@@ -1917,7 +1917,8 @@ wWhatStat:: db ; contains the stat currently being modified by a stat changing m
 ; bit 0 = set to 1 when we should mark a move as seen in the movedex flags on showing its animation, 0 otherwise
 ; bit 1 = set if we ran from battle
 ; bit 2 = set if screeches are echoing
-; bit 3-7 = unused
+; bits 3-4 = screech echo turn counter (3 when activated, counts down to 0)
+; bits 5-7 = unused
 wBattleFunctionalFlags:: db
 ;;;
 

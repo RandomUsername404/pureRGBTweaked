@@ -1,6 +1,32 @@
 ; PureRGBnote: ADDED: function used in some special battles where some effect happens each turn.
 ; like in the volcano, each turn you have a non fire/rock/ground pokemon out they will get burned if they aren't burned.
 CheckPerTurnSpecialBattleEffect::
+	; decrement screech echo counter if active (PureRGB Tweaked)
+	ld a, [wBattleFunctionalFlags]
+	bit 2, a
+	jr z, .screechDone		 ; not active, skip
+	and %00111000			  ; isolate bits 3-4 (counter)
+	sub %00001000			  ; decrement counter by 1
+	jr z, .screechExpired	  ; counter hit 0, end effect
+	ld b, a
+	ld a, [wBattleFunctionalFlags]
+	and %11000111			  ; clear bits 3-4
+	or b					   ; write decremented counter back
+	ld [wBattleFunctionalFlags], a
+	jr .screechDone
+.screechExpired
+	ld a, [wBattleFunctionalFlags]
+	and %11000111
+	res 2, a
+	ld [wBattleFunctionalFlags], a
+	ld hl, .screechesGettingFainter
+	rst _PrintText
+	jr .screechDone
+.screechesGettingFainter
+	text_far _ScreechesGettingFainterText
+	text_end
+.screechDone
+
 	ld a, [wCurMapTileset]
 	cp VOLCANO
 	jp z, .volcano
