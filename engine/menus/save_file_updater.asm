@@ -117,6 +117,8 @@ OriginalGameSaveFileUpdate:
 	call EarlierVersionEventConstantsUpdate
 	; step 7: initialize the new extra hidden objects flags
 	callfar InitializeExtraMissableObjectsFlags
+	; step 7b: revert some original 'mon typings for vanilla save imports (PureRGB Tweaked)
+    callfar InitDefaultTypeRemapFlags
 	; step 8: shift normal hidden object flags according to current ordering
 	call TransferMovedHideShowFlags
 	ld de, RemovedHideShowFlags

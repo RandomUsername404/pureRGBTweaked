@@ -44,7 +44,10 @@ DEF START_MONEY EQU $3000
 
 	; PureRGBnote: ADDED: an extra WRAM variable with more missable object flags was added to have more space for flags.
 	; this is where it's initialized.
-	call InitializeExtraMissableObjectsFlags 
+	call InitializeExtraMissableObjectsFlags
+	
+	callfar InitDefaultTypeRemapFlags ; revert some original 'mon typings by default (PureRGB Tweaked)
+	
 	jp InitializeMissableObjectsFlags
 
 InitializeEmptyList:
