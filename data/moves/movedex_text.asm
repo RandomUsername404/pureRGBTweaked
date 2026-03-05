@@ -1319,30 +1319,17 @@ _SelfdestructDexEntry::
 	next "in a giant fiery"
 	next "fulmination."
 	; fall through
-_GenericExplodeDexEntry::
-	bage "Does heavy recoil"
-	next "damage to the"
-	next "<user>;"
+_GenericSelfdestrucDexEntry::
+	bage "Such a surprising"
+	next "attack that the"
+	next "target takes"
 
-	bage "half the damage"
-	next "inflicted. If it"
-	next "misses, the <user>"
+	bage "double damage!"
+	next "The <user> will"
+	next "faint no matter"
 
-	bage "will still take"
-	next "1/4 of it's full"
-	next "HP in damage."
-
-	bage "If the <user> has"
-	next "less than 1/3 of"
-	next "it's HP left,"
-
-	bage "the explosion will"
-	next "become extremely"
-	next "powerful;"
-
-	bage "power increases"
-	next "to 500! But <user>"
-	next "always faints"
+	bage "what, even if"
+	next "the attack misses"
 	dex
 
 _EggBombDexEntry::
@@ -1710,8 +1697,33 @@ _ExplosionDexEntry::
 	next "that sends rocky"
 
 	bage "shrapnel out at"
-	next "supersonic speed.@"
-	text_jump _GenericExplodeDexEntry
+	next "supersonic speed."
+	; fall through
+_GenericExplodeDexEntry::
+	bage "Does heavy recoil"
+	next "damage to the"
+	next "<user>;"
+
+	bage "half the damage"
+	next "inflicted. If it"
+	next "misses, the <user>"
+
+	bage "will still take"
+	next "1/4 of it's full"
+	next "HP in damage."
+
+	bage "If the <user> has"
+	next "less than 1/3 of"
+	next "it's HP left,"
+
+	bage "the explosion will"
+	next "become extremely"
+	next "powerful;"
+
+	bage "power increases"
+	next "to 500! But <user>"
+	next "always faints"
+	dex
 
 _FurySwipesDexEntry::
 	text "Scratches the foe"
