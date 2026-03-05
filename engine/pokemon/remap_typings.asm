@@ -89,3 +89,23 @@ CountSetBitsPreserveWRAM::
 	ld [wNumSetBits], a
 	ld a, c
 	ret
+	
+; REVERT SOME ORIGINAL TYPINGS BY DEFAULT (PureRGB Tweaked)
+InitDefaultTypeRemapFlags:
+    ld c, 1  ; Fearow | bit index 1 = Fearow's position in OriginalTypings (engine/pokemon/remap_typings.asm)
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
+    ld c, 6  ; Victreebel
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
+    ld c, 14 ; Marowak
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
+    ld c, 18 ; Mr. Mime
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
+    ret
