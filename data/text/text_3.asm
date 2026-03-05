@@ -399,3 +399,8 @@ _LetOutAScreechText::
 	para "<TARGET> let"
 	line "out a SCREECH!"
 	prompt
+
+_ScreechesGettingFainterText::
+	text "The screeches are"
+	line "getting fainter..."
+	prompt

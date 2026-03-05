@@ -29,9 +29,11 @@ _ScreechEffect::
 	ld [hl], SCREECH_EFFECT
 .skipStatChange
 	ld hl, wBattleFunctionalFlags
-	bit 2, [hl]
-	set 2, [hl] ; screeches echoing everywhere
-	ret nz
+	set 2, [hl]	   ; screeches echoing everywhere
+	ld a, [hl]
+	and %11000111  ; clear existing counter bits
+	or %00011000   ; reset counter to 3
+	ld [hl], a
 	ld hl, ScreechesEchoed
 	rst _PrintText
 	jr AutoWakeUpSleepScreech
@@ -79,8 +81,7 @@ AutoWakeUpSleepScreech:
 	; wake up sleeping opponent
 	xor a
 	ld [hl], a
-	ld a, $FF
-	ld [de], a
+	; don't write $FF to selected move - let CheckPlayerStatusConditions handle the turn skip
 	ldh a, [hWhoseTurn]
 	push af
 	xor 1

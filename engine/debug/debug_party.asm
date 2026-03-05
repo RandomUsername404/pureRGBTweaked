@@ -24,7 +24,7 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	db ARMORED_MEWTWO, 99
 	db HARDENED_ONIX, 99
 	db WINTER_DRAGONAIR, 99
-	db MAROWAK, 30
+	db MAROWAK, 45
 	db -1 ; end
 
 PrepareNewGameDebug: ; dummy except in _DEBUG
@@ -43,7 +43,7 @@ IF DEF(_DEBUG)
 
 	call SetDebugNewGameParty
 
-	; Tentacruel gets four HM moves.
+	; Tentacruel gets three HM moves.
 	ld hl, wPartyMon1Moves
 	ld a, FLY
 	ld [hli], a
@@ -69,25 +69,62 @@ IF DEF(_DEBUG)
 	ld hl, wPartyMon3PP + 1
 	ld [hl], 15
 
-	; Hardened Onix gets Strength.
+	; Hardened Onix gets Strength, REST, SCREECH and HAZE.
 	ld hl, wPartyMon4Moves
-	ld [hl], STRENGTH
+	ld a, STRENGTH
+	ld [hli], a
+	ld a, REST
+	ld [hli], a
+	ld a, SCREECH
+	ld [hli], a
+	ld [hl], HAZE
 	ld hl, wPartyMon4PP
-	ld [hl], 15
+	ld a, 15
+	ld [hli], a  ; STRENGTH
+	ld a, 10
+	ld [hli], a  ; REST
+	ld a, 40
+	ld [hli], a  ; SCREECH
+	ld a, 30
+	ld [hl], a   ; HAZE
 
-	; Articuno gets Fly.
+	; Winter Dragonair
 	ld hl, wPartyMon5Moves
-	ld [hl], FLY
+	ld a, FLY
+	ld [hli], a
+	ld a, HYPNOSIS
+	ld [hli], a
+	ld a, SURF
+	ld [hli], a
+	ld [hl], SCREECH
 	ld hl, wPartyMon5PP
-	ld [hl], 15
+	ld a, 15
+	ld [hli], a
+	ld a, 20
+	ld [hli], a
+	ld a, 15
+	ld [hli], a
+	ld a, 40
+	ld [hl], a
 
-	; Pikachu gets Surf, Flash, and DIG.
+	; Marowak gets SURF, FLASH, DIG and SELFDESTRUCT.
 	ld hl, wPartyMon6Moves
 	ld a, SURF
 	ld [hli], a
 	ld a, FLASH
 	ld [hli], a
-	ld [hl], DIG
+	ld a, DIG
+	ld [hli], a
+	ld [hl], SELFDESTRUCT
+	ld hl, wPartyMon6PP
+	ld a, 15
+	ld [hli], a  ; SURF
+	ld a, 15
+	ld [hli], a  ; FLASH
+	ld a, 10
+	ld [hli], a  ; DIG
+	ld a, 5
+	ld [hl], a   ; SELFDESTRUCT
 	ld hl, wPartyMon6Flags
 	set 0, [hl] ; ghost marowak
 
