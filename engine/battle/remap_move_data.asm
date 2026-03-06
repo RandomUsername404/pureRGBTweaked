@@ -195,8 +195,8 @@ ExplosionSelfdestructModifier:
 	ld hl, wEnemyMovePower
 	ld bc, wEnemyMoveEffect
 .gotTurn
-	; if less then 1/3 HP, EXPLOSION does its original effect (fainting the user), but the move gets REALLY powered up
-	ld [hl], 250
+	; if less then 1/3 HP, EXPLOSION does its original effect (fainting the user), but the move gets powered up
+	ld [hl], 160
 	ld a, EXPLODE_EFFECT
 	ld [bc], a
 	jr .faintSetup
