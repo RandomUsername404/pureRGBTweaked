@@ -173,10 +173,16 @@ ExplosionSelfdestructModifier:
 	and a
 	jr z, .playerTurn
 .enemyTurn
+	ld a, [wEnemyMoveNum]
+	cp SELFDESTRUCT
+	jr z, .selfdestructFaint
 	ld d, 3
 	callfar FarCheckIfEnemyHPBelowFraction
 	jr .doneHPCheck
 .playerTurn
+	ld a, [wPlayerMoveNum]
+	cp SELFDESTRUCT
+	jr z, .selfdestructFaint
 	ld d, 3
 	callfar FarCheckIfPlayerHPBelowFraction
 .doneHPCheck
@@ -189,10 +195,23 @@ ExplosionSelfdestructModifier:
 	ld hl, wEnemyMovePower
 	ld bc, wEnemyMoveEffect
 .gotTurn
-	; if less then 1/3 hp, explosion/selfdestruct do their original effect and much more power
+	; if less then 1/3 HP, EXPLOSION does its original effect (fainting the user), but the move gets REALLY powered up
 	ld [hl], 250
 	ld a, EXPLODE_EFFECT
 	ld [bc], a
+	jr .faintSetup
+.selfdestructFaint
+	ldh a, [hWhoseTurn]
+	and a
+	ld hl, wPlayerMovePower
+	ld bc, wPlayerMoveEffect
+	jr z, .faintSetup2
+	ld hl, wEnemyMovePower
+	ld bc, wEnemyMoveEffect
+.faintSetup2
+	ld a, EXPLODE_EFFECT
+	ld [bc], a
+.faintSetup
 	; the below code was originally in ExplodeEffect but was moved because it looks nicer to happen instantly on using the move
 	ld hl, wBattleMonHP
 	ld de, wPlayerBattleStatus2
@@ -208,7 +227,7 @@ ExplosionSelfdestructModifier:
 	inc hl
 	ld [hl], a ; set mon's status to 0
 	ld a, [de]
-	res SEEDED, a ; clear mon's leech seed status
+	res SEEDED, a ; clear mon's LEECHSEED status
 	ld [de], a
 	jpfar DrawHUDsAndHPBars
 

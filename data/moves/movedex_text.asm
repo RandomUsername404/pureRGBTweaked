@@ -1320,16 +1320,12 @@ _SelfdestructDexEntry::
 	next "fulmination."
 	; fall through
 _GenericSelfdestrucDexEntry::
-	bage "Such a surprising"
-	next "attack that the"
-	next "target takes"
+	bage "A last-resort"
+	next "attack. The <user>"
+	next "will always faint,"
 
-	bage "double damage!"
-	next "The <user> will"
-	next "faint no matter"
-
-	bage "what, even if"
-	next "the attack misses"
+	bage "even if the"
+	next "attack misses"
 	dex
 
 _EggBombDexEntry::
@@ -1700,29 +1696,25 @@ _ExplosionDexEntry::
 	next "supersonic speed."
 	; fall through
 _GenericExplodeDexEntry::
-	bage "Does heavy recoil"
-	next "damage to the"
-	next "<user>;"
+	bage "Does recoil damage"
+	next "to the <user>;"
+	next "half the damage"
 
-	bage "half the damage"
-	next "inflicted. If it"
+	bage "inflicted. If it"
 	next "misses, the <user>"
+	next "still takes 1/4"
 
-	bage "will still take"
-	next "1/4 of it's full"
-	next "HP in damage."
+	bage "of its max HP"
+	next "in recoil damage."
+	next "If the <user> has"
 
-	bage "If the <user> has"
-	next "less than 1/3 of"
-	next "it's HP left,"
+	bage "less than 1/3 of"
+	next "its HP left, the"
+	next "explosion becomes"
 
-	bage "the explosion will"
-	next "become extremely"
-	next "powerful;"
-
-	bage "power increases"
-	next "to 500! But <user>"
-	next "always faints"
+	bage "extremely powerful"
+	next "at 500 power, but"
+	next "the <user> faints"
 	dex
 
 _FurySwipesDexEntry::

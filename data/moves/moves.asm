@@ -132,7 +132,7 @@ Moves:
 	move BIDE,         ATTACK_DEFENSE_UP1_EFFECT,    0, NORMAL,       100, 20
 	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10 
 	move MIRROR_MOVE,  MIRROR_MOVE_EFFECT,           0, FLYING,       100, 10 ; priority move, always uses the previously used enemy move without restrictions
-	move SELFDESTRUCT, EXPLODE_EFFECT,             130, FIRE,         100,  5 ; restored original behavior and ATK PWR. Kept new typing. It will ALWAYS KO the launcher. (PureRGB Tweaked) 
+	move SELFDESTRUCT, EXPLODE_EFFECT,             255, FIRE,         100,  5 ; restored original behavior and ATK PWR (almost. It should be 260). Kept new typing. It will ALWAYS KO the user (PureRGB Tweaked) 
 	move EGG_BOMB,     NO_ADDITIONAL_EFFECT,       100, GRASS,        100, 10 ; Vanilla: NORMAL, ACC75. PureRGB: DRAGON, ACC100. PureRGB Tweaked: GRASS, ACC100.
 	move LICK,         PARALYZE_SIDE_EFFECT1,       35, GHOST,        100, 30
 	move SMOG,         POISON_SIDE_EFFECT2,         40, POISON,       100, 20
