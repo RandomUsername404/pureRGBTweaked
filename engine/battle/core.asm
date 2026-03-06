@@ -4722,6 +4722,14 @@ CalculateDamage:
 ; EXPLODE_EFFECT halves defense.
 	cp EXPLODE_EFFECT
 	jr nz, .ok
+	ldh a, [hWhoseTurn]
+	and a
+	ld a, [wPlayerMoveNum]
+	jr z, .checkSelfdestruct
+	ld a, [wEnemyMoveNum]
+.checkSelfdestruct
+	cp SELFDESTRUCT
+	jr z, .ok ; skip defense halving for SELFDESTRUCT (Power already boosted in moves.asm. This allows the player to see the "correct" power in their MoveDex.)
 	srl c
 	jr nz, .ok
 	inc c ; ...with a minimum value of 1 (used as a divisor later on)

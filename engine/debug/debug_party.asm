@@ -107,9 +107,9 @@ IF DEF(_DEBUG)
 	ld a, 40
 	ld [hl], a
 
-	; Marowak gets SURF, FLASH, DIG and SELFDESTRUCT.
+	; Marowak gets EXPLOSION, FLASH, DIG and SELFDESTRUCT.
 	ld hl, wPartyMon6Moves
-	ld a, SURF
+	ld a, EXPLOSION
 	ld [hli], a
 	ld a, FLASH
 	ld [hli], a
@@ -117,8 +117,8 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], SELFDESTRUCT
 	ld hl, wPartyMon6PP
-	ld a, 15
-	ld [hli], a  ; SURF
+	ld a, 5
+	ld [hli], a  ; EXPLOSION
 	ld a, 15
 	ld [hli], a  ; FLASH
 	ld a, 10
