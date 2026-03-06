@@ -1713,7 +1713,7 @@ _GenericExplodeDexEntry::
 	next "explosion becomes"
 
 	bage "extremely powerful"
-	next "at 500 power, but"
+	next "at 320 power, but"
 	next "the <user> faints"
 	dex
 
