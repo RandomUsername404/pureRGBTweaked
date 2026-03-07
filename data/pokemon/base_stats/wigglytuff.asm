@@ -1,6 +1,6 @@
 	db DEX_WIGGLYTUFF ; pokedex id
 
-	db 140,  80,  45,  55,  80
+	db 140,  75,  55,  45,  80
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
