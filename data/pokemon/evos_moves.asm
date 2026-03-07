@@ -1226,6 +1226,7 @@ KinglerEvosMoves:
 	db 30, SLASH
 	db 35, SLAM ; FILTHY SLAM
 	db 39, FURY_ATTACK
+	db 42, CRABHAMMER
 	db 44, EARTHQUAKE
 	db 51, SPIKE_CANNON
 	db 0
