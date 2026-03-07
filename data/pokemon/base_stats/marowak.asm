@@ -1,6 +1,6 @@
 	db DEX_MAROWAK ; pokedex id
 
-	db  80, 125, 110,  45,  60
+	db  80, 90, 110,  45,  80
 	;   hp  atk  def  spd  spc
 
 	db GROUND, GHOST ; type

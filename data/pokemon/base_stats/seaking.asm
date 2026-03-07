@@ -1,6 +1,6 @@
 	db DEX_SEAKING ; pokedex id
 
-	db  90, 102,  65,  68,  95
+	db  85, 92,  65,  68,  85
 	;   hp  atk  def  spd  spc
 
 	db WATER, NORMAL ; type
