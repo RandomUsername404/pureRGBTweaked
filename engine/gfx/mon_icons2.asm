@@ -71,12 +71,20 @@ FarLoadPartyMonSpriteIntoVRAMScreenOn::
 
 PreparePartyMonSpriteCopy:
 	push de
-	call GetPartyMonSpriteID
-	ld b, a
+	; special case: MissingNo uses its existing icon type sprite
+	and a
+	jr z, .missingno
+	; get pokedex number
+	ld [wPokedexNum], a
+	predef IndexToPokedex
+	ld a, [wPokedexNum]
+	; multiply (pokedex number - 1) by $80 (8 tiles per frame, 2 frames = 16 tiles = $80 bytes)
+	dec a
 	xor a
 	ldh [hMultiplicand], a
 	ldh [hMultiplicand + 1], a
-	ld a, b
+	ld a, [wPokedexNum]
+	dec a
 	ldh [hMultiplicand + 2], a
 	ld a, $80
 	ldh [hMultiplier], a
@@ -84,7 +92,39 @@ PreparePartyMonSpriteCopy:
 	ldh a, [hProduct + 2]
 	ld h, a
 	ldh a, [hProduct + 3]
-	ld l, a	
+	ld l, a
+	; if offset < $4000, use first bank
+	bit 6, h
+	set 6, h
+	ld a, BANK(PartyMonSprites151_1)
+	jr z, .gotBank
+	; otherwise use second bank
+	inc a
+.gotBank
+	ld bc, $0080
+	pop de
+	ret
+.missingno
+	; fall back to existing icon system for MissingNo
+	ld a, [wSpriteOptions2]
+	bit BIT_MENU_ICON_SPRITES, a
+	ld hl, MonPartyDataNew
+	jr nz, .getIcon
+	ld hl, MonPartyData
+.getIcon
+	ld a, [hl] ; index 0 = MissingNo entry
+	; multiply icon index by $80
+	ldh [hMultiplicand + 2], a
+	xor a
+	ldh [hMultiplicand], a
+	ldh [hMultiplicand + 1], a
+	ld a, $80
+	ldh [hMultiplier], a
+	call Multiply
+	ldh a, [hProduct + 2]
+	ld h, a
+	ldh a, [hProduct + 3]
+	ld l, a
 	ld a, h
 	add $40
 	ld h, a
