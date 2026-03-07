@@ -1,12 +1,10 @@
 ; PureRGBnote: ADDED: one of the new pages in the options menu. This one's one of the two pages for options related to game sprites.
-DEF OPTIONS_PAGE_4_COUNT EQU 3 ; number of options on this page
+DEF OPTIONS_PAGE_4_COUNT EQU 2 ; number of options on this page
 DEF SPRITE_OPTIONS_PAGE_NUMBER EQU 4 ; must be 1 digit.
 
 ; format: "bit set" x position, "bit not set" x position, which bit it is, pointer to wram variable
 SpriteOptionsXPosBitData:
 	db 12, 9, BIT_BACK_SPRITES
-	dw wSpriteOptions2
-	db 12, 9, BIT_MENU_ICON_SPRITES
 	dw wSpriteOptions2
 	db -1
 
@@ -31,7 +29,6 @@ DisplaySpriteOptions:
 SpriteOptionsYCoordVariableOffsetList:
 	db 3, 0
 	db 5, 1
-	db 7, 2
 	db PAGE_CONTROLS_Y_COORD, MAX_OPTIONS_PER_PAGE
 
 SpriteOptionsData:
@@ -42,13 +39,11 @@ SpriteOptionsData:
 
 SpriteOptionsSetCursorPositionActions:
 	dw SetCursorPositionFromSpriteOptions
-	dw SetCursorPositionFromSpriteOptions
 	dw FrontSpriteCursorFunc
 
 SpritesOptionText:
 	db   "SPRITES"
 	next " BACK:   OG SW97"
-	next " ICONS:  OG OG+"
 	next " FRONT:  @"
 
 DrawSpriteOptionsMenu:
@@ -58,7 +53,7 @@ DrawSpriteOptionsMenu:
 	hlcoord 1, 1
 	ld de, SpritesOptionText
 	call PlaceString
-	hlcoord 10, 7 
+	hlcoord 10, 5 
 	lb bc, $C0, 3
 	ld de, 1
 	jp DrawTileLineIncrement
@@ -69,7 +64,7 @@ SpriteOptionsAorSelectButton:
 	jp z, OptionsPageAorSelectButtonDefault
 	; fall through
 SpriteOptionsAButton:
-	ld a, [SpriteOptionsYCoordVariableOffsetList + 4]
+	ld a, [SpriteOptionsYCoordVariableOffsetList + 2]
 	ld b, a
 	ld a, [wTopMenuItemY]
 	cp b ;is the cursor on the FRONT row?
@@ -105,7 +100,6 @@ SpriteOptionsAButton:
 
 SpriteOptionsLeftRightFuncs:
 	dw GenericSpriteOptionsCursorToggleFunc
-	dw GenericSpriteOptionsCursorToggleFunc
 	dw DontChangeOptionCursor
 	dw CursorCancelRow
 
@@ -114,32 +108,10 @@ GenericSpriteOptionsCursorToggleFunc:
 	jp GenericOptionsCursorToggleFunc
 
 SetSpriteOptionsFromCursorPositions:
-	ld a, [wSpriteOptions2]
-	and %1000 ; menu icon sprites bit
-	push af
 	ld de, wOptions1CursorX
 	ld hl, SpriteOptionsXPosBitData
 	ld b, OPTIONS_PAGE_4_COUNT
-	call LoopGenericSetOptionsFromCursorPositions
-	pop af
-	ld b, a
-	ld a, [wSpriteOptions2]
-	and %1000
-	cp b
-	ret z ; if we didn't change "menu icons sprites" bit don't do anything
-	ld a, [wNewInGameFlags]
-	bit IN_GAME, a
-	ret z ; if we're not in game yet, don't do anything else
-	ld a, [wNumSprites]
-	and a
-	ret z ; if no non-player sprites in the current map, don't do anything else
-	callfar LoopCheckSpriteReloadNeeded
-	ret nc ; if no sprites that are remappable are found in the current map, don't do anything else
-	call GBPalWhiteOut
-	callfar LoopRemapSpritePictureIDs ; if we did, modify the sprites in wram to have the correct IDs
-	call ReloadMapSpriteTilePatterns ; reload their tiles so they have the right sprites
-	call OptionsLoadExtraTiles
-	jp GBPalNormal
+	jp LoopGenericSetOptionsFromCursorPositions
 
 SetCursorPositionFromSpriteOptions:
 	ld hl, SpriteOptionsXPosBitData
@@ -148,12 +120,11 @@ SetCursorPositionFromSpriteOptions:
 FrontSpriteCursorFunc:
 	; always at 9
 	ld a, 9
-	ld [wOptions3CursorX], a
+	ld [wOptions2CursorX], a
 	ret
 
 SpriteInfoTextJumpTable:
 	dw BackSpriteText
-	dw IconsOptionText
 	dw FrontSpriteText
 
 BackSpriteText:

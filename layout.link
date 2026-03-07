@@ -226,6 +226,15 @@ ROMX $3C
 	"NPC Sprites 5"
 ROMX $3D
 	"newCode3"
+ROMX $3E
+	org $4000
+	"Party Mon Sprites 151 Gfx 1"
+ROMX $3F
+	org $4000
+	"Party Mon Sprites 151 Gfx 2"
+ROMX $40
+	org $4000
+	"Mon Icons 2"
 WRAM0
 	"Audio RAM"
 	org $c100

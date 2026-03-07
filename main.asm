@@ -398,6 +398,15 @@ SECTION "Party Sprites", ROMX, BANK[$34]
 PartyMonSprites1:: INCBIN "gfx/icons/menusprites1.2bpp"
 PartyMonSprites2:: INCBIN "gfx/icons/menusprites2.2bpp"
 
+; PureRGB Tweaked: ADDED: 151 unique menu sprites
+SECTION "Party Mon Sprites 151 Gfx 1", ROMX, BANK[$3E]
+PartyMonSprites151_1:: INCBIN "gfx/icons/party_mon_sprites.2bpp", $0, $4000
+SECTION "Party Mon Sprites 151 Gfx 2", ROMX, BANK[$3F]
+PartyMonSprites151_2:: INCBIN "gfx/icons/party_mon_sprites.2bpp", $4000
+;PureRGB Tweaked: Moving mon_icons2.asm to its own bank
+SECTION "Mon Icons 2", ROMX, BANK[$40]
+INCLUDE "engine/gfx/mon_icons2.asm"
+
 SECTION "GBC Mode Code", ROMX
 
 ; shinpokerednote: gbcnote: include the bgmap files from pokemon yellow
@@ -430,7 +439,6 @@ INCLUDE "engine/menus/front_sprite_options3.asm"
 INCLUDE "engine/menus/front_sprite_options4.asm"
 INCLUDE "engine/menus/front_sprite_options5.asm"
 INCLUDE "engine/menus/options_menu3.asm"
-INCLUDE "engine/gfx/mon_icons2.asm"
 INCLUDE "engine/overworld/select_button_functionality.asm"
 INCLUDE "engine/overworld/use_another_repel.asm"
 INCLUDE "engine/items/last_two_fishing_gurus_script.asm"
