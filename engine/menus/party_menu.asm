@@ -199,8 +199,8 @@ RedrawPartyMenu_::
 	call Delay3
 	ld a, %11100100 ; 3210
 	ldh [rBGP], a
-	ldh [rOBP0], a
-	ret
+	ld a, %11100100 ; 3210 (4 colors for party sprites)
+	jp UpdatePal
 .printItemUseMessage
 	and $0F
 	ld hl, PartyMenuItemUseMessagePointers
