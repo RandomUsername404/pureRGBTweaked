@@ -105,13 +105,7 @@ PreparePartyMonSpriteCopy:
 	pop de
 	ret
 .missingno
-	; fall back to existing icon system for MissingNo
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld hl, MonPartyDataNew
-	jr nz, .getIcon
-	ld hl, MonPartyData
-.getIcon
 	ld a, [hl] ; index 0 = MissingNo entry
 	; multiply icon index by $80
 	ldh [hMultiplicand + 2], a
@@ -139,12 +133,7 @@ GetPartyMonSpriteID:
 	ld a, [wPokedexNum]
 	; missingno is allowed here, 0 is a valid value
 	ld b, a
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld hl, MonPartyDataNew
-	jr nz, .next
-	ld hl, MonPartyData
-.next
 	ld a, b
 	ld e, a
 	ld d, 0

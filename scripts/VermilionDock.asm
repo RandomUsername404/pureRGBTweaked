@@ -362,17 +362,14 @@ MewBattleText:
 	ret
 .mewNormal
 	ld hl, vNPCSprites tile $0C
-	ld de, FairySprite
-	lb bc, BANK(FairySprite), 4
+	ld de, MewSprite
+	lb bc, BANK(MewSprite), 4
 	jr .copy2
 .mewDifferent
 	ld hl, vNPCSprites tile $0C
-	ld de, PartyMonSprites1 tile 24
-	call .copy
-	ld hl, vNPCSprites tile $0E
-	ld de, PartyMonSprites1 tile 28
-.copy
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, MewSprite tile 4
+	lb bc, BANK(MewSprite), 4
+	jr .copy2
 .copy2
 	jp CopyVideoData
 

@@ -159,11 +159,8 @@ PowerPlantOverworldSFX::
 	ld de, PowerPlantElectricityFar
 	jp PlayNewSoundChannel8
 
-; PureRGBnote: ADDED: the pokeball will turn into a voltorb graphically if you have enhanced sprites turned on in the options.
+; PureRGBnote: ADDED: the pokeball will turn into a Voltorb.
 LoadVoltorbSprite::
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret z
 	ld h, d
 	ld l, e
 	ld a, 4
@@ -400,7 +397,7 @@ ZapdosAbsorbAnimation:
 	call UpdateSprites
 	rst _DelayFrame
 	ld de, vNPCSprites tile $0C
-	callfar FarOpenBirdSpriteWings
+	call OpenZapdosSpriteWings
 	ld a, SFX_BATTLE_25
 	rst _PlaySound
 	; replace last 3 tiles of pokeball2 sprite with "nothing"
@@ -528,6 +525,15 @@ ZapdosAbsorbAnimation:
 	ld [wPowerPlantCurScript], a
 	ld [wCurMapScript], a
 	ret
+
+FarOpenZapdosSpriteWings::
+	ld h, d
+	ld l, e
+; input hl = where in vram to replace it
+OpenZapdosSpriteWings:
+	ld de, ZapdosSprite tile 12
+	lb bc, BANK(ZapdosSprite), 4
+	jp CopyVideoData
 
 PowerPlantHideSpriteEntry:
 	ld [wMissableObjectIndex], a
@@ -676,15 +682,7 @@ MagnetonSuperchargeAnimation:
 	ld [hl], a
 	call UpdateSprites
 	call .doBallPoof
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr nz, .magnetonSprite
-	call .loadPokeballSprite
-	jr .doneSpriteReplace
-.magnetonSprite
-	; load magneton sprite into vram
 	call .loadMagnetonSprite
-.doneSpriteReplace
 	ld a, POWERPLANT_ELECTRODE1
 	ldh [hSpriteIndex], a
 	ld de, PowerPlantElectricityFar
@@ -715,12 +713,12 @@ MagnetonSuperchargeAnimation:
 	jp CopyVideoData
 .loadMagnetonSprite
 	ld hl, vNPCSprites tile $78
-	ld de, PartyMonSprites1 tile 128
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, PartyMonSprites151_1 tile 648
+	lb bc, BANK(PartyMonSprites151_1), 2
 	call CopyVideoData
 	ld hl, vNPCSprites tile $7A
-	ld de, PartyMonSprites1 tile 132
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, PartyMonSprites151_1 tile 652
+	lb bc, BANK(PartyMonSprites151_1), 2
 	jp CopyVideoData
 
 PowerPlantCheckPowersBack:

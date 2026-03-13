@@ -103,14 +103,52 @@ SpriteSheetPointerTable:
 	overworld_sprite BlueSittingSprite, 12            ; SPRITE_BLUE_SITTING
 	overworld_sprite LavaSuitSprite, 12               ; SPRITE_LAVA_SUIT
 	overworld_sprite MonsterSwimmingSprite, 12        ; SPRITE_MONSTER_SWIMMING
-	overworld_sprite GravelerSprite, 12                ; SPRITE_GRAVELER
-	overworld_sprite NothingSprite, 12                 ; SPRITE_NOTHING
+	overworld_sprite GravelerSprite, 12               ; SPRITE_GRAVELER
+	overworld_sprite NothingSprite, 12                ; SPRITE_NOTHING
 	overworld_sprite GhostSprite, 12                  ; SPRITE_GHOST
 	overworld_sprite SnakeSprite, 12                  ; SPRITE_SNAKE
 	overworld_sprite FitnessGirlSprite, 12            ; SPRITE_FITNESS_GIRL
 	overworld_sprite HooliganSprite, 12               ; SPRITE_HOOLIGAN
 	overworld_sprite CeruleanBallDesignerSprite, 12   ; SPRITE_BALL_DESIGNER
 	overworld_sprite CatSprite, 12                    ; SPRITE_CAT2
+	; PureRGB Tweaked: new "walking" overworld sprites (walk animation included)
+	overworld_sprite ArcanineSprite, 12               ; SPRITE_ARCANINE
+	overworld_sprite ArticunoSprite, 12               ; SPRITE_ARTICUNO
+	overworld_sprite ChanseySprite, 12                ; SPRITE_CHANSEY
+	overworld_sprite CloysterSprite, 12               ; SPRITE_CLOYSTER
+	overworld_sprite CuboneSprite, 12                 ; SPRITE_CUBONE
+	overworld_sprite DoduoSprite, 12                  ; SPRITE_DODUO
+	overworld_sprite FarfetchdSprite, 12              ; SPRITE_FARFETCHD
+	overworld_sprite FearowSprite, 12                 ; SPRITE_FEAROW
+	overworld_sprite JigglypuffSprite, 12             ; SPRITE_JIGGLYPUFF
+	overworld_sprite KangaskhanSprite, 12             ; SPRITE_KANGASKHAN
+	overworld_sprite LaprasSprite, 12                 ; SPRITE_LAPRAS
+	overworld_sprite MachokSprite, 12                 ; SPRITE_MACHOKE
+	overworld_sprite MachopSprite, 12                 ; SPRITE_MACHOP
+	overworld_sprite MankeySprite, 12                 ; SPRITE_MANKEY
+	overworld_sprite MewSprite, 12                    ; SPRITE_MEW
+	overworld_sprite MewtwoSprite, 12                 ; SPRITE_MEWTWO
+	overworld_sprite MeowthSprite, 12                 ; SPRITE_MEOWTH
+	overworld_sprite MoltresSprite, 12                ; SPRITE_MOLTRES
+	overworld_sprite NidoranFSprite, 12               ; SPRITE_NIDORANF
+	overworld_sprite PidgeotSprite, 12                ; SPRITE_PIDGEOT
+	overworld_sprite PidgeySprite, 12                 ; SPRITE_PIDGEY
+	overworld_sprite PikachuSprite, 12                ; SPRITE_PIKACHU
+	overworld_sprite PoliwrathSprite, 12              ; SPRITE_POLIWRATH
+	overworld_sprite PsyduckSprite, 12                ; SPRITE_PSYDUCK
+	overworld_sprite SlowpokeSprite, 12               ; SPRITE_SLOWPOKE
+	overworld_sprite SpearowSprite, 12                ; SPRITE_SPEAROW
+	overworld_sprite ZapdosSprite, 12                 ; SPRITE_ZAPDOS
+	; PureRGB Tweaked: new "walking" overworld sprites (no walk animation)
+	overworld_sprite DragonairSprite, 12              ; SPRITE_DRAGONAIR
+	overworld_sprite FlareonSprite, 12                ; SPRITE_FLAREON
+	overworld_sprite JolteonSprite, 12                ; SPRITE_JOLTEON
+	overworld_sprite MachampSprite, 12                ; SPRITE_MACHAMP
+	overworld_sprite NidokingSprite, 12               ; SPRITE_NIDOKING
+	overworld_sprite NidoranMSprite, 12               ; SPRITE_NIDORANM
+	overworld_sprite NidorinoSprite, 12               ; SPRITE_NIDORINO
+	overworld_sprite SlowbroSprite, 12                ; SPRITE_SLOWBRO
+	; PureRGB Tweaked: end of new sprites
 	overworld_sprite PokeBallSprite, 4                ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4                  ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4                 ; SPRITE_BOULDER
@@ -121,7 +159,7 @@ SpriteSheetPointerTable:
 	overworld_sprite OldAmberSprite, 4                ; SPRITE_OLD_AMBER
 	overworld_sprite GamblerAsleepSprite, 4           ; SPRITE_GAMBLER_ASLEEP
 	overworld_sprite Monster2Sprite, 4                ; SPRITE_MONSTER2_STILL
-	overworld_sprite PokeballSprite2, 4     	      ; SPRITE_POKE_BALL2
+	overworld_sprite PokeballSprite2, 4               ; SPRITE_POKE_BALL2
 	overworld_sprite DarkChannelerSprite, 4           ; SPRITE_DARK_CHANNELER
 	overworld_sprite BoomboxSprite, 4                 ; SPRITE_BOOMBOX
 	overworld_sprite NothingSprite, 4                 ; SPRITE_NOTHING_STILL
@@ -129,4 +167,7 @@ SpriteSheetPointerTable:
 	overworld_sprite CameraSprite, 4                  ; SPRITE_CAMERA
 	overworld_sprite GhostSprite tile 4, 4, BANK(GhostSprite) ; SPRITE_SHADOW
 	overworld_sprite QuadrupedSprite, 4               ; SPRITE_QUADRUPED
+	; PureRGB Tweaked: new static overworld sprites
+	overworld_sprite AbraSprite, 4                    ; SPRITE_ABRA
+	overworld_sprite WigglytuffSprite, 4              ; SPRITE_WIGGLYTUFF
 	assert_table_length NUM_SPRITES

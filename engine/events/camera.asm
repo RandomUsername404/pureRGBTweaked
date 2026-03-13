@@ -285,32 +285,17 @@ UseCameraRoute6:
 	text_far _Route6Psyduck2Text
 	text_end
 .faceSide
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, Monster2Sprite tile 8
-	lb bc, BANK(Monster2Sprite), 4
-	jr nz, .copy
-	ld de, MonsterSprite tile 8
-	lb bc, BANK(MonsterSprite), 4
+	ld de, PsyduckSprite tile 8
+	lb bc, BANK(PsyduckSprite), 4
 	jr .copy
 .faceUp
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, Monster2Sprite tile 4
-	lb bc, BANK(Monster2Sprite), 4
-	jr nz, .copy
-	ld de, MonsterSprite tile 4
-	lb bc, BANK(MonsterSprite), 4
+	ld de, PsyduckSprite tile 4
+	lb bc, BANK(PsyduckSprite), 4
 	jr .copy
 .faceDown
 	; make the sprite face down
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, Monster2Sprite
-	lb bc, BANK(Monster2Sprite), 4
-	jr nz, .copy
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 4
+	ld de, PsyduckSprite
+	lb bc, BANK(PsyduckSprite), 4
 .copy
 	ld hl, vNPCSprites tile $7C
 	jp CopyVideoData
@@ -342,7 +327,7 @@ UseCameraRoute8:
 	rst _PrintText
 	ld hl, .useCameraRoute8
 	rst _PrintText
-	call CatSpriteFrame2
+	call JolteonSpriteFrame2
 	ld c, 60
 	rst _DelayFrames
 	; make jolteon "absorb electricity"
@@ -377,7 +362,7 @@ UseCameraRoute8:
 	call PlayCry
 	ld hl, .joltronAbsorbing
 	rst _PrintText
-	call CatSpriteNormal
+	call JolteonSpriteNormal
 	pop af
 	ret
 .useCameraRoute8
@@ -442,7 +427,7 @@ UseCameraRoute10:
 	rst _PrintText
 	ld hl, .useCameraRoute10
 	rst _PrintText
-	call CatSpriteFrame2
+	call FlareonSpriteFrame2
 	ld c, 40
 	rst _DelayFrames
 	call ExclamationDuringCameraEvent
@@ -452,7 +437,7 @@ UseCameraRoute10:
   	call SetMonSeen
 	ld d, BALL_ID_BLAZE
 	call PlayerSnapsPicThenDisplayPicture
-	call CatSpriteNormal
+	call FlareonSpriteNormal
 	ld a, FLAREON
 	call PlayCry
 	ld hl, .flareonMajestic
@@ -469,33 +454,33 @@ UseCameraRoute10:
 	text_far _Route10FlareonPoseText
 	text_end
 
-CatSpriteFrame2:
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, CatSprite tile 12
-	lb bc, BANK(CatSprite), 4
-	ld hl, vNPCSprites tile $48
-	jr nz, .copy
-	ld de, QuadrupedSprite tile 4
-	lb bc, BANK(QuadrupedSprite), 4
-	ld hl, vNPCSprites tile $7C
-.copy
+JolteonSpriteFrame2:  
+	ld de, JolteonSprite tile 12
+	lb bc, BANK(JolteonSprite), 4  
+	ld hl, vNPCSprites tile $48  
+	jp CopyVideoData
+	
+	
+JolteonSpriteNormal:  
+	ld de, JolteonSprite  
+	lb bc, BANK(JolteonSprite), 4  
+	ld hl, vNPCSprites tile $48  
 	jp CopyVideoData
 
-CatSpriteNormal:
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, CatSprite
-	lb bc, BANK(CatSprite), 4
-	ld hl, vNPCSprites tile $48
-	jr nz, .copy2
-	ld de, QuadrupedSprite 
-	lb bc, BANK(QuadrupedSprite), 4
-	ld hl, vNPCSprites tile $7C
-.copy2
+FlareonSpriteFrame2:
+	ld de, FlareonSprite tile 12
+	lb bc, BANK(FlareonSprite), 4  
+	ld hl, vNPCSprites tile $48  
 	jp CopyVideoData
 
-UseCameraRoute24:
+FlareonSpriteNormal:
+	ld de, FlareonSprite  
+	lb bc, BANK(FlareonSprite), 4  
+	ld hl, vNPCSprites tile $48  
+	jp CopyVideoData
+	
+
+UseCameraRoute24: ; Abra
 	CheckEvent EVENT_SNAPPED_CAMERA_PIC_MIND_BALL
 	scf
 	ret nz
@@ -809,12 +794,12 @@ UseCameraRoute13:
 	text_far _PidgeotPlumageText
 	text_end
 .loadPidgeotLeft
-	ld de, BirdSprite tile 8
+	ld de, PidgeotSprite tile 8
 	jr .loadPidgeotNext
 .loadPidgeotLeftWingsOpen
-	ld de, BirdSprite tile 20
+	ld de, PidgeotSprite tile 20
 .loadPidgeotNext
-	lb bc, BANK(BirdSprite), 4
+	lb bc, BANK(PidgeotSprite), 4
 	ld hl, vNPCSprites tile $74
 	jp CopyVideoData
 

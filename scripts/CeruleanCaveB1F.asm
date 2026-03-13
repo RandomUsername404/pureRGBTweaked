@@ -41,6 +41,8 @@ MewtwoAnimation:
 	call .setNextSprite
 	rst _DelayFrame
 	rst _DelayFrame
+	rst _DelayFrame
+	rst _DelayFrame
 	pop bc
 	dec b
 	jr nz, .loop
@@ -96,38 +98,20 @@ MewtwoAnimation:
 	ret
 .setNextSprite
 	ld a, b
-	ld hl, wSpriteOptions2
-	bit BIT_MENU_ICON_SPRITES, [hl]
-	jr nz, .psychicSprite
-	; normal monster sprite
 	rrca
-	jr c, .secondMonsterSprite
+	jr c, .secondMewtwoSprite
 	ld hl, vNPCSprites tile $0C
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 4
+	ld de, MewtwoSprite
+	lb bc, BANK(MewtwoSprite), 4
 	jr .copy
-.secondMonsterSprite
+.secondMewtwoSprite
 	ld hl, vNPCSprites tile $0C
-	ld de, PartyMonSprites1 tile 0
-	call .copyPartyMonSprites1
+	ld de, MewtwoAuraSprite
+	call .copyMewtwoAuraSprite
 	ld hl, vNPCSprites tile $0E
-	ld de, PartyMonSprites1 tile 4
-	jr .copyPartyMonSprites1
-.psychicSprite
-	rrca
-	jr c, .secondPsychicSprite
-	ld hl, vNPCSprites tile $0C
-	ld de, PsychicSprite
-	lb bc, BANK(PsychicSprite), 4
-	jr .copy
-.secondPsychicSprite
-	ld hl, vNPCSprites tile $0C
-	ld de, PartyMonSprites1 tile 114
-	call .copyPartyMonSprites1
-	ld hl, vNPCSprites tile $0E
-	ld de, PartyMonSprites1 tile 118
-.copyPartyMonSprites1
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, MewtwoAuraSprite tile 2
+.copyMewtwoAuraSprite
+	lb bc, BANK(MewtwoAuraSprite), 2
 .copy
 	jp CopyVideoData
 

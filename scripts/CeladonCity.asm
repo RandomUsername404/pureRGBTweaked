@@ -244,14 +244,14 @@ PoliwrathAnimation::
 .loop
 	push bc
 	ld hl, vNPCSprites tile $18
-	ld de, FightingSprite tile 12
-	lb bc, BANK(FightingSprite), 12
+	ld de, PoliwrathSprite tile 12
+	lb bc, BANK(PoliwrathSprite), 12
 	call CopyVideoData
-	ld c, 3
+	ld c, 6
 	rst _DelayFrames
 	ld hl, vNPCSprites tile $18
-	ld de, FightingSprite
-	lb bc, BANK(FightingSprite), 12
+	ld de, PoliwrathSprite
+	lb bc, BANK(PoliwrathSprite), 12
 	call CopyVideoData
 	pop bc
 	dec b

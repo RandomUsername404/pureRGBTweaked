@@ -427,19 +427,16 @@ DragonairEventCloysterText:
 	text_end
 
 DragonairEventOpenUpCloysterSprite:
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret z
 	ld hl, vNPCSprites tile $78
-	ld de, PartyMonSprites2 tile 64
-	lb bc, BANK(PartyMonSprites2), 4
-	predef_jump CopyMenuSpritesVideoDataFar
+	ld de, CloysterSprite
+	lb bc, BANK(CloysterSprite), 4
+	jp CopyVideoData
 
 DragonairEventLoadCloysterSprite:
 	ld hl, vNPCSprites tile $78
-	ld de, PartyMonSprites2 tile 66
-	lb bc, BANK(PartyMonSprites2), 4
-	predef_jump CopyMenuSpritesVideoDataFar
+	ld de, CloysterSprite tile 4
+	lb bc, BANK(CloysterSprite), 4
+	jp CopyVideoData
 
 DragonairEventTransformText:
 	CheckAndSetEvent EVENT_DRAGONAIR_EVENT_CLEARED_ONCE
