@@ -354,15 +354,7 @@ CheckFloatingWeezingAnimation:
 	call UpdateSprites
 	ld de, vNPCSprites tile $3C
 	callfar DoBallPoofOnNPC
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr nz, .weezingSprite
-	call .loadSeelSprite
-	jr .doneSpriteReplace
-.weezingSprite
-	; load weezing sprite into vram
 	call .loadWeezingSprite
-.doneSpriteReplace
 	ld a, SILPHCO1F_WEEZING_PROXY
 	ldh [hSpriteIndex], a
 	ld de, GasSound
@@ -383,19 +375,14 @@ CheckFloatingWeezingAnimation:
 	inc hl
 	ld [hl], 36 + 4
 	jp UpdateSprites
-.loadSeelSprite
-	ld hl, vNPCSprites tile $3C
-	ld de, SeelSprite
-	lb bc, BANK(SeelSprite), 4
-	jp CopyVideoData
 .loadWeezingSprite
 	ld hl, vNPCSprites tile $3C
-	ld de, PartyMonSprites1 tile 136
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, PartyMonSprites151_1 tile 872
+	lb bc, BANK(PartyMonSprites151_1), 2
 	call CopyVideoData
 	ld hl, vNPCSprites tile $3E
-	ld de, PartyMonSprites1 tile 140
-	lb bc, BANK(PartyMonSprites1), 2
+	ld de, PartyMonSprites151_1 tile 876
+	lb bc, BANK(PartyMonSprites151_1), 2
 	jp CopyVideoData
 
 SaffronAbandonedBuildingWeezingText:

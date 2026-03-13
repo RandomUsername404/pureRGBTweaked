@@ -1107,12 +1107,12 @@ CuboneBlinks:
 	ld b, 4
 .loop
 	push bc
-	ld de, MonsterBlinkingSprite
-	lb bc, BANK(MonsterBlinkingSprite), 2
+	ld de, CuboneBlinkingSprite
+	lb bc, BANK(CuboneBlinkingSprite), 2
 	call CopyCuboneVideoDataEntry
 	call Delay3
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 2
+	ld de, CuboneSprite
+	lb bc, BANK(CuboneSprite), 2
 	call CopyCuboneVideoDataEntry
 	call Delay3
 	pop bc
@@ -1124,12 +1124,12 @@ CuboneCries:
 	ld b, 4
 .loop
 	push bc
-	ld de, MonsterCryingSprite
-	lb bc, BANK(MonsterCryingSprite), 2
+	ld de, CuboneCryingSprite
+	lb bc, BANK(CuboneCryingSprite), 2
 	call CopyCuboneVideoDataEntry
 	call Delay3
-	ld de, MonsterCryingSprite tile 2
-	lb bc, BANK(MonsterCryingSprite), 2
+	ld de, CuboneCryingSprite tile 2
+	lb bc, BANK(CuboneCryingSprite), 2
 	call CopyCuboneVideoDataEntry
 	call Delay3
 	pop bc

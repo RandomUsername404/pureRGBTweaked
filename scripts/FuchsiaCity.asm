@@ -54,18 +54,15 @@ FuchsiaCityDefaultScript:
 ; we just replace omanyte's with it when loading fuchsia city if kabuto is supposed to be in the zoo
 
 CheckLoadKabutoShell::
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret z
 	CheckEvent EVENT_GOT_HELIX_FOSSIL
 	ret z
 	; fall through
 
 LoadKabutoShellSprite:
 	ld hl, vSprites tile FUCHSIA_OMANYTE_KABUTO_FOSSIL_TILE
-	ld de, PartyMonSprites2 tile 66
-	lb bc, BANK(PartyMonSprites2), 4
-	predef_jump CopyMenuSpritesVideoDataFar
+	ld de, KabutoShellSprite
+	lb bc, BANK(KabutoShellSprite), 4 ; Kabuto is hiding in its shell
+	jp CopyVideoData
 
 
 FuchsiaCity_TextPointers:
@@ -220,10 +217,6 @@ FuchsiaCityYoungster2Text:
 	text_asm
 	ld hl, .Text
 	rst _PrintText
-;;;;;;;;;; PureRGBnote: ADDED: the voltorb will now move while talking to this NPC (but only if OGPlus icons option is turned on)
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr z, .done
 	ld de, vChars0 + VOLTORB_POKEBALL_TILE1
 	callfar LoadVoltorbSprite
 	ld c, 10
@@ -421,9 +414,6 @@ FuchsiaCityFossilFanText:
 	text_asm
 	CheckEvent EVENT_FOSSIL_FAN_TEXT_TOGGLE
 	jr nz, .moveFossil
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a 
-	jr z, .noEvent
 	CheckEitherEventSet EVENT_GOT_HELIX_FOSSIL, EVENT_GOT_DOME_FOSSIL
 	jr z, .noEvent
 	ld hl, FuchsiaCityFossilFanText1Prompt
@@ -434,9 +424,6 @@ FuchsiaCityFossilFanText:
 	jr .done
 .moveFossil
 	ResetEvent EVENT_FOSSIL_FAN_TEXT_TOGGLE
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a 
-	jr z, .noEvent
 	call ShowFossilPokemon
 	ld a, 11
 	ldh [hSpriteIndex], a
@@ -478,12 +465,12 @@ FuchsiaCityFossilFanText3:
 GetFossilSpriteData:
 	CheckEvent EVENT_GOT_HELIX_FOSSIL
 	jr nz, .domeFossil
-	ld de, PartyMonSprites1 tile 16
-	lb bc, BANK(PartyMonSprites1), 4
+	ld de, PartyMonSprites151_2 tile 72
+	lb bc, BANK(PartyMonSprites151_2), 4 ; First Omanyte sprite
 	jr .showSprite
 .domeFossil
-	ld de, PartyMonSprites2 tile 64
-	lb bc, BANK(PartyMonSprites2), 4
+	ld de, PartyMonSprites151_2 tile 88
+	lb bc, BANK(PartyMonSprites151_2), 4 ; Kabuto is visible
 .showSprite
 	ld hl, vSprites tile FUCHSIA_OMANYTE_KABUTO_FOSSIL_TILE
 	ret
@@ -493,8 +480,8 @@ ShowFossilPokemon:
 	predef_jump CopyMenuSpritesVideoDataFar
 
 GetOmanyteSpriteDataFrame2:
-	ld de, PartyMonSprites1 tile 18
-	lb bc, BANK(PartyMonSprites1), 4
+	ld de, PartyMonSprites151_2 tile 74
+	lb bc, BANK(PartyMonSprites151_2), 4 ; second Omanyte sprite
 	ld hl, vSprites tile FUCHSIA_OMANYTE_KABUTO_FOSSIL_TILE
 	ret
 

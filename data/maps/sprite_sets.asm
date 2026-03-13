@@ -68,75 +68,77 @@ SplitMapSpriteSets:
 SpriteSets:
 	table_width SPRITE_SET_LENGTH
 
-; SPRITESET_PALLET_VIRIDIAN
+; SPRITESET_PALLET_VIRIDIAN - PalletTown.asm, ViridianCity.asm, CinnabarIsland.asm, Route1.asm, Route21.asm, Route22.asm, Route2.asm (south side (y > 36)), Route20.asm (west side (complex shape, roughly x < 43))
 	db SPRITE_BLUE
 	db SPRITE_YOUNGSTER
 	db SPRITE_GIRL
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GAMBLER
-	db SPRITE_SEEL
+	db SPRITE_SEEL				; not placed anywhere
 	db SPRITE_OAK
 	db SPRITE_SWIMMER
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
-; SPRITESET_CERULEAN
+; SPRITESET_CERULEAN - CeruleanCity.asm, Route9.asm, Route24.asm, Route25.asm, Route4.asm (east side (x > 20)), Route5.asm (north side (y < 33)), Route10.asm (north side (y < 50))
 	db SPRITE_YOUNGSTER
 	db SPRITE_ROCKET
 	db SPRITE_SUPER_NERD
 	db SPRITE_HIKER
-	db SPRITE_MONSTER
+	;db SPRITE_MONSTER			; not placed anywhere
+	db SPRITE_SLOWBRO
 	db SPRITE_BLUE
 	db SPRITE_GUARD
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKE_BALL
-	db SPRITE_MONSTER2_STILL
+	db SPRITE_ABRA
 
-; SPRITESET_LAVENDER
+; SPRITESET_LAVENDER - LavenderTown.asm, Route8.asm (east side (x > 2)), Route10.asm (south side (y > 49)), Route12.asm (north side (y < 21))
 	db SPRITE_LITTLE_GIRL
 	db SPRITE_GIRL
 	db SPRITE_SUPER_NERD
 	db SPRITE_HIKER
 	db SPRITE_GAMBLER
-	db SPRITE_CAT2
+	db SPRITE_FLAREON			; Route10.asm (camera event)
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GUARD
 	db SPRITE_POKE_BALL
-	db SPRITE_QUADRUPED
+	db SPRITE_QUADRUPED			; not placed anywhere
 
-; SPRITESET_VERMILION
+; SPRITESET_VERMILION - VermilionCity.asm, Route6.asm (south side (y > 1)), Route11.asm (west side (x < 57))
 	db SPRITE_BEAUTY
 	db SPRITE_SUPER_NERD
 	db SPRITE_YOUNGSTER
 	db SPRITE_GAMBLER
-	db SPRITE_MONSTER
-	db SPRITE_FIGHTING
+	db SPRITE_MONSTER			; not placed anywhere
+	db SPRITE_MACHOP
 	db SPRITE_SAILOR
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKE_BALL
 	db SPRITE_SHADOW
 
-; SPRITESET_CELADON
+; SPRITESET_CELADON - CeladonCity.asm, Route7.asm (west side (x < 17)), Route16.asm (east side (x > 23))
 	db SPRITE_LITTLE_GIRL
-	db SPRITE_FIGHTING
+	db SPRITE_POLIWRATH
+	db SPRITE_MANKEY
 	db SPRITE_GIRL
 	db SPRITE_FISHER
 	db SPRITE_MIDDLE_AGED_MAN
 	db SPRITE_GRAMPS
-	db SPRITE_MONSTER
+	;db SPRITE_MONSTER			; not placed anywhere
 	db SPRITE_GUARD
 	db SPRITE_ROCKET
 	db SPRITE_POKE_BALL
 	db SPRITE_SNORLAX
 
-; SPRITESET_INDIGO
+; SPRITESET_INDIGO - IndigoPlateau.asm, Route23.asm
 	db SPRITE_YOUNGSTER
 	db SPRITE_GYM_GUIDE
-	db SPRITE_MONSTER
+	db SPRITE_MONSTER			; not placed anywhere
 	db SPRITE_BLUE
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
@@ -146,20 +148,20 @@ SpriteSets:
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
-; SPRITESET_SAFFRON
+; SPRITESET_SAFFRON - SaffronCity.asm, Route5.asm (south side (y > 32)), Route6.asm (north side (y < 2)), Route7.asm (east side (x > 16)), Route8.asm (west side (x < 3))
 	db SPRITE_ROCKET
 	db SPRITE_SCIENTIST
 	db SPRITE_SILPH_WORKER_M
 	db SPRITE_SILPH_WORKER_F
 	db SPRITE_GENTLEMAN
-	db SPRITE_CAT2
+	db SPRITE_JOLTEON			; Jolteon Route8.asm (camera event)
 	db SPRITE_ROCKER
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_BIRD
+	db SPRITE_PIDGEOT
 	db SPRITE_POKE_BALL
-	db SPRITE_QUADRUPED
+	db SPRITE_QUADRUPED			; not placed anywhere
 
-; SPRITESET_SILENCE_BRIDGE
+; SPRITESET_SILENCE_BRIDGE - Route13.asm, Route14.asm, Route11.asm (east side (x > 56)), Route12.asm (south side (y > 20)), Route15.asm (east side (x > 7))
 	db SPRITE_BIKER
 	db SPRITE_SUPER_NERD
 	db SPRITE_GAMBLER
@@ -167,12 +169,12 @@ SpriteSets:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BEAUTY
 	db SPRITE_FISHER
-	db SPRITE_ROCKER ; not used
-	db SPRITE_BIRD
+	db SPRITE_ROCKER			; not placed anywhere
+	db SPRITE_PIDGEOT
 	db SPRITE_POKE_BALL
 	db SPRITE_SNORLAX
 
-; SPRITESET_CYCLING_ROAD
+; SPRITESET_CYCLING_ROAD - Route17.asm, Route16.asm (west side (x < 24)), Route18.asm (west side (x < 34))
 	db SPRITE_BIKER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_SILPH_WORKER_M
@@ -185,42 +187,42 @@ SpriteSets:
 	db SPRITE_POKE_BALL
 	db SPRITE_SNORLAX
 
-; SPRITESET_FUCHSIA
-	db SPRITE_BIRD
+; SPRITESET_FUCHSIA - Route20.asm (east side (complex shape, roughly x > 61))
+	db SPRITE_BIRD				; not placed anywhere
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_FAIRY
+	db SPRITE_CHANSEY
 	db SPRITE_FISHER
 	db SPRITE_GAMBLER
-	db SPRITE_MONSTER
-	db SPRITE_SEEL
+	db SPRITE_MONSTER			; not placed anywhere
+	db SPRITE_LAPRAS
 	db SPRITE_SWIMMER
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKE_BALL
 	db SPRITE_FOSSIL
 
-; SPRITESET_FUCHSIA2
-	db SPRITE_MONSTER2
+; SPRITESET_FUCHSIA2 - Route19.asm, Route15.asm (west side (x < 8)), Route18.asm (east side (x > 33))
+	db SPRITE_SLOWPOKE
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_FAIRY
+	db SPRITE_CHANSEY
 	db SPRITE_FISHER
 	db SPRITE_GAMBLER
-	db SPRITE_MONSTER
-	db SPRITE_SEEL
+	db SPRITE_KANGASKHAN
+	db SPRITE_LAPRAS
 	db SPRITE_SWIMMER
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKE_BALL
 	db SPRITE_FOSSIL
 
-; SPRITESET_CERULEAN
+; SPRITESET_PEWTER - PewterCity.asm, Route3.asm, Route2.asm (north side (y < 37)), Route4.asm (west side (x < 21))
 	db SPRITE_YOUNGSTER
 	db SPRITE_ROCKET
 	db SPRITE_SUPER_NERD
 	db SPRITE_HIKER
-	db SPRITE_FAIRY
+	db SPRITE_JIGGLYPUFF
 	db SPRITE_BLUE
 	db SPRITE_GUARD
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKE_BALL
-	db SPRITE_MONSTER2_STILL
+	db SPRITE_MONSTER2_STILL	; not placed anywhere
 	assert_table_length NUM_SPRITE_SETS

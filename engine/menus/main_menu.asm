@@ -361,7 +361,6 @@ IF DEF(_DEBUG)
 	jr z, .normal
 	ld hl, wSpriteOptions2
 	set BIT_BACK_SPRITES, [hl]
-	set BIT_MENU_ICON_SPRITES, [hl]
 	jr SpecialEnterMap
 .normal
 ENDC

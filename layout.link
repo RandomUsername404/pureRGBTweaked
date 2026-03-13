@@ -48,7 +48,6 @@ ROMX $4
 	"Font Graphics"
 	"Battle Engine 1"
 ROMX $5
-	"NPC Sprites 2"
 	"Battle Engine 2"
 ROMX $6
 	"Maps 1"
@@ -235,6 +234,10 @@ ROMX $3F
 ROMX $40
 	org $4000
 	"Mon Icons 2"
+	"NPC Sprites 2"
+ROMX $41
+	org $4000
+	"NPC Sprites 6"
 WRAM0
 	"Audio RAM"
 	org $c100

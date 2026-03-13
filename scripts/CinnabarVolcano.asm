@@ -1815,7 +1815,7 @@ MoltresBattleAnimation:
 	call GBPalNormal
 	; make moltres open its wings
 	ld de, vNPCSprites tile $30
-	callfar FarOpenBirdSpriteWings
+	call OpenMoltresSpriteWings
 	ld hl, vNPCSprites tile $78 ; start of vram tiles for the old amber sprite
 	ld de, BurningAnimation
 	lb bc, BANK(BurningAnimation), 4
@@ -1904,6 +1904,11 @@ MoltresBattleAnimation:
 	jr nz, .loop
 	pop bc
 	ret
+	
+OpenMoltresSpriteWings:
+	ld de, MoltresSprite tile 12
+	lb bc, BANK(MoltresSprite), 4
+	jp CopyVideoData
 
 CirclePixelOffsetsY:
 	db -16, -12, -8, -4, 0, 4, 8, 12, 16, 12, 8, 4, 0, -4, -8, -12
@@ -2434,27 +2439,16 @@ MakeNPCWearLavaSuit:
 	lb bc, BANK(LavaSuitSprite), 12
 	jp CopyVideoData
 
-MakeBlaineAndProspectorWearLavaSuit:
-	ld de, vNPCSprites tile 12
-	ld hl, wSprite01StateData1PictureID
-	ld bc, wMapSpriteOriginalPictureIDs
-	call MakeNPCWearLavaSuit
-	ld de, vNPCSprites tile 24
-	ld hl, wSprite02StateData1PictureID
-	ld bc, wMapSpriteOriginalPictureIDs + 1
-	call MakeNPCWearLavaSuit
-	ld hl, wSpriteOptions2
-	bit BIT_MENU_ICON_SPRITES, [hl]
-	ret nz
-	; replace cat sprite with quadruped sprite
-	ld hl, vNPCSprites tile $2C
-	ld de, PartyMonSprites1 tile 72
-	call .copy
-	ld hl, vNPCSprites tile $2E
-	ld de, PartyMonSprites1 tile 76
-.copy
-	lb bc, BANK(PartyMonSprites1), 2
-	jp CopyVideoData
+MakeBlaineAndProspectorWearLavaSuit:  
+	ld de, vNPCSprites tile 12  
+	ld hl, wSprite01StateData1PictureID  
+	ld bc, wMapSpriteOriginalPictureIDs  
+	call MakeNPCWearLavaSuit  
+	ld de, vNPCSprites tile 24  
+	ld hl, wSprite02StateData1PictureID  
+	ld bc, wMapSpriteOriginalPictureIDs + 1  
+	call MakeNPCWearLavaSuit  
+	ret
 
 CinnabarVolcanoClearedAllBlockagesText::
 	text_far _VolcanoBlockagesGone

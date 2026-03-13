@@ -180,7 +180,7 @@ CheckDoZapdosLightningAnimation:
 	ld c, 10
 	rst _DelayFrames
 	ld de, vNPCSprites tile $0C
-	callfar FarOpenBirdSpriteWings
+	callfar FarOpenZapdosSpriteWings
 	call GBPalNormal
 	; 10 frame flicker
 	ld b, 5

@@ -29,4 +29,6 @@
 *.sn*
 *.sa*
 *.sg1
-data/pokemon/base_stats/.directory
+
+# dolphin
+*.directory

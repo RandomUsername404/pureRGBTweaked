@@ -1,0 +1,49 @@
+Based on sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "animated" by yours truly (I am NOT a graphic designer):
+ - ./diglett_digging.png (animated by me) + Diglett inside gfx/icons/menusprites2.png
+ - ./graveler_unused.png
+ - ./graveler.png
+ - abra.png
+ - arcanine.png (2 extra frames based on Growlithe were edited by yours truly. Awful back sprites by me.)
+ - cloyster.png (poorly animated by me but I'm pretty sure players won't see more than 1 of my added frames.)
+ - dragonair.png
+ - farfetched (animated by yours truly.)
+ - flareon.png
+ - jolteon.png
+ - machamp.png (uglified by me. I'm sorry.)
+ - mankey.png (uglified by me but players won't see my extra frames anyway.)
+ - nidoking.png (uglified by me.)
+ - slowbro.png (uglified by me.)
+
+From Pokémon Yellow:
+- jigglypuff.png (poorly animated by me)
+- pikachu.png
+
+From Yellow Legacy (cRz-Shadows):
+- fearow.png
+- kabuto_shell.png
+- kangaskhan.png
+- lapras.png
+- mew.png
+- nidoranf.png
+- nidoranm.png
+- nidorino.png
+- pidgeot.png (4th frame by "Blue Emerald, Chamber_, Soloo993, and others" and poorly animated by me)
+- pidgey.png
+- poliwrath.png (1st frame by "Blue Emerald, Chamber_, Soloo993, and others" and poorly edited & animated by me)
+- psyduck.png (poorly animated by me)
+- slowpoke.png
+- spearow.png
+
+From Pokémon Celebration (CreamElDudJafar):
+- ./snorlax.png + ./snorlax_rolling.png + Snorlax inside gfx/icons/menusprites2.png (second frame by me)
+- articuno.png
+- chansey.png
+- cubone.png (cubone_blinking.png & cubone_crying.png are based on this.)
+- doduo.png
+- machop.png (edited)
+- machoke.png (edited)
+- meowth.png
+- mewtwo.png (mewtwo_aura.png is based on this.)
+- moltres.png
+- wigglytuff.png
+- zapdos.png

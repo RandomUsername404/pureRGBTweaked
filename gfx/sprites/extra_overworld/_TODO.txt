@@ -1,0 +1,16 @@
+Swimming volcano boss Magmar (CinnabarVolcano & CinnabarVolcanoWest, uses SPRITE_MONSTER_SWIMMING) (see also scripts/CinnabarVolcanoWest.asm)
+BillsHouse.asm matched SPRITE_MONSTER. Leave it?
+PokemonTowerB1F.asm uses SPRITE_MONSTER_SWIMMING for GHOST_MAROWAK.
+
+Camera events:
+Flareon probably should turn to the left (frame 4).
+Route 11: Uses Scyther with GhostSprite for silhouette effect. Leaving as is. (Scyther is fast.)
+LavenderTown: Gastly as GhostSprite. Leaving as is for now because the ghost sprite looks cool.
+
+
+Frame 1: tile 0
+Frame 2: tile 4
+Frame 3: tile 8
+Frame 4: tile 12
+Frame 5: tile 16
+Frame 6: tile 20
