@@ -24,9 +24,8 @@ _CeruleanBadgeHouseMiddleAgedManVisitAnyTimeText::
 	done
 
 _CeruleanBadgeHouseBoulderBadgeText::
-	text "The ATTACK of all"
-	line "#MON increases"
-	cont "a little bit."
+	text "#MON up to L20"
+	line "will obey you."
 
 	para "It also lets you"
 	line "use FLASH any"
@@ -46,9 +45,8 @@ _CeruleanBadgeHouseCascadeBadgeText::
 	prompt
 
 _CeruleanBadgeHouseThunderBadgeText::
-	text "The SPEED of all"
-	line "#MON increases"
-	cont "a little bit."
+	text "#MON up to L40"
+	line "will obey you."
 
 	para "It also lets you"
 	line "use FLY outside"
@@ -68,9 +66,8 @@ _CeruleanBadgeHouseRainbowBadgeText::
 	prompt
 
 _CeruleanBadgeHouseSoulBadgeText::
-	text "The DEFENSE of all"
-	line "#MON increases"
-	cont "a little bit."
+	text "#MON up to L60"
+	line "will obey you."
 
 	para "It also lets you"
 	line "use SURF outside"
@@ -86,9 +83,12 @@ _CeruleanBadgeHouseMarshBadgeText::
 	prompt
 
 _CeruleanBadgeHouseVolcanoBadgeText::
-	text "Your #MON's"
-	line "SPECIAL abilities"
-	cont "increase a bit."
+	text "Some say it holds"
+	line "the memory of a"
+	cont "great eruption."
+
+	para "Others just think"
+	line "it needs a wash."
 	prompt
 
 _CeruleanBadgeHouseEarthBadgeText::

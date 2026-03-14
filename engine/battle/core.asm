@@ -1861,7 +1861,7 @@ LoadBattleMonFromParty:
 	ld bc, 1 + NUM_STATS * 2
 	rst _CopyData
 	call ApplyBurnAndParalysisPenaltiesToPlayer
-	call ApplyBadgeStatBoosts
+	;call ApplyBadgeStatBoosts					; PureRGB Tweaked: disabled badge boosts
 	ld a, $7 ; default stat modifier
 	ld b, NUM_STAT_MODS
 	ld hl, wPlayerMonAttackMod

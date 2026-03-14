@@ -46,10 +46,8 @@ _CinnabarGymBlaineMoltres::
 _CinnabarGymBlaineVolcanoBadgeInfoText::
 	text "Hah!"
 
-	para "The VOLCANOBADGE"
-	line "heightens the"
-	cont "SPECIAL abilities"
-	cont "of your #MON!"
+	para "I'm not puzzled"
+	line "by your victory!"
 
 	para "Here, you can"
 	line "have this too!"

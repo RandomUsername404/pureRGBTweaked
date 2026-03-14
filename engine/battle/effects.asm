@@ -660,7 +660,7 @@ UpdateStatDone:
 .skipAnimation
 	ld a, [de]
 	cp MINIMIZE
-	jr nz, .applyBadgeBoostsAndStatusPenalties
+	;jr nz, .applyBadgeBoostsAndStatusPenalties				; PureRGB Tweaked: disabled badge boosts
 	pop bc
 	ld a, $1
 	ld [bc], a
@@ -915,7 +915,8 @@ UpdateLoweredStatDone:
 .ApplyBadgeBoostsAndStatusPenalties
 	ldh a, [hWhoseTurn]
 	and a
-	call nz, ApplyBadgeBoostsForSpecificStat ; whenever the opponent uses a stat-down move, badge boosts get reapplied again to every stat,
+	; PureRGB Tweaked: disabled badge boosts:
+	;call nz, ApplyBadgeBoostsForSpecificStat ; whenever the opponent uses a stat-down move, badge boosts get reapplied again to every stat,
 	                              ; even to those not affected by the stat-up move (will be boosted further)
 	                             ; PureRGBnote: FIXED: badge boosts only applied to the specific stat being modified
 	ld hl, MonsStatsFellText
