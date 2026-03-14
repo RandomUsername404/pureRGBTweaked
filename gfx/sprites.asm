@@ -142,8 +142,9 @@ BlueSittingSprite:: INCBIN "gfx/sprites/champ_arena_audience/blue_sitting.2bpp"
 
 SECTION "NPC Sprites 5", ROMX
 
-QuadrupedSprite:: INCBIN "gfx/sprites/quadruped.2bpp"
+QuadrupedSprite::        INCBIN "gfx/sprites/quadruped.2bpp"
 RedTakingPictureSprite:: INCBIN "gfx/sprites/red_taking_picture.2bpp"
+RedSurfingSprite::       INCBIN "gfx/sprites/extra_overworld/red_surf.2bpp"
 
 SECTION "NPC Sprites 6", ROMX
 

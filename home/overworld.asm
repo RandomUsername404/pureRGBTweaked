@@ -1946,13 +1946,14 @@ LoadWalkingPlayerSpriteGraphics::
 	ld de, RedSprite
 	jr LoadPlayerSpriteGraphicsCommon
 
-;;;;; PureRGBnote: CHANGED: in the volcano the surfing sprite uses a rhydon instead of seel sprite, since only rhydon and hardened onix can lava surf.
+;;;;; PureRGBnote: CHANGED: in the volcano the surfing sprite uses a rhydon instead of the usual sprite, since only rhydon and hardened onix can lava surf.
 LoadSurfingPlayerSpriteGraphics::
 	ld a, [wCurMapTileset]
 	cp VOLCANO
-	ld de, SeelSprite
-	jr nz, LoadPlayerSpriteGraphicsCommon
-	ld de, MonsterSwimmingSprite
+	ld de, RedSurfingSprite                 ; PureRGB Tweaked: If not volcano, use special RedSurfing sprite from Pokemon Celebrations
+	lb bc, BANK(RedSurfingSprite), $0c
+	jr nz, LoadPlayerSpriteGraphicsArbitrary
+	ld de, MonsterSwimmingSprite            ; If volcano, use monster sprite
 	lb bc, BANK(MonsterSwimmingSprite), $0c
 	jr LoadPlayerSpriteGraphicsArbitrary
 ;;;;;
