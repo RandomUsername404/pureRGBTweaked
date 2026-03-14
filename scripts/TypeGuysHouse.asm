@@ -266,7 +266,7 @@ TypeGuysHouseTypeGuyText:
 	text_end
 
 PokemonTypeGuyList::
-	db 23
+	db 24
 	db BUTTERFREE
 	db FEAROW
 	db SANDSHREW
@@ -288,6 +288,7 @@ PokemonTypeGuyList::
 	db MR_MIME
 	db ELECTABUZZ
 	db PINSIR
+	db PORYGON
 	db KABUTO
 	db KABUTOPS
 	db -1

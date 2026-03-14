@@ -22,6 +22,7 @@ db SEAKING, WATER, WATER
 db MR_MIME, PSYCHIC_TYPE, PSYCHIC_TYPE
 db ELECTABUZZ, ELECTRIC, ELECTRIC
 db PINSIR, BUG, BUG
+db PORYGON, NORMAL, NORMAL
 db KABUTO, ROCK, WATER
 db KABUTOPS, ROCK, WATER
 db -1
@@ -92,7 +93,7 @@ CountSetBitsPreserveWRAM::
 	
 ; REVERT SOME ORIGINAL TYPINGS BY DEFAULT (PureRGB Tweaked)
 InitDefaultTypeRemapFlags:
-    ld c, 1  ; Fearow | bit index 1 = Fearow's position in OriginalTypings (engine/pokemon/remap_typings.asm)
+    ld c, 1  ; Fearow | bit index 1 = Fearow's position in OriginalTypings
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
@@ -105,6 +106,10 @@ InitDefaultTypeRemapFlags:
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
     ld c, 18 ; Mr. Mime
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
+    ld c, 22 ; Kabuto
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
