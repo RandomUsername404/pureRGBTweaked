@@ -881,11 +881,11 @@ CompareSpeed:
 
 CheckHarderAIActive:
 	ld a, [wObtainedBadges]
-	bit BIT_SOULBADGE, a
+	bit BIT_CASCADEBADGE, a    ; PureRGB Tweaked: used to be BIT_SOULBADGE
 	ret
 
 ; PureRGBnote: ADDED: encourages priority moves if the enemy's pokemon is slower than the player's and the move is neutral or super effective.
-; BUT this effect is only applied after you have the soulbadge to prevent priority moves from being spammed early game.
+; BUT this effect is only applied after you have the badge above to prevent priority moves from being spammed early game.
 ; Applies to trainers that use AI subroutine 3
 EncouragePriorityIfSlow:
 	call CheckHarderAIActive
