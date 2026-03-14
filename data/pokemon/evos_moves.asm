@@ -1894,12 +1894,16 @@ PorygonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 20, SONICBOOM
 	db 23, PSYBEAM
 	db 25, TRI_ATTACK
 	db 28, RECOVER
+	db 32, CONFUSE_RAY
 	db 35, CONVERSION
+	db 39, NIGHT_SHADE
 	db 42, PSYCHIC_M
 	db 54, SELFDESTRUCT
+	db 58, BARRAGE
 	db 0
 
 AerodactylEvosMoves:
