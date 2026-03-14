@@ -279,7 +279,7 @@ GainExperience:
 	ld [wCalculateWhoseStats], a
 	callfar CalculateModifiedStats
 	callfar ApplyBurnAndParalysisPenaltiesToPlayer
-	callfar ApplyBadgeStatBoosts
+	;callfar ApplyBadgeStatBoosts					; PureRGB Tweaked: disabled badge boosts
 	callfar DrawPlayerHUDAndHPBar
 	callfar PrintEmptyString
 	call SaveScreenTilesToBuffer1
