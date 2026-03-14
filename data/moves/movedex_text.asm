@@ -40,9 +40,9 @@ _Generic2To5HitsText::
 	text_end
 
 _CometPunchDexEntry::
-	text "Delivers a"
-	next "lightning speed"
-	next "punch."
+	text "Delivers 2 to"
+	next "3 punches at"
+	next "lightning speed."
 	; fall through
 _GenericAlwaysGoesFirstText::
 	bage "Always goes"
@@ -75,7 +75,7 @@ _FirePunchDexEntry::
 	next "fist."
 	; fall through
 _Generic10PercentBurnText::
-	bage "10% chance of"
+	bage "30% chance of"
 	next "burning the foe"
 	dex
 
@@ -84,7 +84,7 @@ _IcePunchDexEntry::
 	next "with a freezing"
 	next "fist."
 
-	bage "10% chance of"
+	bage "30% chance of"
 	next "freezing the foe"
 	next "solid"
 	dex
@@ -1114,7 +1114,7 @@ _ScreechDexEntry::
 
 	bage "This weird screech"
 	next "will echo for the"
-	next "rest of battle."
+	next "next three turns."
 
 	bage "These echoes wake"
 	next "all #MON from"

@@ -98,4 +98,5 @@ MoveEffectPointerTable:
 	dw HeatRushEffect            ; HEAT_RUSH_EFFECT
 	dw MegaPunchEffect           ; MEGA_PUNCH_EFFECT
 	dw ScreechEffect             ; SCREECH_EFFECT
+	dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT2
 	assert_table_length NUM_MOVE_EFFECTS
