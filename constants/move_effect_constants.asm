@@ -104,4 +104,5 @@
 	const HEAT_RUSH_EFFECT           ; $5F ; PureRGBnote: ADDED: new effect, 30% burn chance, and if used by a fire pokemon, 40% chance of raising special one stage
 	const MEGA_PUNCH_EFFECT          ; $60 ; PureRGBnote: ADDED: new effect, 30% flinch chance if user is FIGHTING type, 10% flinch otherwise
 	const SCREECH_EFFECT             ; $61 ; PureRGBnote: ADDED: new effect, Defense down 2, but also prevents SLEEP status for the battle. Auto-used when a pokemon who has it is put to sleep.
+	const FREEZE_SIDE_EFFECT2        ; $62 ; PureRGB Tweaked: ADDED: new effect, 30% freeze chance
 DEF NUM_MOVE_EFFECTS EQU const_value - 1

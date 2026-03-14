@@ -162,13 +162,18 @@ FreezeBurnParalyzeEffect:
 	ret z  ; return if they match
 .skipTypeComparison1
 	ld a, [wPlayerMoveEffect]
+	cp FREEZE_SIDE_EFFECT2
+	jr nz, .notFreezeSideEffect2_1
+	ld b, 30 percent + 1
+	ld a, FREEZE_SIDE_EFFECT1
+	jr .regular_effectiveness
+.notFreezeSideEffect2_1
 	cp PARALYZE_SIDE_EFFECT1 + 1
 	ld b, 10 percent + 1
 	jr c, .regular_effectiveness
 ; extra effectiveness
 	ld b, 30 percent + 1
 	ASSERT PARALYZE_SIDE_EFFECT2 - PARALYZE_SIDE_EFFECT1 == BURN_SIDE_EFFECT2 - BURN_SIDE_EFFECT1
-	ASSERT PARALYZE_SIDE_EFFECT2 - PARALYZE_SIDE_EFFECT1 == SPEED_UP_SIDE_EFFECT - FREEZE_SIDE_EFFECT1
 	sub PARALYZE_SIDE_EFFECT2 - PARALYZE_SIDE_EFFECT1 ; treat extra effective as regular from now on
 .regular_effectiveness
 	push af
@@ -229,6 +234,12 @@ FreezeBurnParalyzeEffect:
 	ret z
 .skipTypeComparison2
 	ld a, [wEnemyMoveEffect]
+	cp FREEZE_SIDE_EFFECT2
+	jr nz, .notFreezeSideEffect2_2
+	ld b, 30 percent + 1
+	ld a, FREEZE_SIDE_EFFECT1
+	jr .regular_effectiveness2
+.notFreezeSideEffect2_2
 	cp PARALYZE_SIDE_EFFECT1 + 1
 	ld b, 10 percent + 1
 	jr c, .regular_effectiveness2
@@ -750,17 +761,17 @@ StatModifierDownEffect:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .statModifierDownEffect
+;;;;;;;;;; PureRGB Tweaked: CHANGED: removed the 25% miss rate for opponents using stat down moves
 ;;;;;;;;;; PureRGBnote: ADDED: after obtaining the thunderbadge, remove the 25% miss rate for opponents using stat down moves
-	ld a, [wObtainedBadges]
-	bit BIT_THUNDERBADGE, a
-	jr nz, .statModifierDownEffect
-;;;;;;;;;;
-	CheckFlag FLAG_SKIP_NPC_STAT_DOWN_DEBUFF
-	jr nz, .statModifierDownEffect
-	; hardcoded 25% miss rate for opponents using stat down effect moves (feature in the original game) 
-	call BattleRandom
-	cp 25 percent + 1 ; chance to miss by in regular battle
-	jp c, MoveMissed
+	;ld a, [wObtainedBadges]
+	;bit BIT_THUNDERBADGE, a
+	;jr nz, .statModifierDownEffect
+	;CheckFlag FLAG_SKIP_NPC_STAT_DOWN_DEBUFF
+	;jr nz, .statModifierDownEffect
+	; hardcoded 25% miss rate for opponents using stat down effect moves (feature in the original game)
+	;call BattleRandom
+	;cp 25 percent + 1 ; chance to miss by in regular battle
+	;jp c, MoveMissed
 .statModifierDownEffect
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed

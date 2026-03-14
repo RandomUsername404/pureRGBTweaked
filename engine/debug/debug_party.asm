@@ -21,7 +21,7 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	; From https://web.archive.org/web/20000607152840/http://pocket.ign.com/news/14973.html
 	db TENTACRUEL, 99
 	db VOLCANIC_MAGMAR, 50
-	db ARMORED_MEWTWO, 99
+	db ARMORED_MEWTWO, 50
 	db HARDENED_ONIX, 99
 	db WINTER_DRAGONAIR, 99
 	db MAROWAK, 45
@@ -61,13 +61,24 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], a
 
-	; Armored Mewtwo gets Thunderbolt.
-	ld hl, wPartyMon3Moves + 1
+	; Armored Mewtwo gets Comet Punch, Ice Punch, Thunderbolt and Psychic.
+	ld hl, wPartyMon3Moves
+	ld a, COMET_PUNCH
+	ld [hli], a
+	ld a, ICE_PUNCH
+	ld [hli], a
 	ld a, THUNDERBOLT
 	ld [hli], a
 	ld [hl], PSYCHIC_M
-	ld hl, wPartyMon3PP + 1
-	ld [hl], 15
+	ld hl, wPartyMon3PP
+	ld a, 15
+	ld [hli], a  ; COMET_PUNCH
+	ld a, 15
+	ld [hli], a  ; ICE_PUNCH
+	ld a, 15
+	ld [hli], a  ; THUNDERBOLT
+	ld a, 10
+	ld [hl], a   ; PSYCHIC_M
 
 	; Hardened Onix gets Strength, REST, SCREECH and HAZE.
 	ld hl, wPartyMon4Moves
