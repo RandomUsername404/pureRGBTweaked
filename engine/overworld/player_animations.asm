@@ -70,9 +70,9 @@ EnterMapAnim::
 	call LoadPlayerSpriteGraphics
 	jr .restoreDefaultMusic
 .noDig
-	ld de, BirdSprite
+	ld de, PidgeySprite
 	ld hl, vNPCSprites
-	lb bc, BANK(BirdSprite), $0c
+	lb bc, BANK(PidgeySprite), $0c
 	call CopyVideoData
 	call LoadBirdSpriteGraphics
 	ld a, SFX_FLY
@@ -221,13 +221,13 @@ LeaveMapThroughHoleAnim:
 	jp RestoreFacingDirectionAndYScreenPos
 
 LoadBirdSpriteGraphics:
-	ld de, BirdSprite
+	ld de, PidgeySprite
 	ld hl, vNPCSprites
-	lb bc, BANK(BirdSprite), 12
+	lb bc, BANK(PidgeySprite), 12
 	call CopyVideoData
-	ld de, BirdSprite tile 12 ; moving animation sprite
+	ld de, PidgeySprite tile 12 ; moving animation sprite
 	ld hl, vNPCSprites2
-	lb bc, BANK(BirdSprite), 12
+	lb bc, BANK(PidgeySprite), 12
 	jp CopyVideoData
 
 InitFacingDirectionList:

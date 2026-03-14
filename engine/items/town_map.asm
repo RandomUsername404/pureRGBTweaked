@@ -182,8 +182,8 @@ LoadTownMap_Dig::
 ;;;;;;;;;;
 
 LoadTownMap_Fly::
-	ld de, BirdSprite
-	lb bc, BANK(BirdSprite), 12
+	ld de, PidgeySprite
+	lb bc, BANK(PidgeySprite), 12
 	xor a
 	
 LoadTownMap_Fly_Common:
