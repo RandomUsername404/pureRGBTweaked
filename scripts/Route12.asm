@@ -99,6 +99,8 @@ SnorlaxWakesUpAnimation::
 	pop bc
 	rst _DelayFrame
 	rst _DelayFrame
+	rst _DelayFrame
+	rst _DelayFrame
 	dec b
 	jr nz, .loop
 	ret
