@@ -351,6 +351,7 @@ INCLUDE "engine/battle/animations.asm"
 INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
+INCLUDE "engine/overworld/field_moves.asm" ; PureRGB Tweaked : overworld HM use
 
 SECTION "Wild Mons", ROMX
 ; PureRGBnote: MOVED: moved from bank3

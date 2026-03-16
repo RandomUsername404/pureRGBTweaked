@@ -17,6 +17,9 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	ld a, [wHiddenObjectFunctionRomBank]
 	call SetCurBank
 	call hl_caller
+	ld a, [wDoNotWaitForButtonPressAfterDisplayingText]
+	and a
+	jr z, .nothingFound  ; item already collected, allow TryFieldMove
 	xor a
 	jr .done
 .hiddenObjectNotFound

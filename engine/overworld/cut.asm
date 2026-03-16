@@ -38,9 +38,10 @@ UsedCut:
 	call GetPartyMonName
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
-	call GBPalWhiteOutWithDelay3
+	call GBPalWhiteOut            ; PureRGB Tweaked: shortened white screen when using CUT. was "call GBPalWhiteOutWithDelay3"
 	call ClearSprites
 	call RestoreScreenTilesAndReloadTilePatterns
+	call ReloadMapData
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
 	call Delay3
@@ -50,24 +51,32 @@ UsedCut:
 	call Delay3
 	xor a
 	ldh [hWY], a
+	; fall through
+
+Cut2::
 	ld hl, UsedCutText
 	rst _PrintText
 	call LoadScreenTilesFromBuffer2
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
-	call DisableSpriteUpdates
+	ld a, $ff
+	ld [wUpdateSpritesEnabled], a
 	call InitCutAnimOAM
 	ld de, CutTreeBlockSwaps
 	call ReplaceTreeTileBlock
 	call RedrawMapView
-	farcall AnimCut
-	call EnableSpriteUpdates
+	call .common
+	jp RedrawMapView
+.common
 	ld a, SFX_CUT
 	rst _PlaySound
+	farcall AnimCut
+	ld a, $1
+	ld [wUpdateSpritesEnabled], a
 	ld a, $90
 	ldh [hWY], a
 	call UpdateSprites
-	jp RedrawMapView
+	ret
 
 UsedCutText:
 	text_far _UsedCutText

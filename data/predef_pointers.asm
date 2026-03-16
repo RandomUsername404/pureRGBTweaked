@@ -110,3 +110,4 @@ PredefPointers::
 	add_predef OaksAideScript
 	add_predef PickUpItemQuantity
 	add_predef FarLoadTownMapEntry
+	add_predef TryFieldMove
