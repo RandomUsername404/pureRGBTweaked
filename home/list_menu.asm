@@ -126,6 +126,11 @@ DisplayListMenuIDLoop::
 	call GetItemPrice
 	pop hl
 	ld a, [wListMenuID]
+	
+	; needed to make the move reminder/deleter from Red++ work
+	cp a, MOVESLISTMENU
+	jr z, .skipStoringItemName
+
 	cp ITEMLISTMENU
 	jr nz, .skipGettingQuantity
 	inc hl
@@ -150,13 +155,14 @@ DisplayListMenuIDLoop::
 .storeChosenEntry ; store the menu entry that the player chose and return
 	ld de, wNameBuffer
 	call CopyToStringBuffer
+.skipStoringItemName ; needed to make the move reminder/deleter from Red++ work
 .skipGetName
 	ld a, CHOSE_MENU_ITEM
 	ld [wMenuExitMethod], a
 	ld a, [wCurrentMenuItem]
 	ld [wChosenMenuItem], a
 	xor a
-	ldh [hJoy7], a ; joypad state update flag
+	ld [hJoy7], a ; joypad state update flag
 	ld [wListMenuNewFlags], a ; PureRGBnote: ADDED: once we pick a list entry, we consider TM text not shown so we will re-render it after finishing
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl] ; turn on letter printing delay

@@ -114,7 +114,6 @@ FuchsiaBillsGrandpasHouse_Blocks: INCBIN "maps/FuchsiaBillsGrandpasHouse.blk"
 MrPsychicsHouse_Blocks: INCBIN "maps/MrPsychicsHouse.blk"
 
 
-
 SECTION "Maps 4", ROMX
 
 INCLUDE "scripts/CinnabarIsland.asm"
@@ -266,6 +265,12 @@ INCLUDE "data/maps/headers/BillsGarden.asm"
 INCLUDE "scripts/BillsGarden.asm"
 INCLUDE "data/maps/objects/BillsGarden.asm"
 BillsGarden_Blocks: INCBIN "maps/BillsGarden.blk"
+
+; PureRGB Tweaked: Move Reminder/Deleter files
+INCLUDE "data/maps/headers/FuchsiaMoveReminderHouse.asm"
+INCLUDE "scripts/FuchsiaMoveReminderHouse.asm"
+INCLUDE "data/maps/objects/FuchsiaMoveReminderHouse.asm"
+FuchsiaMoveReminderHouse_Blocks: INCBIN "maps/FuchsiaMoveReminderHouse.blk"
 
 
 SECTION "Maps 5", ROMX

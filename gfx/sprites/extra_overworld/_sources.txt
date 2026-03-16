@@ -48,3 +48,6 @@ From Pokémon Celebrations (CreamElDudJafar):
 - red_surf.png
 - wigglytuff.png
 - zapdos.png
+
+From Pokémon TCG 2:
+- dr_mason.png (edited)

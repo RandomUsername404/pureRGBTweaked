@@ -141,6 +141,7 @@ SpriteSheetPointerTable:
 	overworld_sprite ZapdosSprite, 12                 ; SPRITE_ZAPDOS
 	; PureRGB Tweaked: new "walking" overworld sprites (no walk animation)
 	overworld_sprite DragonairSprite, 12              ; SPRITE_DRAGONAIR
+	overworld_sprite DrMasonSprite, 12                ; SPRITE_DR_MASON
 	overworld_sprite FlareonSprite, 12                ; SPRITE_FLAREON
 	overworld_sprite JolteonSprite, 12                ; SPRITE_JOLTEON
 	overworld_sprite MachampSprite, 12                ; SPRITE_MACHAMP

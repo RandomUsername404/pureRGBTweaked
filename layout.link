@@ -57,7 +57,6 @@ ROMX $6
 ROMX $7
 	"Maps 3"
 	"Maps 4"
-	"Hidden Objects 1"
 ROMX $8
 	"Sound Effect Headers 2"
 	"Music Headers 2"
@@ -225,6 +224,7 @@ ROMX $3C
 	"NPC Sprites 5"
 ROMX $3D
 	"newCode3"
+	"Hidden Objects 1"
 ROMX $3E
 	org $4000
 	"Party Mon Sprites 151 Gfx 1"

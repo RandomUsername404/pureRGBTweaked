@@ -13,9 +13,9 @@ FuchsiaGoodRodHouse_Object:
 	warp_event  2,  4, LAST_MAP, 9
 	warp_event  2, 11, LAST_MAP, 8
 	warp_event  3, 11, LAST_MAP, 8
-	warp_event 16, 11, LAST_MAP, 1
-	warp_event 17, 11, LAST_MAP, 1
-	warp_event 21,  9, LAST_MAP, 1
+	warp_event 16, 11, LAST_MAP, 2
+	warp_event 17, 11, LAST_MAP, 2
+	warp_event 21,  9, LAST_MAP, 2
 
 	def_bg_events
 	bg_event  7, 11, TEXT_FUCHSIAGOODRODHOUSE_GARBAGE
