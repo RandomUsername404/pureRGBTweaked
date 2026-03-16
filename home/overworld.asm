@@ -1205,8 +1205,8 @@ CollisionCheckOnLand::
 	jr c, .collision
 	call CheckTilePassable
 	jr nc, .noCollision
-	callfar CheckForAutoSurf ; PureRGBnote: ADDED: "collision check" that will automatically start up surfing if surf was previously activated.
-	jr nc, .noCollision
+	;callfar CheckForAutoSurf ; PureRGB Tweaked: DISABLED: "collision check" that will automatically start up surfing if surf was previously activated.
+	;jr nc, .noCollision
 .collision
 	ld a, [wChannelSoundIDs + CHAN5]
 	cp SFX_COLLISION ; check if collision sound is already playing
