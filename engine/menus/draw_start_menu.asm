@@ -103,3 +103,41 @@ PrintStartMenuItem:
 	ld de, SCREEN_WIDTH * 2
 	add hl, de
 	ret
+	
+; PureRGB Tweaked: Show descriptions in the menu, hinting at a couple of PureRGB features.
+DrawMenuAccount::
+; check for link connection - don't display anything in link mode
+	ld a, [wStatusFlags4]
+	bit BIT_LINK_CONNECTED, a
+	ret nz
+
+; prepare the background
+	hlcoord 0, 17
+	lb bc, 1, 20
+	call ClearScreenArea
+
+; determine which table to use ; PureRGB Tweaked: we're down to one anyway
+	ld de, StartMenuDescriptionTable
+
+.check_pokedex
+	CheckEvent EVENT_GOT_POKEDEX
+	ld a, [wCurrentMenuItem]
+	jr nz, .got_table
+; shift one index forwards to reflect the fact that
+; we haven't gotten a dex yet
+	inc a
+
+.got_table
+	add a
+	ld l, a
+	ld h, 0
+	add hl, de
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+
+; finally, display the string.
+	hlcoord 0, 17
+	jp PlaceString
+
+INCLUDE "data/start_menu_descriptions.asm"

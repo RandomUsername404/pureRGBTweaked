@@ -12,6 +12,7 @@ RedisplayStartMenu::
 	call LoadGBPal ; shinpokerednote: gbcnote: moved to redisplaystartmenu for better visual effect
 	call UpdateSprites
 .loop
+	farcall DrawMenuAccount ; PureRGB Tweaked: ADDED: Show descriptions in the menu
 	call HandleMenuInput
 	ld b, a
 .checkIfUpPressed
