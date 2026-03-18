@@ -106,7 +106,7 @@ SpriteSets:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GUARD
 	db SPRITE_POKE_BALL
-	db SPRITE_QUADRUPED			; not placed anywhere
+	db SPRITE_JOLTEON			; Route8.asm (static)
 
 ; SPRITESET_VERMILION - VermilionCity.asm, Route6.asm (south side (y > 1)), Route11.asm (west side (x < 57))
 	db SPRITE_BEAUTY
@@ -154,7 +154,7 @@ SpriteSets:
 	db SPRITE_SILPH_WORKER_M
 	db SPRITE_SILPH_WORKER_F
 	db SPRITE_GENTLEMAN
-	db SPRITE_JOLTEON			; Jolteon Route8.asm (camera event)
+	db SPRITE_JOLTEON			; Jolteon (camera event)
 	db SPRITE_ROCKER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_PIDGEOT
