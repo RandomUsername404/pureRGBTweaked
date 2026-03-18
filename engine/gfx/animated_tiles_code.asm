@@ -133,13 +133,17 @@ AnimateFlowerTile::
 	ld de, vTileset tile $03
 
 	ld a, [wMovingBGTilesCounter2]
-	and 3
-	cp 2
-	ld hl, FlowerTile1
-	jr c, AnimateCopyTile
-	ld hl, FlowerTile2
+	;and 3
+	;cp 2
+	;ld hl, FlowerTile1
+	;jr c, AnimateCopyTile
+	;ld hl, FlowerTile2
+	;jr z, AnimateCopyTile
+	;ld hl, FlowerTile3
+	and 1
+	ld hl, FlowerTileJP
 	jr z, AnimateCopyTile
-	ld hl, FlowerTile3
+	ld hl, FlowerTileJP + 16 ; second 8x8 tile
 AnimateCopyTile:
 	ld c, 16
 .loop
@@ -381,9 +385,10 @@ Seafoam1FAnimatedTiles:
 ;	dec a
 ;	jr nz ,.loop1
 
-FlowerTile1: INCBIN "gfx/tilesets/flower/flower1.2bpp"
-FlowerTile2: INCBIN "gfx/tilesets/flower/flower2.2bpp"
-FlowerTile3: INCBIN "gfx/tilesets/flower/flower3.2bpp"
+FlowerTileJP: INCBIN "gfx/tilesets/tilesets_rg/flower.2bpp"
+;FlowerTile1: INCBIN "gfx/tilesets/flower/flower1.2bpp"
+;FlowerTile2: INCBIN "gfx/tilesets/flower/flower2.2bpp"
+;FlowerTile3: INCBIN "gfx/tilesets/flower/flower3.2bpp"
 
 LavaBubble1: INCBIN "gfx/tilesets/lava/lava1.2bpp"
 LavaBubble2: INCBIN "gfx/tilesets/lava/lava2.2bpp"
