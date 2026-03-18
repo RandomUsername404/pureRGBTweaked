@@ -17,8 +17,8 @@ CeruleanCaveB1FWildMons:
 	db 65, GYARADOS
 	db 65, GYARADOS
 	db 64, GYARADOS
-	db 66, GOLDBAT
-	db 65, GOLDBAT
+	db 66, GOLBAT
+	db 65, GOLBAT
 	db 55, SLOWBRO
 	db 65, SLOWBRO
 	db 58, GOLDUCK
