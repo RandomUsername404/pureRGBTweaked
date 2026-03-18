@@ -845,7 +845,7 @@ DEF FLAG_JIGGLE_TOGGLE EQU const_value
 	const EVENT_BEAT_ROUTE_24_TRAINER_5
 	const_skip
 	const EVENT_NUGGET_REWARD_AVAILABLE
-	; pureRGBnote: 4 bits of unused event space
+	const EVENT_GOT_CHARMANDER_ROUTE_24 ; PureRGB Tweaked: Added GIFT Charmander NPC
 
 ; Route 25 events
 	const_next $54E

@@ -94,6 +94,7 @@ Route24_TextPointers:
 	dw_const Route24Youngster2Text,    TEXT_ROUTE24_YOUNGSTER2
 	dw_const PickUpItemText,           TEXT_ROUTE24_ITEM1
 	dw_const PickUpItemText,           TEXT_ROUTE24_ITEM2 ; PureRGBnote: ADDED: new item on this route.
+	dw_const Route24CooltrainerM4Text, TEXT_ROUTE24_COOLTRAINER_M4 ; PureRGB Tweaked: Added GIFT Charmander NPC
 	dw_const DoRet,                    TEXT_ROUTE24_ABRA
 
 Route24TrainerHeaders:
@@ -287,4 +288,53 @@ Route24Youngster2EndBattleText:
 
 Route24Youngster2AfterBattleText:
 	text_far _Route24Youngster2AfterBattleText
+	text_end
+
+; PureRGB Tweaked: Added GIFT Charmander NPC
+Route24CooltrainerM4Text:
+	text_asm
+	CheckEvent EVENT_GOT_CHARMANDER_ROUTE_24
+	jr nz, .asm_Damian4
+	ld hl, Route24Text_Damian1
+	rst _PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .asm_Damian3
+	lb bc, CHARMANDER, 13
+	call GivePokemon
+	jp nc, TextScriptEnd
+	ld a, [wAddedToParty]
+	and a
+	call z, WaitForTextScrollButtonPress
+	ld hl, Route24Text_Damian2
+	rst _PrintText
+	SetEvent EVENT_GOT_CHARMANDER_ROUTE_24
+	rst TextScriptEnd
+
+.asm_Damian3
+	ld hl, Route24Text_Damian3
+	jr .asm_DamianBye
+
+.asm_Damian4
+	ld hl, Route24Text_Damian4
+.asm_DamianBye
+	rst _PrintText
+	rst TextScriptEnd
+
+Route24Text_Damian1:
+	text_far _Route24DamianText1
+	text_end
+
+Route24Text_Damian2:
+	text_far _Route24DamianText2
+	text_waitbutton
+	text_end
+
+Route24Text_Damian3:
+	text_far _Route24DamianText3
+	text_end
+
+Route24Text_Damian4:
+	text_far _Route24DamianText4
 	text_end

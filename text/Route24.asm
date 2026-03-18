@@ -58,3 +58,30 @@ _Route24CooltrainerM2BattleText::
 	text "I saw your feat"
 	line "from the grass!"
 	done
+
+; PureRGB Tweaked: Added GIFT Charmander NPC
+_Route24DamianText1::
+	text "I should release"
+	line "my CHARMANDER"
+	cont "because it's"
+	cont "weak!"
+
+	para "If you want it,"
+	line "it's yours."
+	done
+
+_Route24DamianText2::
+	text "Good luck with"
+	line "that.@"
+	text_end
+
+_Route24DamianText3::
+	text "Oh<...> I'd better"
+	line "release it then."
+	done
+
+_Route24DamianText4::
+	text "How's that weak"
+	line "old CHARMANDER"
+	cont "doing?"
+	done
