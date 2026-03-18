@@ -3,16 +3,16 @@ SeafoamIslandsB3FWildMons:
 	db 31, JYNX
 	db 31, JYNX
 	db 33, JYNX
-	db 35, JYNX
+	db 39, KINGLER
 	db 29, DEWGONG
 	db 31, DEWGONG
-	db 31, KINGLER
+	db 40, JYNX
 	db 29, KINGLER
 	db 39, VAPOREON
 	db 37, VAPOREON
 	end_grass_wildmons
 
-	def_water_wildmons 10 ; encounter rate
+	def_water_wildmons 5 ; encounter rate
 	db 30, LAPRAS
 	db 36, DRAGONAIR
 	db 33, DRAGONAIR

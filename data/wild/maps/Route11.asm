@@ -1,10 +1,10 @@
 Route11WildMons:
-	def_grass_wildmons 20 ; encounter rate
+	def_grass_wildmons 15 ; encounter rate
 	db 14, SPEAROW
 	db 15, DROWZEE
 	db 13, PIDGEY
-	db 10, DROWZEE
-	db 13, DROWZEE
+	db 18, SANDSHREW
+	db 17, EKANS
 	db 14, DROWZEE
 	db 15, SCYTHER
 	db 16, SCYTHER

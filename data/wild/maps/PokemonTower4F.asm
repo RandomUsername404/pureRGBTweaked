@@ -7,9 +7,9 @@ PokemonTower4FWildMons:
 	db 23, GASTLY
 	db 24, HAUNTER
 	db 25, HAUNTER
-	db 20, CUBONE
+	db 20, HAUNTER
 	db 22, CUBONE
-	db 28, GASTLY
+	db 28, PORYGON
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

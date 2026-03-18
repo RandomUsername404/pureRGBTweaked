@@ -1,15 +1,15 @@
 Route4WildMons:
-	def_grass_wildmons 30 ; encounter rate
+	def_grass_wildmons 20 ; encounter rate
 	db 10, POLIWAG
 	db 10, SANDSHREW
 	db  8, POLIWAG
-	db  6, SANDSHREW
-	db  8, SANDSHREW
+	db  6, FARFETCHD
+	db 11, EKANS
 	db 10, SANDSHREW
-	db 12, SQUIRTLE
-	db 12, SQUIRTLE
-	db  8, PIDGEOTTO
 	db 12, PIDGEOTTO
+	db  8, PIDGEOTTO
+	db  8, CLEFAIRY
+	db 12, SQUIRTLE
 	end_grass_wildmons
 
 	def_water_wildmons 4 ; encounter rate

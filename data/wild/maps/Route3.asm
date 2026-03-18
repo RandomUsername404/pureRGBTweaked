@@ -1,7 +1,7 @@
 Route3WildMons:
-	def_grass_wildmons 40 ; encounter rate
-	db  6, VULPIX
-	db  5, EXEGGCUTE
+	def_grass_wildmons 20 ; encounter rate
+	db  9, ODDISH
+	db  5, RATTATA
 	db  7, MANKEY
 	db  6, EXEGGCUTE
 	db  7, EXEGGCUTE

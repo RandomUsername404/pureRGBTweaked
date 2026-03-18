@@ -4,11 +4,11 @@ MtMoonB2FWildMons:
 	db  9, GEODUDE
 	db 10, ZUBAT
 	db 10, GEODUDE
-	db 7, RHYHORN
+	db 7,  PARAS
 	db 10, PARAS
-	db 12, PARAS
-	db 8, RHYHORN
-	db 12, CLEFAIRY
+	db 12, ZUBAT
+	db 8,  RHYHORN
+	db 12, RHYHORN
 	db 12, CLEFAIRY
 	end_grass_wildmons
 

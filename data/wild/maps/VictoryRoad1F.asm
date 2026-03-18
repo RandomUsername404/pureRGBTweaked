@@ -8,8 +8,8 @@ VictoryRoad1FWildMons:
 	db 50, NIDOKING
 	db 49, PRIMEAPE
 	db 41, ONIX
-	db 42, ONIX
-	db 43, ONIX
+	db 48, HITMONCHAN
+	db 48, HITMONCHAN
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

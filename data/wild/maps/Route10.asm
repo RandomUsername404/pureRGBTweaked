@@ -1,5 +1,5 @@
 Route10WildMons:
-	def_grass_wildmons 30 ; encounter rate
+	def_grass_wildmons 15 ; encounter rate
 	db 16, VOLTORB
 	db 16, MAGNEMITE
 	db 17, VOLTORB
@@ -8,8 +8,8 @@ Route10WildMons:
 	db 19, MAGNEMITE
 	db 17, VOLTORB
 	db 18, KOFFING
-	db 20, MAGNEMITE
-	db 21, MAGNEMITE
+	db 19, MACHOP
+	db 20, MACHOP
 	end_grass_wildmons
 
 	def_water_wildmons 7 ; encounter rate

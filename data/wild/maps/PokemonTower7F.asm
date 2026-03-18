@@ -9,7 +9,7 @@ PokemonTower7FWildMons:
 	db 22, MAROWAK
 	db 24, MAROWAK
 	db 29, HAUNTER
-	db 30, HAUNTER
+	db 32, GENGAR
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

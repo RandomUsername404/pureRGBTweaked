@@ -7,7 +7,7 @@ PokemonMansionB1FWildMons:
 	db 55, DITTO
 	db 42, ALAKAZAM
 	db 56, PORYGON
-	db 58, PORYGON
+	db 40, MAGMAR
 	db 60, PORYGON
 	db 50, DITTO
 	end_grass_wildmons

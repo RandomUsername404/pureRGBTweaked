@@ -3,13 +3,13 @@ SeafoamIslandsB1FWildMons:
 	db 30, SLOWPOKE
 	db 26, SEEL
 	db 25, SEEL
-	db 32, WARTORTLE
-	db 24, WARTORTLE
 	db 25, KRABBY
 	db 30, KRABBY
 	db 28, SLOWBRO
 	db 38, DEWGONG
-	db 37, DEWGONG
+	db 36, JYNX
+	db 35, JYNX
+	db 36, WARTORTLE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

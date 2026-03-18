@@ -12,7 +12,7 @@ SeaRoutesWildMons:
 	db 120, MISSINGNO
 	end_grass_wildmons
 
-	def_water_wildmons 7 ; encounter rate
+	def_water_wildmons 5 ; encounter rate
 	db 32, TENTACOOL
 	db 30, TENTACOOL
 	db 28, HORSEA

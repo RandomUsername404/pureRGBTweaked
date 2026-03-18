@@ -8,8 +8,8 @@ VictoryRoad2FWildMons:
 	db 50, POLIWRATH
 	db 41, GOLEM
 	db 40, DUGTRIO
-	db 40, DUGTRIO
-	db 43, DUGTRIO
+	db 48, HITMONLEE
+	db 48, HITMONLEE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

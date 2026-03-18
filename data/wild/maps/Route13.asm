@@ -1,5 +1,5 @@
 Route13WildMons:
-	def_grass_wildmons 40 ; encounter rate
+	def_grass_wildmons 15 ; encounter rate
 	db 28, BEEDRILL
 	db 27, BUTTERFREE
 	db 29, BUTTERFREE
@@ -12,15 +12,15 @@ Route13WildMons:
 	db 38, TANGELA
 	end_grass_wildmons
 
-	def_water_wildmons 7 ; encounter rate
+	def_water_wildmons 3 ; encounter rate
 	db 32, MAGIKARP
 	db 30, STARYU
 	db 28, HORSEA
 	db 30, STARYU
 	db 31, HORSEA
 	db 30, STARYU
-	db 35, MAGIKARP
+	db 30, SLOWPOKE
 	db 25, GYARADOS
 	db 32, GYARADOS
-	db 36, GYARADOS
+	db 36, SLOWBRO
 	end_water_wildmons

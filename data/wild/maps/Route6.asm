@@ -1,14 +1,14 @@
 Route6WildMons:
-	def_grass_wildmons 25 ; encounter rate
+	def_grass_wildmons 15 ; encounter rate
 	db 13, SLOWPOKE
 	db 13, PSYDUCK
-	db 15, PSYDUCK
+	db 14, ABRA
 	db 10, PIKACHU
-	db 12, KAKUNA
+	db 16, LICKITUNG
 	db 15, SLOWPOKE
 	db 16, SLOWPOKE
 	db 16, PSYDUCK
-	db 14, KANGASKHAN
+	db 17, MAGNEMITE
 	db 16, KANGASKHAN
 	end_grass_wildmons
 

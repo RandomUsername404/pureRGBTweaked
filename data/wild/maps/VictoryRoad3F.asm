@@ -6,10 +6,10 @@ VictoryRoad3FWildMons:
 	db 50, MAROWAK
 	db 40, MACHAMP
 	db 40, MACHAMP
-	db 50, MACHAMP
-	db 41, GOLBAT
-	db 42, MAROWAK
-	db 45, MAROWAK
+	db 48, RHYHORN
+	db 48, HITMONCHAN
+	db 48, HITMONLEE
+	db 48, HITMONLEE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

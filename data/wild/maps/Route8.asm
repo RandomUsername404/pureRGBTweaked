@@ -1,15 +1,15 @@
 Route8WildMons:
-	def_grass_wildmons 50 ; encounter rate
-	db 21, MR_MIME
-	db 22, MR_MIME
-	db 23, MR_MIME
-	db 19, KADABRA
-	db 20, KADABRA
+	def_grass_wildmons 15 ; encounter rate
+	db 20, GROWLITHE
+	db 22, PIDGEY
+	db 20, RATTATA
+	db 17, ABRA
+	db 18, ABRA
 	db 24, MR_MIME
 	db 23, HYPNO
-	db 24, HYPNO
-	db 15, KADABRA
-	db 18, KADABRA
+	db 24, JIGGLYPUFF
+	db 24, KADABRA
+	db 28, KADABRA
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

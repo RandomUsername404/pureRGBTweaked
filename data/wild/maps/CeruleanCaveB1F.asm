@@ -4,12 +4,12 @@ CeruleanCaveB1FWildMons:
 	db 85, CHANSEY
 	db 80, CHANSEY
 	db 85, CHANSEY
-	db 90, CHANSEY
+	db 90, PARASECT
 	db 99, CHANSEY
-	db 99, CHANSEY
+	db 99, KADABRA
 	db 90, CHANSEY
 	db 80, CLEFABLE
-	db 85, CLEFABLE
+	db 85, ALAKAZAM
 	end_grass_wildmons
 
 	def_water_wildmons 7 ; encounter rate
@@ -17,10 +17,10 @@ CeruleanCaveB1FWildMons:
 	db 65, GYARADOS
 	db 65, GYARADOS
 	db 64, GYARADOS
-	db 66, GYARADOS
-	db 65, GYARADOS
-	db 55, GYARADOS
-	db 65, GYARADOS
-	db 58, GYARADOS
-	db 59, GYARADOS
+	db 66, GOLDBAT
+	db 65, GOLDBAT
+	db 55, SLOWBRO
+	db 65, SLOWBRO
+	db 58, GOLDUCK
+	db 59, GOLDUCK
 	end_water_wildmons

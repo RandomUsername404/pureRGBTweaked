@@ -1,9 +1,9 @@
 Route2WildMons:
-	def_grass_wildmons 40 ; encounter rate
+	def_grass_wildmons 25 ; encounter rate
 	db  3, RATTATA
 	db  3, PIDGEY
-	db  4, EKANS
-	db  4, GROWLITHE
+	db  6, NIDORAN_F
+	db  6, NIDORAN_M
 	db  5, SPEAROW
 	db  3, CATERPIE
 	db  2, GROWLITHE
