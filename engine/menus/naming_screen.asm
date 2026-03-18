@@ -479,15 +479,15 @@ PrintNamingText:
 	ld [wMonPartySpriteSpecies], a
 	push af
 	farcall LoadNicknameMonSprite ; mechanicalpennote: CHANGED: new code for choosing which sprite displays on the nicknaming menus
+	ld a, %11100100 ; 3210 (4 colors for party sprites)
+	ldh [rBGP], a
+	ld a, %11100100 ; 3210
+	call UpdatePal
 	pop af
 	ld [wNamedObjectIndex], a
 	call GetMonName
 	hlcoord 4, 1
 	call PlaceString
-	; PureRGBnote: OPTIMIZED: don't need this blank character anymore in english
-	;ld hl, $1
-	;add hl, bc
-	;ld [hl], "の" ; leftover from Japanese version; blank tile $c9 in English 
 	hlcoord 1, 3
 	ld de, NicknameTextString
 	jr .placeString
