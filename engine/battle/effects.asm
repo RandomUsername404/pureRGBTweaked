@@ -660,7 +660,7 @@ UpdateStatDone:
 .skipAnimation
 	ld a, [de]
 	cp MINIMIZE
-	;jr nz, .applyBadgeBoostsAndStatusPenalties				; PureRGB Tweaked: disabled badge boosts
+	jr nz, .applyBadgeBoostsAndStatusPenalties ; PureRGB Tweaked: badge boosts disabled but jump still needed
 	pop bc
 	ld a, $1
 	ld [bc], a
@@ -671,7 +671,8 @@ UpdateStatDone:
 .applyBadgeBoostsAndStatusPenalties
 	ldh a, [hWhoseTurn]
 	and a
-	call z, ApplyBadgeBoostsForSpecificStat ; whenever the player uses a stat-up move, badge boosts get reapplied again to every stat,
+	; PureRGB Tweaked: disabled badge boosts
+	;call z, ApplyBadgeBoostsForSpecificStat ; whenever the player uses a stat-up move, badge boosts get reapplied again to every stat,
 	                             ; even to those not affected by the stat-up move (will be boosted further)
 	                             ; PureRGBnote: FIXED: badge boosts only applied to the specific stat being modified
 	ld hl, MonsStatsRoseText
