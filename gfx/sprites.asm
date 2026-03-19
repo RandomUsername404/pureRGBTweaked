@@ -152,6 +152,7 @@ SECTION "NPC Sprites 6", ROMX
 AbraSprite::            INCBIN "gfx/sprites/extra_overworld/abra.2bpp"
 ArcanineSprite::        INCBIN "gfx/sprites/extra_overworld/arcanine.2bpp"
 ArticunoSprite::        INCBIN "gfx/sprites/extra_overworld/articuno.2bpp"
+BulbasaurSprite::       INCBIN "gfx/sprites/extra_overworld/bulbasaur.2bpp"
 ChanseySprite::         INCBIN "gfx/sprites/extra_overworld/chansey.2bpp"
 CuboneSprite::          INCBIN "gfx/sprites/extra_overworld/cubone.2bpp"
 CuboneBlinkingSprite::  INCBIN "gfx/sprites/extra_overworld/cubone_blinking.2bpp"

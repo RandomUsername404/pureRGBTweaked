@@ -80,6 +80,7 @@ DEF SHOW EQU $15
 	const HS_VIRIDIAN_GYM_GIOVANNI         ; 32
 	const HS_VIRIDIAN_GYM_ITEM             ; 33 X
 	const HS_OLD_AMBER                     ; 34
+	const HS_CERULEAN_BULBASAUR            ; PureRGB Tweaked: Added GIFT Bulbasaur NPC
 	const HS_CERULEAN_CAVE_1F_ITEM_1       ; 35 X
 	const HS_CERULEAN_CAVE_1F_ITEM_2       ; 36 X
 	const HS_CERULEAN_CAVE_1F_ITEM_3       ; 37 X

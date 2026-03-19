@@ -1,6 +1,6 @@
 Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "animated" by yours truly (I am NOT a graphic designer):
- - ./diglett_digging.png (animated by me) + Diglett inside gfx/icons/menusprites2.png
- - ./graveler_unused.png
+ - ../diglett_digging.png (animated by me) + Diglett inside gfx/icons/menusprites2.png
+ - ../graveler_unused.png
  - ./graveler.png (color swapped)
  - abra.png
  - arcanine.png (2 extra frames based on Growlithe were edited by yours truly. Awful back sprites by me.)
@@ -15,6 +15,7 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
  - slowbro.png (uglified by me.)
 
 From Pokémon Yellow:
+- bulbasaur.png
 - jigglypuff.png (poorly animated by me)
 - pikachu.png
 
@@ -35,7 +36,7 @@ From Yellow Legacy (cRz-Shadows):
 - spearow.png
 
 From Pokémon Celebrations (CreamElDudJafar):
-- ./snorlax.png + ./snorlax_rolling.png + Snorlax inside gfx/icons/menusprites2.png (second frame by me)
+- ../snorlax.png + ../snorlax_rolling.png + Snorlax inside gfx/icons/menusprites2.png (second frame by me)
 - articuno.png
 - chansey.png
 - cubone.png (cubone_blinking.png & cubone_crying.png are based on this.)
@@ -49,5 +50,5 @@ From Pokémon Celebrations (CreamElDudJafar):
 - wigglytuff.png
 - zapdos.png
 
-From Pokémon TCG 2:
+From Pokémon TCG GB2:
 - dr_mason.png (edited)

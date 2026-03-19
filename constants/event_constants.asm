@@ -134,8 +134,9 @@ DEF CUSTOM_BALL_UNLOCK_FLAGS_START EQU const_value
 	const EVENT_GOT_TM11
 	const EVENT_BEAT_MISTY
 	const EVENT_GOT_BICYCLE
+	const EVENT_GOT_BULBASAUR_IN_CERULEAN ; PureRGB Tweaked: Added GIFT Bulbasaur NPC
 
-	; pureRGBnote: ~46 bits of unused event space (large)
+	; pureRGB Tweaked note: ~45 bits of unused event space (large)
 
 ; Lavender Town events
 	const_next $F0 - 2 ; $EE
@@ -846,6 +847,8 @@ DEF FLAG_JIGGLE_TOGGLE EQU const_value
 	const_skip
 	const EVENT_NUGGET_REWARD_AVAILABLE
 	const EVENT_GOT_CHARMANDER_ROUTE_24 ; PureRGB Tweaked: Added GIFT Charmander NPC
+	
+	; pureRGB Tweaked note: 3 bits of unused event space
 
 ; Route 25 events
 	const_next $54E

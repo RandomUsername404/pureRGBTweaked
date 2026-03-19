@@ -60,7 +60,7 @@ _Route24CooltrainerM2BattleText::
 	done
 
 ; PureRGB Tweaked: Added GIFT Charmander NPC
-_Route24DamianText1::
+_Route24DamianOfferText::
 	text "I should release"
 	line "my CHARMANDER"
 	cont "because it's"
@@ -70,17 +70,17 @@ _Route24DamianText1::
 	line "it's yours."
 	done
 
-_Route24DamianText2::
+_Route24DamianByeText::
 	text "Good luck with"
 	line "that.@"
 	text_end
 
-_Route24DamianText3::
+_Route24DamianDeclinedText::
 	text "Oh<...> I'd better"
 	line "release it then."
 	done
 
-_Route24DamianText4::
+_Route24DamianAfterText::
 	text "How's that weak"
 	line "old CHARMANDER"
 	cont "doing?"

@@ -140,6 +140,7 @@ SpriteSheetPointerTable:
 	overworld_sprite SpearowSprite, 12                ; SPRITE_SPEAROW
 	overworld_sprite ZapdosSprite, 12                 ; SPRITE_ZAPDOS
 	; PureRGB Tweaked: new "walking" overworld sprites (no walk animation)
+	overworld_sprite BulbasaurSprite, 12              ; SPRITE_BULBASAUR
 	overworld_sprite DragonairSprite, 12              ; SPRITE_DRAGONAIR
 	overworld_sprite DrMasonSprite, 12                ; SPRITE_DR_MASON
 	overworld_sprite FlareonSprite, 12                ; SPRITE_FLAREON

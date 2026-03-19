@@ -294,47 +294,47 @@ Route24Youngster2AfterBattleText:
 Route24CooltrainerM4Text:
 	text_asm
 	CheckEvent EVENT_GOT_CHARMANDER_ROUTE_24
-	jr nz, .asm_Damian4
-	ld hl, Route24Text_Damian1
+	jr nz, .alreadyGot
+	ld hl, Route24DamianOfferText
 	rst _PrintText
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, .asm_Damian3
+	jr nz, .declined
 	lb bc, CHARMANDER, 13
 	call GivePokemon
 	jp nc, TextScriptEnd
 	ld a, [wAddedToParty]
 	and a
 	call z, WaitForTextScrollButtonPress
-	ld hl, Route24Text_Damian2
+	ld hl, Route24DamianByeText
 	rst _PrintText
 	SetEvent EVENT_GOT_CHARMANDER_ROUTE_24
 	rst TextScriptEnd
 
-.asm_Damian3
-	ld hl, Route24Text_Damian3
-	jr .asm_DamianBye
+.declined
+	ld hl, Route24DamianDeclinedText
+	jr .done
 
-.asm_Damian4
-	ld hl, Route24Text_Damian4
-.asm_DamianBye
+.alreadyGot
+	ld hl, Route24DamianAfterText
+.done
 	rst _PrintText
 	rst TextScriptEnd
 
-Route24Text_Damian1:
-	text_far _Route24DamianText1
+Route24DamianOfferText:
+	text_far _Route24DamianOfferText
 	text_end
 
-Route24Text_Damian2:
-	text_far _Route24DamianText2
+Route24DamianByeText:
+	text_far _Route24DamianByeText
 	text_waitbutton
 	text_end
 
-Route24Text_Damian3:
-	text_far _Route24DamianText3
+Route24DamianDeclinedText:
+	text_far _Route24DamianDeclinedText
 	text_end
 
-Route24Text_Damian4:
-	text_far _Route24DamianText4
+Route24DamianAfterText:
+	text_far _Route24DamianAfterText
 	text_end

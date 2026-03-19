@@ -129,36 +129,37 @@
 	const SPRITE_SPEAROW                   ; $7a
 	const SPRITE_ZAPDOS                    ; $7b
 	; without a walk animation:
-	const SPRITE_DRAGONAIR                 ; $7c
-	const SPRITE_DR_MASON                  ; $7d
-	const SPRITE_FLAREON                   ; $7e
-	const SPRITE_JOLTEON                   ; $7f
-	const SPRITE_MACHAMP                   ; $80
-	const SPRITE_NIDOKING                  ; $81
-	const SPRITE_NIDORANM                  ; $82
-	const SPRITE_NIDORINO                  ; $83
-	const SPRITE_SLOWBRO                   ; $84
+	const SPRITE_BULBASAUR                 ; $7c
+	const SPRITE_DRAGONAIR                 ; $7d
+	const SPRITE_DR_MASON                  ; $7e
+	const SPRITE_FLAREON                   ; $7f
+	const SPRITE_JOLTEON                   ; $80
+	const SPRITE_MACHAMP                   ; $81
+	const SPRITE_NIDOKING                  ; $82
+	const SPRITE_NIDORANM                  ; $83
+	const SPRITE_NIDORINO                  ; $84
+	const SPRITE_SLOWBRO                   ; $85
 	; PureRGB Tweaked: end of new overworld sprites.
 DEF FIRST_STILL_SPRITE EQU const_value
-	const SPRITE_POKE_BALL                 ; $85
-	const SPRITE_FOSSIL                    ; $86
-	const SPRITE_BOULDER                   ; $87
-	const SPRITE_PAPER                     ; $88
-	const SPRITE_POKEDEX                   ; $89
-	const SPRITE_CLIPBOARD                 ; $8a
-	const SPRITE_SNORLAX                   ; $8b
-	const SPRITE_OLD_AMBER                 ; $8c
-	const SPRITE_GAMBLER_ASLEEP            ; $8d
-	const SPRITE_MONSTER2_STILL            ; $8e
-	const SPRITE_POKE_BALL2                ; $8f
-	const SPRITE_DARK_CHANNELER            ; $90
-	const SPRITE_BOOMBOX                   ; $91
-	const SPRITE_NOTHING_STILL             ; $92
-	const SPRITE_SCUBA_DIVER               ; $93
-	const SPRITE_CAMERA                    ; $94
-	const SPRITE_SHADOW                    ; $95
-	const SPRITE_QUADRUPED                 ; $96
+	const SPRITE_POKE_BALL                 ; $86
+	const SPRITE_FOSSIL                    ; $87
+	const SPRITE_BOULDER                   ; $88
+	const SPRITE_PAPER                     ; $89
+	const SPRITE_POKEDEX                   ; $8a
+	const SPRITE_CLIPBOARD                 ; $8b
+	const SPRITE_SNORLAX                   ; $8c
+	const SPRITE_OLD_AMBER                 ; $8d
+	const SPRITE_GAMBLER_ASLEEP            ; $8e
+	const SPRITE_MONSTER2_STILL            ; $8f
+	const SPRITE_POKE_BALL2                ; $90
+	const SPRITE_DARK_CHANNELER            ; $91
+	const SPRITE_BOOMBOX                   ; $92
+	const SPRITE_NOTHING_STILL             ; $93
+	const SPRITE_SCUBA_DIVER               ; $94
+	const SPRITE_CAMERA                    ; $95
+	const SPRITE_SHADOW                    ; $96
+	const SPRITE_QUADRUPED                 ; $97
 	; PureRGB Tweaked : added unique (but static) overworld sprites
-	const SPRITE_ABRA                      ; $97
-	const SPRITE_WIGGLYTUFF                ; $98
+	const SPRITE_ABRA                      ; $98
+	const SPRITE_WIGGLYTUFF                ; $99
 DEF NUM_SPRITES EQU const_value - 1
