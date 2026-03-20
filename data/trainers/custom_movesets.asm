@@ -21,6 +21,7 @@
 	const ELITE_FOUR_RIVAL2_MOVESET
 	const ELITE_FOUR_RIVAL3_MOVESET
 	const METRONOME_GAMBLER_MOVESET
+	const OFFICER_JENNY_MOVESET
 
 ; input d = which moveset
 LoadTrainerMoveSet:
@@ -72,6 +73,7 @@ MoveSetMappings:
 	dw EliteFourRivalMoveset2
 	dw EliteFourRivalMoveset3
 	dw MetronomeGamblerMoveset
+	dw OfficerJennyMoveset
 
 ChampArenaErikaMoveset:
 	; victreebel
@@ -679,7 +681,7 @@ EliteFourRivalMoveset3:
 	db RAZOR_LEAF
 	db SLEEP_POWDER
 	db GROWTH
-	db SLAM ; SIPHON SNAG
+	db SLAM ; FILTHY_SLAM
 
 MetronomeGamblerMoveset:
 	; meowth
@@ -697,3 +699,35 @@ MetronomeGamblerMoveset:
 	db NO_MOVE
 	db NO_MOVE
 	db NO_MOVE
+
+OfficerJennyMoveset:
+	; pidgeot
+	db RAZOR_WIND ; ROOST
+	db AGILITY
+	db SKY_ATTACK
+	db TOXIC
+	; blastoise
+	db SURF
+	db EARTHQUAKE
+	db ICE_BEAM
+	db BODY_SLAM
+	; tangela
+	db MEGA_DRAIN
+	db SLEEP_POWDER
+	db MIMIC
+	db WRAP
+	; gengar
+	db PSYCHIC_M
+	db SLAM ; FILTHY_SLAM
+	db HYPNOSIS
+	db THUNDERBOLT
+	; parasect
+	db SPORE
+	db MEGA_DRAIN
+	db SLASH
+	db LEECH_LIFE
+	; arcanine
+	db REFLECT
+	db FIRE_BLAST
+	db BODY_SLAM
+	db DIG

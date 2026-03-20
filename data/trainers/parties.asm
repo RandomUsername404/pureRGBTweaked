@@ -58,6 +58,7 @@ TrainerDataPointers:
 	dw RookieData
 	dw RookieData
 	dw RookieData
+	dw JennyData
 	assert_table_length NUM_TRAINERS
 
 ; if first byte != $FF, then
@@ -905,3 +906,6 @@ GymGuideData:
 	db $FD, CHAMP_ARENA_GYM_GUIDE_MOVESET, 81 + 128, CHANSEY, 81 + 128, SNORLAX, 82 + 128, CLOYSTER, 83 + 128, ALAKAZAM, 83 + 128, TAUROS, 85 + 128, MISSINGNO, 0 
 	db $FD, CHAMP_ARENA_GYM_GUIDE_MOVESET, 91 + 128, CHANSEY, 91 + 128, SNORLAX, 92 + 128, CLOYSTER, 93 + 128, ALAKAZAM, 93 + 128, TAUROS, 95 + 128, MISSINGNO, 0 
  
+JennyData:
+; Vermilion City
+	db $FD, OFFICER_JENNY_MOVESET, 65, PIDGEOT, 65, BLASTOISE, 65, TANGELA, 65, GENGAR, 65, PARASECT, 65, ARCANINE, 0

@@ -71,6 +71,8 @@ ENDM
 	trainer_const FITNESS_GIRL   ; $36
 	trainer_const SPRINTER       ; $37
 	trainer_const FIST_FIGHTER   ; $38
+;;;;;;;;;; PureRGB Tweaked note: ADDED: new trainer types
+	trainer_const JENNY          ; $39
 ;;;;;;;;;;
-	; two trainer slots left
+	; one trainer slot left?
 DEF NUM_TRAINERS EQU const_value - 1

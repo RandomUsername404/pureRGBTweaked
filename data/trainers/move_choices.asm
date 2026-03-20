@@ -67,6 +67,7 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 3    ; FITNESS_PRO
 	move_choices 1, 3    ; SPRINTER
 	move_choices 1, 3    ; FISTFIGHTER
+	move_choices 1, 2, 3, 4 ; JENNY
 	assert_list_length NUM_TRAINERS
 
 ChampArenaGenericMoveChoices:

@@ -131,6 +131,7 @@ SpriteSheetPointerTable:
 	overworld_sprite MeowthSprite, 12                 ; SPRITE_MEOWTH
 	overworld_sprite MoltresSprite, 12                ; SPRITE_MOLTRES
 	overworld_sprite NidoranFSprite, 12               ; SPRITE_NIDORANF
+	overworld_sprite OfficerJennySprite, 12           ; SPRITE_OFFICER_JENNY
 	overworld_sprite PidgeotSprite, 12                ; SPRITE_PIDGEOT
 	overworld_sprite PidgeySprite, 12                 ; SPRITE_PIDGEY
 	overworld_sprite PikachuSprite, 12                ; SPRITE_PIKACHU

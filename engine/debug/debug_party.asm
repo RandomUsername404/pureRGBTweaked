@@ -20,11 +20,11 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	; always using this character while I was debugging the program."
 	; From https://web.archive.org/web/20000607152840/http://pocket.ign.com/news/14973.html
 	db TENTACRUEL, 99
-	db VOLCANIC_MAGMAR, 50
-	db ARMORED_MEWTWO, 50
+	db VOLCANIC_MAGMAR, 99
+	db ARMORED_MEWTWO, 99
 	db HARDENED_ONIX, 99
 	db WINTER_DRAGONAIR, 99
-	db MAROWAK, 45
+	db MAROWAK, 99
 	db -1 ; end
 
 PrepareNewGameDebug: ; dummy except in _DEBUG
@@ -80,7 +80,7 @@ IF DEF(_DEBUG)
 	ld a, 10
 	ld [hl], a   ; PSYCHIC_M
 
-	; Hardened Onix gets Strength, REST, SCREECH and HAZE.
+	; Hardened Onix gets Strength, REST, SCREECH and ROCK_SLIDE.
 	ld hl, wPartyMon4Moves
 	ld a, STRENGTH
 	ld [hli], a
@@ -88,20 +88,20 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld a, SCREECH
 	ld [hli], a
-	ld [hl], HAZE
+	ld [hl], ROCK_SLIDE
 	ld hl, wPartyMon4PP
 	ld a, 15
 	ld [hli], a  ; STRENGTH
 	ld a, 10
 	ld [hli], a  ; REST
-	ld a, 40
+	ld a, 10
 	ld [hli], a  ; SCREECH
-	ld a, 30
-	ld [hl], a   ; HAZE
+	ld a, 10
+	ld [hl], a   ; ROCK_SLIDE
 
 	; Winter Dragonair
 	ld hl, wPartyMon5Moves
-	ld a, FLY
+	ld a, ICE_BEAM
 	ld [hli], a
 	ld a, HYPNOSIS
 	ld [hli], a
@@ -109,7 +109,7 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], SCREECH
 	ld hl, wPartyMon5PP
-	ld a, 15
+	ld a, 10
 	ld [hli], a
 	ld a, 20
 	ld [hli], a
@@ -118,24 +118,24 @@ IF DEF(_DEBUG)
 	ld a, 40
 	ld [hl], a
 
-	; Marowak gets EXPLOSION, FLASH, DIG and SELFDESTRUCT.
+	; Marowak gets BONEMERANG, FLASH, DIG and SCREECH.
 	ld hl, wPartyMon6Moves
-	ld a, EXPLOSION
+	ld a, BONEMERANG
 	ld [hli], a
 	ld a, FLASH
 	ld [hli], a
 	ld a, DIG
 	ld [hli], a
-	ld [hl], SELFDESTRUCT
+	ld [hl], SCREECH
 	ld hl, wPartyMon6PP
-	ld a, 5
-	ld [hli], a  ; EXPLOSION
+	ld a, 15
+	ld [hli], a  ; BONEMERANG
 	ld a, 15
 	ld [hli], a  ; FLASH
 	ld a, 10
 	ld [hli], a  ; DIG
-	ld a, 5
-	ld [hl], a   ; SELFDESTRUCT
+	ld a, 10
+	ld [hl], a   ; SCREECH
 	ld hl, wPartyMon6Flags
 	set 0, [hl] ; ghost marowak
 
@@ -192,6 +192,7 @@ IF DEF(_DEBUG)
 	SetEvent EVENT_HIDE_ALREADY_HAS_FOUR_MOVES_MSG
 	;SetEvent EVENT_UNLOCKED_AT_LEAST_ONE_CUSTOM_BALL
 	;SetEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
+	SetEvent EVENT_BECAME_CHAMP
 
 	;callfar SilphCo11FTeamRocketLeavesScript
 

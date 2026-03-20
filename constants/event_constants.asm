@@ -63,8 +63,9 @@
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_5
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_6
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
+	const EVENT_GOT_SQUIRTLE_FROM_OFFICER_JENNY ; PureRGB Tweaked: Added GIFT Squirtle NPC
 
-	; pureRGBnote: ~15 bits of unused event space
+	; pureRGB Tweaked: ~14 bits of unused event space
 
 ; Pewter City events
 	const_next $68

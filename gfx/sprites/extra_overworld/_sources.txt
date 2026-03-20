@@ -17,9 +17,11 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
 From Pokémon Yellow:
 - bulbasaur.png
 - jigglypuff.png (poorly animated by me)
+- officer_jenny.png
 - pikachu.png
 
 From Yellow Legacy (cRz-Shadows):
+- gfx/trainers/extras/jenny.png
 - fearow.png
 - kabuto_shell.png
 - kangaskhan.png

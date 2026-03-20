@@ -7502,13 +7502,17 @@ _LoadTrainerPic:
 	and a
 	ld a, BANK(RedPicFront)
 	jr nz, .loadSprite
-;;;;;;;;;; PureRGBnote: ADDED: now two banks are used for trainer sprites instead of 1
+;;;;;;;;;; PureRGB Tweaked: ADDED: now THREE banks are used for trainer sprites instead of 1
 .defaultSprite
-	ld a, [wCurOpponent]
-	cp OPP_COOL_KID
+	ld a, [wTrainerClass]
+	cp COOL_KID
 	ld a, BANK("Pics 6") ; this is where most of the trainer pics are
 	jr c, .loadSprite
+	ld a, [wTrainerClass]  ; PureRGB Tweaked: reload wTrainerClass since "a" is being overwritten somewhere
+	cp JENNY
 	ld a, BANK(KidPic) ; this is where extra trainer pics are (trainers after Cool Kid in ID)
+	jr c, .loadSprite
+	ld a, BANK(JennyPic) ; PureRGB Tweaked: new trainer pics in Pics 12
 ;;;;;;;;;;
 .loadSprite
 	call UncompressSpriteFromDE

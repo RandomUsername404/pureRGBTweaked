@@ -266,7 +266,6 @@ INCLUDE "text/LavenderTown.asm"
 INCLUDE "text/VermilionCity.asm"
 INCLUDE "text/CeladonCity.asm"
 INCLUDE "text/FuchsiaCity.asm"
-INCLUDE "text/CinnabarIsland.asm"
 INCLUDE "text/SaffronCity.asm"
 
 INCLUDE "data/text/text_6.asm"
@@ -292,6 +291,7 @@ INCLUDE "text/ChampArena.asm"
 INCLUDE "text/DiamondMine.asm"
 INCLUDE "text/CinnabarLabTradeRoom.asm"
 INCLUDE "text/CeruleanPokecenter.asm"
+INCLUDE "text/CinnabarIsland.asm"
 
 SECTION "Text 13", ROMX
 INCLUDE "text/PokemonTowerCatacombs.asm"

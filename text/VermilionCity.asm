@@ -200,3 +200,85 @@ _VermilionCityTradeHouseClipboardText::
 	para "He must've phoned"
 	line "NINTENDO HOTLINE!"
 	done
+
+_OfficerJennyNoBadgeText::
+	text "I just caught a"
+	line "SQUIRTLE that was"
+	cont "always getting"
+	cont "into mischief."
+
+	para "I think it needs a"
+	line "good trainer to"
+	cont "set it straight."
+	done
+
+_OfficerJennyOfferText::
+	text "You have the"
+	line "THUNDERBADGE!?"
+
+	para "You must be a"
+	line "good trainer!"
+
+	para "I just caught a"
+	line "SQUIRTLE that was"
+	cont "always getting"
+	cont "into mischief."
+
+	para "Would you take"
+	line "good care of it?"
+	done
+
+_OfficerJennyByeText::
+	text "OK! Please treat"
+	line "SQUIRTLE right!@"
+	text_end
+
+_OfficerJennyDeclinedText::
+	text "Oh<...> What am I"
+	line "to do now?"
+	done
+
+_OfficerJennyAfterText::
+	text "How is SQUIRTLE"
+	line "doing?"
+	done
+
+_JennyBattleText::
+	text "As a CHAMPION,"
+	line "you've grown"
+	cont "strong."
+
+	para "And so has that"
+	line "SQUIRTLE I gave"
+	cont "you."
+
+	para "I wonder how"
+	line "strong?"
+
+	para "Can I test your"
+	line "strength in a"
+	cont "battle?"
+	done
+
+_JennyRefusedText::
+	text "Oh, that's too"
+	line "bad. Maybe"
+	cont "another time."
+	done
+
+_JennyAcceptedText::
+	text "I knew you"
+	line "wouldn't back"
+	cont "down!"
+	done
+
+_JennyAfterBattleText::
+	text "Incredible!"
+
+	para "You and SQUIRTLE"
+	line "are unstoppable!"
+
+	para "Keep up the"
+	line "great work,"
+	cont "CHAMPION!"
+	prompt

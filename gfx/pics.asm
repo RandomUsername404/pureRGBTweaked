@@ -635,6 +635,12 @@ ScubaSuitBattlePicSW:: INCBIN "gfx/player/scuba_suitb_big.pic"
 ScubaSuitBattlePic::   INCBIN "gfx/player/scuba_suitb.pic"
 
 
+SECTION "Pics 12", ROMX
+
+; PureRGB Tweaked battle sprites
+JennyPic::   INCBIN "gfx/trainers/extras/jenny.pic" ; NOTE: ALL NEW TRAINER PICs MUST GO UNDER JENNY IN "Pics 12"!
+
+
 SECTION "Type Icons", ROMX
 
 NormalTypeIcon::     INCBIN "gfx/movedex/type_icons/normal.2bpp"

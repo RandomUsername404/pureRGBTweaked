@@ -106,6 +106,7 @@ VermilionCity_ScriptPointers:
 	dw_const VermilionCityPlayerExitShipScript,      SCRIPT_VERMILIONCITY_PLAYER_EXIT_SHIP
 	dw_const VermilionCityPlayerMovingUp2Script,     SCRIPT_VERMILIONCITY_PLAYER_MOVING_UP2
 	dw_const VermilionCityPlayerAllowedToPassScript, SCRIPT_VERMILIONCITY_PLAYER_ALLOWED_TO_PASS
+	dw_const VermilionCityJennyPostBattleScript,     SCRIPT_VERMILIONCITY_JENNY_POST_BATTLE
 
 VermilionCityDefaultScript:
 	ld a, [wSpritePlayerStateData1FacingDirection]
@@ -197,6 +198,7 @@ VermilionCity_TextPointers:
 	dw_const VermilionCityGambler2Text,           TEXT_VERMILIONCITY_GAMBLER2
 	dw_const VermilionCityMachopText,             TEXT_VERMILIONCITY_MACHOP
 	dw_const VermilionCitySailor2Text,            TEXT_VERMILIONCITY_SAILOR2
+	dw_const VermilionCityOfficerJennyText,       TEXT_VERMILIONCITY_OFFICER_JENNY
 	dw_const VermilionCityDockBeautyText,         TEXT_VERMILIONCITY_DOCK_BEAUTY
 	dw_const VermilionCitySignText,               TEXT_VERMILIONCITY_SIGN
 	dw_const VermilionCityNoticeSignText,         TEXT_VERMILIONCITY_NOTICE_SIGN
@@ -395,3 +397,20 @@ VermilionCityDockBeautyReceivedItemText:
 VermilionCityDockBeautyEndText:
 	text_far _VermilionCityDockBeautyEndText
 	text_end
+
+; PureRGB Tweaked: Added GIFT Squirtle NPC
+VermilionCityOfficerJennyText:
+	text_asm
+	call VermilionCityPrintOfficerJennyText
+	rst TextScriptEnd
+
+VermilionCityJennyPostBattleScript:
+	ld a, [wIsInBattle]
+	inc a
+	jr z, .skip
+	callfar PrintEndBattleText
+.skip
+	xor a
+	ld [wVermilionCityCurScript], a
+	ld [wCurMapScript], a
+	ret
