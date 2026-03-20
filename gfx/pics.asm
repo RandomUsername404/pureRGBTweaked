@@ -639,6 +639,7 @@ SECTION "Pics 12", ROMX
 
 ; PureRGB Tweaked battle sprites
 JennyPic::   INCBIN "gfx/trainers/extras/jenny.pic" ; NOTE: ALL NEW TRAINER PICs MUST GO UNDER JENNY IN "Pics 12"!
+JoyPic::     INCBIN "gfx/trainers/extras/joy.pic"
 
 
 SECTION "Type Icons", ROMX

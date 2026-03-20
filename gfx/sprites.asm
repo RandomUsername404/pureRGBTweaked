@@ -142,6 +142,7 @@ BlueSittingSprite:: INCBIN "gfx/sprites/champ_arena_audience/blue_sitting.2bpp"
 
 SECTION "NPC Sprites 5", ROMX
 
+NurseJoySprite::         INCBIN "gfx/sprites/extra_overworld/nurse_joy.2bpp"
 OfficerJennySprite::     INCBIN "gfx/sprites/extra_overworld/officer_jenny.2bpp"
 DrMasonSprite::          INCBIN "gfx/sprites/extra_overworld/dr_mason.2bpp"
 QuadrupedSprite::        INCBIN "gfx/sprites/quadruped.2bpp"

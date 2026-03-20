@@ -139,28 +139,29 @@
 	const SPRITE_NIDOKING                  ; $83
 	const SPRITE_NIDORANM                  ; $84
 	const SPRITE_NIDORINO                  ; $85
-	const SPRITE_SLOWBRO                   ; $86
+	const SPRITE_NURSE_JOY                 ; $86
+	const SPRITE_SLOWBRO                   ; $87
 	; PureRGB Tweaked: end of new overworld sprites.
 DEF FIRST_STILL_SPRITE EQU const_value
-	const SPRITE_POKE_BALL                 ; $87
-	const SPRITE_FOSSIL                    ; $88
-	const SPRITE_BOULDER                   ; $89
-	const SPRITE_PAPER                     ; $8a
-	const SPRITE_POKEDEX                   ; $8b
-	const SPRITE_CLIPBOARD                 ; $8c
-	const SPRITE_SNORLAX                   ; $8d
-	const SPRITE_OLD_AMBER                 ; $8e
-	const SPRITE_GAMBLER_ASLEEP            ; $8f
-	const SPRITE_MONSTER2_STILL            ; $90
-	const SPRITE_POKE_BALL2                ; $91
-	const SPRITE_DARK_CHANNELER            ; $92
-	const SPRITE_BOOMBOX                   ; $93
-	const SPRITE_NOTHING_STILL             ; $94
-	const SPRITE_SCUBA_DIVER               ; $95
-	const SPRITE_CAMERA                    ; $96
-	const SPRITE_SHADOW                    ; $97
-	const SPRITE_QUADRUPED                 ; $98
+	const SPRITE_POKE_BALL                 ; $88
+	const SPRITE_FOSSIL                    ; $89
+	const SPRITE_BOULDER                   ; $8a
+	const SPRITE_PAPER                     ; $8b
+	const SPRITE_POKEDEX                   ; $8c
+	const SPRITE_CLIPBOARD                 ; $8d
+	const SPRITE_SNORLAX                   ; $8e
+	const SPRITE_OLD_AMBER                 ; $8f
+	const SPRITE_GAMBLER_ASLEEP            ; $90
+	const SPRITE_MONSTER2_STILL            ; $91
+	const SPRITE_POKE_BALL2                ; $92
+	const SPRITE_DARK_CHANNELER            ; $93
+	const SPRITE_BOOMBOX                   ; $94
+	const SPRITE_NOTHING_STILL             ; $95
+	const SPRITE_SCUBA_DIVER               ; $96
+	const SPRITE_CAMERA                    ; $97
+	const SPRITE_SHADOW                    ; $98
+	const SPRITE_QUADRUPED                 ; $99
 	; PureRGB Tweaked : added unique (but static) overworld sprites
-	const SPRITE_ABRA                      ; $99
-	const SPRITE_WIGGLYTUFF                ; $9a
+	const SPRITE_ABRA                      ; $9a
+	const SPRITE_WIGGLYTUFF                ; $9b
 DEF NUM_SPRITES EQU const_value - 1

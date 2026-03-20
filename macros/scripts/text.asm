@@ -253,7 +253,11 @@ MACRO script_players_pc
 	db TX_SCRIPT_PLAYERS_PC
 ENDM
 
-	const_skip ; $fb
+; PureRGB Tweaked: ADDED a post-game fight
+const TX_SCRIPT_POKECENTER_NURSE_JOY ; $fb
+MACRO script_pokecenter_nurse_joy
+	db TX_SCRIPT_POKECENTER_NURSE_JOY
+ENDM
 
 	const_skip ; $fa
 

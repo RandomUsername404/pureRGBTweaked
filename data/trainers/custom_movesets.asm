@@ -22,6 +22,7 @@
 	const ELITE_FOUR_RIVAL3_MOVESET
 	const METRONOME_GAMBLER_MOVESET
 	const OFFICER_JENNY_MOVESET
+	const NURSE_JOY_MOVESET
 
 ; input d = which moveset
 LoadTrainerMoveSet:
@@ -74,6 +75,7 @@ MoveSetMappings:
 	dw EliteFourRivalMoveset3
 	dw MetronomeGamblerMoveset
 	dw OfficerJennyMoveset
+	dw NurseJoyMoveset
 
 ChampArenaErikaMoveset:
 	; victreebel
@@ -216,7 +218,7 @@ ChampArenaBrunoMoveset:
 	db SUBMISSION
 	; onix
 	db WITHDRAW
-	db CRABHAMMER
+	db FLAMETHROWER
 	db EARTHQUAKE
 	db ROCK_SLIDE
 	; fearow
@@ -319,7 +321,7 @@ ChampArenaKogaMoveset:
 	db SPORE
 	db TWINEEDLE
 	db GROWTH
-	db CRABHAMMER
+	db SOLARBEAM
 	; venomoth
 	db SLEEP_POWDER
 	db MIRROR_MOVE
@@ -382,7 +384,7 @@ ChampArenaBrockMoveset:
 	; omastar
 	db WITHDRAW
 	db DEFENSE_CURL
-	db CRABHAMMER
+	db SURF
 	db MEGA_DRAIN 
 	; aerodactyl
 	db RAZOR_WIND ; ROOST
@@ -439,7 +441,7 @@ ChampArenaGymGuideMoveset:
 	db REST
 	db EARTHQUAKE
 	; cloyster
-	db CRABHAMMER
+	db HYDRO_PUMP
 	db BLIZZARD
 	db WITHDRAW
 	db GLARE
@@ -731,3 +733,35 @@ OfficerJennyMoveset:
 	db FIRE_BLAST
 	db BODY_SLAM
 	db DIG
+
+NurseJoyMoveset:
+	; kangaskhan
+	db REST
+	db DOUBLE_TEAM
+	db FISSURE
+	db DOUBLE_EDGE
+	; snorlax
+	db REST
+	db ICE_BEAM
+	db AMNESIA
+	db SCREECH
+	; starmie
+	db RECOVER
+	db PSYCHIC_M
+	db THUNDER_WAVE
+	db SUBSTITUTE
+	; porygon
+	db REFLECT
+	db BLIZZARD
+	db RECOVER
+	db THUNDER_WAVE
+	; exeggutor
+	db SOFTBOILED
+	db REFLECT
+	db DREAM_EATER
+	db SLEEP_POWDER
+	; chansey
+	db SOFTBOILED
+	db REFLECT
+	db EGG_BOMB
+	db THUNDER_WAVE

@@ -89,4 +89,6 @@ CeruleanTradeHouseBulbasaurText:
 	text_asm
 	ld a, BULBASAUR
 	call PlayCry
+	ld c, DEX_BULBASAUR - 1
+	callfar SetMonSeen
 	rst TextScriptEnd

@@ -150,6 +150,7 @@ SpriteSheetPointerTable:
 	overworld_sprite NidokingSprite, 12               ; SPRITE_NIDOKING
 	overworld_sprite NidoranMSprite, 12               ; SPRITE_NIDORANM
 	overworld_sprite NidorinoSprite, 12               ; SPRITE_NIDORINO
+	overworld_sprite NurseJoySprite, 12               ; SPRITE_NURSE_JOY
 	overworld_sprite SlowbroSprite, 12                ; SPRITE_SLOWBRO
 	; PureRGB Tweaked: end of new sprites
 	overworld_sprite PokeBallSprite, 4                ; SPRITE_POKE_BALL

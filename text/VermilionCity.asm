@@ -273,7 +273,8 @@ _JennyAcceptedText::
 	done
 
 _JennyAfterBattleText::
-	text "Incredible!"
+	text " "
+	line "Incredible!"
 
 	para "You and SQUIRTLE"
 	line "are unstoppable!"

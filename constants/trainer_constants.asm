@@ -73,6 +73,7 @@ ENDM
 	trainer_const FIST_FIGHTER   ; $38
 ;;;;;;;;;; PureRGB Tweaked note: ADDED: new trainer types
 	trainer_const JENNY          ; $39
+	trainer_const JOY            ; $40
 ;;;;;;;;;;
-	; one trainer slot left?
+	; no trainer slot left?
 DEF NUM_TRAINERS EQU const_value - 1

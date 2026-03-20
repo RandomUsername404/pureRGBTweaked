@@ -83,6 +83,7 @@ ENDM
 
 	dict  TX_SCRIPT_MART,                    DisplayPokemartDialogue
 	dict  TX_SCRIPT_POKECENTER_NURSE,        DisplayPokemonCenterDialogue
+	dict  TX_SCRIPT_POKECENTER_NURSE_JOY,    DisplayPokemonCenterJoyDialogue
 	dict  TX_SCRIPT_PLAYERS_PC,              TextScript_ItemStoragePC
 	dict  TX_SCRIPT_BILLS_PC,                TextScript_BillsPC
 	dict  TX_SCRIPT_POKECENTER_PC,           TextScript_PokemonCenterPC
@@ -243,3 +244,8 @@ EnableTextDelay::
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
 	ret
+
+; PureRGB Tweaked: unique Nurse Joy logic
+DisplayPokemonCenterJoyDialogue::
+	callfar DisplayPokemonCenterJoyDialogue_
+	jp AfterDisplayingTextID

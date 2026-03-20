@@ -925,7 +925,7 @@ MagmarEvosMoves:
 	db 24, TELEPORT
 	db 27, FIRE_PUNCH
 	db 30, BARRAGE
-	db 37, EGG_BOMB
+	db 37, DRAGON_RAGE
 	db 43, EARTHQUAKE
 	db 49, POISON_GAS
 	db 54, FIRE_BLAST
@@ -1680,7 +1680,7 @@ ElectrodeEvosMoves:
 	db 35, SELFDESTRUCT
 	db 39, REFLECT
 	db 42, SWIFT
-	db 48, EGG_BOMB
+	db 48, EARTHQUAKE
 	db 0
 
 ClefairyEvosMoves:
@@ -1904,6 +1904,7 @@ PorygonEvosMoves:
 	db 42, PSYCHIC_M
 	db 54, SELFDESTRUCT
 	db 58, BARRAGE
+	db 65, SLAM ; FILTHY_SLAM
 	db 0
 
 AerodactylEvosMoves:

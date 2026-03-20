@@ -80,6 +80,7 @@ INCLUDE "text/MoveMystic.asm"
 INCLUDE "text/PokemonCenterChamp.asm"
 INCLUDE "text/MrPsychicsHouse.asm"
 INCLUDE "text/SoftboiledGuysHouse.asm"
+INCLUDE "text/CinnabarLabTradeRoom.asm"
 
 
 SECTION "Text 4", ROMX
@@ -200,7 +201,6 @@ INCLUDE "text/PokemonTowerB1F.asm"
 SECTION "Text 8", ROMX
 
 INCLUDE "text/VermilionGym_2.asm"
-INCLUDE "text/VermilionPidgeyHouse.asm"
 INCLUDE "text/VermilionDock.asm"
 INCLUDE "text/VermilionOldRodHouse.asm"
 INCLUDE "text/CeladonMart1F.asm"
@@ -211,8 +211,6 @@ INCLUDE "text/CeladonMartRoof.asm"
 INCLUDE "text/CeladonMansion1F.asm"
 INCLUDE "text/CeladonMansion2F.asm"
 INCLUDE "text/CeladonMansion3F.asm"
-INCLUDE "text/CeladonMansionRoof.asm"
-INCLUDE "text/CeladonMansionRoofHouse.asm"
 INCLUDE "text/CeladonPokecenter.asm"
 INCLUDE "text/CeladonGym.asm"
 INCLUDE "text/GameCorner.asm"
@@ -267,6 +265,7 @@ INCLUDE "text/VermilionCity.asm"
 INCLUDE "text/CeladonCity.asm"
 INCLUDE "text/FuchsiaCity.asm"
 INCLUDE "text/SaffronCity.asm"
+INCLUDE "text/CeladonMansionRoof.asm"
 
 INCLUDE "data/text/text_6.asm"
 
@@ -284,12 +283,13 @@ INCLUDE "text/PalletPhoneResultEvents.asm"
 INCLUDE "text/BillsGarden.asm"
 INCLUDE "text/SecretLab.asm"
 INCLUDE "text/SilphCo5F.asm"
+INCLUDE "text/VermilionPidgeyHouse.asm"
+INCLUDE "text/CeladonMansionRoofHouse.asm"
 
 SECTION "Text 12", ROMX
 INCLUDE "text/TypeGuysHouse.asm"
 INCLUDE "text/ChampArena.asm"
 INCLUDE "text/DiamondMine.asm"
-INCLUDE "text/CinnabarLabTradeRoom.asm"
 INCLUDE "text/CeruleanPokecenter.asm"
 INCLUDE "text/CinnabarIsland.asm"
 

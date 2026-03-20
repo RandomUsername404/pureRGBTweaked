@@ -61,4 +61,5 @@ TrainerAIPointers:
 	dbw 3, GenericAI ; sprinter
 	dbw 3, GenericAI ; fist fighter
 	dbw 2, LoreleiAI ; jenny
+	dbw 2, LoreleiAI ; joy
 	assert_table_length NUM_TRAINERS

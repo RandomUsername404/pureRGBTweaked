@@ -336,8 +336,9 @@ DEF CUSTOM_BALL_SNAPPED_FLAGS_START EQU const_value
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_3
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_4
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_5
+	const EVENT_BEAT_NURSE_JOY ; PureRGB Tweaked: optional post-game battle
 
-	; pureRGBnote: ~19 bits of unused event space
+	; pureRGB Tweaked: ~18 bits of unused event space
 
 ; Cinnabar Island events
 	const_next $278

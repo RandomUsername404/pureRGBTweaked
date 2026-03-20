@@ -1,0 +1,137 @@
+; PureRGBnote: ADDED: this code was modified to make it so you can speed up pokemon center dialog by holding B before talking to the nurse. 
+;                     the ability to do this is unlocked by donating to the nurse at rock tunnel pokecenter.
+
+DisplayPokemonCenterJoyDialogue_::
+	call SaveScreenTilesToBuffer1 ; save screen
+	ldh a, [hJoyHeld]
+	bit BIT_B_BUTTON, a
+	jr z, .notFastWelcome ; NEW: if you're holding b when you start talking to the nurse, it'll skip right to healing.
+.fastWelcome
+	CheckEvent EVENT_DONATED_TO_POKECENTER_CHARITY ; must donate to pokecenter charity at rock tunnel pokecenter to be able to do this
+	jr z, .normalWelcome
+	ld a, 1
+	ld [wUnusedC000], a
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, PokemonCenterFastChampText
+	jr nz, .fastPrint
+	ld hl, PokemonCenterFastWelcomeText
+.fastPrint
+	rst _PrintText
+	jr .skipToHeal
+.notFastWelcome
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .normalWelcome
+	ld hl, PokemonCenterChampText
+	rst _PrintText
+	jr .skipToHeal
+.normalWelcome
+	ld hl, PokemonCenterWelcomeText
+	rst _PrintText
+	ld hl, wStatusFlags4
+	bit BIT_USED_POKECENTER, [hl]
+	set BIT_UNKNOWN_4_1, [hl]
+	set BIT_USED_POKECENTER, [hl]
+	jr nz, .skipShallWeHealYourPokemon
+	ld hl, ShallWeHealYourPokemonText
+	rst _PrintText
+.skipShallWeHealYourPokemon
+	call YesNoChoicePokeCenter ; yes/no menu
+	ld a, [wCurrentMenuItem]
+	and a
+	jp nz, .declinedHealing ; if the player chose No
+	; call SetLastBlackoutMap ; PureRGBnote: FIXED: set last blackout map on entering a pokemon center instead of when healing
+	call LoadScreenTilesFromBuffer1 ; restore screen
+	ld hl, NeedYourPokemonText
+	rst _PrintText
+.skipToHeal
+	ld a, $18
+	ld [wSprite01StateData1ImageIndex], a ; make the nurse turn to face the machine
+	call Delay3
+	predef HealParty
+	farcall AnimateHealingMachine ; do the healing machine animation
+	xor a
+	ld [wAudioFadeOutControl], a
+	ld a, [wAudioSavedROMBank]
+	ld [wAudioROMBank], a
+	ld a, [wMapMusicSoundID]
+	ld [wLastMusicSoundID], a
+	ld [wNewSoundID], a
+	rst _PlaySound
+	CheckEvent EVENT_BECAME_CHAMP
+	jr nz, .skipFightingFit
+	ld a, [wUnusedC000]
+	and a
+	jr nz, .skipFightingFit ; NEW: if you're holding b when you start talking to the nurse, it'll skip right to healing.
+	ld hl, PokemonFightingFitText
+	rst _PrintText
+.skipFightingFit
+	ld a, $14
+	ld [wSprite01StateData1ImageIndex], a ; make the nurse bow
+	ld c, a
+	rst _DelayFrames
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .notChamp
+	ld hl, NurseJoyAfterBattleText
+	ld de, NurseJoyAfterBattleText
+	call SaveEndBattleTextPointers
+	ld hl, wStatusFlags3
+	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+	; choose pre-battle text based on whether we've fought before
+	CheckEvent EVENT_BEAT_NURSE_JOY
+	ld hl, NurseJoyPreBattleText2
+	jr nz, .offerBattle
+	ld hl, NurseJoyPreBattleText
+.offerBattle
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, NurseJoyAcceptedText
+	call PrintText
+	call Delay3
+	SetEvent EVENT_BEAT_NURSE_JOY
+	ld a, OPP_JOY
+	ld [wCurOpponent], a
+	ld a, 1
+	ld [wTrainerNo], a
+	ld a, SCRIPT_FUCHSIAPOKECENTER_JOY_POST_BATTLE
+	ld [wFuchsiaPokecenterCurScript], a
+	ld [wCurMapScript], a
+	xor a
+	ld [wUnusedC000], a
+	jp UpdateSprites
+.refused
+	ld hl, NurseJoyRefusedText
+	call PrintText
+.notChamp
+	ld hl, PokemonCenterFarewellTextDelay
+.declinedHealing
+	call LoadScreenTilesFromBuffer1 ; restore screen
+	ld hl, PokemonCenterFarewellText
+.printDone
+	rst _PrintText
+	xor a
+	ld [wUnusedC000], a
+	jp UpdateSprites
+
+
+NurseJoyPreBattleText:
+	text_far _NurseJoyPreBattleText
+	text_end
+
+NurseJoyPreBattleText2:
+	text_far _NurseJoyPreBattleText2
+	text_end
+
+NurseJoyAcceptedText:
+	text_far _NurseJoyAcceptedText
+	text_end
+
+NurseJoyRefusedText:
+	text_far _NurseJoyRefusedText
+	text_end
+
+NurseJoyAfterBattleText:
+	text_far _NurseJoyAfterBattleText
+	text_end

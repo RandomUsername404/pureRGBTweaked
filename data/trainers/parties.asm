@@ -59,6 +59,7 @@ TrainerDataPointers:
 	dw RookieData
 	dw RookieData
 	dw JennyData
+	dw JoyData
 	assert_table_length NUM_TRAINERS
 
 ; if first byte != $FF, then
@@ -909,3 +910,7 @@ GymGuideData:
 JennyData:
 ; Vermilion City
 	db $FD, OFFICER_JENNY_MOVESET, 65, PIDGEOT, 65, BLASTOISE, 65, TANGELA, 65, GENGAR, 65, PARASECT, 65, ARCANINE, 0
+
+JoyData:
+; Fuchsia Pokécenter
+	db $FD, NURSE_JOY_MOVESET, 65, KANGASKHAN, 65, SNORLAX, 65, STARMIE, 65, PORYGON, 65, EXEGGUTOR, 65, CHANSEY, 0

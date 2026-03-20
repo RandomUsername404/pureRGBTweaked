@@ -4,37 +4,37 @@ EggBombLearnset:
 	dbit TRUE  ; BULBASAUR  ; 1
 	dbit TRUE  ; IVYSAUR    ; 2
 	dbit TRUE  ; VENUSAUR   ; 3
-	dbit TRUE  ; CHARMANDER ; 4
-	dbit TRUE  ; CHARMELEON ; 5
-	dbit TRUE  ; CHARIZARD  ; 6
-	dbit TRUE  ; SQUIRTLE   ; 7
-	dbit TRUE  ; WARTORTLE  ; 8
+	dbit FALSE ; CHARMANDER ; 4
+	dbit FALSE ; CHARMELEON ; 5
+	dbit FALSE ; CHARIZARD  ; 6
+	dbit FALSE ; SQUIRTLE   ; 7
+	dbit FALSE ; WARTORTLE  ; 8
 	dbit TRUE  ; BLASTOISE  ; 9
 	dbit FALSE ; CATERPIE   ; 10
 	dbit FALSE ; METAPOD    ; 11
 	dbit TRUE  ; BUTTERFREE ; 12
 	dbit FALSE ; WEEDLE     ; 13
 	dbit FALSE ; KAKUNA     ; 14
-	dbit FALSE ; BEEDRILL   ; 15
-	dbit TRUE  ; PIDGEY     ; 16
-	dbit TRUE  ; PIDGEOTTO  ; 17
-	dbit TRUE  ; PIDGEOT    ; 18
+	dbit TRUE  ; BEEDRILL   ; 15
+	dbit FALSE ; PIDGEY     ; 16
+	dbit FALSE ; PIDGEOTTO  ; 17
+	dbit FALSE ; PIDGEOT    ; 18
 	dbit FALSE ; RATTATA    ; 19
 	dbit FALSE ; RATICATE   ; 20
-	dbit TRUE  ; SPEAROW    ; 21
-	dbit TRUE  ; FEAROW     ; 22
+	dbit FALSE ; SPEAROW    ; 21
+	dbit FALSE ; FEAROW     ; 22
 	dbit TRUE  ; EKANS      ; 23
 	dbit TRUE  ; ARBOK      ; 24
 	dbit FALSE ; PIKACHU    ; 25
 	dbit FALSE ; RAICHU     ; 26
 	dbit FALSE ; SANDSHREW  ; 27
 	dbit FALSE ; SANDSLASH  ; 28
-	dbit FALSE ; NIDORAN_F  ; 29
-	dbit FALSE ; NIDORINA   ; 30
-	dbit FALSE ; NIDOQUEEN  ; 31
-	dbit FALSE ; NIDORAN_M  ; 32
-	dbit FALSE ; NIDORINO   ; 33
-	dbit FALSE ; NIDOKING   ; 34
+	dbit TRUE  ; NIDORAN_F  ; 29
+	dbit TRUE  ; NIDORINA   ; 30
+	dbit TRUE  ; NIDOQUEEN  ; 31
+	dbit TRUE  ; NIDORAN_M  ; 32
+	dbit TRUE  ; NIDORINO   ; 33
+	dbit TRUE  ; NIDOKING   ; 34
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
 	dbit FALSE ; VULPIX     ; 37
@@ -44,8 +44,8 @@ EggBombLearnset:
 	dbit FALSE ; ZUBAT      ; 41
 	dbit FALSE ; GOLBAT     ; 42
 	dbit FALSE ; ODDISH     ; 43
-	dbit FALSE ; GLOOM      ; 44
-	dbit FALSE ; VILEPLUME  ; 45
+	dbit TRUE  ; GLOOM      ; 44
+	dbit TRUE  ; VILEPLUME  ; 45
 	dbit TRUE  ; PARAS      ; 46
 	dbit TRUE  ; PARASECT   ; 47
 	dbit TRUE  ; VENONAT    ; 48
@@ -54,15 +54,15 @@ EggBombLearnset:
 	dbit FALSE ; DUGTRIO    ; 51
 	dbit FALSE ; MEOWTH     ; 52
 	dbit FALSE ; PERSIAN    ; 53
-	dbit TRUE  ; PSYDUCK    ; 54
-	dbit TRUE  ; GOLDUCK    ; 55
+	dbit FALSE ; PSYDUCK    ; 54
+	dbit FALSE ; GOLDUCK    ; 55
 	dbit FALSE ; MANKEY     ; 56
 	dbit FALSE ; PRIMEAPE   ; 57
 	dbit FALSE ; GROWLITHE  ; 58
 	dbit FALSE ; ARCANINE   ; 59
-	dbit TRUE  ; POLIWAG    ; 60
-	dbit TRUE  ; POLIWHIRL  ; 61
-	dbit TRUE  ; POLIWRATH  ; 62
+	dbit FALSE ; POLIWAG    ; 60
+	dbit FALSE ; POLIWHIRL  ; 61
+	dbit FALSE ; POLIWRATH  ; 62
 	dbit FALSE ; ABRA       ; 63
 	dbit FALSE ; KADABRA    ; 64
 	dbit FALSE ; ALAKAZAM   ; 65
@@ -81,27 +81,27 @@ EggBombLearnset:
 	dbit FALSE ; RAPIDASH   ; 78
 	dbit FALSE ; SLOWPOKE   ; 79
 	dbit FALSE ; SLOWBRO    ; 80
-	dbit TRUE  ; MAGNEMITE  ; 81
-	dbit TRUE  ; MAGNETON   ; 82
-	dbit FALSE ; FARFETCHD  ; 83
+	dbit FALSE ; MAGNEMITE  ; 81
+	dbit FALSE ; MAGNETON   ; 82
+	dbit TRUE  ; FARFETCHD  ; 83
 	dbit FALSE ; DODUO      ; 84
 	dbit FALSE ; DODRIO     ; 85
 	dbit FALSE ; SEEL       ; 86
 	dbit FALSE ; DEWGONG    ; 87
 	dbit TRUE  ; GRIMER     ; 88
 	dbit TRUE  ; MUK        ; 89
-	dbit TRUE  ; SHELLDER   ; 90
+	dbit FALSE ; SHELLDER   ; 90
 	dbit TRUE  ; CLOYSTER   ; 91
-	dbit TRUE  ; GASTLY     ; 92
-	dbit TRUE  ; HAUNTER    ; 93
-	dbit TRUE  ; GENGAR     ; 94
+	dbit FALSE ; GASTLY     ; 92
+	dbit FALSE ; HAUNTER    ; 93
+	dbit FALSE ; GENGAR     ; 94
 	dbit FALSE ; ONIX       ; 95
 	dbit FALSE ; DROWZEE    ; 96
 	dbit FALSE ; HYPNO      ; 97
 	dbit TRUE  ; KRABBY     ; 98
 	dbit TRUE  ; KINGLER    ; 99
-	dbit TRUE  ; VOLTORB    ; 100
-	dbit TRUE  ; ELECTRODE  ; 101
+	dbit FALSE ; VOLTORB    ; 100
+	dbit FALSE ; ELECTRODE  ; 101
 	dbit TRUE  ; EXEGGCUTE  ; 102
 	dbit TRUE  ; EXEGGUTOR  ; 103
 	dbit FALSE ; CUBONE     ; 104
@@ -115,7 +115,7 @@ EggBombLearnset:
 	dbit FALSE ; RHYDON     ; 112
 	dbit TRUE  ; CHANSEY    ; 113
 	dbit TRUE  ; TANGELA    ; 114
-	dbit FALSE ; KANGASKHAN ; 115
+	dbit TRUE  ; KANGASKHAN ; 115
 	dbit FALSE ; HORSEA     ; 116
 	dbit FALSE ; SEADRA     ; 117 ; TODO: egg bomb?
 	dbit FALSE ; GOLDEEN    ; 118
@@ -123,11 +123,11 @@ EggBombLearnset:
 	dbit FALSE ; STARYU     ; 120
 	dbit FALSE ; STARMIE    ; 121
 	dbit FALSE ; MR_MIME    ; 122
-	dbit FALSE ; SCYTHER    ; 123
-	dbit TRUE  ; JYNX       ; 124
+	dbit TRUE  ; SCYTHER    ; 123
+	dbit FALSE ; JYNX       ; 124
 	dbit FALSE ; ELECTABUZZ ; 125
-	dbit TRUE  ; MAGMAR     ; 126
-	dbit FALSE ; PINSIR     ; 127
+	dbit FALSE ; MAGMAR     ; 126
+	dbit TRUE  ; PINSIR     ; 127
 	dbit FALSE ; TAUROS     ; 128
 	dbit FALSE ; MAGIKARP   ; 129
 	dbit TRUE  ; GYARADOS   ; 130
@@ -141,7 +141,7 @@ EggBombLearnset:
 	dbit TRUE  ; OMANYTE    ; 138
 	dbit TRUE  ; OMASTAR    ; 139
 	dbit FALSE ; KABUTO     ; 140
-	dbit FALSE ; KABUTOPS   ; 141
+	dbit TRUE  ; KABUTOPS   ; 141
 	dbit FALSE ; AERODACTYL ; 142
 	dbit FALSE ; SNORLAX    ; 143
 	dbit TRUE  ; ARTICUNO   ; 144

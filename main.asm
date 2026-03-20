@@ -291,7 +291,6 @@ INCLUDE "engine/events/hidden_objects/vermilion_gym_trash.asm"
 ; PureRGBnote: ADDED: new hidden objects code files
 INCLUDE "engine/events/hidden_objects/fossil_guys_pc.asm"
 INCLUDE "engine/events/hidden_objects/cerulean_rocket_house.asm"
-INCLUDE "engine/events/hidden_objects/school_house_b1f_bookcases.asm"
 
 
 SECTION "Cinnabar Lab Fossils", ROMX
@@ -304,6 +303,7 @@ SECTION "Hidden Objects 4", ROMX
 INCLUDE "engine/events/hidden_objects/gym_statues.asm"
 INCLUDE "engine/events/hidden_objects/bench_guys.asm"
 INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
+INCLUDE "engine/events/hidden_objects/school_house_b1f_bookcases.asm"
 
 
 SECTION "Version Graphics", ROMX
@@ -351,7 +351,7 @@ INCLUDE "engine/battle/animations.asm"
 INCLUDE "data/moves/animations.asm"
 INCLUDE "data/battle_anims/subanimations.asm"
 INCLUDE "data/battle_anims/frame_blocks.asm"
-INCLUDE "engine/overworld/field_moves.asm" ; PureRGB Tweaked : overworld HM use
+INCLUDE "engine/overworld/field_moves.asm" ; PureRGB Tweaked: overworld HM usage
 
 SECTION "Wild Mons", ROMX
 ; PureRGBnote: MOVED: moved from bank3
@@ -393,6 +393,8 @@ INCLUDE "engine/events/pokecenter.asm"
 INCLUDE "engine/menus/draw_badges.asm"
 ; moved from battle core
 INCLUDE "engine/battle/move_effects/sleep.asm"
+; PureRGB Tweaked: post-game battle against Nurse Joy
+INCLUDE "engine/events/pokecenter_joy.asm"
 
 SECTION "Party Sprites", ROMX, BANK[$34]
 ; PureRGBnote: ADDED: new menu sprite icons raw data
