@@ -75,5 +75,5 @@ ENDM
 	trainer_const JENNY          ; $39
 	trainer_const JOY            ; $40
 ;;;;;;;;;;
-	; no trainer slot left?
+	; PureRGB Tweaked: no trainer slot left. `wCurOpponent` (ram/wram.asm) is maxed out.
 DEF NUM_TRAINERS EQU const_value - 1
