@@ -397,7 +397,8 @@ _LetOutAScreechText::
 	text "But wait! At the"
 	line "last moment,"
 	para "<TARGET> let"
-	line "out a SCREECH!"
+	line "out a faint"
+	cont "SCREECH!"
 	prompt
 
 _ScreechesGettingFainterText::

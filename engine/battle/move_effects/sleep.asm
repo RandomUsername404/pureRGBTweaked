@@ -38,6 +38,16 @@ _SleepEffect::
 	ld a, b
 	and a
 	jr nz, .didntAffect ; can't affect a mon that is already statused
+	; PureRGB Tweaked: check if target is invulnerable (mid-FLY or mid-DIG) and if it is, don't animate the attack and don't auto-use SCREECH
+	ld bc, wEnemyBattleStatus1
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .checkInvulnerable
+	ld bc, wPlayerBattleStatus1
+.checkInvulnerable
+	ld a, [bc]
+	bit INVULNERABLE, a
+	jr nz, .didntAffect
 	; does the target have screech? If so, trigger the screech effect automatically
 	ld b, NUM_MOVES
 .loopCheckMoves
@@ -104,7 +114,13 @@ _SleepEffect::
 	ld [de], a
 	push hl
 	push de
+	; PureRGB Tweaked: if SCREECH was auto-used, don't trigger echoing effect
+	ld hl, wBattleFunctionalFlags
+	set 5, [hl]
 	callfar _ScreechEffect
+	ld hl, wBattleFunctionalFlags
+	res 5, [hl]
+	;;;;;;;
 	pop de
 	pop hl
 	pop af
@@ -114,9 +130,18 @@ _SleepEffect::
 	pop af
 	ldh [hWhoseTurn], a
 	ret
+; PureRGB Tweaked: Pokemon auto-using SCREECH will let out an audible cry
 .letOutAScreech
 	text_far _LetOutAScreechText
-	text_end
+	text_asm
+	ldh a, [hWhoseTurn]
+	and a
+	ld a, [wEnemyMonSpecies] ; hWhoseTurn=0 means player is attacker, so defender is enemy
+	jr z, .playCry
+	ld a, [wBattleMonSpecies] ; hWhoseTurn=1 means enemy is attacker, so defender is player
+.playCry
+	call PlayCry
+	rst TextScriptEnd
 	
 
 FellAsleepText:

@@ -9,6 +9,9 @@ _ScreechEffect::
 	ld de, wPlayerMonDefenseMod
 	ld bc, wPlayerBattleStatus2
 .playersTurn
+	ld a, [wBattleFunctionalFlags]
+	bit 5, a ; is this an auto-use? if so skip stat change
+	jr nz, .skipStatChange
 	call .checkPlayAnimation
 	jr nc, .failed
 	ld a, [bc]
@@ -17,7 +20,7 @@ _ScreechEffect::
 	ld a, [de]
 	dec a ; is it 1? (lowest stat mod possible)
 	jr z, .skipStatChange ; can't lower any more
-	; does opponent have 
+	; does opponent have
 	ld [hl], DEFENSE_DOWN2_EFFECT
 	push hl
 	SetFlag FLAG_SKIP_STAT_ANIMATION
@@ -29,6 +32,8 @@ _ScreechEffect::
 	ld [hl], SCREECH_EFFECT
 .skipStatChange
 	ld hl, wBattleFunctionalFlags
+	bit 5, [hl] ; is this an auto-use? if so skip echoing effect
+	jr nz, .skipEchoing
 	set 2, [hl]	   ; screeches echoing everywhere
 	ld a, [hl]
 	and %11000111  ; clear existing counter bits
@@ -36,6 +41,7 @@ _ScreechEffect::
 	ld [hl], a
 	ld hl, ScreechesEchoed
 	rst _PrintText
+.skipEchoing
 	jr AutoWakeUpSleepScreech
 .failed
 	jpfar PrintButItFailedText_

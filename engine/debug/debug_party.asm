@@ -99,24 +99,24 @@ IF DEF(_DEBUG)
 	ld a, 10
 	ld [hl], a   ; ROCK_SLIDE
 
-	; Winter Dragonair
+	; Winter Dragonair gets ICE_BEAM, FLY, HYPNOSIS and SCREECH.
 	ld hl, wPartyMon5Moves
 	ld a, ICE_BEAM
 	ld [hli], a
-	ld a, HYPNOSIS
+	ld a, FLY
 	ld [hli], a
-	ld a, SURF
+	ld a, HYPNOSIS
 	ld [hli], a
 	ld [hl], SCREECH
 	ld hl, wPartyMon5PP
 	ld a, 10
-	ld [hli], a
-	ld a, 20
-	ld [hli], a
+	ld [hli], a  ; ICE_BEAM
 	ld a, 15
-	ld [hli], a
+	ld [hli], a  ; FLY
+	ld a, 15
+	ld [hli], a  ; HYPNOSIS
 	ld a, 40
-	ld [hl], a
+	ld [hl], a   ; SCREECH
 
 	; Marowak gets BONEMERANG, FLASH, DIG and SCREECH.
 	ld hl, wPartyMon6Moves
@@ -192,7 +192,7 @@ IF DEF(_DEBUG)
 	SetEvent EVENT_HIDE_ALREADY_HAS_FOUR_MOVES_MSG
 	;SetEvent EVENT_UNLOCKED_AT_LEAST_ONE_CUSTOM_BALL
 	;SetEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
-	;SetEvent EVENT_BECAME_CHAMP
+	SetEvent EVENT_BECAME_CHAMP
 
 	;callfar SilphCo11FTeamRocketLeavesScript
 
