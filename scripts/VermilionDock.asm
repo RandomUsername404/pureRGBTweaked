@@ -226,6 +226,7 @@ VermilionDock_EraseSSAnne:
 VermilionDock_TextPointers:
 	def_text_pointers
 	dw_const VermilionDockMewText,      TEXT_VERMILIONDOCK_MEW
+	dw_const VermilionDockNoPushTruckText, TEXT_VERMILIONDOCK_NO_PUSH_TRUCK
 
 VermilionDockTrainerHeaders:
 	def_trainers
@@ -447,6 +448,14 @@ TruckCheck:
 	ldh a, [hJoyHeld]
 	bit BIT_D_LEFT, a ; is player pressing left
 	ret z
+	;PureRGB Tweaked: Can only push the truck (and reveal Mew) after becoming Champion
+	CheckEvent EVENT_BECAME_CHAMP
+	jr nz, .canPushTruck
+	ld a, TEXT_VERMILIONDOCK_NO_PUSH_TRUCK
+	ldh [hTextID], a
+	call DisplayTextID
+	ret
+.canPushTruck
 	res BIT_CUR_MAP_USED_ELEVATOR, [hl]
 	call DisableSpriteUpdates
 	ld [wJoyIgnore], a ; a = $FF due to DisableSpriteUpdates
@@ -494,6 +503,11 @@ TruckCheck:
 	ld [wJoyIgnore], a
 	SetEvent EVENT_FOUND_MEW
 	ret
+
+; PureRGB Tweaked: text will appear onscreen when the player hasn't beaten the E4 yet
+VermilionDockNoPushTruckText:
+	text_far _NoPushTruckText
+	text_end
 
 ShowMew:
 	call EnableSpriteUpdates
