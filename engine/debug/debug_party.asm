@@ -40,6 +40,10 @@ IF DEF(_DEBUG)
 	; Get all badges except Earth Badge.
 	ld a, ~(1 << BIT_EARTHBADGE)
 	ld [wObtainedBadges], a
+	
+	; Get only the first 4 badges (Boulder, Cascade, Thunder, Rainbow)
+	;ld a, (1 << BIT_BOULDERBADGE) | (1 << BIT_CASCADEBADGE) | (1 << BIT_THUNDERBADGE) | (1 << BIT_RAINBOWBADGE)
+	;ld [wObtainedBadges], a
 
 	call SetDebugNewGameParty
 
@@ -192,7 +196,7 @@ IF DEF(_DEBUG)
 	SetEvent EVENT_HIDE_ALREADY_HAS_FOUR_MOVES_MSG
 	;SetEvent EVENT_UNLOCKED_AT_LEAST_ONE_CUSTOM_BALL
 	;SetEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
-	SetEvent EVENT_BECAME_CHAMP
+	;SetEvent EVENT_BECAME_CHAMP
 
 	;callfar SilphCo11FTeamRocketLeavesScript
 

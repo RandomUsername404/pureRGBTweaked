@@ -162,7 +162,31 @@ CeladonGymErikaText:
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	ld a, $4
+	ld a, [wObtainedBadges]
+	ld b, 0
+; PureRGB Tweaked: count the number of badges the player has and use Erika's 5th or 6th gym team if the player has 4/5 badges already
+.countBadges
+	and a
+	jr z, .doneCounting
+	ld c, a
+	dec c
+	and c
+	inc b
+	jr .countBadges
+.doneCounting
+	ld a, 1 ; default team
+	ld c, a
+	ld a, b
+	cp 4
+	jr c, .setErikaParty ; fewer than 4 badges
+	ld c, 2 ; 4th gym team (4+ badges)
+	cp 5
+	jr c, .setErikaParty ; fewer than 5 badges
+	ld c, 3 ; 5th gym team (5+ badges)
+.setErikaParty
+	ld a, c
+	ld [wTrainerNo], a
+	ld a, $9 ; PureRGB Tweaked: disabled lone move patch
 	ld [wGymLeaderNo], a
 	ld a, SCRIPT_CELADONGYM_ERIKA_POST_BATTLE
 	ld [wCeladonGymCurScript], a

@@ -813,7 +813,7 @@ ErikaIntroText:
 	; TODO: how do you respond?
 	ld a, 4
 	ld [wGymLeaderNo], a
-	ld b, 2
+	ld b, 4
 	call GetChampArenaChallengerPartyID
 	ld a, OPP_ERIKA
 	ld hl, .challengerLost
@@ -909,7 +909,7 @@ SabrinaIntroText:
 	; TODO: how do you respond?
 	ld a, 6
 	ld [wGymLeaderNo], a
-	ld b, 2
+	ld b, 3
 	call GetChampArenaChallengerPartyID
 	ld a, OPP_SABRINA
 	ld hl, .challengerLost
@@ -1046,7 +1046,7 @@ KogaIntroText:
 	; TODO: how do you respond?
 	ld a, 5
 	ld [wGymLeaderNo], a
-	ld b, 2
+	ld b, 3
 	call GetChampArenaChallengerPartyID
 	ld a, OPP_KOGA
 	ld hl, .challengerLost
