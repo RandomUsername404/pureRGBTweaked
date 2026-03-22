@@ -29,9 +29,9 @@
 | STOMP | NORMAL | 65 | 100 | 20 | 30% chance to make the target flinch. | — |
 | DOUBLE_KICK | FIGHTING | 30 | 100 | 30 | Hits exactly 2 times. | — |
 | **MEGA_KICK** | **FIGHTING** | 120 | **85** | **10** | No secondary effect. | — |
-| JUMP_KICK | FIGHTING | 70 | 95 | 25 | f the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. | — |
+| JUMP_KICK | FIGHTING | 70 | 95 | 25 | If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. | — |
 | **ROLLING_KICK** | **ROCK** | 60 | **100** | 15 | 30% chance to make the target flinch. | — |
-| SAND_ATTACK | — | 0 | 100 | 15 | Lowers the target's Accuracy modifier by 1 stage. Fails against Ground/Flying types. | — |
+| **SAND_ATTACK** | — | 0 | 100 | 15 | Lowers the target's Accuracy modifier by 1 stage. **Fails against Ground types and Flying types.** | — |
 | **HEADBUTT** | NORMAL | **75** | 100 | 15 | 30% chance to make the target flinch. | — |
 | HORN_ATTACK | NORMAL | 65 | 100 | 25 | No secondary effect. | — |
 | **FURY_ATTACK** | **FLYING** | **40** | **100** | 20 | **Hits exactly 2 times.** | — |
@@ -53,11 +53,11 @@
 | SING | — | 0 | 55 | 15 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
 | **SUPERSONIC** | — | 0 | **70** | 20 | Confuses the target for 2–5 turns (random). | — |
 | **SONICBOOM** | **GHOST** | **50** | **100** | **15** | **Priority move. 10% chance to make the target flinch. It always flinches if it is the very first move used after the Pokémon was sent out.** | Doesn't deal a flat amount of damage anymore. |
-| **DISABLE** | — | 0 | **85** | 20 | **Disables the opponent's last used move for 2–8 turns. If the opponent hasn't used any move yet (or is unable to act), a random non-empty move slot with remaining PP is selected instead. It fails if a move is already disabled.** | — |
+| **DISABLE** | — | 0 | **85** | 20 | **Disables the opponent's last used move for 2–8 turns. If the opponent hasn't used any move yet (or is unable to act), a random non-empty move slot with remaining PP is selected instead. It fails if a move is already disabled.** | Removed by HAZE. |
 | **ACID** | POISON | **50** | 100 | 30 | **Randomly lowers either the opponent's Attack or Defense by 1 stage (50/50 chance between the two).** | — |
 | EMBER | FIRE | 40 | 100 | 25 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target. | — |
 | FLAMETHROWER | FIRE | 95 | 100 | 15 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target. | — |
-| MIST | — | 0 | 100 | 30 | Protects the user from stat-lowering moves. Also **makes the user immune to Normal and Fighting-type moves** for the rest of the battle or until they switch out. | Cleared by Haze. |
+| MIST | — | 0 | 100 | 30 | Protects the user from stat-lowering moves. Also **makes the user immune to Normal and Fighting-type moves** for the rest of the battle or until they switch out. | Removed by HAZE. |
 | WATER_GUN | WATER | 40 | 100 | 25 | No secondary effect. | — |
 | **HYDRO_PUMP** | WATER | 120 | **90** | 5 | No secondary effect. | — |
 | SURF | WATER | 95 | 100 | 15 | No secondary effect. | — |
@@ -76,10 +76,10 @@
 | STRENGTH | NORMAL | 80 | 100 | 15 | No secondary effect. | — |
 | **ABSORB** | GRASS | **30** | 100 | **25** | Heals the user for 50% of the damage dealt (minimum 1 HP restored). | — |
 | **MEGA_DRAIN** | GRASS | **60** | 100 | **20** | Heals the user for 50% of the damage dealt (minimum 1 HP restored). | — |
-| **LEECH_SEED** | — | 0 | 90 | 10 | Seeds the target. HP is then drained each turn. | **Will do more damage per turn depending on the opponent's resistance to GRASS type. It will stay at 1/16th of their HP per turn if they resist GRASS type, 1/8th if GRASS is normally effective, and 3/16th if they are weak to GRASS type.** |
+| **LEECH_SEED** | — | 0 | 90 | 10 | Seeds the target. HP is then drained each turn. | **Will do more damage per turn depending on the opponent's resistance to GRASS type. It will stay at 1/16th of their HP per turn if they resist GRASS type, 1/8th if GRASS is normally effective, and 3/16th if they are weak to GRASS type.** Removed by HAZE. |
 | **GROWTH** | — | 0 | 100 | **10** | **Raises Special by +1 stage and heals ~1/3 of max HP. If the user is already at full HP, nothing happens at all.** | — |
 | **RAZOR_LEAF** | GRASS | 55 | **100** | 25 | High critical hit ratio. | — |
-| **SOLARBEAM** | GRASS | **110** | 100 | **5** | **10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon.** | — |
+| **SOLARBEAM** | GRASS | **110** | 100 | **5** | **10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon.** | Doesn't need to be charged anymore. |
 | POISONPOWDER | POISON | 0 | 75 | 35 | Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type. | — |
 | STUN_SPORE | GRASS | 0 | 75 | 30 | Guarantees paralysis on the target if the move hits. | — |
 | SLEEP_POWDER | GRASS | 0 | 75 | 15 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
@@ -104,9 +104,9 @@
 | QUICK_ATTACK | NORMAL | 40 | 100 | 30 | Priority move. | — |
 | **RAGE** | NORMAL | **60** | 100 | 20 | **Raises the user's Attack by 1 stage silently (no stat animation) after the move resolves.** | This effect is a PureRGB addition. |
 | **TELEPORT** | — | 0 | 100 | 20 | Switches the user out and **heals them for 25% of their max HP on exit.** If no other party members are available, it fails. | In wild battles (when the enemy uses it), acts as a flee attempt based on speed comparison. |
-| **NIGHT_SHADE** | GHOST | **65** | 100 | 15 | **No secondary effect.** | — |
+| **NIGHT_SHADE** | GHOST | **65** | 100 | 15 | No secondary effect. | **No longer deals damage based on the user level.** |
 | **MIMIC** | — | 0 | 100 | 10 | Mimic copies a random move from the opponent's moveset into the user's current move slot, **then immediately executes that move in the same turn.** | — |
-| **SCREECH** | — | 0 | **100** | 40 | **Lowers the opponent's Defense by 2 stages. Sends "screeches echoing, preventing sleep-inducing moves from working for the next 3 turns. Immediately wakes up a sleeping Pokémon. Auto-triggered if the user is targeted by a sleep-inducing move (but it will only prevent the defender from falling asleep.)** | Heavily reworked by PureRGB with additional RGB TWK modifications. |
+| **SCREECH** | — | 0 | **100** | 40 | **Lowers the opponent's Defense by 2 stages. Sends "screeches echoing", preventing sleep-inducing moves from working for the next 3 turns. Immediately wakes up a sleeping Pokémon. Auto-triggered if the user is targeted by a sleep-inducing move (but it will only prevent the defender from falling asleep.)** | Heavily reworked by PureRGB with additional RGB TWK modifications. |
 | DOUBLE_TEAM | — | 0 | 100 | 15 | Raises the user's Evasion stat modifier by 1 stage. | — |
 | RECOVER | — | 0 | 100 | 20 | Recovers 50% of the user's max HP. | — |
 | HARDEN | — | 0 | 100 | 30 | Raises the user's Defense stat modifier by 1 stage. | — |
@@ -116,10 +116,10 @@
 | **WITHDRAW** | — | 0 | 100 | **10** | **Raises Defense by +1 stage and heals ~1/3 of max HP. If the user is already at full HP, nothing happens at all.** | This effect is a PureRGB addition. |
 | **DEFENSE_CURL** | — | 0 | 100 | **15** | **Makes super-effective moves do normal damage.** | — |
 | BARRIER | — | 0 | 100 | 30 | Raises the user's Defense modifier by 2 stages. | — |
-| LIGHT_SCREEN | — | 0 | 100 | 30 | Halves all incoming Special attack damage until the user switches out or faints. **Removed by HAZE.** | — |
+| LIGHT_SCREEN | — | 0 | 100 | 30 | Halves all incoming Special attack damage until the user switches out or faints. | Removed by HAZE. |
 | **HAZE** | — | 0 | 100 | 30 | Resets all stat modifiers for both sides to neutral. | Cures the target's non-volatile status (sleep/freeze). Clears both side's volatile statuses (DISABLE, X Accuracy, LEECH SEED, etc.). Cures user's CONFUSION only. Removes Psychic immunity from the opponent. Finally, **grants the user Psychic-type immunity** (until the user switches out or faints), and **resets the "Screeches echoing" flag.** |
-| **REFLECT** | — | 0 | 100 | 20 | Halves all incoming Physical attack damage until the user switches out or faints. | **lasts until the user switches out or faints. Removed by HAZE.** |
-| FOCUS_ENERGY | — | 0 | 100 | 30 | Causes the user's critical hit rate to be multiplied by 4.  | In vanilla this was bugged to reduce crit rate. PureRGB fixed it. |
+| **REFLECT** | — | 0 | 100 | 20 | Halves all incoming Physical attack damage until the user switches out or faints. | Removed by HAZE. |
+| FOCUS_ENERGY | — | 0 | 100 | 30 | Causes the user's critical hit rate to be multiplied by 4.  | In vanilla this was bugged to reduce crit rate. PureRGB fixed it. Removed by HAZE. |
 | **BIDE** | — | 0 | 100 | **20** | **Raises both the user's Attack and Defense by 1 stage each.** | This effect is a PureRGB addition. |
 | METRONOME | — | 0 | 100 | 10 | Uses a random move. | — |
 | **MIRROR_MOVE** | — | 0 | 100 | **10** | **Priority move.** Copies the last move used by the opponent **and immediately executes it.** | — |
@@ -139,7 +139,7 @@
 | AMNESIA | — | 0 | 100 | 20 | Raises the user's Special modifier by 2 stages. | — |
 | **FIREWALL** | **FIRE** | **20** | **90** | **30** | **Burns the target. If the target was already burned by FIREWALL, the move's power scales higher on subsequent uses. Fire-type Pokémon are immune.** | **New PureRGB move. Replaces KINESIS.** |
 | **SOFTBOILED** | — | 0 | 100 | **5** | Recovers 50% of the user's max HP. | — |
-| **HI_JUMP_KICK** | FIGHTING | **120** | 90 | **10** | f the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. | — |
+| **HI_JUMP_KICK** | FIGHTING | **120** | 90 | **10** | If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. | — |
 | **GLARE** | — | 0 | **90** | 30 | Guarantees paralysis on the target if the move hits. | — |
 | **DREAM_EATER** | **GHOST** | 100 | 100 | 15 | Heals the user for 50% of the damage dealt, but only works if the target is currently asleep. | — |
 | **POISON_GAS** | POISON | **60** | **100** | **20** | **High critical hit ratio.. 20% chance to inflict poison on the target after dealing damage. Cannot poison a Poison-type Pokémon.** | — |
@@ -163,7 +163,7 @@
 | **ROCK_SLIDE** | ROCK | 75 | **95** | 10 | **10% chance to make the target flinch.** | — |
 | HYPER_FANG | NORMAL | 80 | 90 | 15 | 10% chance to make the target flinch. | — |
 | **SHARPEN** | — | 0 | 100 | 30 | **ATTACK_Raises the user's Accuracy stat modifier by 1 stage.** | — |
-| **CONVERSION** | — | 0 | 100 | **10** | **Conversion has two modes the user chooses between: DEFENSE MODE halves all damage taken. ATTACK MODE scans the target and auto-uses a super-effective move against it.** | Entirely reworked by PureRGB. |
+| **CONVERSION** | — | 0 | 100 | **10** | **Conversion has two modes the user chooses between: DEFENSE MODE halves all damage taken. ATTACK MODE scans the target and auto-uses a super-effective move against it. STAB applies to the ATTACK move based on its own type vs the user's type.** | Entirely reworked by PureRGB. |
 | **TRI_ATTACK** | NORMAL | **90** | 100 | 10 | **Uses the SPECIAL stat. This move has a ~10.1% chance each to inflict burn, freeze, or paralyze. Respects type immunities: Fire-types cannot be burned, Ice-types cannot be frozen, Ground-types cannot be paralyzed.** | Entirely reworked by PureRGB. |
 | **SUPER_FANG** | NORMAL | 1 | **100** | 10 | **Deals damage equal to 2/3 of the target's current HP.** | Changed from vanilla's 1/2. |
 | SLASH | NORMAL | 70 | 100 | 20 | High critical hit ratio. | — |
