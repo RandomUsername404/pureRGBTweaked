@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	RAZOR_WIND,\ ; ROOST
 	FIRE_PUNCH,\
@@ -47,7 +48,8 @@
 	CUT,\
 	FLY,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(CharizardPicFront)

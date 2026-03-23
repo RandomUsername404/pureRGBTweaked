@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	TOXIC,\
 	DOUBLE_EDGE,\

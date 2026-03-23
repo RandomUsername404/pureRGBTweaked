@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	LEECH_SEED,\
 	PIN_MISSILE,\ 
@@ -44,7 +45,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	ROCK_SLIDE ; YellowLegacy
 	; end
 
 	db BANK(VenusaurPicFront)

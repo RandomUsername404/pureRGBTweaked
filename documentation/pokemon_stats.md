@@ -1,11 +1,14 @@
 # Pokémon Stats
 
-## The 151 OGs
+## The Original 151
 
 **Bold** = changed from Pokémon Red/Blue.
+
 Pokémon with an "OTHER TYPING" entry can be made to use said typing by visiting the Type Guy's house on Route 23 (you only need the Boulder Badge to access his house.)
 
-| DEX NUMBER |        NAME        | TYPE 1 | TYPE 2 | HP | ATTACK | DEFENSE | SPECIAL | SPEED | TOTAL | NEW TYPING? |
+You can find an interactive version of the table below [right here.](https://sheet.zohopublic.eu/sheet/published/ohkwdf62a7e9d8f304f92822428e570f7fd1a)
+
+| DEX NUMBER |        NAME        | TYPE 1 | TYPE 2 | HP | ATTACK | DEFENSE | SPECIAL | SPEED | TOTAL | OTHER TYPING? |
 |:----------:|:------------------:|:------:|:------:|:--:|:------:|:-------:|:-------:|:-----:|:-----:|:-----------:|
 | 001 | BULBASAUR | GRASS | POISON | 45 | 49 | 49 | 65 | 45 | 253 | — |
 | 002 | IVYSAUR | GRASS | POISON | 60 | 62 | 63 | 80 | 60 | 325 | — |
@@ -33,7 +36,7 @@ Pokémon with an "OTHER TYPING" entry can be made to use said typing by visiting
 | 024 | ARBOK | POISON | — | **85** | **95** | 69 | **70** | **96** | **415** | — |
 | 025 | PIKACHU | ELECTRIC | — | **60** | 55 | **50** | **70** | 90 | **325** | — |
 | 026 | RAICHU | ELECTRIC | — | **85** | **70** | **75** | **100** | 100 | **430** | — |
-| 027 | SANDSHREW | GROUND | **NORMAL** | 50 | 75 | 85 | 30 | 40 | **280** | GROUND |
+| 027 | SANDSHREW | GROUND | **NORMAL** | 50 | 75 | 85 | 30 | 40 | 280 | GROUND |
 | 028 | SANDSLASH | GROUND | **NORMAL** | 75 | **105** | **105** | **40** | **91** | **416** | GROUND |
 | 029 | NIDORANF | POISON | — | 55 | 47 | 52 | 40 | 41 | 235 | — |
 | 030 | NIDORINA | POISON | — | 70 | 62 | 67 | 55 | 56 | 310 | — |
@@ -44,7 +47,7 @@ Pokémon with an "OTHER TYPING" entry can be made to use said typing by visiting
 | 035 | CLEFAIRY | NORMAL | — | 70 | 45 | 48 | 60 | 35 | 258 | — |
 | 036 | CLEFABLE | NORMAL | — | 95 | 70 | 73 | **105** | 60 | **403** | — |
 | 037 | VULPIX | FIRE | — | **45** | 41 | **45** | **70** | **75** | **276** | — |
-| 038 | NINETALES | FIRE | **GHOST** | 73 | 76 | 75 | 100 | 100 | **424** | FIRE |
+| 038 | NINETALES | FIRE | **GHOST** | 73 | 76 | 75 | 100 | 100 | 424 | FIRE |
 | 039 | JIGGLYPUFF | NORMAL | — | 115 | 45 | 20 | 25 | 20 | 225 | — |
 | 040 | WIGGLYTUFF | NORMAL | — | 140 | **75** | **55** | **80** | 45 | **395** | — |
 | 041 | ZUBAT | POISON | FLYING | 40 | 45 | 35 | 40 | 55 | 215 | — |
@@ -90,7 +93,7 @@ Pokémon with an "OTHER TYPING" entry can be made to use said typing by visiting
 | 081 | MAGNEMITE | ELECTRIC | — | 25 | 35 | 70 | 95 | 45 | 270 | — |
 | 082 | MAGNETON | ELECTRIC | — | **65** | 60 | 95 | 120 | 70 | **410** | — |
 | 083 | FARFETCHD | NORMAL | FLYING | **70** | **75** | **65** | **68** | **70** | **348** | — |
-| 084 | DODUO | **GROUND** | FLYING | 35 | 85 | 45 | 35 | 75 | **275** | NORMAL/FLYING |
+| 084 | DODUO | **GROUND** | FLYING | 35 | 85 | 45 | 35 | 75 | 275 | NORMAL/FLYING |
 | 085 | DODRIO | **GROUND** | FLYING | **70** | **115** | 70 | 60 | **105** | **420** | NORMAL/FLYING |
 | 086 | SEEL | WATER | — | 65 | 45 | 55 | 70 | 45 | 280 | — |
 | 087 | DEWGONG | WATER | ICE | 90 | 70 | 80 | 95 | **90** | **425** | — |
@@ -159,11 +162,12 @@ Pokémon with an "OTHER TYPING" entry can be made to use said typing by visiting
 | 150 | MEWTWO | PSYCHIC | — | 106 | 110 | 90 | 154 | 130 | 590 | — |
 | 151 | MEW | PSYCHIC | — | 100 | 100 | 100 | 100 | 100 | 500 | — |
 
-\* PORYGON's new typing is a RGB TWK addition.
+\* PORYGON's new typing is a RGB Tweaked addition.
 
 ## "Secret" Pokémon & enemies
 
 **SPOILERS AHEAD**
+
 Some of the player's Pokémon can be upgraded to use the stats below. Others are only enemy encounters:
 
 | DEX NUMBER |        NAME        | TYPE 1 | TYPE 2 | HP | ATTACK | DEFENSE | SPECIAL | SPEED | TOTAL | NEW TYPING? |
@@ -183,5 +187,11 @@ Some of the player's Pokémon can be upgraded to use the stats below. Others are
 | ??? | WINTER_DRAGONAIR | DRAGON | ICE | 91 | 84 | 75 | 130 | 80 | 460 | — |
 
 The FLOATING type makes a Pokémon immune to GROUND moves.
+
 The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, but remains weak to FIGHTING and GROUND.
+
 The MAGMA type makes a Pokémon immune to WATER and FIRE moves.
+
+---
+
+See also: https://github.com/RandomUsername404/pureRGBTweaked/tree/master/data/pokemon/base_stats

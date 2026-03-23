@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	TOXIC,\
@@ -40,7 +41,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(GengarPicFront)

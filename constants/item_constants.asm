@@ -139,15 +139,15 @@ ENDM
 
 ;;;;; PureRGBnote: CHANGED: TMs were reassigned better moves
 DEF TM01 EQU const_value
-	add_tm ICE_PUNCH   	; $C9
+	add_tm ICE_PUNCH    ; $C9
 	add_tm RAZOR_WIND   ; $CA ROOST
-	add_tm LEECH_SEED 	; $CB
+	add_tm LEECH_SEED   ; $CB
 	add_tm PIN_MISSILE  ; $CC
 	add_tm FIRE_PUNCH   ; $CD
 	add_tm TOXIC        ; $CE
 	add_tm HORN_DRILL   ; $CF
 	add_tm BODY_SLAM    ; $D0
-	add_tm SLASH    	; $D1
+	add_tm SLASH        ; $D1
 	add_tm DOUBLE_EDGE  ; $D2
 	add_tm BUBBLEBEAM   ; $D3
 	add_tm AURORA_BEAM  ; $D4
@@ -165,7 +165,7 @@ DEF TM01 EQU const_value
 	add_tm THUNDERBOLT  ; $E0
 	add_tm THUNDER      ; $E1
 	add_tm EARTHQUAKE   ; $E2
-	add_tm CRABHAMMER	; $E3
+	add_tm SEISMIC_TOSS ; $E3 ; PureRGB Tweaked: replaced CRABHAMMER
 	add_tm DIG          ; $E4
 	add_tm PSYCHIC_M    ; $E5
 	add_tm MEGA_DRAIN   ; $E6
@@ -173,21 +173,21 @@ DEF TM01 EQU const_value
 	add_tm SWORDS_DANCE ; $E8
 	add_tm REFLECT      ; $E9
 	add_tm BIDE         ; $EA 
-	add_tm AGILITY    	; $EB
-	add_tm BARRAGE 		; $EC
+	add_tm AGILITY      ; $EB
+	add_tm BARRAGE      ; $EC
 	add_tm FLAMETHROWER ; $ED
 	add_tm FIRE_BLAST   ; $EE
-	add_tm SLAM        	; $EF FILTHY SLAM
+	add_tm SLAM         ; $EF FILTHY SLAM
 	add_tm KARATE_CHOP  ; $F0
-	add_tm MEDITATE   	; $F1 
+	add_tm MEDITATE     ; $F1 
 	add_tm LOVELY_KISS  ; $F2
 	add_tm SKY_ATTACK   ; $F3
 	add_tm LIGHT_SCREEN ; $F4
 	add_tm THUNDER_WAVE ; $F5
 	add_tm PSYBEAM      ; $F6
-	add_tm SLUDGE    	; $F7
+	add_tm SLUDGE       ; $F7
 	add_tm ROCK_SLIDE   ; $F8
-	add_tm GLARE   		; $F9
+	add_tm GLARE        ; $F9
 	add_tm SUBSTITUTE   ; $FA
 ASSERT NUM_TMS == const_value - TM01, "NUM_TMS ({d:NUM_TMS}) does not match the number of add_tm definitions"
 

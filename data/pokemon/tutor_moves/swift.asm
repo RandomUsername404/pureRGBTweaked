@@ -21,14 +21,14 @@ SwiftLearnset:
 	dbit FALSE ; PIDGEOT    ; 18
 	dbit TRUE  ; RATTATA    ; 19
 	dbit TRUE  ; RATICATE   ; 20
-	dbit FALSE ; SPEAROW    ; 21
-	dbit FALSE ; FEAROW     ; 22
+	dbit TRUE  ; SPEAROW    ; 21
+	dbit TRUE  ; FEAROW     ; 22
 	dbit FALSE ; EKANS      ; 23
 	dbit FALSE ; ARBOK      ; 24
 	dbit TRUE  ; PIKACHU    ; 25
 	dbit TRUE  ; RAICHU     ; 26
-	dbit FALSE ; SANDSHREW  ; 27
-	dbit FALSE ; SANDSLASH  ; 28
+	dbit TRUE  ; SANDSHREW  ; 27
+	dbit TRUE  ; SANDSLASH  ; 28
 	dbit FALSE ; NIDORAN_F  ; 29
 	dbit FALSE ; NIDORINA   ; 30
 	dbit FALSE ; NIDOQUEEN  ; 31
@@ -81,8 +81,8 @@ SwiftLearnset:
 	dbit TRUE  ; RAPIDASH   ; 78
 	dbit FALSE ; SLOWPOKE   ; 79
 	dbit FALSE ; SLOWBRO    ; 80
-	dbit FALSE ; MAGNEMITE  ; 81
-	dbit FALSE ; MAGNETON   ; 82
+	dbit TRUE  ; MAGNEMITE  ; 81
+	dbit TRUE  ; MAGNETON   ; 82
 	dbit TRUE  ; FARFETCHD  ; 83
 	dbit FALSE ; DODUO      ; 84
 	dbit FALSE ; DODRIO     ; 85

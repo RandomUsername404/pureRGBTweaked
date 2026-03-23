@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\
@@ -35,7 +36,8 @@
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
-	FLASH
+	FLASH,\
+	EARTHQUAKE ; RGB Tweaked
 	; end
 
 	db BANK(ElectrodePicFront)

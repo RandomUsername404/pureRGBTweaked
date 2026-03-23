@@ -74,7 +74,7 @@ MegaKickLearnset:
 	dbit FALSE ; VICTREEBEL ; 71
 	dbit FALSE ; TENTACOOL  ; 72
 	dbit FALSE ; TENTACRUEL ; 73
-	dbit FALSE ; GEODUDE    ; 74
+	dbit TRUE  ; GEODUDE    ; 74
 	dbit TRUE  ; GRAVELER   ; 75
 	dbit TRUE  ; GOLEM      ; 76
 	dbit TRUE  ; PONYTA     ; 77

@@ -262,11 +262,11 @@ NidoranMEvosMoves:
 	db 6, POISON_STING ; YellowLegacy
 	db 8, HORN_ATTACK ; YellowLegacy
 	db 12, DOUBLE_KICK ; YellowLegacy
-	db 21, SLAM ; PureRGB							FILTHY SLAM
+	db 21, SLAM ; PureRGB						FILTHY SLAM
 	db 23, FOCUS_ENERGY ; YellowLegacy
 	db 26, GLARE ; PureRGB
 	db 30, FURY_ATTACK ; YellowLegacy
-	db 37, COUNTER ; PureRGB						DRAIN PUNCH
+	db 37, COUNTER ; PureRGB					DRAIN PUNCH
 	db 38, HORN_DRILL ; YellowLegacy
 	db 43, EARTHQUAKE ; PureRGB
 	db 54, POISON_GAS ; PureRGB
@@ -281,12 +281,12 @@ NidokingEvosMoves:
 	db 8, HORN_ATTACK ; YellowLegacy
 	db 12, DOUBLE_KICK ; YellowLegacy
 	db 25, THRASH ; YellowLegacy
-	db 26, SLAM ; PureRGB							FILTHY SLAM
+	db 26, SLAM ; PureRGB						FILTHY SLAM
 	db 27, FOCUS_ENERGY ; YellowLegacy
 	db 28, GLARE ; PureRGB
 	db 32, SLUDGE ; YellowLegacy
 	db 36, FURY_ATTACK ; YellowLegacy
-	db 37, COUNTER ; PureRGB						DRAIN PUNCH
+	db 37, COUNTER ; PureRGB					DRAIN PUNCH
 	db 40, EARTHQUAKE ; YellowLegacy
 	db 46, HORN_DRILL ; YellowLegacy
 	db 57, POISON_GAS ; PureRGB
@@ -406,11 +406,11 @@ MukEvosMoves:
 	db 16, ACID ; YellowLegacy
 	db 19, POISON_GAS ; YellowLegacy
 	db 24, ACID_ARMOR ; YellowLegacy
-	db 26, SLAM ; PureRGB							FILTHY SLAM
+	db 26, SLAM ; PureRGB						FILTHY SLAM
 	db 27, MINIMIZE ; YellowLegacy
 	db 33, SLUDGE ; YellowLegacy
 	db 37, BODY_SLAM ; YellowLegacy
-	db 41, COUNTER ; PureRGB						DRAIN PUNCH
+	db 41, COUNTER ; PureRGB					DRAIN PUNCH
 	db 42, TOXIC ; YellowLegacy
 	db 45, SCREECH ; YellowLegacy
 	db 50, EXPLOSION ; PureRGB
@@ -499,7 +499,7 @@ MarowakEvosMoves:
 	db 30, DIG ; PureRGB
 	db 31, BONEMERANG ; YellowLegacy
 	db 33, BARRAGE ; PureRGB
-	db 36, COUNTER ; PureRGB						DRAIN PUNCH
+	db 36, COUNTER ; PureRGB					DRAIN PUNCH
 	db 38, THRASH ; YellowLegacy
 	db 45, SKULL_BASH ; PureRGB
 	db 46, RAGE ; YellowLegacy
@@ -614,7 +614,7 @@ TentacruelEvosMoves:
 	db 8, POISON_STING ; PureRGB
 	db 13, WATER_GUN ; YellowLegacy
 	db 18, ACID ; YellowLegacy
-	db 19, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 19, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 21, WRAP ; PureRGB
 	db 23, BUBBLEBEAM ; YellowLegacy
 	db 24, CONFUSE_RAY ; PureRGB
@@ -698,7 +698,7 @@ BlastoiseEvosMoves:
 	db 27, BODY_SLAM ; YellowLegacy
 	db 31, WITHDRAW ; YellowLegacy
 	db 33, WATERFALL ; YellowLegacy
-	db 34, COUNTER ; PureRGB						DRAIN PUNCH
+	db 34, COUNTER ; PureRGB					DRAIN PUNCH
 	db 42, SKULL_BASH ; YellowLegacy
 	db 45, ICE_BEAM ; YellowLegacy
 	db 52, HYDRO_PUMP ; YellowLegacy
@@ -789,14 +789,14 @@ FearowEvosMoves:
 ; Learnset
 	db 7, LEER ; YellowLegacy
 	db 10, FURY_ATTACK ; YellowLegacy
-	db 13, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 13, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 14, FOCUS_ENERGY ; YellowLegacy
 	db 18, SWIFT ; YellowLegacy
 	db 19, WING_ATTACK ; PureRGB
 	db 21, MIRROR_MOVE ; YellowLegacy
 	db 22, SUBMISSION ; PureRGB
 	db 24, DRILL_PECK ; YellowLegacy
-	db 26, RAZOR_WIND ; RGB Tweaked					ROOST
+	db 26, RAZOR_WIND ; RGB Tweaked				ROOST
 	db 28, WHIRLWIND ; YellowLegacy
 	db 30, SHARPEN ; YellowLegacy
 	db 40, AGILITY ; YellowLegacy
@@ -853,7 +853,7 @@ GolemEvosMoves:
 ; Learnset
 	db 11, HARDEN ; PureRGB
 	db 12, ROCK_THROW ; YellowLegacy
-	db 13, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 13, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 19, DEFENSE_CURL ; PureRGB
 	db 21, DIG ; YellowLegacy
 	db 31, SELFDESTRUCT ; YellowLegacy
@@ -908,7 +908,7 @@ MachampEvosMoves:
 	db 44, COMET_PUNCH ; PureRGB
 	db 47, MEGA_PUNCH ; PureRGB
 	db 52, SKULL_BASH ; PureRGB
-	db 56, COUNTER ; PureRGB						DRAIN PUNCH
+	db 56, COUNTER ; PureRGB					DRAIN PUNCH
 	db 0
 
 
@@ -944,7 +944,7 @@ HitmonleeEvosMoves:
 	db 38, JUMP_KICK ; YellowLegacy
 	db 41, MIRROR_MOVE ; PureRGB
 	db 43, MEDITATE ; YellowLegacy
-	db 46, COUNTER ; PureRGB						DRAIN PUNCH
+	db 46, COUNTER ; PureRGB					DRAIN PUNCH
 	db 48, HI_JUMP_KICK ; YellowLegacy
 	db 53, MEGA_KICK ; YellowLegacy
 	db 0
@@ -960,7 +960,7 @@ HitmonchanEvosMoves:
 	db 33, FIRE_PUNCH ; YellowLegacy
 	db 35, ICE_PUNCH ; YellowLegacy
 	db 37, THUNDERPUNCH ; YellowLegacy
-	db 38, COUNTER ; PureRGB						DRAIN PUNCH
+	db 38, COUNTER ; PureRGB					DRAIN PUNCH
 	db 40, DIZZY_PUNCH ; YellowLegacy
 	db 42, SUBMISSION ; YellowLegacy
 	db 43, MIRROR_MOVE ; PureRGB
@@ -980,7 +980,7 @@ ArbokEvosMoves:
 	db 12, BITE ; YellowLegacy
 	db 13, SMOG ; PureRGB
 	db 15, ACID ; YellowLegacy
-	db 19, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 19, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 22, SUBSTITUTE ; YellowLegacy
 	db 23, MEGA_DRAIN ; PureRGB
 	db 25, GLARE ; YellowLegacy
@@ -1008,7 +1008,7 @@ ParasectEvosMoves:
 	db 8, ABSORB ; YellowLegacy
 	db 10, LEECH_LIFE ; YellowLegacy
 	db 13, POISONPOWDER ; YellowLegacy
-	db 18, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 18, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 24, SPORE ; YellowLegacy
 	db 25, BARRAGE ; PureRGB
 	db 27, MEGA_DRAIN ; YellowLegacy
@@ -1093,7 +1093,7 @@ ElectabuzzEvosMoves:
 	db 25, SCREECH ; YellowLegacy
 	db 26, COMET_PUNCH ; PureRGB
 	db 31, THUNDERPUNCH ; YellowLegacy
-	db 33, COUNTER ; PureRGB						DRAIN PUNCH
+	db 33, COUNTER ; PureRGB					DRAIN PUNCH
 	db 37, TAKE_DOWN ; PureRGB					HEAT RUSH
 	db 40, LIGHT_SCREEN ; YellowLegacy
 	db 42, MEGA_PUNCH ; PureRGB
@@ -1163,7 +1163,7 @@ DewgongEvosMoves:
 	db 17, HEADBUTT ; PureRGB
 	db 21, REST ; YellowLegacy
 	db 25, BUBBLEBEAM ; YellowLegacy
-	db 26, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 26, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 32, BODY_SLAM ; PureRGB
 	db 39, SKULL_BASH ; PureRGB
 	db 40, ICE_BEAM ; YellowLegacy
@@ -1182,7 +1182,7 @@ DugtrioEvosMoves:
 	db 0
 ; Learnset
 	db 13, GROWL ; PureRGB
-	db 15, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 15, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 19, DIG ; YellowLegacy
 	db 24, SAND_ATTACK ; YellowLegacy
 	db 30, SLAM ; PureRGB						FILTHY SLAM
@@ -1282,7 +1282,7 @@ DoduoEvosMoves: ; same learnset as dodrio below
 DodrioEvosMoves:
 	db 0
 ; Learnset
-	db 10, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 10, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 14, DOUBLE_TEAM ; PureRGB
 	db 17, STOMP ; PureRGB
 	db 20, GROWL ; YellowLegacy
@@ -1349,7 +1349,7 @@ MoltresEvosMoves:
 	db 55, SKY_ATTACK ; YellowLegacy
 	db 60, FIRE_SPIN ; YellowLegacy
 	db 61, DRAGON_RAGE ; PureRGB
-	db 75, RAZOR_WIND ; RGB Tweaked					ROOST
+	db 80, RAZOR_WIND ; RGB Tweaked				ROOST
 	db 0
 
 
@@ -1364,7 +1364,7 @@ ArticunoEvosMoves:
 	db 55, SKY_ATTACK ; YellowLegacy
 	db 60, MIST ; YellowLegacy
 	db 61, WHIRLWIND ; PureRGB
-	db 75, RAZOR_WIND ; RGB Tweaked					ROOST
+	db 80, RAZOR_WIND ; RGB Tweaked				ROOST
 	db 0
 
 
@@ -1379,7 +1379,7 @@ ZapdosEvosMoves:
 	db 55, SKY_ATTACK ; YellowLegacy
 	db 60, LIGHT_SCREEN ; YellowLegacy
 	db 61, SPIKE_CANNON ; PureRGB
-	db 75, RAZOR_WIND ; RGB Tweaked					ROOST
+	db 80, RAZOR_WIND ; RGB Tweaked				ROOST
 	db 0
 
 
@@ -1397,7 +1397,7 @@ PersianEvosMoves:
 	db 0
 ; Learnset
 	db 8, LICK ; PureRGB
-	db 10, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 10, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 15, BITE ; YellowLegacy
 	db 16, DOUBLE_KICK ; PureRGB
 	db 18, PAY_DAY ; YellowLegacy
@@ -1417,7 +1417,7 @@ KrabbyEvosMoves: ; same learnset as kingler below
 KinglerEvosMoves:
 	db 0
 ; Learnset
-	db 14, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 14, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 17, KARATE_CHOP ; PureRGB
 	db 20, VICEGRIP ; YellowLegacy
 	db 25, BUBBLEBEAM ; YellowLegacy
@@ -1467,7 +1467,7 @@ RaichuEvosMoves:
 	db 8, THUNDER_WAVE ; YellowLegacy
 	db 11, TAIL_WHIP ; YellowLegacy
 	db 15, DOUBLE_TEAM ; YellowLegacy
-	db 16, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 16, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 20, THUNDERPUNCH ; YellowLegacy
 	db 24, HEADBUTT ; YellowLegacy
 	db 30, THUNDERBOLT ; YellowLegacy
@@ -1735,7 +1735,7 @@ MachopEvosMoves:
 	db 45, KARATE_CHOP ; YellowLegacy
 	db 47, MEGA_PUNCH ; PureRGB
 	db 52, SKULL_BASH ; PureRGB
-	db 56, COUNTER ; PureRGB						DRAIN PUNCH
+	db 56, COUNTER ; PureRGB					DRAIN PUNCH
 	db 0
 
 
@@ -1781,7 +1781,7 @@ PoliwrathEvosMoves:
 	db 36, DIZZY_PUNCH ; PureRGB
 	db 43, HYPNOSIS ; YellowLegacy
 	db 48, AMNESIA ; YellowLegacy
-	db 52, COUNTER ; PureRGB						DRAIN PUNCH
+	db 52, COUNTER ; PureRGB					DRAIN PUNCH
 	db 53, HYDRO_PUMP ; YellowLegacy
 	db 0
 
@@ -1832,7 +1832,7 @@ PrimeapeEvosMoves:
 	db 0
 ; Learnset
 	db 9, LOW_KICK ; YellowLegacy
-	db 12, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 12, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 15, GLARE ; PureRGB
 	db 20, DEFENSE_CURL ; PureRGB
 	db 21, KARATE_CHOP ; YellowLegacy
@@ -1843,7 +1843,7 @@ PrimeapeEvosMoves:
 	db 39, THRASH ; YellowLegacy
 	db 40, COMET_PUNCH ; PureRGB
 	db 45, SCREECH ; YellowLegacy
-	db 46, COUNTER ; PureRGB						DRAIN PUNCH
+	db 46, COUNTER ; PureRGB					DRAIN PUNCH
 	db 51, EXPLOSION ; PureRGB
 	db 54, SONICBOOM ; PureRGB
 	db 0
@@ -1936,7 +1936,7 @@ SnorlaxEvosMoves:
 	db 55, MEGA_KICK ; PureRGB
 	db 56, HYPER_BEAM ; YellowLegacy
 	db 59, EXPLOSION ; PureRGB
-	db 73, SCREECH ; RGB Tweaked
+	db 76, SCREECH ; RGB Tweaked
 	db 0
 
 
@@ -2038,7 +2038,7 @@ BulbasaurEvosMoves:
 	db 7, LEECH_SEED ; YellowLegacy
 	db 9, VINE_WHIP ; YellowLegacy
 	db 18, STUN_SPORE ; PureRGB
-	db 21, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 21, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 22, POISONPOWDER ; YellowLegacy
 	db 25, SLEEP_POWDER ; YellowLegacy
 	db 29, RAZOR_LEAF ; YellowLegacy
@@ -2057,7 +2057,7 @@ VenusaurEvosMoves:
 	db 16, ACID ; YellowLegacy
 	db 20, STUN_SPORE ; PureRGB
 	db 22, POISONPOWDER ; YellowLegacy
-	db 24, CONSTRICT ; PureRGB						SIPHON SNAG
+	db 24, CONSTRICT ; PureRGB					SIPHON SNAG
 	db 25, SLEEP_POWDER ; YellowLegacy
 	db 29, RAZOR_LEAF ; YellowLegacy
 	db 36, SLUDGE ; YellowLegacy
@@ -2156,7 +2156,7 @@ NidorinoEvosMoves:
 	db 27, FOCUS_ENERGY ; YellowLegacy
 	db 32, SLUDGE ; YellowLegacy
 	db 36, FURY_ATTACK ; YellowLegacy
-	db 37, COUNTER ; PureRGB						DRAIN PUNCH
+	db 37, COUNTER ; PureRGB					DRAIN PUNCH
 	db 40, EARTHQUAKE ; YellowLegacy
 	db 46, HORN_DRILL ; YellowLegacy
 	db 54, POISON_GAS ; PureRGB
@@ -2171,7 +2171,7 @@ NidorinaEvosMoves:
 	db 6, POISON_STING ; YellowLegacy
 	db 8, BITE ; YellowLegacy
 	db 12, DOUBLE_KICK ; YellowLegacy
-	db 14, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 14, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 21, HEADBUTT ; YellowLegacy
 	db 22, SLAM ; PureRGB						FILTHY SLAM
 	db 24, DIG ; YellowLegacy
@@ -2192,7 +2192,7 @@ GeodudeEvosMoves:
 ; Learnset
 	db 11, HARDEN ; PureRGB
 	db 12, ROCK_THROW ; YellowLegacy
-	db 13, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 13, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 19, DEFENSE_CURL ; PureRGB
 	db 21, DIG ; YellowLegacy
 	db 31, SELFDESTRUCT ; YellowLegacy
@@ -2225,7 +2225,6 @@ PorygonEvosMoves:
 	db 50, HYPER_BEAM ; YellowLegacy
 	db 54, SELFDESTRUCT ; PureRGB
 	db 58, BARRAGE ; RGB Tweaked
-	db 65, SLAM ; RGB Tweaked					FILTHY_SLAM
 	db 0
 
 
@@ -2252,14 +2251,14 @@ CharmanderEvosMoves:
 	db 0
 ; Learnset
 	db 9, EMBER ; YellowLegacy
-	db 12, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 12, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 13, LEER ; YellowLegacy
 	db 15, SMOKESCREEN ; PureRGB
 	db 17, RAGE ; YellowLegacy
 	db 18, KINESIS ; PureRGB					FIREWALL
 	db 19, BITE ; RGB Tweaked
 	db 23, FIRE_PUNCH ; RGB Tweaked
-	db 28, TAKE_DOWN ; RGB Tweaked					HEAT RUSH
+	db 28, TAKE_DOWN ; RGB Tweaked				HEAT RUSH
 	db 33, SLASH ; YellowLegacy
 	db 38, FLAMETHROWER ; YellowLegacy
 	db 46, FIRE_SPIN ; YellowLegacy
@@ -2280,7 +2279,7 @@ SquirtleEvosMoves:
 	db 27, BODY_SLAM ; YellowLegacy
 	db 31, WITHDRAW ; YellowLegacy
 	db 33, WATERFALL ; YellowLegacy
-	db 34, COUNTER ; PureRGB						DRAIN PUNCH
+	db 34, COUNTER ; PureRGB					DRAIN PUNCH
 	db 42, SKULL_BASH ; YellowLegacy
 	db 45, ICE_BEAM ; YellowLegacy
 	db 52, HYDRO_PUMP ; YellowLegacy
@@ -2294,13 +2293,13 @@ CharmeleonEvosMoves:
 ; Learnset
 	db 9, EMBER ; YellowLegacy
 	db 13, LEER ; YellowLegacy
-	db 14, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 14, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 15, SMOKESCREEN ; PureRGB
 	db 17, RAGE ; YellowLegacy
 	db 20, KINESIS ; PureRGB					FIREWALL
 	db 23, BITE ; YellowLegacy
 	db 26, FIRE_PUNCH ; RGB Tweaked
-	db 30, TAKE_DOWN ; RGB Tweaked					HEAT RUSH
+	db 30, TAKE_DOWN ; RGB Tweaked				HEAT RUSH
 	db 33, SLASH ; YellowLegacy
 	db 40, FLAMETHROWER ; YellowLegacy
 	db 56, FIRE_SPIN ; YellowLegacy
@@ -2321,7 +2320,7 @@ WartortleEvosMoves:
 	db 27, BODY_SLAM ; YellowLegacy
 	db 31, WITHDRAW ; YellowLegacy
 	db 33, WATERFALL ; YellowLegacy
-	db 34, COUNTER ; PureRGB						DRAIN PUNCH
+	db 34, COUNTER ; PureRGB					DRAIN PUNCH
 	db 42, SKULL_BASH ; YellowLegacy
 	db 45, ICE_BEAM ; YellowLegacy
 	db 52, HYDRO_PUMP ; YellowLegacy
@@ -2334,13 +2333,13 @@ CharizardEvosMoves:
 ; Learnset
 	db 9, EMBER ; YellowLegacy
 	db 13, LEER ; YellowLegacy
-	db 14, FURY_SWIPES ; PureRGB						DUST CLAW
+	db 14, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 15, SMOKESCREEN ; PureRGB
 	db 17, RAGE ; YellowLegacy
 	db 20, KINESIS ; PureRGB					FIREWALL
 	db 23, BITE ; YellowLegacy
 	db 28, FIRE_PUNCH ; RGB Tweaked
-	db 32, TAKE_DOWN ; RGB Tweaked					HEAT_RUSH
+	db 32, TAKE_DOWN ; RGB Tweaked				HEAT_RUSH
 	db 33, SLASH ; YellowLegacy
 	db 36, WING_ATTACK ; YellowLegacy
 	db 42, FLAMETHROWER ; YellowLegacy

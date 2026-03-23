@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	FIRE_PUNCH,\
@@ -41,8 +42,9 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
-	SURF,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS,\ ; YellowLegacy
+	STRENGTH       ; YellowLegacy
 	; end
 
 

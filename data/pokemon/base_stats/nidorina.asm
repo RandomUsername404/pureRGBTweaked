@@ -13,6 +13,8 @@
 	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
+	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	PIN_MISSILE,\
 	TOXIC,\
@@ -41,7 +43,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	HORN_DRILL ; YellowLegacy
 	; end
 
 	db BANK(NidorinaPicFront)

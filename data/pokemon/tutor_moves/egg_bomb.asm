@@ -124,7 +124,7 @@ EggBombLearnset:
 	dbit FALSE ; STARMIE    ; 121
 	dbit FALSE ; MR_MIME    ; 122
 	dbit TRUE  ; SCYTHER    ; 123
-	dbit FALSE ; JYNX       ; 124
+	dbit TRUE  ; JYNX       ; 124
 	dbit FALSE ; ELECTABUZZ ; 125
 	dbit FALSE ; MAGMAR     ; 126
 	dbit TRUE  ; PINSIR     ; 127

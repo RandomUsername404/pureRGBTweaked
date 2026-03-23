@@ -14,6 +14,7 @@
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\

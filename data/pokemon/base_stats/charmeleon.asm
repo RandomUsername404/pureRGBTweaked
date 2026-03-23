@@ -13,6 +13,8 @@
 	db SCRATCH, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
+	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	FIRE_PUNCH,\
 	TOXIC,\
@@ -41,7 +43,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(CharmeleonPicFront)

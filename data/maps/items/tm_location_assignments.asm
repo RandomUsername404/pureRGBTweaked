@@ -5,7 +5,7 @@
 DEF TM_BROCK                                EQU TM_BIDE
 DEF TM_MISTY                                EQU TM_BUBBLEBEAM
 DEF TM_SURGE                                EQU TM_THUNDERBOLT
-DEF TM_ERIKA                                EQU TM_RAZOR_LEAF
+DEF TM_ERIKA                                EQU TM_MEGA_DRAIN
 DEF TM_KOGA                                 EQU TM_TOXIC
 DEF TM_SABRINA                              EQU TM_MEDITATE
 DEF TM_BLAINE                               EQU TM_FIRE_BLAST
@@ -23,7 +23,7 @@ DEF TM_SAFFRON_CITY_MR_PSYCHIC              EQU TM_PSYCHIC_M
 ;DEF TM_CELADON_CITY_SURF_POOL_GRAMPS        EQU TM_MEDITATE ; PureRGBnote: CHANGED: He is now a move tutor instead
 DEF TM_SILPH_CO_2F_HIDING_LADY              EQU TM_SUBSTITUTE
 ;DEF TM_SAFFRON_CITY_COPYCAT_POKEDOLL_REWARD EQU TM_SUBSTITUTE ; PureRGBnote: CHANGED: She is now a move tutor instead
-DEF TM_CINNABAR_LAB_CENTER_ROOM             EQU TM_CRABHAMMER
+DEF TM_CINNABAR_LAB_CENTER_ROOM             EQU TM_SEISMIC_TOSS
 
 ; Field item ball TMs (in order of appearance / obtainability)
 DEF TM_MT_MOON_1F_LEFT_DOWN_FROM_ENTRANCE   EQU TM_AURORA_BEAM

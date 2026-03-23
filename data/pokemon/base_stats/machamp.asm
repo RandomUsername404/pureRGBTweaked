@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	FIRE_PUNCH,\
@@ -38,7 +39,8 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
-	STRENGTH
+	STRENGTH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(MachampPicFront)

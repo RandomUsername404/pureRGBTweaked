@@ -13,6 +13,8 @@
 	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
+	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	RAZOR_WIND,\ ; ROOST
 	PIN_MISSILE,\

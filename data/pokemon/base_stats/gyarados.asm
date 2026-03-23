@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\
@@ -38,7 +39,8 @@
 	SUBSTITUTE,\
 	SURF,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	FLY ; YellowLegacy
 	; end
 
 

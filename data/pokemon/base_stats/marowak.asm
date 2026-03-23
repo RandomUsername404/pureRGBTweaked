@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	PIN_MISSILE,\
@@ -46,7 +47,8 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
-	STRENGTH
+	STRENGTH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(MarowakPicFront)

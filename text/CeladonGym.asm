@@ -67,12 +67,12 @@ _TM21ExplanationText::
 	para "@"
 	text_ram_stringbuffer
 	text " contains"
-	line "RAZOR LEAF."
+	line "MEGA DRAIN."
 
-	para "It's a powerful"
-	line "GRASS attack that"
-	cont "lands critical"
-	cont "hits very often!"
+	para "Half the damage"
+	line "it inflicts is"
+	cont "drained to heal"
+	cont "your #MON!"
 	done
 
 _CeladonGymTM21NoRoomText::

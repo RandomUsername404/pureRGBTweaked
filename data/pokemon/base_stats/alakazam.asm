@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\
@@ -31,7 +32,9 @@
 	LIGHT_SCREEN,\
 	PSYBEAM,\
 	SUBSTITUTE,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS,\ ; YellowLegacy
+	THUNDER_WAVE   ; YellowLegacy
 	; end
 
 	db BANK(AlakazamPicFront)

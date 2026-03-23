@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	LEECH_SEED,\
 	PIN_MISSILE,\
@@ -30,7 +31,6 @@
 	ROLLING_KICK,\
 	BARRIER,\
 	EARTHQUAKE,\
-	CRABHAMMER,\
 	DIG,\
 	MEGA_DRAIN,\
 	SWORDS_DANCE,\
@@ -47,7 +47,8 @@
 	CUT,\
 	SURF,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(KabutopsPicFront)

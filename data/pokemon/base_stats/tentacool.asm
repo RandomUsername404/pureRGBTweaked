@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	PIN_MISSILE,\
 	TOXIC,\
@@ -38,7 +39,8 @@
 	GLARE,\
 	SUBSTITUTE,\
 	SURF,\
-	FLASH
+	FLASH,\
+	CUT ; YellowLegacy
 	; end
 
 

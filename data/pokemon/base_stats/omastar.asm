@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	LEECH_SEED,\
 	PIN_MISSILE,\
@@ -42,7 +43,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	SURF,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
 	; end
 
 	db BANK(OmastarPicFront)

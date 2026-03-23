@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	LEECH_SEED,\
 	PIN_MISSILE,\
@@ -27,7 +28,6 @@
 	BLIZZARD,\
 	BARRIER,\
 	EARTHQUAKE,\
-	CRABHAMMER,\
 	DIG,\
 	MEGA_DRAIN,\
 	REFLECT,\

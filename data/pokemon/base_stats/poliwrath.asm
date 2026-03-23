@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	FIRE_PUNCH,\
@@ -44,7 +45,9 @@
 	SUBSTITUTE,\
 	SURF,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS,\ ; YellowLegacy
+	EARTHQUAKE     ; YellowLegacy
 	; end
 
 	db BANK(PoliwrathPicFront)

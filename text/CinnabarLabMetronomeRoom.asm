@@ -10,19 +10,26 @@ _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
 	text "Tch-tch-tch!"
 	line "That's the sound"
 	cont "a KINGLER makes!"
-
-	para "CRABHAMMER is"
-	line "its signature"
-	cont "move!"
-
-	para "I love that move"
-	line "so much, I made a"
-	cont "<TM> to teach it to"
-	cont "other #MON!"
-
-	para "When in doubt:"
-	para "Drop a HAMMER on"
-	line "'em!"
+	
+	para "I was trying to"
+	line "capture its raw"
+	cont "power. KINGLER"
+	cont "just grabs you"
+	cont "and WHAM!"
+	
+	para "Sadly, I could"
+	line "not crack that"
+	cont "CRABHAMMER<...>"
+	
+	para "But I did figure"
+	line "out how to grab"
+	cont "a foe and HURL"
+	cont "it to the ground"
+	cont "with gravity!"
+	
+	para "SEISMIC TOSS!"
+	line "Not CRABHAMMER,"
+	cont "but I'll take it!"
 	done
 
 _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::

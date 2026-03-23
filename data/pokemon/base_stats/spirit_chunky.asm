@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	FIRE_PUNCH,\
@@ -42,9 +43,9 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
-	SURF,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; RGB Tweaked
 	; end
 
 	db BANK(ChunkyPicFront)

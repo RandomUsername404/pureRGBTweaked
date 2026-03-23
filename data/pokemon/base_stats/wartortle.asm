@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	TOXIC,\
@@ -41,7 +42,9 @@
 	CUT,\
 	SURF,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS ; YellowLegacy
+	; end
 
 	db BANK(WartortlePicFront)
 	db 0

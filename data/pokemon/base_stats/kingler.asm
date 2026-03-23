@@ -14,6 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	PIN_MISSILE,\
 	TOXIC,\
@@ -28,7 +29,6 @@
 	ROLLING_KICK,\
 	BARRIER,\
 	EARTHQUAKE,\
-	CRABHAMMER,\
 	DIG,\
 	SWORDS_DANCE,\
 	BIDE,\

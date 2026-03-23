@@ -14,6 +14,7 @@
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
+	; PureRGB:
 	tmhm \
 	ICE_PUNCH,\
 	LEECH_SEED,\
@@ -52,7 +53,9 @@
 	SUBSTITUTE,\
 	CUT,\
 	STRENGTH,\
-	FLASH
+	FLASH,\
+	SEISMIC_TOSS,\ ; YellowLegacy
+	HI_JUMP_KICK   ; RGB Tweaked
 	; end
 
 	db BANK(ClefablePicFront)
