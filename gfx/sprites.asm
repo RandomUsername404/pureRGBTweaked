@@ -142,12 +142,14 @@ BlueSittingSprite:: INCBIN "gfx/sprites/champ_arena_audience/blue_sitting.2bpp"
 
 SECTION "NPC Sprites 5", ROMX
 
-NurseJoySprite::         INCBIN "gfx/sprites/extra_overworld/nurse_joy.2bpp"
-OfficerJennySprite::     INCBIN "gfx/sprites/extra_overworld/officer_jenny.2bpp"
-DrMasonSprite::          INCBIN "gfx/sprites/extra_overworld/dr_mason.2bpp"
-QuadrupedSprite::        INCBIN "gfx/sprites/quadruped.2bpp"
-RedTakingPictureSprite:: INCBIN "gfx/sprites/red_taking_picture.2bpp"
-RedSurfingSprite::       INCBIN "gfx/sprites/extra_overworld/red_surf.2bpp"
+NurseJoySprite::            INCBIN "gfx/sprites/extra_overworld/nurse_joy.2bpp"
+NurseJoySittingSprite::     INCBIN "gfx/sprites/champ_arena_audience/extras/nurse_joy_sitting.2bpp"
+OfficerJennySprite::        INCBIN "gfx/sprites/extra_overworld/officer_jenny.2bpp"
+OfficerJennySittingSprite:: INCBIN "gfx/sprites/champ_arena_audience/extras/officer_jenny_sitting.2bpp"
+DrMasonSprite::             INCBIN "gfx/sprites/extra_overworld/dr_mason.2bpp"
+QuadrupedSprite::           INCBIN "gfx/sprites/quadruped.2bpp"
+RedTakingPictureSprite::    INCBIN "gfx/sprites/red_taking_picture.2bpp"
+RedSurfingSprite::          INCBIN "gfx/sprites/extra_overworld/red_surf.2bpp"
 
 SECTION "NPC Sprites 6", ROMX
 

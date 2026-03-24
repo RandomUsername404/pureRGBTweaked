@@ -10,6 +10,7 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
  - flareon.png
  - jolteon.png
  - machamp.png (uglified by me. I'm sorry.)
+ - magmar_swimming.png and magmar_blinking.png (poorly animated by me.)
  - mankey.png (uglified by me but players won't see my extra frames anyway.)
  - nidoking.png (uglified by me.)
  - slowbro.png (uglified by me.)
@@ -17,8 +18,8 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
 From Pokémon Yellow:
 - bulbasaur.png
 - jigglypuff.png (poorly animated by me)
-- nurse_joy.png
-- officer_jenny.png
+- nurse_joy.png (gfx/sprites/champ_arena_audience/extras/nurse_joy_sitting.png is a mix of this and PureRGB's cooltrainer_f_sitting.png)
+- officer_jenny.png (gfx/sprites/champ_arena_audience/extras/officer_jenny_sitting.png is a mix of this and PureRGB's brunette_girl_sitting.png)
 - pikachu.png
 
 From Yellow Legacy (cRz-Shadows):

@@ -1,7 +1,5 @@
 Swimming volcano boss Magmar (CinnabarVolcano & CinnabarVolcanoWest, uses SPRITE_MONSTER_SWIMMING) (see also scripts/CinnabarVolcanoWest.asm)
-Nidoking's back sprite is missing his horn.
-BillsHouse.asm matched SPRITE_MONSTER. Leave it?
-PokemonTowerB1F.asm uses SPRITE_MONSTER_SWIMMING for GHOST_MAROWAK.
+PokemonTowerB1F.asm uses SPRITE_MONSTER_SWIMMING for GHOST_MAROWAK (placeholder?)
 
 Camera events:
 Flareon probably should turn to the left (frame 4).

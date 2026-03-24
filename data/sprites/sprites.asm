@@ -152,6 +152,9 @@ SpriteSheetPointerTable:
 	overworld_sprite NidorinoSprite, 12               ; SPRITE_NIDORINO
 	overworld_sprite NurseJoySprite, 12               ; SPRITE_NURSE_JOY
 	overworld_sprite SlowbroSprite, 12                ; SPRITE_SLOWBRO
+	; PureRGB Tweaked: Sitting sprites
+	overworld_sprite NurseJoySittingSprite, 12        ; SPRITE_NURSE_JOY_SITTING
+	overworld_sprite OfficerJennySittingSprite, 12    ; SPRITE_OFFICER_JENNY_SITTING
 	; PureRGB Tweaked: end of new sprites
 	overworld_sprite PokeBallSprite, 4                ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4                  ; SPRITE_FOSSIL
