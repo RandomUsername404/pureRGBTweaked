@@ -125,6 +125,7 @@ SpriteSheetPointerTable:
 	overworld_sprite LaprasSprite, 12                 ; SPRITE_LAPRAS
 	overworld_sprite MachokSprite, 12                 ; SPRITE_MACHOKE
 	overworld_sprite MachopSprite, 12                 ; SPRITE_MACHOP
+	overworld_sprite MagmarSwimmingSprite, 12         ; SPRITE_MAGMAR_SWIMMING
 	overworld_sprite MankeySprite, 12                 ; SPRITE_MANKEY
 	overworld_sprite MewSprite, 12                    ; SPRITE_MEW
 	overworld_sprite MewtwoSprite, 12                 ; SPRITE_MEWTWO

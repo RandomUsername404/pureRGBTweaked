@@ -2188,15 +2188,9 @@ CinnabarVolcanoProspectorText:
 	call WaitForSoundToFinish
 	ld a, SFX_WITHDRAW_DEPOSIT
 	rst _PlaySound
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld a, SPRITE_BLAINE
 	ld de, BlaineSprite
 	lb bc, BANK(BlaineSprite), 12
-	jr nz, .loadSprite
-	ld de, MiddleAgedManSprite
-	lb bc, BANK(MiddleAgedManSprite), 12
-	ld a, SPRITE_MIDDLE_AGED_MAN
 .loadSprite
 	ld [wSprite02StateData1PictureID], a
 	ld hl, vNPCSprites tile 24

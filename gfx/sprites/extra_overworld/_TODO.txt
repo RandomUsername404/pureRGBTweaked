@@ -1,4 +1,4 @@
-Swimming volcano boss Magmar (CinnabarVolcano & CinnabarVolcanoWest, uses SPRITE_MONSTER_SWIMMING) (see also scripts/CinnabarVolcanoWest.asm)
+Redo Swimming Magmar's side sprite.
 PokemonTowerB1F.asm uses SPRITE_MONSTER_SWIMMING for GHOST_MAROWAK (placeholder?)
 
 Camera events:

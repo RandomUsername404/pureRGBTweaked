@@ -283,7 +283,6 @@ INCLUDE "engine/events/starter_dex.asm"
 SECTION "Hidden Objects 3", ROMX
 
 INCLUDE "engine/pokemon/set_types.asm"
-INCLUDE "engine/events/hidden_objects/reds_room.asm"
 INCLUDE "engine/events/hidden_objects/route_15_binoculars.asm"
 INCLUDE "engine/events/hidden_objects/museum_fossils.asm"
 INCLUDE "engine/events/hidden_objects/school_blackboard.asm"
@@ -304,6 +303,7 @@ INCLUDE "engine/events/hidden_objects/gym_statues.asm"
 INCLUDE "engine/events/hidden_objects/bench_guys.asm"
 INCLUDE "engine/events/hidden_objects/pokecenter_pc.asm"
 INCLUDE "engine/events/hidden_objects/school_house_b1f_bookcases.asm"
+INCLUDE "engine/events/hidden_objects/reds_room.asm"
 
 
 SECTION "Version Graphics", ROMX

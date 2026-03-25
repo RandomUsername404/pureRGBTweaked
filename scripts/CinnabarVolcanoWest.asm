@@ -100,10 +100,15 @@ CheckStartMagmarTransform:
 	call UpdateSprites
 	; ball poof
 	call .magmarBallPoof
-	; monster sprite
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 4
-	call .copyMonsterSprite
+	; Magmar sprite
+	ld hl, vNPCSprites tile $78           ; top row destination
+	ld de, PartyMonSprites151_1 tile 1000 ; top two tiles of Magmar's front sprite
+	lb bc, BANK(PartyMonSprites151_1), 2
+	call CopyVideoData
+	ld hl, vNPCSprites tile $7A           ; bottom row destination
+	ld de, PartyMonSprites151_1 tile 1004 ; bottom two tiles of Magmar's front sprite
+	lb bc, BANK(PartyMonSprites151_1), 2
+	call CopyVideoData
 	ld c, 8
 	rst _DelayFrames
 	ld de, SFX_Lava_Splash
@@ -114,20 +119,20 @@ CheckStartMagmarTransform:
 	; disappeared ghost sprite frame 1
 	ld de, GhostSprite tile 4
 	call .copyGhostSprite
-	; monster swimming sprite
-	ld de, MonsterSwimmingSprite
-	lb bc, BANK(MonsterSwimmingSprite), 4
+	; Magmar swimming sprite
+	ld de, MagmarSwimmingSprite
+	lb bc, BANK(MagmarSwimmingSprite), 4
 	call .copyMonsterSprite
-	; monster blinking sprite
+	; Magmar blinking sprite
 	ld b, 5
 .loop
 	push bc
-	ld de, MonsterBlinkingSprite
-	lb bc, BANK(MonsterBlinkingSprite), 2
+	ld de, MagmarBlinkingSprite
+	lb bc, BANK(MagmarBlinkingSprite), 2
 	ld a, 3
 	call .copyMonsterSpriteArbitraryDelay
-	ld de, MonsterSwimmingSprite
-	lb bc, BANK(MonsterSwimmingSprite), 2
+	ld de, MagmarSwimmingSprite
+	lb bc, BANK(MagmarSwimmingSprite), 2
 	ld a, 3
 	call .copyMonsterSpriteArbitraryDelay
 	pop bc
@@ -141,8 +146,8 @@ CheckStartMagmarTransform:
 	call PauseMusic
 	ld de, SFX_Fire_Powerup
 	call PlayNewSoundChannel8
-	ld de, MonsterSwimmingSprite tile 12
-	lb bc, BANK(MonsterSwimmingSprite), 4
+	ld de, MagmarSwimmingSprite tile 12
+	lb bc, BANK(MagmarSwimmingSprite), 4
 	ld a, 1
 	call CheckStartMagmarTransform.copyMonsterSpriteArbitraryDelay
 	call GBFadeOutToWhite
@@ -152,8 +157,8 @@ CheckStartMagmarTransform:
 	ld a, TEXT_CINNABAR_VOLCANO_MAGMAR_TRANSFORM2
 	ldh [hTextID], a
 	call DisplayTextID
-	ld de, MonsterSwimmingSprite
-	lb bc, BANK(MonsterSwimmingSprite), 4
+	ld de, MagmarSwimmingSprite
+	lb bc, BANK(MagmarSwimmingSprite), 4
 	call .copyMonsterSprite
 	call ResumeMusic
 	ld a, VOLCANIC_MAGMAR

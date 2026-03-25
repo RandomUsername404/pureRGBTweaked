@@ -10,7 +10,7 @@
 	INCBIN "gfx/battle/spirit_torched.pic", 0, 1 ; sprite dimensions
 	dw TorchedPicFront, ExeggutorPicBackSW
 
-	db BARRIER, FLAMETHROWER, SELFDESTRUCT, MEGA_DRAIN ; level 1 learnset
+	db BARRIER, FLAMETHROWER, LEECH_SEED, MEGA_DRAIN ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
