@@ -539,11 +539,6 @@ INCLUDE "scripts/MtMoonB2F.asm"
 INCLUDE "data/maps/objects/MtMoonB2F.asm"
 MtMoonB2F_Blocks: INCBIN "maps/MtMoonB2F.blk"
 
-INCLUDE "data/maps/headers/CinnabarVolcano.asm"
-INCLUDE "data/maps/objects/CinnabarVolcano.asm"
-CinnabarVolcano_Blocks: INCBIN "maps/CinnabarVolcano.blk"
-INCLUDE "scripts/CinnabarVolcano.asm"
-
 
 SECTION "Maps 9", ROMX
 
@@ -1007,11 +1002,6 @@ RockTunnelB1F_Blocks: INCBIN "maps/RockTunnelB1F.blk"
 
 ;;;;;
 
-INCLUDE "data/maps/headers/CinnabarVolcanoWest.asm"
-INCLUDE "scripts/CinnabarVolcanoWest.asm"
-INCLUDE "data/maps/objects/CinnabarVolcanoWest.asm"
-CinnabarVolcanoWest_Blocks: INCBIN "maps/CinnabarVolcanoWest.blk"
-
 INCLUDE "data/maps/headers/MtMoonPokecenter.asm"
 INCLUDE "scripts/MtMoonPokecenter.asm"
 INCLUDE "data/maps/objects/MtMoonPokecenter.asm"
@@ -1304,3 +1294,16 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+
+SECTION "Maps 22", ROMX
+
+INCLUDE "data/maps/headers/CinnabarVolcano.asm"
+INCLUDE "data/maps/objects/CinnabarVolcano.asm"
+CinnabarVolcano_Blocks: INCBIN "maps/CinnabarVolcano.blk"
+INCLUDE "scripts/CinnabarVolcano.asm"
+
+INCLUDE "data/maps/headers/CinnabarVolcanoWest.asm"
+INCLUDE "scripts/CinnabarVolcanoWest.asm"
+INCLUDE "data/maps/objects/CinnabarVolcanoWest.asm"
+CinnabarVolcanoWest_Blocks: INCBIN "maps/CinnabarVolcanoWest.blk"

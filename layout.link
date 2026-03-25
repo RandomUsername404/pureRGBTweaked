@@ -94,7 +94,7 @@ ROMX $11
 	"Hidden Objects Core"
 ROMX $12
 	"Maps 7"
-	"Screen Effects"
+	"Maps 8"
 ROMX $13
 	"Pics 6"
 ROMX $14
@@ -132,6 +132,7 @@ ROMX $1B
 	"Tilesets 3"
 ROMX $1C
 	"bank1C"
+	"Screen Effects"
 ROMX $1D
 	"Maps 19"
 	"Itemfinder 1"
@@ -239,8 +240,7 @@ ROMX $41
 	"NPC Sprites 6"
 ROMX $42
 	"Text 12"
-ROMX $43
-	"Maps 8"
+	"Maps 22"
 WRAM0
 	"Audio RAM"
 	org $c100
