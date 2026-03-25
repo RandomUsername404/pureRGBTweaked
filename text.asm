@@ -201,7 +201,6 @@ INCLUDE "text/PokemonTowerB1F.asm"
 SECTION "Text 8", ROMX
 
 INCLUDE "text/VermilionGym_2.asm"
-INCLUDE "text/VermilionDock.asm"
 INCLUDE "text/VermilionOldRodHouse.asm"
 INCLUDE "text/CeladonMart1F.asm"
 INCLUDE "text/CeladonMart2F.asm"
@@ -216,7 +215,6 @@ INCLUDE "text/CeladonGym.asm"
 INCLUDE "text/GameCorner.asm"
 INCLUDE "text/CeladonMart5F.asm"
 INCLUDE "text/GameCornerPrizeRoom.asm"
-INCLUDE "text/CeladonDiner.asm"
 INCLUDE "text/CeladonHotel.asm"
 INCLUDE "text/FuchsiaMart.asm"
 INCLUDE "text/FuchsiaBillsGrandpasHouse.asm"
@@ -242,12 +240,12 @@ INCLUDE "text/CopycatsHouse1F.asm"
 INCLUDE "text/CopycatsHouse2F.asm"
 INCLUDE "text/FightingDojo.asm"
 INCLUDE "text/SaffronGym.asm"
-INCLUDE "text/SaffronPidgeyHouse.asm"
-INCLUDE "text/SaffronMart.asm"
 INCLUDE "text/SilphCo1F.asm"
 INCLUDE "text/SaffronPokecenter.asm"
 INCLUDE "text/FossilGuysHouse.asm"
 INCLUDE "text/CeladonChiefHouse.asm"
+INCLUDE "text/CeladonDiner.asm"
+INCLUDE "text/VermilionDock.asm"
 
 INCLUDE "data/text/text_4.asm"
 
@@ -255,6 +253,7 @@ INCLUDE "data/text/text_4.asm"
 SECTION "Text 10", ROMX
 
 INCLUDE "data/text/text_5.asm"
+INCLUDE "data/text/text_6.asm"
 
 INCLUDE "text/PalletTown.asm"
 INCLUDE "text/ViridianCity.asm"
@@ -266,9 +265,6 @@ INCLUDE "text/CeladonCity.asm"
 INCLUDE "text/FuchsiaCity.asm"
 INCLUDE "text/SaffronCity.asm"
 INCLUDE "text/CeladonMansionRoof.asm"
-
-INCLUDE "data/text/text_6.asm"
-
 INCLUDE "text/CinnabarLabColorChanger.asm"
 INCLUDE "text/CeladonLaprasGuy.asm"
 INCLUDE "text/SafariZoneNewRestHouseText.asm"
@@ -285,6 +281,7 @@ INCLUDE "text/SecretLab.asm"
 INCLUDE "text/SilphCo5F.asm"
 INCLUDE "text/VermilionPidgeyHouse.asm"
 INCLUDE "text/CeladonMansionRoofHouse.asm"
+INCLUDE "text/SaffronPidgeyHouse.asm"
 
 SECTION "Text 12", ROMX
 INCLUDE "text/TypeGuysHouse.asm"
@@ -292,6 +289,7 @@ INCLUDE "text/ChampArena.asm"
 INCLUDE "text/DiamondMine.asm"
 INCLUDE "text/CeruleanPokecenter.asm"
 INCLUDE "text/CinnabarIsland.asm"
+INCLUDE "text/SaffronMart.asm"
 
 SECTION "Text 13", ROMX
 INCLUDE "text/PokemonTowerCatacombs.asm"

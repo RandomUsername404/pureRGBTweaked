@@ -1,5 +1,15 @@
 CeladonHotel_Script:
 	call EnableAutoTextBoxDrawing
+	; RGB Tweaked: Coin Grandpa
+	ld hl, wCurrentMapScriptFlags
+	bit BIT_CUR_MAP_LOADED_1, [hl]
+	jr z, .skipClearRequest
+	xor a
+	ld [wCoinGrandpaRequestedMon], a
+	res BIT_CUR_MAP_LOADED_1, [hl]
+.skipClearRequest
+	call CeladonHotelPickRandomMon
+	;;;;;;;;;
 	ld hl, CeladonHotelTrainerHeaders
 	ld de, CeladonHotel_ScriptPointers
 	ld a, [wCeladonHotelCurScript]
@@ -24,6 +34,7 @@ CeladonHotel_TextPointers:
 	dw_const CeladonHotelBeautyText,    TEXT_CELADONHOTEL_BEAUTY
 	dw_const CeladonHotelSuperNerdText, TEXT_CELADONHOTEL_SUPER_NERD
 	dw_const CeladonLaprasGuyText,      TEXT_CELADONHOTEL_LAPRAS_GUY
+	dw_const CeladonHotelGrampsText,    TEXT_CELADONHOTEL_GRAMPS
 
 CeladonHotelTrainerHeaders:
 	def_trainers 2
@@ -236,4 +247,204 @@ CeladonLaprasGuyNoBoxRoom:
 
 CeladonLaprasGuyAfter:
 	text_far _CeladonLaprasGuyAfter
+	text_end
+
+; RGB Tweaked: everything beyond this line is used exclusively for our Coin Grandpa
+CeladonHotelPickRandomMon:
+	ld a, [wCoinGrandpaRequestedMon]
+	and a
+	ret nz ; already picked
+	call Random
+	ld hl, CoinGrandpaMonList
+	ld b, a
+.loop
+	ld a, b
+	and a
+	jr z, .done
+	inc hl
+	dec b
+	ld a, [hl]
+	and a
+	jr nz, .loop
+	ld hl, CoinGrandpaMonList
+	jr .loop
+.done
+	ld a, [hl]
+	and a
+	jr z, CeladonHotelPickRandomMon ; retry if landed on $00 terminator
+	ld [wCoinGrandpaRequestedMon], a
+	ret
+
+CoinGrandpaMonList:
+	db BULBASAUR, IVYSAUR, VENUSAUR, CHARMANDER, CHARMELEON, CHARIZARD
+	db SQUIRTLE, WARTORTLE, BLASTOISE, CATERPIE, METAPOD, BUTTERFREE
+	db WEEDLE, KAKUNA, BEEDRILL, PIDGEY, PIDGEOTTO, PIDGEOT
+	db RATTATA, RATICATE, SPEAROW, FEAROW, EKANS, ARBOK
+	db PIKACHU, RAICHU, SANDSHREW, SANDSLASH, NIDORAN_F, NIDORINA
+	db NIDOQUEEN, NIDORAN_M, NIDORINO, NIDOKING, CLEFAIRY, CLEFABLE
+	db VULPIX, NINETALES, JIGGLYPUFF, WIGGLYTUFF, ZUBAT, GOLBAT
+	db ODDISH, GLOOM, VILEPLUME, PARAS, PARASECT, VENONAT, VENOMOTH
+	db DIGLETT, DUGTRIO, MEOWTH, PERSIAN, PSYDUCK, GOLDUCK
+	db MANKEY, PRIMEAPE, GROWLITHE, ARCANINE, POLIWAG, POLIWHIRL
+	db POLIWRATH, ABRA, KADABRA, ALAKAZAM, MACHOP, MACHOKE, MACHAMP
+	db BELLSPROUT, WEEPINBELL, VICTREEBEL, TENTACOOL, TENTACRUEL
+	db GEODUDE, GRAVELER, GOLEM, PONYTA, RAPIDASH, SLOWPOKE, SLOWBRO
+	db MAGNEMITE, MAGNETON, FARFETCHD, DODUO, DODRIO, SEEL, DEWGONG
+	db SHELLDER, CLOYSTER, GASTLY, HAUNTER, GENGAR, ONIX, DROWZEE
+	db HYPNO, KRABBY, KINGLER, VOLTORB, ELECTRODE, EXEGGCUTE, EXEGGUTOR
+	db CUBONE, MAROWAK, HITMONLEE, HITMONCHAN, LICKITUNG, KOFFING
+	db WEEZING, RHYHORN, RHYDON, CHANSEY, TANGELA, KANGASKHAN
+	db HORSEA, SEADRA, GOLDEEN, SEAKING, STARYU, STARMIE, MR_MIME
+	db SCYTHER, JYNX, ELECTABUZZ, MAGMAR, PINSIR, TAUROS, MAGIKARP
+	db GYARADOS, LAPRAS, DITTO, EEVEE, VAPOREON, JOLTEON, FLAREON
+	db PORYGON, OMANYTE, OMASTAR, KABUTO, KABUTOPS, AERODACTYL, SNORLAX
+	db DRATINI, DRAGONAIR
+	db $00 ; terminator
+
+CeladonHotelGrampsText:
+	text_asm
+	CheckEvent EVENT_GOT_COIN_CASE
+	jr nz, .hasCoinCase
+	ld hl, .noCoinCaseText
+	rst _PrintText
+	rst TextScriptEnd
+.hasCoinCase
+	; load requested mon name
+	ld a, [wCoinGrandpaRequestedMon]
+	and a
+	jr nz, .hasRequest
+	call CeladonHotelPickRandomMon
+.hasRequest
+	ld a, [wCoinGrandpaRequestedMon]
+	ld [wNamedObjectIndex], a
+	call GetMonName
+	call CopyToStringBuffer
+	ld hl, .introText
+	rst _PrintText
+	; check first party slot
+	ld a, [wPartyMon1Species]
+	ld b, a
+	ld a, [wCoinGrandpaRequestedMon]
+	cp b
+	jr z, .match
+	; check special variants
+	call .checkSpecialVariant
+	jr nc, .noMatch
+	jr .specialPayout
+.noMatch
+	ld hl, .wrongMonText
+	rst _PrintText
+	rst TextScriptEnd
+.match
+	; normal payout: 270 coins
+	xor a
+	ldh [hUnusedCoinsByte], a
+	ld a, $02
+	ldh [hCoins], a
+	ld a, $70
+	ldh [hCoins + 1], a
+	jr .payout
+.specialPayout
+	; special variant payout: 630 coins
+	; load base species name for display
+	ld a, [wCoinGrandpaRequestedMon]
+	ld [wNamedObjectIndex], a
+	call GetMonName
+	call CopyToStringBuffer
+	xor a
+	ldh [hUnusedCoinsByte], a
+	ld a, $06
+	ldh [hCoins], a
+	ld a, $30
+	ldh [hCoins + 1], a
+	ld hl, .specialPayoutText
+	rst _PrintText
+	jr .resetAndClose
+.payout
+	ld hl, .receivedText
+	rst _PrintText
+.resetAndClose
+	ld a, SFX_PURCHASE
+	call PlaySoundWaitForCurrent
+	call WaitForSoundToFinish
+	; add coins to player
+	ld de, wPlayerCoins + 1
+	ld hl, hCoins + 1
+	ld c, $2
+	predef AddBCDPredef
+	xor a
+	ld [wCoinGrandpaRequestedMon], a
+	rst TextScriptEnd
+
+.checkSpecialVariant
+	; check if first party mon is a special variant of requested mon
+	; returns carry set if match found
+	ld a, [wPartyMon1Species]
+	ld b, a
+	ld a, [wCoinGrandpaRequestedMon]
+	cp DRAGONAIR
+	jr nz, .checkOnix
+	ld a, b
+	cp WINTER_DRAGONAIR
+	jr z, .variantMatch
+	jr .noVariantMatch
+.checkOnix
+	cp ONIX
+	jr nz, .checkHaunter
+	ld a, b
+	cp HARDENED_ONIX
+	jr z, .variantMatch
+	jr .noVariantMatch
+.checkHaunter
+	cp HAUNTER
+	jr nz, .checkMagmar
+	ld a, b
+	cp POWERED_HAUNTER
+	jr z, .variantMatch
+	jr .noVariantMatch
+.checkMagmar
+	cp MAGMAR
+	jr nz, .checkMagneton
+	ld a, b
+	cp VOLCANIC_MAGMAR
+	jr z, .variantMatch
+	jr .noVariantMatch
+.checkMagneton
+	cp MAGNETON
+	jr nz, .checkWeezing
+	ld a, b
+	cp FLOATING_MAGNETON
+	jr z, .variantMatch
+	jr .noVariantMatch
+.checkWeezing
+	cp WEEZING
+	jr nz, .noVariantMatch
+	ld a, b
+	cp FLOATING_WEEZING
+	jr z, .variantMatch
+.noVariantMatch
+	and a ; clear carry
+	ret
+.variantMatch
+	scf ; set carry
+	ret
+
+.introText:
+	text_far _CeladonHotelGrampsIntroText
+	text_end
+
+.noCoinCaseText:
+	text_far _CeladonHotelGrampsNoCoinCaseText
+	text_end
+
+.wrongMonText:
+	text_far _CeladonHotelGrampsWrongMonText
+	text_end
+
+.receivedText:
+	text_far _CeladonHotelGrampsReceivedText
+	text_end
+
+.specialPayoutText:
+	text_far _CeladonHotelGrampsSpecialPayoutText
 	text_end

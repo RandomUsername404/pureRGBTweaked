@@ -1243,7 +1243,8 @@ NEXTU
 wMapSpriteOriginalPictureIDs:: ds 15
 ENDU
 
-ds 13 ; unused 13 bytes (used to be wGymLeaderName and 2 bytes of wGymCityName)
+wCoinGrandpaRequestedMon:: db ; PureRGB Tweaked: temporary and cleared on map transition. Used in Celadon Hotel only.
+ds 12 ; unused (used to be wGymLeaderName and 2 bytes of wGymCityName)
 
 UNION
 ds 16 ; PureRGBnote: CHANGED: used to be wItemList:: but now the item list for marts is expanded in size and reuses a bigger space elsewhere

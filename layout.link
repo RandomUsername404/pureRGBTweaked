@@ -95,7 +95,6 @@ ROMX $11
 ROMX $12
 	"Maps 7"
 	"Screen Effects"
-	"Maps 8"
 ROMX $13
 	"Pics 6"
 ROMX $14
@@ -197,7 +196,6 @@ ROMX $32
 ROMX $33
 	"movedCode"
 	"Pokémon Names"
-	"Text 12"
 ROMX $34
 	"Party Sprites"
 	"GBC Mode Code"
@@ -239,6 +237,10 @@ ROMX $40
 ROMX $41
 	org $4000
 	"NPC Sprites 6"
+ROMX $42
+	"Text 12"
+ROMX $43
+	"Maps 8"
 WRAM0
 	"Audio RAM"
 	org $c100
