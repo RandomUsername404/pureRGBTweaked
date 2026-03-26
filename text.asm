@@ -60,20 +60,16 @@ INCLUDE "text/PewterNidoranHouse.asm"
 
 SECTION "Text 3", ROMX
 
-INCLUDE "text/RockTunnelB1F_2.asm"
-INCLUDE "text/SeafoamIslandsB4F.asm"
-
 INCLUDE "data/text/text_2.asm"
 
+INCLUDE "text/RockTunnelB1F_2.asm"
+INCLUDE "text/SeafoamIslandsB4F.asm"
 INCLUDE "text/DiglettsCaveRoute2.asm"
 INCLUDE "text/ViridianForestNorthGate.asm"
-INCLUDE "text/Route2TradeHouse.asm"
-INCLUDE "text/Route2Gate.asm"
 INCLUDE "text/ViridianForestSouthGate.asm"
 INCLUDE "text/MtMoonPokecenter.asm"
 INCLUDE "text/SaffronGates.asm"
 INCLUDE "text/Daycare.asm"
-; moved from Text 2
 INCLUDE "text/SafariZoneWest.asm"
 INCLUDE "text/ProspectorsHouse.asm"
 INCLUDE "text/MoveMystic.asm"
@@ -120,6 +116,8 @@ INCLUDE "text/Route7.asm"
 INCLUDE "text/Route8.asm"
 INCLUDE "text/Route9.asm"
 INCLUDE "text/Route10.asm"
+INCLUDE "text/Route2TradeHouse.asm"
+INCLUDE "text/Route2Gate.asm"
 
 
 SECTION "Text 5", ROMX

@@ -61,7 +61,6 @@ MtMoonPokecenterMagikarpSalesmanText:
 	call DisplayTextBoxID
 	SetEvent EVENT_BOUGHT_MAGIKARP
 	rst TextScriptEnd
-
 .alreadyBoughtMagikarp
 	; PureRGB Tweaked: The Magikarp Salesman turns into a Move Tutor if we've bought his fish
 	ld a, [wPartyMon1Species]
@@ -86,68 +85,40 @@ MtMoonPokecenterMagikarpSalesmanText:
 
 .dragonRageTutor
 	ld hl, .DragonRageOfferText
-	ld a, DRAGON_RAGE
-	ld [wMoveNum], a
-	xor a
-	ld [wPriceTemp], a
-	ld [wPriceTemp + 2], a
-	ld a, $50
-	ld [wPriceTemp + 1], a
-	call .TutorRoutine
-	jr nc, .dragonRageSuccess
-	jp .done
-.dragonRageSuccess
-	ld hl, .ByeText
-	jp .printText
-
-.flyTutor
-	ld hl, .FlyOfferText
-	ld a, FLY
-	ld [wMoveNum], a
-	xor a
-	ld [wPriceTemp], a
-	ld [wPriceTemp + 2], a
-	ld a, $20
-	ld [wPriceTemp + 1], a
-	call .TutorRoutine
-	jr nc, .flySuccess
-	jp .done
-.flySuccess
-	ld hl, .FlyDoneText
-	rst _PrintText
-	ld hl, .ByeText
-	jp .printText
-
-.TutorRoutine
 	rst _PrintText
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
 	call YesNoChoice
-	jr nz, .cancelTutor
-	ld a, [wPriceTemp]
+	ld a, [wCurrentMenuItem]
+	and a
+	jp nz, .choseNo
+	xor a
 	ldh [hMoney], a
-	ld a, [wPriceTemp + 1]
-	ldh [hMoney + 1], a
-	ld a, [wPriceTemp + 2]
 	ldh [hMoney + 2], a
+	ld a, $50
+	ldh [hMoney + 1], a
 	call HasEnoughMoney
-	jr nc, .enoughMoneyTutor
+	jr nc, .dragonRageEnoughMoney
 	ld hl, .NoMoneyText
-	rst _PrintText
-	scf
-	ret
-.enoughMoneyTutor
+	jp .printText
+.dragonRageEnoughMoney
 	xor a
 	ld [wWhichPokemon], a
-	ld a, [wMoveNum]
+	ld a, DRAGON_RAGE
+	ld [wMoveNum], a
 	ld [wNamedObjectIndex], a
 	call GetMoveName
 	call CopyToStringBuffer
 	predef LearnMove
 	ld a, b
 	and a
-	jr z, .cancelTutor
+	jp z, .choseNo
+	xor a
+	ld [wPriceTemp], a
+	ld [wPriceTemp + 2], a
+	ld a, $50
+	ld [wPriceTemp + 1], a
 	ld hl, wPriceTemp + 2
 	ld de, wPlayerMoney + 2
 	ld c, $3
@@ -155,13 +126,56 @@ MtMoonPokecenterMagikarpSalesmanText:
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
-	and a
-	ret
-.cancelTutor
-	ld hl, .NoText
+	ld hl, .ByeText
+	jr .printText
+
+.flyTutor
+	ld hl, .FlyOfferText
 	rst _PrintText
-	scf
-	ret
+	ld a, MONEY_BOX
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .choseNo
+	xor a
+	ldh [hMoney], a
+	ldh [hMoney + 2], a
+	ld a, $20
+	ldh [hMoney + 1], a
+	call HasEnoughMoney
+	jr nc, .flyEnoughMoney
+	ld hl, .NoMoneyText
+	jr .printText
+.flyEnoughMoney
+	xor a
+	ld [wWhichPokemon], a
+	ld a, FLY
+	ld [wMoveNum], a
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyToStringBuffer
+	predef LearnMove
+	ld a, b
+	and a
+	jr z, .choseNo
+	xor a
+	ld [wPriceTemp], a
+	ld [wPriceTemp + 2], a
+	ld a, $20
+	ld [wPriceTemp + 1], a
+	ld hl, wPriceTemp + 2
+	ld de, wPlayerMoney + 2
+	ld c, $3
+	predef SubBCDPredef
+	ld a, MONEY_BOX
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	ld hl, .FlyDoneText
+	rst _PrintText
+	ld hl, .ByeText
+	jr .printText
 
 .choseNo
 	ld hl, .NoText
@@ -186,19 +200,19 @@ MtMoonPokecenterMagikarpSalesmanText:
 	text_far _MtMoonPokecenterMagikarpSalesmanByeText
 	text_end
 
-.IGotADealText:
+.IGotADealText
 	text_far _MtMoonPokecenterMagikarpSalesmanIGotADealText
 	text_end
 
-.NoText:
+.NoText
 	text_far _MtMoonPokecenterMagikarpSalesmanNoText
 	text_end
 
-.NoMoneyText:
+.NoMoneyText
 	text_far _MtMoonPokecenterMagikarpSalesmanNoMoneyText
 	text_end
 
-.NoRefundsText:
+.NoRefundsText
 	text_far _MtMoonPokecenterMagikarpSalesmanNoRefundsText
 	text_end
 

@@ -22,7 +22,7 @@ PayDayLearnset:
 	dbit TRUE  ; RATTATA    ; 19
 	dbit TRUE  ; RATICATE   ; 20
 	dbit FALSE ; SPEAROW    ; 21
-	dbit FALSE ; FEAROW     ; 22
+	dbit TRUE  ; FEAROW     ; 22
 	dbit FALSE ; EKANS      ; 23
 	dbit FALSE ; ARBOK      ; 24
 	dbit TRUE  ; PIKACHU    ; 25
@@ -78,7 +78,7 @@ PayDayLearnset:
 	dbit FALSE ; GRAVELER   ; 75
 	dbit FALSE ; GOLEM      ; 76
 	dbit FALSE ; PONYTA     ; 77
-	dbit FALSE ; RAPIDASH   ; 78
+	dbit TRUE  ; RAPIDASH   ; 78
 	dbit TRUE  ; SLOWPOKE   ; 79
 	dbit TRUE  ; SLOWBRO    ; 80
 	dbit FALSE ; MAGNEMITE  ; 81
