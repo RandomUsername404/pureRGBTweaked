@@ -1,5 +1,4 @@
 Redo Swimming Magmar's side sprite.
-PokemonTowerB1F.asm uses SPRITE_MONSTER_SWIMMING for GHOST_MAROWAK (placeholder?)
 
 Camera events:
 Flareon probably should turn to the left (frame 4).

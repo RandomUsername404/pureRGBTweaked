@@ -1120,7 +1120,7 @@ CuboneBlinks:
 	jr nz, .loop
 	ret
 
-CuboneCries:
+CuboneCries: ; RGB Tweaked: slowed down the crying animation
 	ld b, 4
 .loop
 	push bc
@@ -1128,9 +1128,13 @@ CuboneCries:
 	lb bc, BANK(CuboneCryingSprite), 2
 	call CopyCuboneVideoDataEntry
 	call Delay3
+	call Delay3
+	call Delay3
 	ld de, CuboneCryingSprite tile 2
 	lb bc, BANK(CuboneCryingSprite), 2
 	call CopyCuboneVideoDataEntry
+	call Delay3
+	call Delay3
 	call Delay3
 	pop bc
 	dec b

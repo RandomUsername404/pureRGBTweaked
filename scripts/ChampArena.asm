@@ -1772,6 +1772,10 @@ ReloadVariableCrowd:
 	cp 12 ; rival
 	call z, .daisy ; always show daisy when fighting rival
 	jr z, .loadCrowd3
+	; 5% chance for Nurse Joy
+	call Random
+	cp 13                ; 13/256 = ~5.1%
+	jp c, .loadNurseJoy
 	call Random
 	srl a
 	jr c, .loadDefaultCrowd3 ; 50% chance of no one special
@@ -1789,7 +1793,12 @@ ReloadVariableCrowd:
 	ld hl, vChars0 tile 108
 	call CopyVideoData
 .checkCrowd1and2
-	; then decide who will replace CHAMP_ARENA_VARIABLE_CROWD1 and CHAMP_ARENA_VARIABLE_CROWD2
+	; decide special crowd for slot 2 (and possibly slot 1)
+	; 5% chance for Officer Jenny (only for crowd2)
+	call Random
+	cp 13                    ; 5% chance
+	jp c, .loadJennyOnly     ; Officer Jenny appears
+	; fall through to original random selection (scaled to 95% of cases)
 	call Random
 	and %11
 	jr z, .loadDefaultCrowd1and2 ; 25% chance of no one special
@@ -1912,6 +1921,19 @@ ReloadVariableCrowd:
 	lb bc, BANK(GiovanniSittingSprite), 12
 	ld de, GiovanniSittingSprite
 	ret
+.loadJennyOnly
+	call .default1 ; load middle‑aged man for crowd1
+	call .loadCrowd1
+	ld a, SPRITE_OFFICER_JENNY_SITTING
+	lb bc, BANK(OfficerJennySittingSprite), 12
+	ld de, OfficerJennySittingSprite
+	call .loadCrowd2
+	ret
+.loadNurseJoy
+	ld a, SPRITE_NURSE_JOY_SITTING
+	lb bc, BANK(NurseJoySittingSprite), 12
+	ld de, NurseJoySittingSprite
+	jp .loadCrowd3
 
 ShowChampArenaTrainerSelectMenu:
 	call SaveScreenTilesToBuffer2

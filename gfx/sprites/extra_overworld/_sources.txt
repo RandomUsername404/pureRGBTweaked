@@ -3,7 +3,7 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
  - ../graveler_unused.png (color swapped and more boulder-like)
  - ./graveler.png
  - abra.png
- - arcanine.png (2 extra frames based on Growlithe were edited by yours truly. Awful back sprites by me. My extra frames are all unused.)
+ - arcanine.png (2 extra frames based on Growlithe were edited by yours truly. Awful back sprites by me. My extra frames are all unused...)
  - cloyster.png (poorly animated by me but I'm pretty sure players won't see more than 1 of my added frames.)
  - dragonair.png
  - farfetched (animated by yours truly.)
@@ -12,6 +12,7 @@ Sprites created by Blue Emerald, Chamber_, Soloo993, and others; some were "anim
  - machamp.png (uglified by me. I'm sorry.)
  - magmar_swimming.png and magmar_blinking.png (poorly animated by me.)
  - mankey.png (uglified by me but players won't see my extra frames anyway.)
+ - marowak_spirit.png (based on their work)
  - nidoking.png (uglified by me.)
  - slowbro.png (uglified by me.)
 
@@ -21,6 +22,12 @@ From Pokémon Yellow:
 - nurse_joy.png (gfx/sprites/champ_arena_audience/extras/nurse_joy_sitting.png is a mix of this and PureRGB's cooltrainer_f_sitting.png)
 - officer_jenny.png (gfx/sprites/champ_arena_audience/extras/officer_jenny_sitting.png is a mix of this and PureRGB's brunette_girl_sitting.png)
 - pikachu.png
+
+From PureRGB:
+- ../brock.png
+- ../erika.png
+- ../lt_surge.png
+- ../sabrina.png
 
 From Yellow Legacy (cRz-Shadows):
 - gfx/trainers/extras/jenny.png
@@ -57,3 +64,6 @@ From Pokémon Celebrations (CreamElDudJafar):
 
 From Pokémon TCG GB2:
 - dr_mason.png (edited)
+
+From Pokémon Gold:
+- ../koga.png
