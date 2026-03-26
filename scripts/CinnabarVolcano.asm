@@ -31,10 +31,18 @@ CinnabarVolcanoOnMapLoad:
 	;SetEventReuseHL EVENT_FINISHED_VOLCANO
 	;
 	CheckEvent EVENT_BEAT_MOLTRES
-	jr z, .dontHideVolcanoMoltres
+	jr z, .notBeaten
+	; RGB Tweaked: Moltres is beaten, so we hide it and show Entrance Rhydon
 	ld a, HS_VOLCANO_MOLTRES
 	call VolcanoHideSpriteEntry
-.dontHideVolcanoMoltres
+	ld a, HS_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call VolcanoShowSpriteEntry
+	jr .afterRhydon
+.notBeaten
+	; Moltres wasn't beaten, hide Entrance Rhydon
+	ld a, HS_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call VolcanoHideSpriteEntry
+.afterRhydon
 	CheckAndResetEvent EVENT_IN_LAVA_FLOOD_ROOM
 	ld a, 1
 	jr z, .loadCooldown
@@ -964,6 +972,7 @@ CinnabarVolcano_TextPointers:
 	dw_const CinnabarVolcanoHungryGravelerText, TEXT_CINNABAR_VOLCANO_HUNGRY_GRAVELER
 	dw_const CinnabarVolcanoSickRhydonText, TEXT_CINNABAR_VOLCANO_SICK_RHYDON
 	dw_const CinnabarVolcanoBossMagmarText, TEXT_CINNABAR_VOLCANO_BOSS_MAGMAR
+	dw_const CinnabarVolcanoSurfingRhydonEntranceText, TEXT_CINNABAR_VOLCANO_SURFING_RHYDON_ENTRANCE
 	dw_const CinnabarVolcanoBombRockDoneText, TEXT_CINNABAR_VOLCANO_BOMB_ROCK_DONE
 	dw_const CinnabarVolcanoBombRockAfterText, TEXT_CINNABAR_VOLCANO_BOMB_ROCK_AFTER
 	dw_const CinnabarVolcanoBossMagmarAfterTextMove, TEXT_CINNABAR_VOLCANO_BOSS_MAGMAR_AFTER
@@ -2479,3 +2488,46 @@ VolcanoHiddenItemInit::
 	ret nz
 	call VolcanoStopChannel8
 	jpfar HiddenItems
+
+
+; RGB Tweaked: Entrance Rhydon will appear after Moltres has been defeated, preventing a softlock
+CinnabarVolcanoSurfingRhydonEntranceText:
+	text_asm
+	ld hl, .itsRhydon
+	rst _PrintText
+	ld a, CINNABAR_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call SetSpriteFacingDown
+	ld hl, .getOn
+	rst _PrintText
+	call YesNoChoice
+	jr nz, .no
+	ld a, RHYDON
+	ld [wNamedObjectIndex], a
+	ld [wBattleMonSpecies2], a
+	call GetMonName
+	ld a, SURFBOARD
+	ld [wCurItem], a
+	ld [wPseudoItemID], a
+	call UseItem
+	ld hl, .gotOn
+	rst _PrintText
+	ld a, RHYDON
+	call PlayCry
+	ld a, HS_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call VolcanoHideSpriteEntry
+	rst TextScriptEnd
+.no
+	ld a, CINNABAR_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call SetSpriteFacingUp
+	ld hl, CinnabarVolcanoBombRockText.forgetIt
+	rst _PrintText
+	rst TextScriptEnd
+.itsRhydon
+	text_far _ItsRhydon
+	text_end
+.getOn
+	text_far _RhydonGetOnBack
+	text_end
+.gotOn
+	text_far _RhydonGotOnBack
+	text_end

@@ -215,6 +215,7 @@ DEF CUSTOM_BALL_UNLOCK_FLAGS_START EQU const_value
 	const EVENT_FINISHED_VOLCANO
 	const EVENT_VOLCANO_TALKED_TO_BLAINE
 	const EVENT_MAGMAR_TRANSFORMATION
+	;const EVENT_USED_RHYDON_ENTRANCE ; PureRGB Tweaked: Fixed post-Moltres softlock
 	
 	; pureRGBnote: ~6 bits of unused event space
 	
