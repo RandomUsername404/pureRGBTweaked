@@ -128,62 +128,61 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	jr .SpecialTrainerLoop
+; RGB Tweaked: Disabled LoneMoves and TeamMoves
 .AddLoneMove
 ; does the trainer have a single monster with a different move?
-	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc
-	and a
-	jr z, .AddTeamMove
-	; RGB Tweaked: disabling Lone Moves for all Gym Leaders
-	cp 9
-	jr c, .FinishUp   ; if value < 9 (1–8), skip
-	jr .AddTeamMove   ; otherwise keep going 		; PureRGBnote: higher than 8 are elite four which we don't want getting these moves since their movesets are good already
+;	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc
+;	and a
+;	jr z, .AddTeamMove
+;	cp 9
+;	jr nc, .AddTeamMove   ; higher than 8 are elite four which we don't want getting these moves since their movesets are good already
 ;;;;;;;;;; PureRGBnote: CHANGED: gym leader special moves can have custom indices instead of hardcoded to replace move 2 of the given pokemon.
-	dec a ; indices start at 0, wLoneAttackNo starts at 1
-	ld b, a
-	add b ; double the index value 
-	add b ; triple the index value (each entry is 3 bytes)
-	ld c, a
-	ld b, 0
-	ld hl, LoneMoves 
-	add hl, bc ; select the correct entry from LoneMoves
-	ld a, [hli] ; pokemon index
-	ld c, [hl] ; move index for the above pokemon
-	inc hl
-	ld d, [hl] ; move to be given
-	ld hl, wEnemyMon1Moves
-	add hl, bc ; select which move will be replaced based on c
-	ld bc, wEnemyMon2 - wEnemyMon1
-	call AddNTimes ; select the correct pokemon to modify
-	ld [hl], d ; modify the move at the given slot to be the given move
+;	dec a ; indices start at 0, wLoneAttackNo starts at 1
+;	ld b, a
+;	add b ; double the index value 
+;	add b ; triple the index value (each entry is 3 bytes)
+;	ld c, a
+;	ld b, 0
+;	ld hl, LoneMoves 
+;	add hl, bc ; select the correct entry from LoneMoves
+;	ld a, [hli] ; pokemon index
+;	ld c, [hl] ; move index for the above pokemon
+;	inc hl
+;	ld d, [hl] ; move to be given
+;	ld hl, wEnemyMon1Moves
+;	add hl, bc ; select which move will be replaced based on c
+;	ld bc, wEnemyMon2 - wEnemyMon1
+;	call AddNTimes ; select the correct pokemon to modify
+;	ld [hl], d ; modify the move at the given slot to be the given move
 ;;;;;;;;;;
-	jr .FinishUp
+;	jr .FinishUp
 .AddTeamMove
 ; check if our trainer's team has special moves
-
+;
 ; get trainer class number
-	ld a, [wCurOpponent]
-	sub OPP_ID_OFFSET
-	ld b, a
-	ld hl, TeamMoves
-
+;	ld a, [wCurOpponent]
+;	sub OPP_ID_OFFSET
+;	ld b, a
+;	ld hl, TeamMoves
+;
 ; iterate through entries in TeamMoves, checking each for our trainer class
-.IterateTeamMoves
-	ld a, [hli]
-	cp b
-	jr z, .GiveTeamMoves ; is there a match?
-	inc hl ; if not, go to the next entry
-	inc a
-	jr nz, .IterateTeamMoves
-
+;.IterateTeamMoves
+;	ld a, [hli]
+;	cp b
+;	jr z, .GiveTeamMoves ; is there a match?
+;	inc hl ; if not, go to the next entry
+;	inc a
+;	jr nz, .IterateTeamMoves
+;
 ; no matches found. is this trainer champion rival?
-	;ld a, b
-	;cp RIVAL3
-	;jr z, .ChampionRival
-	jr .FinishUp ; nope
-.GiveTeamMoves
-	ld a, [hl]
-	ld [wEnemyMon6Moves + 1], a ; PureRGBnote: CHANGED: elite four trainers replace their 6th pokemon's 2nd move with their special moves.
-	;jr .FinishUp
+;	;ld a, b
+;	;cp RIVAL3
+;	;jr z, .ChampionRival
+;	jr .FinishUp ; nope
+;.GiveTeamMoves
+;	ld a, [hl]
+;	ld [wEnemyMon6Moves + 1], a ; PureRGBnote: CHANGED: elite four trainers replace their 6th pokemon's 2nd move with their special moves.
+;	;jr .FinishUp
 ;.ChampionRival ; give moves to his team
 ; PureRGBnote: CHANGED: not necessary because champion's team already has good moves at such high level from their learnset.
 

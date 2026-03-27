@@ -9,7 +9,7 @@ LoneMoves:
 	db 1, 2, BIDE
 	db 1, 3, BUBBLEBEAM
 	db 2, 3, THUNDERBOLT
-	db 2, 1, RAZOR_LEAF
+	db 2, 1, MEGA_DRAIN
 	db 3, 0, TOXIC
 	db 4, 1, PSYCHIC_M
 	db 4, 1, FIRE_BLAST
