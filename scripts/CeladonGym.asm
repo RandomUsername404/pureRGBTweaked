@@ -186,7 +186,7 @@ CeladonGymErikaText:
 .setErikaParty
 	ld a, c
 	ld [wTrainerNo], a
-	ld a, $9 ; PureRGB Tweaked: disabled lone move patch
+	ld a, $4
 	ld [wGymLeaderNo], a
 	ld a, SCRIPT_CELADONGYM_ERIKA_POST_BATTLE
 	ld [wCeladonGymCurScript], a

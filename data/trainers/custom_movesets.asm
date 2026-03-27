@@ -20,9 +20,23 @@
 	const ELITE_FOUR_RIVAL1_MOVESET
 	const ELITE_FOUR_RIVAL2_MOVESET
 	const ELITE_FOUR_RIVAL3_MOVESET
+	const GYM_LEADER_BLAINE_MOVESET
+	const GYM_LEADER_BROCK_MOVESET
+	const GYM_LEADER_ERIKA1_MOVESET
+	const GYM_LEADER_ERIKA2_MOVESET
+	const GYM_LEADER_ERIKA3_MOVESET
+	const GYM_LEADER_GIOVANNI_MOVESET
+	const GYM_LEADER_KOGA1_MOVESET
+	const GYM_LEADER_KOGA2_MOVESET
+	const GYM_LEADER_MISTY_MOVESET
+	const GYM_LEADER_SABRINA1_MOVESET
+	const GYM_LEADER_SABRINA2_MOVESET
+	const GYM_LEADER_SURGE_MOVESET
 	const METRONOME_GAMBLER_MOVESET
-	const OFFICER_JENNY_MOVESET
 	const NURSE_JOY_MOVESET
+	const OFFICER_JENNY_MOVESET
+	const ROCKET_BOSS_GIOVANNI1_MOVESET
+	const ROCKET_BOSS_GIOVANNI2_MOVESET
 
 ; input d = which moveset
 LoadTrainerMoveSet:
@@ -73,9 +87,23 @@ MoveSetMappings:
 	dw EliteFourRivalMoveset1
 	dw EliteFourRivalMoveset2
 	dw EliteFourRivalMoveset3
+	dw GymLeaderBlaineMoveset
+	dw GymLeaderBrockMoveset
+	dw GymLeaderErikaMoveset1
+	dw GymLeaderErikaMoveset2
+	dw GymLeaderErikaMoveset3
+	dw GymLeaderGiovanniMoveset
+	dw GymLeaderKogaMoveset1
+	dw GymLeaderKogaMoveset2
+	dw GymLeaderMistyMoveset
+	dw GymLeaderSabrina1Moveset
+	dw GymLeaderSabrina2Moveset
+	dw GymLeaderSurgeMoveset
 	dw MetronomeGamblerMoveset
-	dw OfficerJennyMoveset
 	dw NurseJoyMoveset
+	dw OfficerJennyMoveset
+	dw RocketBossGiovanniMoveset1
+	dw RocketBossGiovanniMoveset2
 
 ChampArenaErikaMoveset:
 	; victreebel
@@ -685,6 +713,280 @@ EliteFourRivalMoveset3:
 	db GROWTH
 	db SLAM ; FILTHY_SLAM
 
+GymLeaderBlaineMoveset:
+	; rapidash
+	db FIRE_SPIN
+	db STRENGTH
+	db TAKE_DOWN ; HEAT RUSH
+	db HI_JUMP_KICK
+	; ninetales
+	db FIRE_BLAST
+	db CONFUSE_RAY
+	db SOLARBEAM
+	db FIRE_SPIN
+	; magmar
+	db FIRE_BLAST
+	db PSYCHIC_M
+	db CONFUSE_RAY
+	db THUNDERPUNCH
+	; flareon
+	db FIRE_BLAST
+	db TRI_ATTACK
+	db DIG
+	db FLASH
+	; arcanine
+	db FIRE_BLAST
+	db DOUBLE_EDGE
+	db DIG
+	db AGILITY
+	
+GymLeaderBrockMoveset:
+	; geodude
+	db TACKLE
+	db HARDEN
+	db ROCK_THROW
+	db NO_MOVE
+	; onix
+	db CONSTRICT
+	db BIDE
+	db SWORDS_DANCE
+	db BIND
+
+GymLeaderErikaMoveset1:
+	; tangela
+	db BIND
+	db STUN_SPORE
+	db SLEEP_POWDER
+	db MEGA_DRAIN
+	; victreebel
+	db MEGA_DRAIN
+	db STUN_SPORE
+	db ACID
+	db RAZOR_LEAF
+	; ivysaur
+	db RAZOR_LEAF
+	db LEECH_SEED
+	db ACID
+	db NO_MOVE
+	; vileplume
+	db ACID
+	db PETAL_DANCE
+	db STUN_SPORE
+	db SLEEP_POWDER
+
+GymLeaderErikaMoveset2:
+	; tangela
+	db BIND
+	db BODY_SLAM
+	db SLEEP_POWDER
+	db MEGA_DRAIN
+	; victreebel
+	db SWORDS_DANCE
+	db WRAP
+	db RAZOR_LEAF
+	db SLAM ; FILTHY SLAM
+	; venusaur
+	db RAZOR_LEAF
+	db LEECH_SEED
+	db SLAM ; FILTHY SLAM
+	db BODY_SLAM
+	; vileplume
+	db MEGA_DRAIN
+	db SLEEP_POWDER
+	db SOLARBEAM
+	db SLAM ; FILTHY SLAM
+
+GymLeaderErikaMoveset3:
+	; tangela
+	db MEGA_DRAIN
+	db STUN_SPORE
+	db SOLARBEAM
+	db BIND
+	; victreebel
+	db RAZOR_LEAF
+	db SLAM ; FILTHY SLAM
+	db WRAP
+	db SWORDS_DANCE
+	; venusaur
+	db RAZOR_LEAF
+	db SOLARBEAM
+	db LEECH_SEED
+	db BODY_SLAM
+	; exeggutor
+	db REFLECT
+	db EGG_BOMB
+	db PSYCHIC_M
+	db SLEEP_POWDER
+	; vileplume
+	db LEECH_SEED
+	db PETAL_DANCE
+	db SLUDGE
+	db SOLARBEAM
+
+GymLeaderGiovanniMoveset:
+	; kingler
+	db EARTHQUAKE
+	db CRABHAMMER
+	db SPIKE_CANNON
+	db HARDEN
+	; persian
+	db SLASH
+	db HYPER_BEAM
+	db BUBBLEBEAM
+	db THUNDERBOLT
+	; dugtrio
+	db EARTHQUAKE
+	db STRENGTH
+	db FISSURE
+	db ROCK_SLIDE
+	; nidoqueen
+	db EARTHQUAKE
+	db ICE_BEAM
+	db THUNDERBOLT
+	db BODY_SLAM
+	; nidoking
+	db EARTHQUAKE
+	db COUNTER ; DRAIN PUNCH
+	db THUNDER
+	db SLUDGE
+	; rhydon
+	db ROCK_SLIDE
+	db EARTHQUAKE
+	db SUBMISSION
+	db THUNDERBOLT
+
+GymLeaderKogaMoveset1:
+	; golbat
+	db CONFUSE_RAY
+	db TOXIC
+	db BITE
+	db SLUDGE
+	; muk
+	db ACID_ARMOR
+	db MEGA_DRAIN
+	db SLAM ; FILTHY SLAM
+	db TOXIC
+	; tentacruel
+	db SURF
+	db ICE_BEAM
+	db BARRIER
+	db SLAM ; FILTHY SLAM
+	; venomoth
+	db SOLARBEAM
+	db DOUBLE_TEAM
+	db TOXIC
+	db PSYCHIC_M
+
+GymLeaderKogaMoveset2:
+	; golbat
+	db TOXIC
+	db CONFUSE_RAY
+	db SLUDGE
+	db BITE
+	; muk
+	db SLUDGE
+	db MEGA_DRAIN
+	db TOXIC
+	db ACID_ARMOR
+	; tentacruel
+	db BARRIER
+	db SURF
+	db ICE_BEAM
+	db WRAP
+	; weezing
+	db AMNESIA
+	db SLUDGE
+	db THUNDERBOLT
+	db SELFDESTRUCT
+	; venomoth
+	db SOLARBEAM
+	db DOUBLE_TEAM
+	db TOXIC
+	db SLUDGE
+
+GymLeaderMistyMoveset:
+	; psyduck
+	db SCRATCH
+	db DISABLE
+	db CONFUSION
+	db BUBBLEBEAM
+	; goldeen
+	db TAIL_WHIP
+	db SUPERSONIC
+	db HORN_ATTACK
+	db WATERFALL
+	; starmie
+	db CONFUSION
+	db SWIFT
+	db BUBBLEBEAM
+	db NO_MOVE
+
+GymLeaderSabrina1Moveset:
+	; kadabra
+	db PSYBEAM
+	db RECOVER
+	db MEDITATE
+	db REFLECT
+	; mr_mime
+	db SUBSTITUTE
+	db MIMIC
+	db LIGHT_SCREEN
+	db PSYCHIC_M
+	; golduck
+	db SURF
+	db CONFUSION
+	db MEDITATE
+	db THUNDERPUNCH
+	; alakazam
+	db THUNDER_WAVE
+	db RECOVER
+	db PSYCHIC_M
+	db REFLECT
+
+GymLeaderSabrina2Moveset:
+	; kadabra
+	db REFLECT
+	db MEDITATE
+	db PSYCHIC_M
+	db RECOVER
+	; mr_mime
+	db LIGHT_SCREEN
+	db MIMIC
+	db PSYCHIC_M
+	db SUBSTITUTE
+	; golduck
+	db THUNDERPUNCH
+	db PSYCHIC_M
+	db MEDITATE
+	db SURF
+	; butterfree
+	db CONFUSE_RAY
+	db PSYCHIC_M
+	db MEGA_DRAIN
+	db MIST
+	; alakazam
+	db THUNDER_WAVE
+	db RECOVER
+	db PSYCHIC_M
+	db REFLECT
+
+GymLeaderSurgeMoveset:
+	; voltorb
+	db THUNDERSHOCK
+	db SCREECH
+	db BIDE
+	db SELFDESTRUCT
+	; magnemite
+	db SONICBOOM
+	db THUNDERSHOCK
+	db THUNDER_WAVE
+	db NO_MOVE
+	; raichu
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db BODY_SLAM
+	db ICE_PUNCH
+
 MetronomeGamblerMoveset:
 	; meowth
 	db METRONOME
@@ -701,6 +1003,38 @@ MetronomeGamblerMoveset:
 	db NO_MOVE
 	db NO_MOVE
 	db NO_MOVE
+
+NurseJoyMoveset:
+	; kangaskhan
+	db REST
+	db DOUBLE_TEAM
+	db FISSURE
+	db DOUBLE_EDGE
+	; snorlax
+	db REST
+	db ICE_BEAM
+	db AMNESIA
+	db SCREECH
+	; starmie
+	db RECOVER
+	db PSYCHIC_M
+	db THUNDER_WAVE
+	db SUBSTITUTE
+	; porygon
+	db REFLECT
+	db BLIZZARD
+	db RECOVER
+	db THUNDER_WAVE
+	; exeggutor
+	db SOFTBOILED
+	db REFLECT
+	db DREAM_EATER
+	db SLEEP_POWDER
+	; chansey
+	db SOFTBOILED
+	db REFLECT
+	db EGG_BOMB
+	db THUNDER_WAVE
 
 OfficerJennyMoveset:
 	; pidgeot
@@ -734,34 +1068,51 @@ OfficerJennyMoveset:
 	db BODY_SLAM
 	db DIG
 
-NurseJoyMoveset:
+RocketBossGiovanniMoveset1:
+	; sandslash
+	db DIG
+	db FURY_ATTACK
+	db CUT
+	db SHARPEN
 	; kangaskhan
-	db REST
-	db DOUBLE_TEAM
-	db FISSURE
-	db DOUBLE_EDGE
-	; snorlax
-	db REST
-	db ICE_BEAM
-	db AMNESIA
-	db SCREECH
-	; starmie
-	db RECOVER
-	db PSYCHIC_M
-	db THUNDER_WAVE
-	db SUBSTITUTE
-	; porygon
-	db REFLECT
-	db BLIZZARD
-	db RECOVER
-	db THUNDER_WAVE
-	; exeggutor
-	db SOFTBOILED
-	db REFLECT
-	db DREAM_EATER
-	db SLEEP_POWDER
-	; chansey
-	db SOFTBOILED
-	db REFLECT
-	db EGG_BOMB
-	db THUNDER_WAVE
+	db MEGA_PUNCH
+	db SUBMISSION
+	db DIZZY_PUNCH
+	db NO_MOVE
+	; dodrio
+	db DRILL_PECK
+	db ROLLING_KICK
+	db FURY_SWIPES ; DUST CLAW
+	db DIG
+	; persian
+	db HEADBUTT
+	db BUBBLEBEAM
+	db THUNDERBOLT
+	db NO_MOVE
+
+RocketBossGiovanniMoveset2:
+	; machoke
+	db DIG
+	db BODY_SLAM
+	db ROCK_SLIDE
+	db KARATE_CHOP
+	; kangaskhan
+	db ICE_PUNCH
+	db ROCK_SLIDE
+	db SUBMISSION
+	db BODY_SLAM
+	; kingler
+	db SURF
+	db KARATE_CHOP
+	db BODY_SLAM
+	db HARDEN
+	; golem
+	db EARTHQUAKE
+	db ROCK_SLIDE
+	db EXPLOSION
+	db NO_MOVE
+	; persian
+	db SLASH
+	db BUBBLEBEAM
+	db THUNDERBOLT
+	db NO_MOVE

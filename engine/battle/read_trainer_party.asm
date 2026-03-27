@@ -133,8 +133,10 @@ ReadTrainer:
 	ld a, [wLoneAttackNo] ; Brock is 01, Misty is 02, Erika is 04, etc
 	and a
 	jr z, .AddTeamMove
+	; RGB Tweaked: disabling Lone Moves for all Gym Leaders
 	cp 9
-	jr nc, .AddTeamMove ; higher than 8 are elite four which we don't want getting these moves since their movesets are good already
+	jr c, .FinishUp   ; if value < 9 (1–8), skip
+	jr .AddTeamMove   ; otherwise keep going 		; PureRGBnote: higher than 8 are elite four which we don't want getting these moves since their movesets are good already
 ;;;;;;;;;; PureRGBnote: CHANGED: gym leader special moves can have custom indices instead of hardcoded to replace move 2 of the given pokemon.
 	dec a ; indices start at 0, wLoneAttackNo starts at 1
 	ld b, a

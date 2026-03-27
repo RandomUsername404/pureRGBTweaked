@@ -139,7 +139,7 @@ SaffronGymSabrinaText:
 .setSabrinaParty
 	ld a, c
 	ld [wTrainerNo], a
-	ld a, $9 ; PureRGB Tweaked: disabled lone move patch
+	ld a, $6
 	ld [wGymLeaderNo], a
 	ld a, SCRIPT_SAFFRONGYM_SABRINA_POST_BATTLE
 	ld [wSaffronGymCurScript], a

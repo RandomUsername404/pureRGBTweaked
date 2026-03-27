@@ -136,7 +136,7 @@ FuchsiaGymKogaText:
 .setKogaParty
 	ld a, c
 	ld [wTrainerNo], a
-	ld a, $9 ; PureRGB Tweaked: disabled lone move patch
+	ld a, $5
 	ld [wGymLeaderNo], a
 	xor a
 	ldh [hJoyHeld], a
