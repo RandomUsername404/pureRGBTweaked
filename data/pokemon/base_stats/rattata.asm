@@ -18,7 +18,6 @@
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\
-	SLASH,\
 	DOUBLE_EDGE,\
 	BUBBLEBEAM,\
 	AURORA_BEAM,\

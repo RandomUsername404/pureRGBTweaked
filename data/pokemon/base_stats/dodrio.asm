@@ -39,7 +39,6 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
-	FLY,\
 	STRENGTH
 	; end
 

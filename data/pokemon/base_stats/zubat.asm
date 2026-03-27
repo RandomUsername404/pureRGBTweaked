@@ -18,7 +18,6 @@
 	tmhm \
 	RAZOR_WIND,\ ; ROOST
 	TOXIC,\
-	SLASH,\
 	DOUBLE_EDGE,\
 	BARRIER,\
 	MEGA_DRAIN,\

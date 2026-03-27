@@ -479,7 +479,7 @@ ChampArenaGymGuideMoveset:
 	db RECOVER
 	db DISABLE
 	; tauros
-	db SLASH
+	db BODY_SLAM
 	db BLIZZARD
 	db EARTHQUAKE
 	db HORN_DRILL
@@ -538,7 +538,7 @@ ChampArenaRivalMoveset2:
 	db DEFENSE_CURL
 	db MEGA_KICK
 	; tauros
-	db SLASH
+	db BODY_SLAM
 	db SKULL_BASH
 	db MEGA_KICK
 	db FURY_ATTACK
@@ -669,7 +669,7 @@ EliteFourRivalMoveset2:
 	db GLARE
 	db SKULL_BASH
 	db MEGA_KICK
-	db SLASH
+	db BODY_SLAM
 	; gengar
 	db DREAM_EATER
 	db SLUDGE

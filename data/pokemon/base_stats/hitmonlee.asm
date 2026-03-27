@@ -20,7 +20,6 @@
 	FIRE_PUNCH,\
 	TOXIC,\
 	BODY_SLAM,\
-	SLASH,\
 	DOUBLE_EDGE,\
 	HYPER_BEAM,\
 	HI_JUMP_KICK,\
@@ -38,7 +37,6 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
-	CUT,\
 	STRENGTH,\
 	SEISMIC_TOSS ; YellowLegacy
 	; end

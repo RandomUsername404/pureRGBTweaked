@@ -1186,7 +1186,7 @@ DugtrioEvosMoves:
 	db 19, DIG ; YellowLegacy
 	db 24, SAND_ATTACK ; YellowLegacy
 	db 30, SLAM ; PureRGB						FILTHY SLAM
-	db 31, SLASH ; YellowLegacy
+	db 31, HEADBUTT ; RGB Tweaked
 	db 35, SCREECH ; YellowLegacy
 	db 40, EARTHQUAKE ; YellowLegacy
 	db 43, FURY_ATTACK ; PureRGB

@@ -19,7 +19,6 @@
 	tmhm \
 	TOXIC,\
 	BODY_SLAM,\
-	SLASH,\
 	DOUBLE_EDGE,\
 	AMNESIA,\
 	HYPER_BEAM,\
@@ -39,7 +38,6 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
-	CUT,\
 	SURF,\
 	STRENGTH
 	; end
