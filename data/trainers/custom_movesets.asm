@@ -13,9 +13,12 @@
 	const CHAMP_ARENA_BROCK_MOVESET
 	const CHAMP_ARENA_AGATHA_MOVESET
 	const CHAMP_ARENA_GYM_GUIDE_MOVESET
-	const CHAMP_ARENA_RIVAL1_MOVESET
-	const CHAMP_ARENA_RIVAL2_MOVESET
-	const CHAMP_ARENA_RIVAL3_MOVESET
+	const CHAMP_ARENA1_RIVAL1_MOVESET
+	const CHAMP_ARENA1_RIVAL2_MOVESET
+	const CHAMP_ARENA1_RIVAL3_MOVESET
+	const CHAMP_ARENA2_RIVAL1_MOVESET
+	const CHAMP_ARENA2_RIVAL2_MOVESET
+	const CHAMP_ARENA2_RIVAL3_MOVESET
 	const ELITE_FOUR_LANCE_MOVESET
 	const ELITE_FOUR_RIVAL1_MOVESET
 	const ELITE_FOUR_RIVAL2_MOVESET
@@ -35,8 +38,20 @@
 	const METRONOME_GAMBLER_MOVESET
 	const NURSE_JOY_MOVESET
 	const OFFICER_JENNY_MOVESET
+	const POKE_TOWER_RIVAL2_1_MOVESET
+	const POKE_TOWER_RIVAL2_2_MOVESET
+	const POKE_TOWER_RIVAL2_3_MOVESET
+	const PRE_E4_RIVAL2_1_MOVESET
+	const PRE_E4_RIVAL2_2_MOVESET
+	const PRE_E4_RIVAL2_3_MOVESET
 	const ROCKET_BOSS_GIOVANNI1_MOVESET
 	const ROCKET_BOSS_GIOVANNI2_MOVESET
+	const SILPH_CO_RIVAL2_1_MOVESET
+	const SILPH_CO_RIVAL2_2_MOVESET
+	const SILPH_CO_RIVAL2_3_MOVESET
+	const SS_ANNE_RIVAL2_1_MOVESET
+	const SS_ANNE_RIVAL2_2_MOVESET
+	const SS_ANNE_RIVAL2_3_MOVESET
 
 ; input d = which moveset
 LoadTrainerMoveSet:
@@ -80,9 +95,12 @@ MoveSetMappings:
 	dw ChampArenaBrockMoveset
 	dw ChampArenaAgathaMoveset
 	dw ChampArenaGymGuideMoveset
-	dw ChampArenaRivalMoveset1
-	dw ChampArenaRivalMoveset2
-	dw ChampArenaRivalMoveset3
+	dw ChampArena1RivalMoveset1
+	dw ChampArena1RivalMoveset2
+	dw ChampArena1RivalMoveset3
+	dw ChampArena2RivalMoveset1
+	dw ChampArena2RivalMoveset2
+	dw ChampArena2RivalMoveset3
 	dw EliteFourLanceMoveset
 	dw EliteFourRivalMoveset1
 	dw EliteFourRivalMoveset2
@@ -102,8 +120,20 @@ MoveSetMappings:
 	dw MetronomeGamblerMoveset
 	dw NurseJoyMoveset
 	dw OfficerJennyMoveset
+	dw PokeTowerRival2Moveset1
+	dw PokeTowerRival2Moveset2
+	dw PokeTowerRival2Moveset3
+	dw PreE4Rival2Moveset1
+	dw PreE4Rival2Moveset2
+	dw PreE4Rival2Moveset3
 	dw RocketBossGiovanniMoveset1
 	dw RocketBossGiovanniMoveset2
+	dw SilphRival2Moveset1
+	dw SilphRival2Moveset2
+	dw SilphRival2Moveset3
+	dw SSAnneRival2Moveset1
+	dw SSAnneRival2Moveset2
+	dw SSAnneRival2Moveset3
 
 ChampArenaErikaMoveset:
 	; victreebel
@@ -489,101 +519,199 @@ ChampArenaGymGuideMoveset:
 	db EARTHQUAKE
 	db HYPER_BEAM
 
-ChampArenaRivalMoveset1:
-	; articuno
-	db ICE_BEAM
-	db RAZOR_WIND ; ROOST
-	db PSYCHIC_M
-	db FLY
-	; alakazam
-	db PSYCHIC_M
-	db AURORA_BEAM
-	db RECOVER
-	db FLASH
-	; rhydon
+; Rival fights 9
+ChampArena1RivalMoveset1:
+	; exeggutor
+	db SOLARBEAM
+	db LEECH_SEED
+	db DOUBLE_EDGE
+	db TOXIC
+	; slowbro
 	db EARTHQUAKE
-	db ROCK_SLIDE
-	db DEFENSE_CURL
-	db MEGA_KICK
+	db PSYCHIC_M
+	db SEISMIC_TOSS
+	db SURF
+	; charizard
+	db BODY_SLAM
+	db FLAMETHROWER
+	db EARTHQUAKE
+	db TOXIC
+	; persian
+	db THUNDERBOLT
+	db ROLLING_KICK
+	db AURORA_BEAM
+	db SLASH
+	; jolteon
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db DOUBLE_KICK
+	db REFLECT
+	; pinsir
+	db SWORDS_DANCE
+	db TWINEEDLE
+	db SEISMIC_TOSS
+	db TOXIC
+
+ChampArena1RivalMoveset2:
+	; exeggutor
+	db SOLARBEAM
+	db LEECH_SEED
+	db DOUBLE_EDGE
+	db TOXIC
+	; blastoise
+	db EARTHQUAKE
+	db BARRAGE
+	db SEISMIC_TOSS
+	db SURF
+	; ninetales
+	db BODY_SLAM
+	db FLAMETHROWER
+	db DIG
+	db TOXIC
+	; lickitung
+	db THUNDERBOLT
+	db BARRAGE
+	db BLIZZARD
+	db DOUBLE_EDGE
+	; raichu
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db HI_JUMP_KICK
+	db REFLECT
+	; pinsir
+	db SWORDS_DANCE
+	db TWINEEDLE
+	db SEISMIC_TOSS
+	db TOXIC
+
+ChampArena1RivalMoveset3:
+	; venusaur
+	db SOLARBEAM
+	db LEECH_SEED
+	db DOUBLE_EDGE
+	db TOXIC
+	; slowbro
+	db EARTHQUAKE
+	db PSYCHIC_M
+	db SEISMIC_TOSS
+	db SURF
+	; ninetales
+	db BODY_SLAM
+	db FLAMETHROWER
+	db DIG
+	db TOXIC
+	; fearow
+	db SPIKE_CANNON
+	db BARRAGE
+	db RAZOR_WIND ; ROOST
+	db WHIRLWIND
+	; electabuzz
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db COUNTER ; DRAIN PUNCH
+	db REFLECT
+	; pinsir
+	db SWORDS_DANCE
+	db TWINEEDLE
+	db SEISMIC_TOSS
+	db TOXIC
+
+; Rival fights 10
+ChampArena2RivalMoveset1:
 	; exeggutor
 	db PSYCHIC_M
-	db SOLARBEAM
-	db SLEEP_POWDER
-	db EGG_BOMB
-	; snorlax
-	db BODY_SLAM
-	db REST
-	db KARATE_CHOP
-	db SLASH
-	; charizard
-	db RAZOR_WIND ; ROOST
-	db FLAMETHROWER
-	db SKY_ATTACK
-	db EARTHQUAKE
-
-ChampArenaRivalMoveset2:
-	; moltres
-	db FLAMETHROWER
-	db RAZOR_WIND ; ROOST
-	db SKY_ATTACK
-	db SOLARBEAM
-	; alakazam
-	db PSYCHIC_M
-	db AURORA_BEAM
-	db RECOVER
-	db FLASH
-	; rhydon
-	db EARTHQUAKE
-	db ROCK_SLIDE
-	db DEFENSE_CURL
-	db MEGA_KICK
-	; tauros
-	db BODY_SLAM
-	db SKULL_BASH
-	db MEGA_KICK
-	db FURY_ATTACK
-	; gengar
-	db BARRAGE
-	db PSYCHIC_M
-	db LOVELY_KISS
+	db LEECH_SEED
 	db MEGA_DRAIN
-	; blastoise
-	db HYDRO_PUMP
-	db WITHDRAW
-	db COUNTER ; DRAIN_PUNCH
-	db ICE_BEAM
-
-ChampArenaRivalMoveset3:
+	db TOXIC
+	; slowbro
+	db EARTHQUAKE
+	db PSYCHIC_M
+	db AMNESIA
+	db BLIZZARD
+	; charizard
+	db GLARE
+	db FLAMETHROWER
+	db EARTHQUAKE
+	db TOXIC
+	; persian
+	db THUNDERBOLT
+	db SLASH
+	db AURORA_BEAM
+	db GLARE
 	; zapdos
 	db THUNDERBOLT
-	db RAZOR_WIND ; ROOST
-	db SPIKE_CANNON
 	db THUNDER_WAVE
-	; alakazam
+	db DRILL_PECK
+	db BARRAGE
+	; pinsir
+	db TWINEEDLE
+	db BIND
+	db SEISMIC_TOSS
+	db TOXIC
+
+ChampArena2RivalMoveset2:
+	; exeggutor
 	db PSYCHIC_M
-	db AURORA_BEAM
-	db RECOVER
-	db FLASH
-	; kingler
-	db CRABHAMMER
+	db LEECH_SEED
+	db MEGA_DRAIN
+	db TOXIC
+	; blastoise
 	db EARTHQUAKE
-	db SPIKE_CANNON
-	db VICEGRIP
-	; rhydon
-	db EARTHQUAKE
-	db ROCK_SLIDE
-	db DEFENSE_CURL
-	db MEGA_KICK
-	; gyarados
 	db SURF
-	db EARTHQUAKE
+	db AMNESIA
+	db BLIZZARD
+	; moltres
+	db GLARE
+	db FLAMETHROWER
+	db SOLARBEAM
+	db TOXIC
+	; lickitung
 	db THUNDERBOLT
-	db STRENGTH
+	db BARRAGE
+	db BLIZZARD
+	db THUNDER_WAVE
+	; raichu
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db SEISMIC_TOSS
+	db BARRAGE
+	; pinsir
+	db TWINEEDLE
+	db BIND
+	db SEISMIC_TOSS
+	db TOXIC
+
+ChampArena2RivalMoveset3:
 	; venusaur
-	db SLEEP_POWDER
-	db RAZOR_LEAF
 	db SLUDGE
-	db DRAGON_RAGE
+	db LEECH_SEED
+	db MEGA_DRAIN
+	db SWORDS_DANCE
+	; articuno
+	db SURF
+	db PSYCHIC_M
+	db AMNESIA
+	db BLIZZARD
+	; ninetales
+	db CONFUSE_RAY
+	db FLAMETHROWER
+	db DIG
+	db TOXIC
+	; fearow
+	db SPIKE_CANNON
+	db SUBSTITUTE
+	db RAZOR_WIND ; ROOST
+	db WHIRLWIND
+	; electabuzz
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db COUNTER ; DRAIN PUNCH
+	db PSYCHIC_M
+	; pinsir
+	db TWINEEDLE
+	db BIND
+	db SEISMIC_TOSS
+	db TOXIC
 
 EliteFourLanceMoveset:
 	; gyarados
@@ -617,71 +745,60 @@ EliteFourLanceMoveset:
 	db RAZOR_WIND ; ROOST
 	db DRAGON_RAGE
 
+; Rival fights 8
 EliteFourRivalMoveset1:
+	; venusaur
+	db RAZOR_LEAF
+	db SLEEP_POWDER
+	db GROWTH
+	db SLUDGE
 	; articuno
+	db DRILL_PECK
 	db ICE_BEAM
-	db BLIZZARD
 	db AGILITY
-	db WHIRLWIND
+	db SURF
+	; primeape
+	db SONICBOOM
+	db EXPLOSION
+	db COUNTER ; DRAIN PUNCH
+	db THRASH
+	; jolteon
+	db THUNDERBOLT
+	db PIN_MISSILE
+	db SLAM ; FILTHY SLAM
+	db BODY_SLAM
+	; charizard
+	db FLAMETHROWER
+	db SLASH
+	db WING_ATTACK
+	db DRAGON_RAGE
 	; alakazam
 	db PSYCHIC_M
 	db MEDITATE
-	db REFLECT
+	db THUNDERPUNCH
 	db RECOVER
-	; rhydon
-	db EARTHQUAKE
-	db SKULL_BASH
-	db DEFENSE_CURL
-	db MEGA_KICK
-	; exeggutor
-	db PSYCHIC_M
-	db SLEEP_POWDER
-	db SOLARBEAM
-	db EGG_BOMB
-	; snorlax
-	db POISON_GAS
-	db HYPER_BEAM
-	db MEGA_KICK
-	db EXPLOSION
+
+EliteFourRivalMoveset2:
 	; charizard
 	db THUNDERPUNCH
 	db SLASH
 	db FLAMETHROWER
 	db SKY_ATTACK
-
-EliteFourRivalMoveset2:
-	; moltres
-	db FLAMETHROWER
-	db SKY_ATTACK
-	db AGILITY
-	db DRAGON_RAGE
-	; alakazam
+	; exeggutor
 	db PSYCHIC_M
-	db MEDITATE
-	db REFLECT
-	db RECOVER
-	; rhydon
-	db EARTHQUAKE
-	db SKULL_BASH
-	db DEFENSE_CURL
-	db MEGA_KICK
-	; tauros
-	db GLARE
-	db SKULL_BASH
-	db MEGA_KICK
-	db BODY_SLAM
-	; gengar
-	db DREAM_EATER
-	db SLUDGE
-	db ICE_PUNCH
-	db LOVELY_KISS
+	db SLEEP_POWDER
+	db SOLARBEAM
+	db EGG_BOMB
 	; blastoise
+	db SURF
 	db WITHDRAW
-	db COUNTER ; DRAIN PUNCH
+	db EARTHQUAKE
 	db ICE_BEAM
-	db HYDRO_PUMP
-
-EliteFourRivalMoveset3:
+	; machamp
+	db COUNTER ; DRAIN PUNCH
+	db ROCK_SLIDE
+	db BODY_SLAM
+	db BIND
 	; zapdos
 	db DRILL_PECK
 	db THUNDERBOLT
@@ -690,28 +807,40 @@ EliteFourRivalMoveset3:
 	; alakazam
 	db PSYCHIC_M
 	db MEDITATE
-	db REFLECT
+	db ICE_PUNCH
 	db RECOVER
-	; kingler
-	db CRABHAMMER
-	db FURY_ATTACK
-	db EARTHQUAKE
-	db SPIKE_CANNON
-	; rhydon
-	db EARTHQUAKE
-	db SKULL_BASH
-	db DEFENSE_CURL
-	db MEGA_KICK
-	; gyarados
+
+EliteFourRivalMoveset3:
+	; blastoise
+	db WITHDRAW
+	db COUNTER ; DRAIN PUNCH
+	db ICE_BEAM
 	db HYDRO_PUMP
-	db HYPER_BEAM
-	db THUNDERBOLT
+	; moltres
 	db FLAMETHROWER
+	db SKY_ATTACK
+	db AGILITY
+	db DRAGON_RAGE
 	; venusaur
-	db RAZOR_LEAF
-	db SLEEP_POWDER
-	db GROWTH
-	db SLAM ; FILTHY_SLAM
+	db SOLARBEAM
+	db SLUDGE
+	db CONSTRICT ; SIPHON SNAG
+	db EARTHQUAKE
+	; hitmonlee
+	db COUNTER ; DRAIN PUNCH
+	db MIRROR_MOVE
+	db HI_JUMP_KICK
+	db STOMP
+	; jynx
+	db ICE_BEAM
+	db PSYCHIC_M
+	db BODY_SLAM
+	db SURF
+	; alakazam
+	db PSYCHIC_M
+	db MEDITATE
+	db FIRE_PUNCH
+	db RECOVER
 
 GymLeaderBlaineMoveset:
 	; rapidash
@@ -1116,3 +1245,331 @@ RocketBossGiovanniMoveset2:
 	db BUBBLEBEAM
 	db THUNDERBOLT
 	db NO_MOVE
+
+; Rival fights 4
+SSAnneRival2Moveset1:
+	; golbat
+	db WING_ATTACK
+	db CONFUSE_RAY
+	db LEECH_LIFE
+	db NO_MOVE
+	; raticate
+	db HYPER_FANG
+	db FLASH
+	db DOUBLE_KICK
+	db NO_MOVE
+	; diglett
+	db DIG
+	db SAND_ATTACK
+	db GROWL
+	db NO_MOVE
+	; charmeleon
+	db FIRE_PUNCH
+	db SMOKESCREEN
+	db RAGE
+	db BITE
+
+SSAnneRival2Moveset2:
+	; pidgeotto
+	db WING_ATTACK
+	db SAND_ATTACK
+	db CUT
+	db NO_MOVE
+	; raticate
+	db HYPER_FANG
+	db FIRE_PUNCH
+	db DOUBLE_KICK
+	db NO_MOVE
+	; pikachu
+	db THUNDERPUNCH
+	db HEADBUTT
+	db TAIL_WHIP
+	db NO_MOVE
+	; wartortle
+	db BUBBLEBEAM
+	db GLARE
+	db BODY_SLAM
+	db BITE
+
+SSAnneRival2Moveset3:
+	; fearow
+	db DRILL_PECK
+	db LEER
+	db SUBMISSION
+	db NO_MOVE
+	; raticate
+	db HYPER_FANG
+	db BUBBLEBEAM
+	db DOUBLE_KICK
+	db NO_MOVE
+	; growlithe
+	db EMBER
+	db QUICK_ATTACK
+	db LICK
+	db NO_MOVE
+	; ivysaur
+	db MEGA_DRAIN
+	db POISONPOWDER
+	db CONSTRICT ; SIPHON SNAG
+	db LEECH_SEED
+
+; Rival fights 5
+PokeTowerRival2Moveset1:
+	; golbat
+	db WING_ATTACK
+	db SLUDGE
+	db CONFUSE_RAY
+	db LEECH_LIFE
+	; dugtrio
+	db DIG
+	db DISABLE
+	db SAND_ATTACK
+	db SLAM ; FILTHY SLAM
+	; eevee
+	db FLASH
+	db HEADBUTT
+	db DOUBLE_KICK
+	db SAND_ATTACK
+	; golduck
+	db WATERFALL
+	db LOW_KICK
+	db CONFUSION
+	db REFLECT
+	; charmeleon
+	db TAKE_DOWN ; HEAT RUSH
+	db SLASH
+	db RAGE
+	db BITE
+	
+PokeTowerRival2Moveset2:
+	; pidgeot
+	db WING_ATTACK
+	db RAZOR_WIND ; ROOST
+	db CUT
+	db GLARE
+	; eevee
+	db SLAM ; FILTHY SLAM
+	db HEADBUTT
+	db DOUBLE_KICK
+	db SAND_ATTACK
+	; raichu
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db HEADBUTT
+	db AGILITY
+	; exeggcute
+	db MEGA_DRAIN
+	db SOFTBOILED
+	db PSYBEAM
+	db LEECH_SEED
+	; wartortle
+	db WATERFALL
+	db WITHDRAW
+	db COUNTER ; DRAIN PUNCH
+	db BITE
+
+PokeTowerRival2Moveset3:
+	; fearow
+	db DRILL_PECK
+	db RAZOR_WIND ; ROOST
+	db SUBMISSION
+	db SWIFT
+	; jynx
+	db ICE_PUNCH
+	db PSYBEAM
+	db DOUBLESLAP
+	db BUBBLEBEAM
+	; eevee
+	db SLAM ; FILTHY SLAM
+	db HEADBUTT
+	db DOUBLE_KICK
+	db SAND_ATTACK
+	; arcanine
+	db TAKE_DOWN ; HEAT_RUSH
+	db QUICK_ATTACK
+	db DIG
+	db HYPER_FANG
+	; ivysaur
+	db RAZOR_LEAF
+	db POISONPOWDER
+	db CONSTRICT ; SIPHON SNAG
+	db MEGA_DRAIN
+
+; Rival fights 6
+SilphRival2Moveset1:
+	; persian
+	db SLASH
+	db MIRROR_MOVE
+	db LICK
+	db SKULL_BASH
+	; golduck
+	db HYDRO_PUMP
+	db PSYCHIC_M
+	db AMNESIA
+	db SWIFT
+	; jolteon
+	db THUNDER
+	db PIN_MISSILE
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+	; dugtrio
+	db EARTHQUAKE
+	db DISABLE
+	db SAND_ATTACK
+	db SLAM ; FILTHY SLAM
+	; charizard
+	db FLAMETHROWER
+	db SLASH
+	db WING_ATTACK
+	db RAGE
+
+SilphRival2Moveset2:
+	; lickitung
+	db MEGA_PUNCH
+	db BODY_SLAM
+	db DISABLE
+	db DEFENSE_CURL
+	; exeggutor
+	db SOLARBEAM
+	db SOFTBOILED
+	db PSYCHIC_M
+	db LEECH_SEED
+	; raichu
+	db THUNDER
+	db WITHDRAW
+	db AGILITY
+	db HEADBUTT
+	; blastoise
+	db HYDRO_PUMP
+	db WITHDRAW
+	db COUNTER ; DRAIN PUNCH
+	db ICE_BEAM
+	; flareon
+	db FIRE_BLAST
+	db PIN_MISSILE
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+
+SilphRival2Moveset3:
+	; porygon
+	db NIGHT_SHADE
+	db RECOVER
+	db CONFUSE_RAY
+	db TRI_ATTACK
+	; jynx
+	db ICE_BEAM
+	db PSYCHIC_M
+	db BODY_SLAM
+	db BUBBLEBEAM
+	; vaporeon
+	db HYDRO_PUMP
+	db ROLLING_KICK
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+	; venusaur
+	db SOLARBEAM
+	db SLUDGE
+	db CONSTRICT ; SIPHON SNAG
+	db BODY_SLAM
+	; arcanine
+	db FLAMETHROWER
+	db LEER
+	db DIG
+	db SKULL_BASH
+
+; Rival fights 7
+PreE4Rival2Moveset1:
+	; primeape
+	db SONICBOOM
+	db EXPLOSION
+	db COUNTER ; DRAIN PUNCH
+	db THRASH
+	; jolteon
+	db THUNDER
+	db PIN_MISSILE
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+	; golduck
+	db HYDRO_PUMP
+	db PSYCHIC_M
+	db AMNESIA
+	db SWIFT
+	; dugtrio
+	db EARTHQUAKE
+	db DISABLE
+	db SUBMISSION
+	db SLAM ; FILTHY SLAM
+	; persian
+	db SLASH
+	db MIRROR_MOVE
+	db LICK
+	db SKULL_BASH
+	; charizard
+	db FLAMETHROWER
+	db SLASH
+	db WING_ATTACK
+	db RAGE
+
+PreE4Rival2Moveset2:
+	; machamp
+	db COUNTER ; DRAIN PUNCH
+	db ROCK_SLIDE
+	db BODY_SLAM
+	db BIND
+	; raichu
+	db THUNDER
+	db WITHDRAW
+	db SWIFT
+	db HEADBUTT
+	; blastoise
+	db HYDRO_PUMP
+	db WITHDRAW
+	db COUNTER ; DRAIN PUNCH
+	db ICE_BEAM
+	; flareon
+	db FIRE_BLAST
+	db PIN_MISSILE
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+	; exeggutor
+	db SOLARBEAM
+	db SOFTBOILED
+	db PSYCHIC_M
+	db LEECH_SEED
+	; lickitung
+	db MEGA_PUNCH
+	db BODY_SLAM
+	db DISABLE
+	db DEFENSE_CURL
+
+PreE4Rival2Moveset3:
+	; hitmonlee
+	db COUNTER ; DRAIN PUNCH
+	db MIRROR_MOVE
+	db HI_JUMP_KICK
+	db STOMP
+	; porygon
+	db NIGHT_SHADE
+	db RECOVER
+	db CONFUSE_RAY
+	db TRI_ATTACK
+	; jynx
+	db ICE_BEAM
+	db PSYCHIC_M
+	db BODY_SLAM
+	db BUBBLEBEAM
+	; vaporeon
+	db HYDRO_PUMP
+	db ROLLING_KICK
+	db DOUBLE_KICK
+	db QUICK_ATTACK
+	; arcanine
+	db FIRE_BLAST
+	db LEER
+	db DIG
+	db SKULL_BASH
+	; venusaur
+	db SOLARBEAM
+	db SLUDGE
+	db CONSTRICT ; SIPHON SNAG
+	db BODY_SLAM

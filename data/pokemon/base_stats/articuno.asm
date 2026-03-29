@@ -40,7 +40,8 @@
 	SUBSTITUTE,\
 	CUT,\
 	FLY,\
-	FLASH
+	FLASH,\
+	SURF ; RGB Tweaked
 	; end
 
 
