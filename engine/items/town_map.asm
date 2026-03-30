@@ -167,17 +167,9 @@ GetCurrentTownMap:
 
 ;;;;;;;;;; PureRGBnote: ADDED: using dig to go to another town displays a different sprite in this menu
 LoadTownMap_Dig::
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr z, .notDiglett
 	ld de, PartyMonSprites2 tile 50
 	lb bc, BANK(PartyMonSprites2), 2
 	ld a, 1
-	jr LoadTownMap_Fly_Common
-.notDiglett
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 12
-	xor a
 	jr LoadTownMap_Fly_Common
 ;;;;;;;;;;
 

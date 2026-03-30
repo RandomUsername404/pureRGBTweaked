@@ -114,61 +114,32 @@ StartDigEnterMapAnimation::
 	jp ResetSFXModifiers
 
 DigLoadMonsterSprite::
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 4
-	jr z, .notdiglett
-	ld de, PartyMonSprites2 tile 54 ; diglett sprite
+	ld de, PartyMonSprites2 tile 54
 	lb bc, BANK(PartyMonSprites2), 2
 	ld hl, vNPCSprites tile 2
 	call CopyVideoData
 	ld de, PartyMonSprites2 tile 50
 	lb bc, BANK(PartyMonSprites2), 2
-.notdiglett
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterSpriteBlinks::
 	ld c, 5
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld de, DiglettBlinkingSprite
 	lb bc, BANK(DiglettBlinkingSprite), 2
-	jr nz, .diglett1
-	ld de, MonsterBlinkingSprite
-	lb bc, BANK(MonsterBlinkingSprite), 2
-.diglett1
 	ld hl, vNPCSprites
 	call CopyVideoData
 	ld c, 5
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld de, PartyMonSprites2 tile 50
 	lb bc, BANK(PartyMonSprites2), 2
-	jr nz, .diglett2
-	ld de, MonsterSprite
-	lb bc, BANK(MonsterSprite), 2
-.diglett2
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterFrame1:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr nz, .diglett
-	ld de, MonsterSprite tile 12
-	lb bc, BANK(MonsterSprite), 2
-	call CopyVideoData
-	ld de, MonsterDiggingSprite
-	ld hl, vNPCSprites tile 2
-	lb bc, BANK(MonsterDiggingSprite), 2
-	jp CopyVideoData
-.diglett
 	ld de, PartyMonSprites2 tile 48
 	lb bc, BANK(PartyMonSprites2), 2
 	ld hl, vNPCSprites
@@ -181,74 +152,44 @@ DigAnimationMonsterFrame1:
 DigAnimationMonsterFrame2:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, DiglettDiggingSprite 
+	ld de, DiglettDiggingSprite
 	lb bc, BANK(DiglettDiggingSprite), 4
-	jr nz, .diglett
-	ld de, MonsterDiggingSprite2
-	lb bc, BANK(MonsterDiggingSprite2), 4
-.diglett
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterFrame3:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld de, DiglettDiggingSprite tile 4
 	lb bc, BANK(DiglettDiggingSprite), 4
-	jr nz, .diglett
-	ld de, MonsterDiggingSprite2 tile 4
-	lb bc, BANK(MonsterDiggingSprite2), 4
-.diglett
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterFrame4:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
 	ld de, DiglettDiggingSprite tile 8
 	lb bc, BANK(DiglettDiggingSprite), 4
-	jr nz, .diglett
-	ld de, MonsterDiggingSprite2 tile 8
-	lb bc, BANK(MonsterDiggingSprite2), 4
-.diglett
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterFrame5:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, MonsterDiggingSprite2 tile 12
-	lb bc, BANK(MonsterDiggingSprite2), 4
-	jr z, .notdiglett
 	ld de, DiglettDiggingSprite tile 12
 	lb bc, BANK(DiglettDiggingSprite), 2
 	ld hl, vNPCSprites tile 2
 	call CopyVideoData
-	ld de, MonsterDiggingSprite2 tile 12
-	lb bc, BANK(MonsterDiggingSprite2), 2
-.notdiglett
+	ld de, NothingSprite ; RGB Tweaked: Don't worry about it. I'm pretty sure this cleans the screen so using NothingSprite should do the trick.
+	lb bc, BANK(NothingSprite), 2
 	ld hl, vNPCSprites
 	jp CopyVideoData
 
 DigAnimationMonsterFrame6:
 	ld c, 2
 	rst _DelayFrames
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ld de, MonsterDiggingSprite2 tile 16
-	lb bc, BANK(MonsterDiggingSprite2), 2
-	jr z, .notdiglett
 	ld de, DiglettDiggingSprite tile 14
 	lb bc, BANK(DiglettDiggingSprite), 2
-.notdiglett
 	ld hl, vNPCSprites tile 2
 	jp CopyVideoData
 
