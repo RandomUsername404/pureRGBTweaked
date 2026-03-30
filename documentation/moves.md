@@ -1,5 +1,7 @@
 # RGB Tweaked Moves
 
+## Regular moves
+
 **Bold** = different from Pokémon Red/Blue.
 
 You can find an interactive version of the table below (without the "COMMENT" column) [right here.](https://sheet.zohopublic.eu/sheet/published/ohkwd7f0e41b42bec42ce9fbed599da54adc2)
@@ -8,7 +10,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 |:---|---|---|---|---|---|---|
 | POUND | NORMAL | 40 | 100 | 35 | No secondary effect. | — |
 | **KARATE_CHOP** | **FIGHTING** | **40** | **95** | 25 | High critical hit ratio. | — |
-| **DOUBLESLAP** | NORMAL | **20** | **100** | **30** | Hits 2–5 times per use. Distribution: 3/8 for 2 hits, 3/8 for 3 hits, 1/8 for 4 hits, 1/8 for 5 hits. Will also wake the target if it's asleep. | — |
+| **DOUBLESLAP** | NORMAL | **20** | **100** | **30** | Hits 2–5 times per use. Distribution: 3/8 for 2 hits, 3/8 for 3 hits, 1/8 for 4 hits, 1/8 for 5 hits. Deals double damage if the target is asleep, but will wake it up. | — |
 | **COMET_PUNCH** | **FIGHTING** | **20** | **100** | 15 | **Priority move. Hits 2 or 3 times with a 50% probability for each outcome.** | — |
 | **MEGA_PUNCH** | **FIGHTING** | **75** | **100** | 20 | **Fighting-type user: 30% flinch chance - Non-Fighting-type user: 10% flinch chance** | — |
 | **PAY_DAY** | NORMAL | **60** | 100 | 20 | Hits the opponent and scatters coins equal to the user's level × 2. These coins are awarded to the player at the end of the battle. | — |
@@ -26,7 +28,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **WHIRLWIND** | **FLYING** | **110** | 85 | **10** | **30% chance to confuse the target after dealing damage.** | This effect is a PureRGB addition. |
 | **FLY** | FLYING | **75** | **100** | 15 | Two-turn move. Hits on the second turn. | — |
 | **BIND** | **ROCK** | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
-| **FILTHY SLAM** | **POISON** | **80** | **100** | **20** | **No secondary effect.** | **New PureRGB move. Replaces SLAM.** |
+| **FILTHY SLAM** | **POISON** | **80** | **100** | **20** | **Power goes up to 130 if the opponent is poisoned.** | **New PureRGB move. Replaces SLAM.** |
 | **VINE_WHIP** | GRASS | **40** | 100 | **25** | No secondary effect. | — |
 | STOMP | NORMAL | 65 | 100 | 20 | 30% chance to make the target flinch. | — |
 | DOUBLE_KICK | FIGHTING | 30 | 100 | 30 | Hits exactly 2 times. | — |
@@ -97,7 +99,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | EARTHQUAKE | GROUND | 100 | 100 | 10 | No secondary effect. | — |
 | FISSURE | GROUND | 1 | 30 | 5 | One-hit KO. | — |
 | **DIG** | GROUND | **70** | 100 | 10 | Two-turn move. Hits on the second turn. | — |
-| **TOXIC** | POISON | 0 | **90** | 10 | **Inflicts Badly Poisoned. Damage escalates each turn. Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type.** | — |
+| **TOXIC** | POISON | 0 | **90** | 10 | **Inflicts Badly Poisoned. Damage escalates each turn. Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type. Accuracy boosted to 100 if the user is a POISON-type.** | — |
 | CONFUSION | PSYCHIC_TYPE | 50 | 100 | 25 | 10% chance to confuse the target after dealing damage. | — |
 | PSYCHIC_M | PSYCHIC_TYPE | 90 | 100 | 10 | ~33% chance to lower the target's Special by 1 stage after dealing damage. | — |
 | HYPNOSIS | PSYCHIC_TYPE | 0 | 60 | 20 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
@@ -135,11 +137,11 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **WATERFALL** | WATER | **70** | 100 | 15 | **30% chance to make the target flinch.** | — |
 | **CLAMP** | WATER | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
 | **SWIFT** | **ICE** | 60 | 100 | 20 | **Priority move.** This move never misses and will hit through FLY and DIG. | — |
-| **SKULL_BASH** | **ROCK** | **90** | **85** | **10** | **If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt.** | — |
+| **SKULL_BASH** | **ROCK** | **90** | **85** | **10** | **If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. Accuracy boosted to 100 if the user is a ROCK-type (also applies to Hardened Onix).** | — |
 | **SPIKE_CANNON** | **ROCK** | **35** | 100 | **10** | **Hits 2 or 3 times with a 50% probability for each outcome.** | — |
 | **SIPHON SNAG** | **ELECTRIC** | **75** | **100** | **20** | **Cures the user's own status and undoes burn/paralysis stat penalties. If the user has no status, it searches through the party for the first Pokémon with a status condition and cures that party member instead.** | **New PureRGB move & effect. Replaces CONSTRICT.** |
 | AMNESIA | PSYCHIC_TYPE | 0 | 100 | 20 | Raises the user's Special modifier by 2 stages. | — |
-| **FIREWALL** | **FIRE** | **20** | **90** | **30** | **Burns the target. If the target was already burned by FIREWALL, the move's power scales higher on subsequent uses. Fire-type Pokémon are immune.** | **New PureRGB move. Replaces KINESIS.** |
+| **FIREWALL** | **FIRE** | **20** | **90** | **30** | **Burns the target. If user lvl<50: 50 power (first hit on burned target) → 80 power (subsequent hits). If user lvl>50: 80 power (first hit on burned target) → 140 power (subsequent hits). Cannot burn a Fire-type Pokémon.** | **New PureRGB move. Replaces KINESIS.** |
 | **SOFTBOILED** | NORMAL | 0 | 100 | **5** | Recovers 50% of the user's max HP. | — |
 | **HI_JUMP_KICK** | FIGHTING | **120** | 90 | **10** | If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. | — |
 | **GLARE** | NORMAL | 0 | **90** | 30 | Guarantees paralysis on the target if the move hits. | — |
@@ -172,6 +174,41 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | SUBSTITUTE | NORMAL | 0 | 100 | 10 | The user sacrifices 25% of its max HP to create a Substitute with that many HP. The Substitute absorbs incoming damage until it breaks. Fails if the user would be left at 0 HP. | — |
 | **STRUGGLE** | **TYPELESS** | 50 | 100 | 10 | The user takes recoil equal to 50% of the damage dealt. | — |
 
+
+
+## Signature moves
+
+**Bold** = different from regular moves.
+
+Certain Pokémon get bonus power or accuracy on specific moves, making those moves "signature" to that Pokémon species.
+
+| MOVE | TYPE | POWER | ACCURACY | PP | AFFECTED POKéMON |
+| :--- | --- | --- | --- | --- | --- |
+| ACID | POISON | **100** | 100 | 30 | ARBOK |
+| FIRE_BLAST | FIRE | 120 | **100** | 5 | ARCANINE |
+| POISON_STING | POISON | **45** | 100 | 35 | BEEDRIL |
+| TWINEEDLE | BUG | **65** | 100 | 20 | BEEDRIL |
+| BLIZZARD | ICE | 120 | **100** | 5 | DEWGONG |
+| DRAGON_RAGE | DRAGON | **100** | 100 | 20 | DRAGONITE |
+| THUNDERPUNCH | ELECTRIC | **100** | 100 | 15 | ELECTABUZZ |
+| DRILL_PECK | FLYING | **110** | 100 | 20 | FEAROW |
+| PSYBEAM | PSYCHIC | **105** | 100 | 20 | GOLDUCK |
+| ROCK_SLIDE | ROCK | **110** | 95 | 10 | GOLEM |
+| COMET_PUNCH | FIGHTING | **30** | 100 | 15 | HITMONCHAN |
+| HI_JUMP_KICK | FIGHTING | **160** | 90 | 10 | HITMONLEE |
+| HYPNOSIS | PSYCHIC | 0 | **85** | 20 | HYPNO |
+| SING | NORMAL | 0 | **85** | 15 | JIGGLY/WIGGLYTUFF (lvl>20) |
+| ICE_PUNCH | ICE | **100** | 100 | 15 | JYNX |
+| DIZZY_PUNCH | FIGHTING | **130** | 100 | 10 | KANGASKHAN |
+| LICK | GHOST | **75** | 100 | 30 | LICKITUNG |
+| FIRE_PUNCH | FIRE | **100** | 100 | 15 | MAGMAR |
+| SPIKE_CANNON | ROCK | **70** | 100 | 10 | OMASTAR |
+| WATERFALL | WATER | **140** | 100 | 15 | SEAKING |
+
+
 ---
 
-See also: https://github.com/RandomUsername404/pureRGBTweaked/blob/master/data/moves/moves.asm
+See also:
+- [Move availability](https://github.com/RandomUsername404/pureRGBTweaked/blob/master/documentation/move_availability.md)
+- https://github.com/RandomUsername404/pureRGBTweaked/blob/master/data/moves/moves.asm
+- https://github.com/RandomUsername404/pureRGBTweaked/blob/master/engine/battle/remap_move_data.asm
