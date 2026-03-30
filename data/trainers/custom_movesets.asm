@@ -5,13 +5,17 @@
 	const CHAMP_ARENA_BLAINE_MOVESET
 	const CHAMP_ARENA_SURGE_MOVESET
 	const CHAMP_ARENA_SABRINA_MOVESET
-	const CHAMP_ARENA_BRUNO_MOVESET
+	const CHAMP_ARENA_BRUNO1_MOVESET
+	const CHAMP_ARENA_BRUNO2_MOVESET
 	const CHAMP_ARENA_MISTY_MOVESET
-	const CHAMP_ARENA_LANCE_MOVESET
+	const CHAMP_ARENA_LANCE1_MOVESET
+	const CHAMP_ARENA_LANCE2_MOVESET
 	const CHAMP_ARENA_KOGA_MOVESET
-	const CHAMP_ARENA_LORELEI_MOVESET
+	const CHAMP_ARENA_LORELEI1_MOVESET
+	const CHAMP_ARENA_LORELEI2_MOVESET
 	const CHAMP_ARENA_BROCK_MOVESET
-	const CHAMP_ARENA_AGATHA_MOVESET
+	const CHAMP_ARENA_AGATHA1_MOVESET
+	const CHAMP_ARENA_AGATHA2_MOVESET
 	const CHAMP_ARENA_GYM_GUIDE_MOVESET
 	const CHAMP_ARENA1_RIVAL1_MOVESET
 	const CHAMP_ARENA1_RIVAL2_MOVESET
@@ -19,7 +23,10 @@
 	const CHAMP_ARENA2_RIVAL1_MOVESET
 	const CHAMP_ARENA2_RIVAL2_MOVESET
 	const CHAMP_ARENA2_RIVAL3_MOVESET
+	const ELITE_FOUR_AGATHA_MOVESET
+	const ELITE_FOUR_BRUNO_MOVESET
 	const ELITE_FOUR_LANCE_MOVESET
+	const ELITE_FOUR_LORELEI_MOVESET
 	const ELITE_FOUR_RIVAL1_MOVESET
 	const ELITE_FOUR_RIVAL2_MOVESET
 	const ELITE_FOUR_RIVAL3_MOVESET
@@ -87,13 +94,17 @@ MoveSetMappings:
 	dw ChampArenaBlaineMoveset
 	dw ChampArenaSurgeMoveset
 	dw ChampArenaSabrinaMoveset
-	dw ChampArenaBrunoMoveset
+	dw ChampArenaBrunoMoveset1
+	dw ChampArenaBrunoMoveset2
 	dw ChampArenaMistyMoveset
-	dw ChampArenaLanceMoveset
+	dw ChampArenaLanceMoveset1
+	dw ChampArenaLanceMoveset2
 	dw ChampArenaKogaMoveset
-	dw ChampArenaLoreleiMoveset
+	dw ChampArenaLoreleiMoveset1
+	dw ChampArenaLoreleiMoveset2
 	dw ChampArenaBrockMoveset
-	dw ChampArenaAgathaMoveset
+	dw ChampArenaAgathaMoveset1
+	dw ChampArenaAgathaMoveset2
 	dw ChampArenaGymGuideMoveset
 	dw ChampArena1RivalMoveset1
 	dw ChampArena1RivalMoveset2
@@ -101,7 +112,10 @@ MoveSetMappings:
 	dw ChampArena2RivalMoveset1
 	dw ChampArena2RivalMoveset2
 	dw ChampArena2RivalMoveset3
+	dw EliteFourAgathaMoveset
+	dw EliteFourBrunoMoveset
 	dw EliteFourLanceMoveset
+	dw EliteFourLoreleiMoveset
 	dw EliteFourRivalMoveset1
 	dw EliteFourRivalMoveset2
 	dw EliteFourRivalMoveset3
@@ -263,36 +277,68 @@ ChampArenaSabrinaMoveset:
 	db MEDITATE
 	db RECOVER
 
-ChampArenaBrunoMoveset:
+ChampArenaBrunoMoveset1:
+	; hardened onix
+	db SCREECH
+	db BIND
+	db ROCK_SLIDE
+	db EARTHQUAKE
 	; hitmonchan
-	db COMET_PUNCH
-	db MIRROR_MOVE
 	db COUNTER ; DRAIN_PUNCH
-	db SLAM ; FILTHY_SLAM
+	db THUNDERPUNCH
+	db ICE_PUNCH
+	db DOUBLE_TEAM
 	; hitmonlee
 	db HI_JUMP_KICK
-	db AGILITY
-	db EARTHQUAKE
-	db SUBMISSION
-	; onix
-	db WITHDRAW
-	db FLAMETHROWER
-	db EARTHQUAKE
-	db ROCK_SLIDE
-	; fearow
-	db MIRROR_MOVE
-	db DRILL_PECK
-	db SUBMISSION
-	db SPIKE_CANNON
-	; primeape
-	db EXPLOSION
-	db COMET_PUNCH
-	db SONICBOOM
-	db KARATE_CHOP
+	db MEDITATE
+	db MEGA_KICK
+	db DOUBLE_TEAM
 	; machamp
 	db DEFENSE_CURL
 	db COMET_PUNCH
-	db COUNTER ; DRAIN_PUNCH
+	db HYPER_BEAM
+	db SEISMIC_TOSS
+	; electabuzz
+	db THUNDERPUNCH
+	db COUNTER ; DRAIN PUNCH
+	db DIG
+	db TOXIC
+	; rhydon
+	db FURY_ATTACK
+	db HORN_DRILL
+	db BODY_SLAM
+	db ROCK_SLIDE
+
+ChampArenaBrunoMoveset2:
+	; clefable
+	db BODY_SLAM
+	db THUNDERBOLT
+	db ICE_BEAM
+	db PSYCHIC_M
+	; muk
+	db MINIMIZE
+	db SLUDGE
+	db THUNDERBOLT
+	db EXPLOSION
+	; hitmonlee
+	db AGILITY
+	db EARTHQUAKE
+	db SEISMIC_TOSS
+	db DOUBLE_TEAM
+	; machamp
+	db EARTHQUAKE
+	db DEFENSE_CURL
+	db HYPER_BEAM
+	db SEISMIC_TOSS
+	; poliwrath
+	db AMNESIA
+	db PSYCHIC_M
+	db SURF
+	db THUNDERPUNCH
+	; hardened onix
+	db ROCK_SLIDE
+	db SURF
+	db BODY_SLAM
 	db EARTHQUAKE
 
 ChampArenaMistyMoveset:
@@ -327,37 +373,69 @@ ChampArenaMistyMoveset:
 	db RECOVER
 	db THUNDER_WAVE
 
-ChampArenaLanceMoveset:
+ChampArenaLanceMoveset1:
 	; gyarados
-	db SURF
-	db EARTHQUAKE
-	db THUNDERBOLT
+	db DRAGON_RAGE
+	db HYDRO_PUMP
 	db BODY_SLAM
-	; dragonair
+	db THUNDERBOLT
+	; winter dragonair
 	db THUNDER_WAVE
+	db WRAP
 	db ICE_BEAM
-	db FLAMETHROWER
-	db FLASH
-	; seadra
-	db DRAGON_RAGE
-	db WATERFALL
-	db FIRE_BLAST
-	db AMNESIA
-	; dragonite 1
-	db KARATE_CHOP
-	db RAZOR_WIND ; ROOST
-	db SHARPEN
-	db WHIRLWIND
+	db TOXIC
 	; aerodactyl
+	db SUPERSONIC
 	db RAZOR_WIND ; ROOST
-	db SKULL_BASH
-	db WHIRLWIND
-	db SWORDS_DANCE
-	; dragonite 2
 	db HYPER_BEAM
-	db THUNDER
-	db RAZOR_WIND ; ROOST
+	db SKY_ATTACK
+	; lapras
+	db BLIZZARD
+	db THUNDERBOLT
+	db SURF
+	db CONFUSE_RAY
+	; charizard
+	db SLASH
+	db FLAMETHROWER
+	db FIRE_SPIN
+	db TOXIC
+	; kangaskhan
+	db STOMP
+	db EARTHQUAKE
+	db ROCK_SLIDE
+	db SURF
+
+ChampArenaLanceMoveset2:
+	; arcanine
 	db DRAGON_RAGE
+	db FLAMETHROWER
+	db HYPER_BEAM
+	db BONEMERANG
+	; snorlax
+	db SELFDESTRUCT
+	db DOUBLE_EDGE
+	db EARTHQUAKE
+	db AMNESIA
+	; lapras
+	db CONFUSE_RAY
+	db ICE_BEAM
+	db BODY_SLAM
+	db PSYCHIC_M
+	; electabuzz
+	db THUNDERBOLT
+	db THUNDER_WAVE
+	db PSYCHIC_M
+	db SEISMIC_TOSS
+	; charizard
+	db SLASH
+	db FIRE_BLAST
+	db SEISMIC_TOSS
+	db EARTHQUAKE
+	; kangaskhan
+	db BODY_SLAM
+	db EARTHQUAKE
+	db ROCK_SLIDE
+	db SURF
 
 ChampArenaKogaMoveset:
 	; tentacruel
@@ -391,37 +469,69 @@ ChampArenaKogaMoveset:
 	db GROWTH
 	db FIRE_BLAST
 
-ChampArenaLoreleiMoveset:
+ChampArenaLoreleiMoveset1:
 	; dewgong
-	db WITHDRAW
-	db BLIZZARD
+	db ICE_BEAM
 	db SURF
-	db CONSTRICT ; SIPHON_SNAG
+	db WITHDRAW
+	db SKULL_BASH
+	; cloyster
+	db SUPERSONIC
+	db CLAMP
+	db SPIKE_CANNON
+	db ICE_BEAM
 	; slowbro
-	db WITHDRAW
-	db PSYCHIC_M
 	db SURF
-	db FIRE_PUNCH
+	db PSYCHIC_M
+	db THUNDER_WAVE
+	db TRI_ATTACK
 	; jynx
-	db LOVELY_KISS
 	db ICE_PUNCH
-	db THUNDERPUNCH
-	db PSYCHIC_M
+	db REFLECT
+	db LOVELY_KISS
+	db THRASH
+	; lapras
+	db BODY_SLAM
+	db CONFUSE_RAY
+	db HYDRO_PUMP
+	db BLIZZARD
 	; winter dragonair
-	db MEGA_DRAIN
+	db TOXIC
 	db SURF
 	db ICE_BEAM
-	db THUNDERBOLT
-	; lapras
+	db DOUBLE_EDGE
+
+ChampArenaLoreleiMoveset2:
+	; wigglytuff
 	db BLIZZARD
-	db HYDRO_PUMP
-	db SOLARBEAM
-	db FLASH
-	; articuno
-	db RAZOR_WIND ; ROOST
+	db RECOVER
+	db TOXIC
+	db DOUBLE_EDGE
+	; cloyster
+	db TOXIC
+	db CLAMP
 	db ICE_BEAM
+	db WITHDRAW
+	; exeggutor
+	db MEGA_DRAIN
 	db PSYCHIC_M
+	db EGG_BOMB
+	db LEECH_SEED
+	; starmie
+	db SURF
+	db BLIZZARD
+	db PSYCHIC_M
+	db THUNDER_WAVE
+	; omastar
+	db HYDRO_PUMP
+	db BLIZZARD
+	db EARTHQUAKE
+	db SEISMIC_TOSS
+	; articuno
+	db TOXIC
+	db ICE_BEAM
 	db WHIRLWIND
+	db RAZOR_WIND ; ROOST
 
 ChampArenaBrockMoveset:
 	; golem
@@ -455,37 +565,69 @@ ChampArenaBrockMoveset:
 	db EARTHQUAKE
 	db SPIKE_CANNON
 
-ChampArenaAgathaMoveset:
-	; marowak
-	db BONEMERANG
-	db BARRAGE
-	db COMET_PUNCH
-	db SKULL_BASH
-	; mr mime
-	db PSYCHIC_M
-	db SONICBOOM
-	db TELEPORT
-	db ICE_PUNCH
-	; ninetales
-	db FLAMETHROWER
-	db SONICBOOM
-	db CONFUSE_RAY
-	db SOLARBEAM
-	; arbok
-	db WITHDRAW
-	db LEECH_LIFE
-	db SUPER_FANG
-	db ACID
-	; tangela
-	db MEGA_DRAIN
-	db FLASH
-	db SELFDESTRUCT
-	db SPORE
-	; gengar
-	db BARRAGE
-	db ICE_PUNCH
-	db MEGA_DRAIN
+ChampArenaAgathaMoveset1:
+	; powered haunter
 	db THUNDERBOLT
+	db BARRAGE
+	db LOVELY_KISS
+	db DREAM_EATER
+	; golbat
+	db SUPERSONIC
+	db MEGA_DRAIN
+	db SWIFT
+	db HAZE
+	; arbok
+	db ACID_ARMOR
+	db WRAP
+	db GLARE
+	db SLUDGE
+	; muk
+	db MINIMIZE
+	db BODY_SLAM
+	db EXPLOSION
+	db SLUDGE
+	; venusaur
+	db LEECH_SEED
+	db SOLARBEAM
+	db TOXIC
+	db MEGA_DRAIN
+	; gengar
+	db CONFUSE_RAY
+	db BIDE
+	db EXPLOSION
+	db PSYCHIC_M
+
+ChampArenaAgathaMoveset2:
+	; jynx
+	db LOVELY_KISS
+	db REFLECT
+	db BLIZZARD
+	db PSYCHIC_M
+	; alakazam
+	db PSYCHIC_M
+	db SEISMIC_TOSS
+	db THUNDER_WAVE
+	db RECOVER
+	; arbok
+	db ACID_ARMOR
+	db GLARE
+	db EARTHQUAKE
+	db SLUDGE
+	; gyarados
+	db SURF
+	db HYPER_BEAM
+	db THUNDERBOLT
+	db FLAMETHROWER
+	; venusaur
+	db DOUBLE_EDGE
+	db SOLARBEAM
+	db SLEEP_POWDER
+	db MEGA_DRAIN
+	; gengar
+	db CONFUSE_RAY
+	db BARRAGE
+	db EXPLOSION
+	db PSYCHIC_M
 
 ChampArenaGymGuideMoveset:
 	; chansey
@@ -713,37 +855,113 @@ ChampArena2RivalMoveset3:
 	db SEISMIC_TOSS
 	db TOXIC
 
-EliteFourLanceMoveset:
-	; gyarados
-	db HYPER_BEAM
-	db HYDRO_PUMP
+EliteFourAgathaMoveset:
+	; powered haunter
+	db MEGA_DRAIN
+	db NIGHT_SHADE
+	db LOVELY_KISS
+	db DREAM_EATER
+	; golbat
+	db FLY
+	db TOXIC
+	db SLUDGE
+	db DOUBLE_TEAM
+	; ninetales
+	db AMNESIA
+	db BODY_SLAM
 	db FLAMETHROWER
-	db DRAGON_RAGE
-	; dragonair
-	db HYPER_BEAM
+	db DIG
+	; arbok
+	db GLARE
+	db ACID_ARMOR
+	db SLUDGE
+	db WRAP
+	; gengar
+	db PSYCHIC_M
+	db NIGHT_SHADE
+	db MEGA_DRAIN
+	db THUNDER
+
+EliteFourBrunoMoveset:
+	; hitmonchan
+	db COMET_PUNCH
+	db MEGA_PUNCH
+	db ICE_PUNCH
+	db THUNDERPUNCH
+	; hitmonlee
+	db BODY_SLAM
+	db ROLLING_KICK
+	db HI_JUMP_KICK
+	db MEGA_KICK
+	; onix
+	db EXPLOSION
+	db ROCK_SLIDE
+	db EARTHQUAKE
+	db BIND
+	; electabuzz
+	db THUNDERPUNCH
+	db COUNTER ; DRAIN PUNCH
+	db TAKE_DOWN ; HEAT RUSH
+	db SCREECH
+	; machamp
+	db BODY_SLAM
+	db ROCK_SLIDE
+	db EARTHQUAKE
+	db KARATE_CHOP
+
+EliteFourLanceMoveset:
+	; dragonite
+	db WRAP
 	db DRAGON_RAGE
 	db THUNDER_WAVE
-	db BODY_SLAM
-	; seadra
-	db MEGA_DRAIN
-	db BARRAGE
-	db DRAGON_RAGE
-	db HYDRO_PUMP
-	; dragonite
-	db DRAGON_RAGE
-	db ICE_BEAM
-	db THUNDERBOLT
-	db FLAMETHROWER
-	; aerodactyl
-	db SWORDS_DANCE
-	db SKULL_BASH
-	db EARTHQUAKE
-	db WHIRLWIND
-	; dragonite
 	db HYPER_BEAM
-	db WHIRLWIND
-	db RAZOR_WIND ; ROOST
-	db DRAGON_RAGE
+	; gyarados
+	db FLY
+	db SURF
+	db BODY_SLAM
+	db HYPER_BEAM
+	; charizard
+	db WING_ATTACK
+	db FLAMETHROWER
+	db HYPER_BEAM
+	db EARTHQUAKE
+	; aerodactyl
+	db WING_ATTACK
+	db ROCK_SLIDE
+	db EARTHQUAKE
+	db HYPER_BEAM
+	; dragonite
+	db BLIZZARD
+	db FIRE_BLAST
+	db THUNDER
+	db HYPER_BEAM
+
+EliteFourLoreleiMoveset:
+	; slowbro
+	db EARTHQUAKE
+	db BLIZZARD
+	db AMNESIA
+	db PSYCHIC_M
+	; cloyster
+	db SURF
+	db ICE_BEAM
+	db EXPLOSION
+	db WITHDRAW
+	; dewgong
+	db SURF
+	db REST
+	db ICE_BEAM
+	db BLIZZARD
+	; seadra
+	db SURF
+	db BLIZZARD
+	db LOVELY_KISS
+	db MEGA_DRAIN
+	; lapras
+	db THUNDERBOLT
+	db LOVELY_KISS
+	db SURF
+	db BLIZZARD
 
 ; Rival fights 8
 EliteFourRivalMoveset1:

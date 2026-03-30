@@ -135,7 +135,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **WATERFALL** | WATER | **70** | 100 | 15 | **30% chance to make the target flinch.** | — |
 | **CLAMP** | WATER | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
 | **SWIFT** | **ICE** | 60 | 100 | 20 | **Priority move.** This move never misses and will hit through FLY and DIG. | — |
-| **SKULL_BASH** | **ROCK** | **90** | **85** | **10** | **f the move misses, the user takes crash damage equal to 25% of the damage it would have dealt.** | — |
+| **SKULL_BASH** | **ROCK** | **90** | **85** | **10** | **If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt.** | — |
 | **SPIKE_CANNON** | **ROCK** | **35** | 100 | **10** | **Hits 2 or 3 times with a 50% probability for each outcome.** | — |
 | **SIPHON SNAG** | **ELECTRIC** | **75** | **100** | **20** | **Cures the user's own status and undoes burn/paralysis stat penalties. If the user has no status, it searches through the party for the first Pokémon with a status condition and cures that party member instead.** | **New PureRGB move & effect. Replaces CONSTRICT.** |
 | AMNESIA | PSYCHIC_TYPE | 0 | 100 | 20 | Raises the user's Special modifier by 2 stages. | — |
@@ -164,7 +164,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | REST | PSYCHIC_TYPE | 0 | 100 | 10 | Recovers 100% of the user's HP, but the user falls asleep. | — |
 | **ROCK_SLIDE** | ROCK | 75 | **95** | 10 | **10% chance to make the target flinch.** | — |
 | HYPER_FANG | NORMAL | 80 | 90 | 15 | 10% chance to make the target flinch. | — |
-| **SHARPEN** | NORMAL | 0 | 100 | 30 | **ATTACK_Raises the user's Accuracy stat modifier by 1 stage.** | — |
+| **SHARPEN** | NORMAL | 0 | 100 | 30 | **Increases both the user's Attack and Accuracy stats by 1 stage each.** | — |
 | **CONVERSION** | NORMAL | 0 | 100 | **10** | **Conversion has two modes the user chooses between: DEFENSE MODE halves all damage taken. ATTACK MODE scans the target and auto-uses a super-effective move against it. STAB applies to the ATTACK move based on its own type vs the user's type.** | Entirely reworked by PureRGB. |
 | **TRI_ATTACK** | NORMAL | **90** | 100 | 10 | **Uses the SPECIAL stat. This move has a ~10.1% chance each to inflict burn, freeze, or paralyze. Respects type immunities: Fire-types cannot be burned, Ice-types cannot be frozen, Ground-types cannot be paralyzed.** | Entirely reworked by PureRGB. |
 | **SUPER_FANG** | NORMAL | 1 | **100** | 10 | **Deals damage equal to 2/3 of the target's current HP.** | Changed from vanilla's 1/2. |

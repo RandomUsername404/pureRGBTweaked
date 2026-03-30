@@ -430,8 +430,8 @@ GengarEvosMoves:
 	db 10, SMOG ; YellowLegacy
 	db 15, PSYWAVE ; YellowLegacy
 	db 24, MEGA_DRAIN ; PureRGB
-	db 29, BARRAGE ; PureRGB
-	db 36, NIGHT_SHADE ; YellowLegacy
+	db 29, NIGHT_SHADE ; RGB Tweaked
+	db 36, BARRAGE ; RGB Tweaked
 	db 41, SLAM ; PureRGB						FILTHY SLAM
 	db 46, ICE_PUNCH ; PureRGB
 	db 55, HYPNOSIS ; YellowLegacy
@@ -636,8 +636,8 @@ GastlyEvosMoves:
 	db 15, PSYWAVE ; YellowLegacy
 	db 23, POISON_GAS ; YellowLegacy
 	db 24, MEGA_DRAIN ; PureRGB
-	db 29, BARRAGE ; PureRGB
-	db 36, NIGHT_SHADE ; YellowLegacy
+	db 29, NIGHT_SHADE ; RGB Tweaked
+	db 36, BARRAGE ; RGB Tweaked
 	db 41, SLAM ; PureRGB						FILTHY SLAM
 	db 55, HYPNOSIS ; YellowLegacy
 	db 56, DREAM_EATER ; YellowLegacy
@@ -1447,9 +1447,9 @@ NinetalesEvosMoves:
 	db 13, ROAR ; YellowLegacy
 	db 16, CONFUSE_RAY ; YellowLegacy
 	db 25, REFLECT ; YellowLegacy
-	db 28, BARRAGE ; PureRGB
+	db 28, NIGHT_SHADE ; RGB Tweaked
 	db 32, FLAMETHROWER ; YellowLegacy
-	db 37, NIGHT_SHADE ; YellowLegacy
+	db 37, BARRAGE ; RGB Tweaked
 	db 42, FIRE_SPIN ; YellowLegacy
 	db 44, AMNESIA ; PureRGB
 	db 50, PSYCHIC_M ; PureRGB

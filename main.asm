@@ -432,7 +432,7 @@ INCLUDE "engine/menus/save_file_updater.asm"
 SECTION "newCode", ROMX
 ; PureRGBnote: ADDED: new code
 INCLUDE "engine/gfx/front_sprite_toggler.asm"
-INCLUDE "engine/menus/options_menu.asm" ; PureRGBnote: MOVED: used to be part of main_menu.asm but moved out of there for space.
+INCLUDE "engine/menus/options_menu.asm" ; PureRGBnote: MOVED: used to be part of main_menu.asm but moved out of there for space. ; Tweakednote: must remain on top because other files rely on it.
 INCLUDE "engine/menus/options_menu2.asm"
 INCLUDE "engine/menus/battle_options.asm"
 INCLUDE "engine/menus/sprite_options_menu.asm"
@@ -460,7 +460,6 @@ INCLUDE "engine/menus/multi_choice_menu.asm"
 INCLUDE "engine/menus/map_pokemon_areas.asm"
 INCLUDE "engine/gfx/save_screen_area_to_buffer3.asm"
 INCLUDE "engine/menus/change_box_menu.asm"
-INCLUDE "engine/overworld/autosurf.asm"
 INCLUDE "audio/remap_armored_mewtwo_cry.asm"
 INCLUDE "engine/pokemon/change_mon_species.asm"
 INCLUDE "engine/menus/super_softlock_checker.asm"
@@ -468,7 +467,6 @@ INCLUDE "engine/pokemon/remap_typings.asm"
 INCLUDE "engine/gbc/gbc_cpu_speed.asm"
 INCLUDE "data/trainers/custom_movesets.asm"
 INCLUDE "engine/gbc/gbc_fade.asm"
-INCLUDE "engine/menus/dig.asm"
 INCLUDE "engine/battle/pp_tracker.asm"
 INCLUDE "engine/menus/world_options.asm"
 INCLUDE "engine/battle/volcano_battle_init.asm"
@@ -501,6 +499,8 @@ INCLUDE "engine/menus/preview_front_sprite.asm"
 
 SECTION "newCode3", ROMX
 
+INCLUDE "engine/menus/dig.asm"
 INCLUDE "engine/movie/title.asm"
+INCLUDE "engine/overworld/autosurf.asm"
 INCLUDE "audio/pause_resume_music.asm"
 INCLUDE "engine/battle/prevent_invalid_encounters.asm"
