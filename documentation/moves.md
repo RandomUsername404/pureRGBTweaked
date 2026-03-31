@@ -14,11 +14,11 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **COMET_PUNCH** | **FIGHTING** | **20** | **100** | 15 | **Priority move. Hits 2 or 3 times with a 50% probability for each outcome.** | — |
 | **MEGA_PUNCH** | **FIGHTING** | **75** | **100** | 20 | **Fighting-type user: 30% flinch chance - Non-Fighting-type user: 10% flinch chance** | — |
 | **PAY_DAY** | NORMAL | **60** | 100 | 20 | Hits the opponent and scatters coins equal to the user's level × 2. These coins are awarded to the player at the end of the battle. | — |
-| **FIRE_PUNCH** | FIRE | **70** | 100 | 15 | **30% chance to inflict burn. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target.** | — |
+| **FIRE_PUNCH** | FIRE | **70** | 100 | 15 | **30% chance to inflict burn. Cannot burn a Fire-type Pokémon.** | — |
 | **ICE_PUNCH** | ICE | **70** | 100 | 15 | **30% chance to inflict freeze on the target. Cannot freeze an Ice-type Pokémon.** | — |
-| **THUNDERPUNCH** | ELECTRIC | **70** | 100 | 15 | 10% chance to inflict paralysis on the target, reducing its Speed by 75%. Cannot paralyze Ground-types. | RGB Tweaked: This won't be bumped to 30%. |
+| **THUNDERPUNCH** | ELECTRIC | **70** | 100 | 15 | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | RGB Tweaked: This won't be bumped to 30%. |
 | SCRATCH | NORMAL | 40 | 100 | 35 | No secondary effect. | — |
-| **VICEGRIP** | **BUG** | **75** | 100 | 30 | **30% chance to inflict paralysis on the target, reducing its Speed by 75%. Can paralize any type.** | — |
+| **VICEGRIP** | **BUG** | **75** | 100 | 30 | **30% chance to inflict paralysis on the target. Can paralize any type.** | — |
 | **GUILLOTINE** | **BUG** | 1 | 30 | 5 | One-hit KO. | — |
 | **ROOST** | **FLYING** | **0** | **100** | **10** | **Recovers 50% of the user's max HP.** | **New PureRGB move. Replaces RAZOR WIND.** |
 | SWORDS_DANCE | **FIRE** | 0 | 100 | 30 | Raises the user's Attack modifier by 2 stages. | — |
@@ -41,7 +41,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **FURY_ATTACK** | **FLYING** | **40** | **100** | 20 | **Hits exactly 2 times.** | — |
 | HORN_DRILL | NORMAL | 1 | 30 | 5 | One-hit KO. | — |
 | **TACKLE** | NORMAL | 35 | **100** | 35 | No secondary effect. | — |
-| BODY_SLAM | NORMAL | 85 | 100 | 15 | 30% chance to inflict paralysis on the target, reducing its Speed by 75%. Can paralize any type. | — |
+| BODY_SLAM | NORMAL | 85 | 100 | 15 | 30% chance to inflict paralysis on the target. Can paralize any type. | — |
 | **WRAP** | NORMAL | **22** | 85 | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
 | **HEAT RUSH** | **FIRE** | **75** | **100** | **20** | **40% chance to raise the user's Special by +1, but only if the user is a Fire type (either type slot is checked). 30% chance to burn the target.** | **New PureRGB move & effect. Replaces TAKE DOWN.** |
 | THRASH | NORMAL | 90 | 100 | 20 | Locks the user into the move for 2 or 3 turns (chosen randomly). The user cannot select a different move during this period. When the rampage ends, the user becomes confused. | — |
@@ -54,13 +54,13 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | BITE | NORMAL | 60 | 100 | 25 | 10% chance to make the target flinch. | — |
 | GROWL | NORMAL | 0 | 100 | 40 | Lowers the target's Attack modifier by 1 stage. | — |
 | **ROAR** | **DRAGON** | **40** | 100 | 20 | **~33% chance to lower the target's Attack by 1 stage after dealing damage.** | — |
-| SING | NORMAL | 0 | 55 | 15 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
-| **SUPERSONIC** | NORMAL | 0 | **70** | 20 | Confuses the target for 2–5 turns (random). | — |
+| SING | NORMAL | 0 | 55 | 15 | Puts the target to sleep. | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
+| **SUPERSONIC** | NORMAL | 0 | **70** | 20 | Confuses the target. | — |
 | **SONICBOOM** | **GHOST** | **50** | **100** | **15** | **Priority move. 10% chance to make the target flinch. It always flinches if it is the very first move used after the Pokémon was sent out.** | Doesn't deal a flat amount of damage anymore. |
 | **DISABLE** | NORMAL | 0 | **85** | 20 | **Disables the opponent's last used move for 2–8 turns. If the opponent hasn't used any move yet (or is unable to act), a random non-empty move slot with remaining PP is selected instead. It fails if a move is already disabled.** | Removed by HAZE. |
 | **ACID** | POISON | **50** | 100 | 30 | **Randomly lowers either the opponent's Attack or Defense by 1 stage (50/50 chance between the two).** | — |
-| EMBER | FIRE | 40 | 100 | 25 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target. | — |
-| FLAMETHROWER | FIRE | 95 | 100 | 15 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target. | — |
+| EMBER | FIRE | 40 | 100 | 25 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. | — |
+| FLAMETHROWER | FIRE | 95 | 100 | 15 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. | — |
 | MIST | ICE | 0 | 100 | 30 | Protects the user from stat-lowering moves. Also **makes the user immune to Normal and Fighting-type moves** for the rest of the battle or until they switch out. | Removed by HAZE. |
 | WATER_GUN | WATER | 40 | 100 | 25 | No secondary effect. | — |
 | **HYDRO_PUMP** | WATER | 120 | **90** | 5 | No secondary effect. | — |
@@ -86,23 +86,23 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **SOLARBEAM** | GRASS | **110** | 100 | **5** | **10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon.** | Doesn't need to be charged anymore. |
 | POISONPOWDER | POISON | 0 | 75 | 35 | Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type. | — |
 | STUN_SPORE | GRASS | 0 | 75 | 30 | Guarantees paralysis on the target if the move hits. | — |
-| SLEEP_POWDER | GRASS | 0 | 75 | 15 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
+| SLEEP_POWDER | GRASS | 0 | 75 | 15 | Puts the target to sleep. | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
 | **PETAL_DANCE** | GRASS | **90** | 100 | 20 | Locks the user into the move for 2 or 3 turns (chosen randomly). The user cannot select a different move during this period. When the rampage ends, the user becomes confused. | — |
 | STRING_SHOT | BUG | 0 | 95 | 40 | Lowers the target's Speed modifier by 1 stage. | — |
 | **DRAGON_RAGE** | DRAGON | **80** | 100 | **20** | No secondary effect. | — |
 | **FIRE_SPIN** | FIRE | **25** | **85** | 15 | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
-| THUNDERSHOCK | ELECTRIC | 40 | 100 | 30 | 10% chance to inflict paralysis on the target, reducing its Speed by 75%. Cannot paralyze Ground-types. | — |
-| THUNDERBOLT | ELECTRIC | 95 | 100 | 15 | 10% chance to inflict paralysis on the target, reducing its Speed by 75%. Cannot paralyze Ground-types. | — |
+| THUNDERSHOCK | ELECTRIC | 40 | 100 | 30 | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | — |
+| THUNDERBOLT | ELECTRIC | 95 | 100 | 15 | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | — |
 | THUNDER_WAVE | ELECTRIC | 0 | 100 | 20 | Guarantees paralysis on the target if the move hits. Cannot paralyze Ground-types. | — |
-| **THUNDER** | ELECTRIC | 120 | **85** | **5** | 10% chance to inflict paralysis on the target, reducing its Speed by 75%. Cannot paralyze Ground-types. | — |
+| **THUNDER** | ELECTRIC | 120 | **85** | **5** | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | — |
 | **ROCK_THROW** | ROCK | 50 | **95** | **25** | No secondary effect. | — |
 | EARTHQUAKE | GROUND | 100 | 100 | 10 | No secondary effect. | — |
 | FISSURE | GROUND | 1 | 30 | 5 | One-hit KO. | — |
 | **DIG** | GROUND | **70** | 100 | 10 | Two-turn move. Hits on the second turn. | — |
-| **TOXIC** | POISON | 0 | **90** | 10 | **Inflicts Badly Poisoned. Damage escalates each turn. Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type. Accuracy boosted to 100 if the user is a POISON-type.** | — |
+| **TOXIC** | POISON | 0 | **90** | 10 | Inflicts Badly Poisoned. Guarantees poisoning the target if the move hits and the target is not already statused and is not a Poison-type. **Accuracy boosted to 100 if the user is a POISON-type.** | — |
 | CONFUSION | PSYCHIC_TYPE | 50 | 100 | 25 | 10% chance to confuse the target after dealing damage. | — |
 | PSYCHIC_M | PSYCHIC_TYPE | 90 | 100 | 10 | ~33% chance to lower the target's Special by 1 stage after dealing damage. | — |
-| HYPNOSIS | PSYCHIC_TYPE | 0 | 60 | 20 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
+| HYPNOSIS | PSYCHIC_TYPE | 0 | 60 | 20 | Puts the target to sleep. | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
 | **MEDITATE** | PSYCHIC_TYPE | 0 | 100 | **15** | **Raises the user's Attack, Special, and Speed each by 1 stage in a single move.** | — |
 | AGILITY | PSYCHIC_TYPE | 0 | 100 | 30 | Raises the user's Speed modifier by 2 stages. | — |
 | QUICK_ATTACK | NORMAL | 40 | 100 | 30 | Priority move. | — |
@@ -116,24 +116,24 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | HARDEN | **ROCK** | 0 | 100 | 30 | Raises the user's Defense stat modifier by 1 stage. | — |
 | MINIMIZE | NORMAL | 0 | 100 | 20 | Raises the user's Evasion stat modifier by 1 stage. | — |
 | SMOKESCREEN | **ROCK** | 0 | 100 | 20 | Lowers the target's Accuracy modifier by 1 stage. Fails against Fire types. | — |
-| CONFUSE_RAY | GHOST | 0 | 100 | 10 | Confuses the target for 2–5 turns (random). | — |
+| CONFUSE_RAY | GHOST | 0 | 100 | 10 | Confuses the target. | — |
 | **WITHDRAW** | WATER | 0 | 100 | **10** | **Raises Defense by +1 stage and heals ~1/3 of max HP. If the user is already at full HP, nothing happens at all.** | This effect is a PureRGB addition. |
 | **DEFENSE_CURL** | NORMAL | 0 | 100 | **15** | **Makes super-effective moves do normal damage.** | — |
 | BARRIER | **GHOST** | 0 | 100 | 30 | Raises the user's Defense modifier by 2 stages. | — |
-| LIGHT_SCREEN | PSYCHIC_TYPE | 0 | 100 | 30 | Halves all incoming Special attack damage until the user switches out or faints. | Removed by HAZE. |
-| **HAZE** | **POISON** | 0 | 100 | 30 | Resets all stat modifiers for both sides to neutral. | Cures the target's non-volatile status (sleep/freeze). Clears both side's volatile statuses (DISABLE, X Accuracy, LEECH SEED, etc.). Cures user's CONFUSION only. Removes Psychic immunity from the opponent. Finally, **grants the user Psychic-type immunity** (until the user switches out or faints), and **resets the "Screeches echoing" flag.** |
-| **REFLECT** | **ELECTRIC** | 0 | 100 | 20 | Halves all incoming Physical attack damage until the user switches out or faints. | Removed by HAZE. |
+| LIGHT_SCREEN | PSYCHIC_TYPE | 0 | 100 | 30 | Halves all incoming Special attack damage until the user switches out or faints. Ignored by critical hits. | Removed by HAZE. |
+| **HAZE** | **POISON** | 0 | 100 | 30 | Resets all stat modifiers for both sides to neutral. | Cures the target's non-volatile status (sleep/freeze). Clears both side's volatile statuses (DISABLE, X Accuracy, LEECH SEED, etc.). Cures user's CONFUSION only. Removes Psychic immunity from the opponent. Finally, **grants the current user Psychic-type immunity**, and **resets the "Screeches echoing" flag.** |
+| REFLECT | **ELECTRIC** | 0 | 100 | 20 | Halves all incoming Physical attack damage until the user switches out or faints. Ignored by critical hits. | Removed by HAZE. |
 | FOCUS_ENERGY | **ELECTRIC** | 0 | 100 | 30 | Causes the user's critical hit rate to be multiplied by 4.  | In vanilla this was bugged to reduce crit rate. PureRGB fixed it. Removed by HAZE. |
 | **BIDE** | NORMAL | 0 | 100 | **20** | **Raises both the user's Attack and Defense by 1 stage each.** | This effect is a PureRGB addition. |
 | METRONOME | NORMAL | 0 | 100 | 10 | Uses a random move. | — |
 | **MIRROR_MOVE** | FLYING | 0 | 100 | **10** | **Priority move.** Copies the last move used by the opponent **and immediately executes it.** | — |
 | **SELFDESTRUCT** | **FIRE** | **255** | 100 | 5 | The user faints. | Vanilla ATK PWR is 260. |
 | **EGG_BOMB** | **GRASS** | 100 | **100** | 10 | No secondary effect. | — |
-| **LICK** | GHOST | **35** | 100 | 30 | **10% chance to inflict paralysis on the target, reducing its Speed by 75%. Can paralyze any type.** | — |
+| **LICK** | GHOST | **35** | 100 | 30 | **10% chance to inflict paralysis on the target. Can paralyze any type.** | — |
 | **SMOG** | POISON | **40** | **100** | 20 | 40% chance to inflict poison on the target. Cannot poison a Poison-type Pokémon. | — |
 | **SLUDGE** | POISON | **90** | 100 | 20 | 40% chance to inflict poison on the target. Cannot poison a Poison-type Pokémon. | — |
 | **BONE_CLUB** | GROUND | 65 | **100** | 20 | 10% chance to make the target flinch. | — |
-| FIRE_BLAST | FIRE | 120 | 85 | 5 | 30% chance to inflict burn. Cannot burn a Fire-type Pokémon. Will also defrost a frozen target. | — |
+| FIRE_BLAST | FIRE | 120 | 85 | 5 | 30% chance to inflict burn. Cannot burn a Fire-type Pokémon. | — |
 | **WATERFALL** | WATER | **70** | 100 | 15 | **30% chance to make the target flinch.** | — |
 | **CLAMP** | WATER | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
 | **SWIFT** | **ICE** | 60 | 100 | 20 | **Priority move.** This move never misses and will hit through FLY and DIG. | — |
@@ -149,12 +149,12 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **POISON_GAS** | POISON | **60** | **100** | **20** | **High critical hit ratio. 20% chance to inflict poison on the target after dealing damage. Cannot poison a Poison-type Pokémon.** | — |
 | **BARRAGE** | **GHOST** | **40** | **100** | 20 | **Hits exactly 2 times.** | — |
 | **LEECH_LIFE** | BUG | **60** | 100 | **25** | Heals the user for 50% of the damage dealt. | — |
-| LOVELY_KISS | **PSYCHIC_TYPE** | 0 | 75 | 10 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
+| LOVELY_KISS | **PSYCHIC_TYPE** | 0 | 75 | 10 | Puts the target to sleep. | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
 | **SKY_ATTACK** | FLYING | **120** | 90 | 5 | **The user takes recoil equal to 25% of the damage dealt.** | — |
 | **TRANSFORM** | NORMAL | 0 | 100 | 10 | **Priority move.** The user copies the target's species, types, moves (with 5 PP each), DVs, and battle stats. The user's HP does not change. | — |
 | **BUBBLE** | WATER | **10** | 100 | 30 | ~33% chance to lower the target's Speed by 1 stage after dealing damage. | — |
 | **DIZZY_PUNCH** | **FIGHTING** | **60** | 100 | 10 | **30% chance to confuse the target after dealing damage.** | This effect is a PureRGB addition. |
-| SPORE | GRASS | 0 | 100 | 15 | Puts the target to sleep for 1–7 turns (random). | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
+| SPORE | GRASS | 0 | 100 | 15 | Puts the target to sleep. | If "Screeches echoing" is active in the battle, sleep is prevented. If the target knows SCREECH, it auto-uses SCREECH as a reaction instead of falling asleep. |
 | **FLASH** | **ELECTRIC** | **60** | **100** | **15** | **Priority move. 10% chance to make the target flinch.** | — |
 | **PSYWAVE** | PSYCHIC_TYPE | **30** | **100** | **20** | **~33% chance to lower the target's Special by 1 stage after dealing damage.** | — |
 | SPLASH | NORMAL | 0 | 100 | 40 | Doesn't do anything. | — |
@@ -173,6 +173,22 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | SLASH | NORMAL | 70 | 100 | 20 | High critical hit ratio. | — |
 | SUBSTITUTE | NORMAL | 0 | 100 | 10 | The user sacrifices 25% of its max HP to create a Substitute with that many HP. The Substitute absorbs incoming damage until it breaks. Fails if the user would be left at 0 HP. | — |
 | **STRUGGLE** | **TYPELESS** | 50 | 100 | 10 | The user takes recoil equal to 50% of the damage dealt. | — |
+
+
+
+### Status Conditions
+
+A reminder about what status conditions do:
+
+| STATUS | EFFECT |
+| :--- | --- |
+| Badly Poisoned | Lose 1/16 of HP every turn, with the damage inflicted increasing by 1/16 each subsequent turn. |
+| Burned | Damage dealt by the user's physical moves is halved. Lose 1/16 of HP every turn. |
+| Confusion | For 2–5 turns (random), Pokémon have a 50% chance to damage themselves. |
+| Frozen | Prevents the user from attacking. Can only be thawed by a Burn-inducing move or an Ice Heal (item). |
+| Paralysis | Decreases the paralized Pokémon's speed by 75%. 1/4 chance of being unable to attack. |
+| Poison | Lose 1/16 of HP every turn. |
+| Sleep | Prevents the user from attacking for 1–7 turns (random). |
 
 
 

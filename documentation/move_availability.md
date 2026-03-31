@@ -2,13 +2,13 @@
 
 ## HMs
 
-| HM # | Move | Location | Given By | Notes |
-| --- | --- | --- | --- | --- |
-| HM01 | CUT | S.S. Anne Captain | Captain | Given after helping him with his back |
-| HM02 | FLY | Route 16 Fly House | Brunette Girl | Found in secret house north of Cycling Road |
-| HM03 | SURF | Safari Zone Secret House | Prize | Awarded for finding the Secret House |
-| HM04 | STRENGTH | Fuchsia City Warden's House | Warden | Given after returning Gold Teeth |
-| HM05 | FLASH | Route 2 | NPC | Given by NPC near Diglett's Cave |
+| HM # | Move | Location | Given By | Notes | Badge Required |
+| --- | --- | --- | --- | --- | --- |
+| HM05 | Flash | Route 2 Gate | Oak's Aide | Given after the player has seen at least 10 Pokémon. | Boulder Badge (Pewter City) |
+| HM01 | Cut | S.S. Anne Captain | Captain | Given after helping him with his back. | Cascade Badge (Cerulean City) |
+| HM02 | Fly | Route 16 Fly House | Brunette Girl | The house is located west of Celadon City. | Thunder Badge (Vermilion City) |
+| HM04 | Strength | Fuchsia City Warden's House | Warden | Given after returning his Gold Teeth. | Rainbow Badge (Celadon City) |
+| HM03 | Surf | Safari Zone Secret House | Prize | Awarded for finding the Secret House. | Soul Badge (Fuchsia City) |
 
 HM moves can be deleted whenever you want.
 
@@ -19,135 +19,144 @@ HM moves can be deleted whenever you want.
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM34 | BIDE | ₽2,000 |
+| TM34 | Bide | ₽2,000 |
 
 ### Vermilion Mart
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM31 | FIREWALL | ₽1,000 |
-| TM03 | LEECH_SEED | ₽2,000 |
+| TM31 | Firewall | ₽1,000 |
+| TM03 | Leech Seed | ₽2,000 |
 
 ### Lavender Mart
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM12 | AURORA_BEAM | ₽2,000 |
-| TM11 | BUBBLEBEAM | ₽2,000 |
-| TM46 | PSYBEAM | ₽2,000 |
-| TM45 | THUNDER_WAVE | ₽2,000 |
+| TM12 | Aurora Beam | ₽2,000 |
+| TM11 | BubbleBeam | ₽2,000 |
+| TM46 | Psybeam | ₽2,000 |
+| TM45 | Thunder Wave | ₽2,000 |
 
-### Celadon 2F Mart
+### Celadon 2F
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM28 | DIG | ₽4,000 |
-| TM07 | HORN_DRILL | ₽5,000 |
-| TM44 | LIGHT_SCREEN | ₽1,000 |
-| TM33 | REFLECT | ₽1,000 |
-| TM19 | ROLLING_KICK | ₽2,000 |
-| TM02 | ROOST | ₽3,000 |
+| TM28 | Dig | ₽4,000 |
+| TM07 | Horn Drill | ₽5,000 |
+| TM44 | Light Screen | ₽1,000 |
+| TM33 | Reflect | ₽1,000 |
+| TM19 | Rolling Kick | ₽2,000 |
+| TM02 | Roost | ₽3,000 |
+
+### Game Corner
+
+| TM | Move | Coins |
+| :--- | --- | --- |
+| TM15 | Hyper Beam | 3,000 |
+| TM50 | Substitute | 4,000 |
+| TM32 | Swords Dance | 1,500 |
+
 
 ### Saffron Mart
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM05 | FIRE_PUNCH | ₽3,000 |
-| TM01 | ICE_PUNCH | ₽3,000 |
-| TM40 | KARATE_CHOP | ₽3,000 |
-| TM18 | THUNDERPUNCH | ₽3,000 |
+| TM05 | Fire Punch | ₽3,000 |
+| TM01 | Ice Punch | ₽3,000 |
+| TM40 | Karate Chop | ₽3,000 |
+| TM18 | ThunderPunch | ₽3,000 |
 
 ### Fuchsia Mart
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM35 | AGILITY | ₽4,000 |
-| TM30 | MEGA_DRAIN | ₽4,000 |
-| TM04 | PIN_MISSILE | ₽3,000 |
-| TM09 | SLASH | ₽5,000 |
+| TM35 | Agility | ₽4,000 |
+| TM30 | Mega Drain | ₽4,000 |
+| TM04 | Pin Missile | ₽3,000 |
+| TM09 | Slash | ₽5,000 |
 
 ### Cinnabar Mart
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM16 | AMNESIA | ₽3,000 |
-| TM36 | BARRAGE | ₽3,000 |
-| TM20 | BARRIER | ₽2,000 |
-| TM08 | BODY_SLAM | ₽2,000 |
-| TM39 | FILTHY_SLAM | ₽4,000 |
-| TM06 | TOXIC | ₽1,000 |
+| TM16 | Amnesia | ₽3,000 |
+| TM36 | Barrage | ₽3,000 |
+| TM20 | Barrier | ₽2,000 |
+| TM08 | Body Slam | ₽2,000 |
+| TM39 | Filthy Slam | ₽4,000 |
+| TM06 | Toxic | ₽1,000 |
 
-### Indigo Plateau Mart
+### Indigo Plateau
 
 **Pre-E4:**
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM10 | DOUBLE_EDGE | ₽5,000 |
-| TM26 | EARTHQUAKE | ₽5,000 |
-| TM37 | FLAMETHROWER | ₽8,000 |
-| TM17 | HI_JUMP_KICK | ₽8,000 |
-| TM13 | ICE_BEAM | ₽5,000 |
-| TM29 | PSYCHIC | ₽5,000 |
-| TM21 | RAZOR_LEAF | ₽5,000 |
-| TM48 | ROCK_SLIDE | ₽5,000 |
-| TM47 | SLUDGE | ₽5,000 |
-| TM24 | THUNDERBOLT | ₽5,000 |
+| TM10 | Double-Edge | ₽5,000 |
+| TM26 | Earthquake | ₽5,000 |
+| TM37 | Flamethrower | ₽8,000 |
+| TM17 | Hi Jump Kick | ₽8,000 |
+| TM13 | Ice Beam | ₽5,000 |
+| TM29 | Psychic | ₽5,000 |
+| TM21 | Razor Leaf | ₽5,000 |
+| TM48 | Rock Slide | ₽5,000 |
+| TM47 | Sludge | ₽5,000 |
+| TM24 | Thunderbolt | ₽5,000 |
 
 **Post-E4:**
 
 | TM | MOVE | PRICE |
 | :--- | --- | --- |
-| TM35 | AGILITY | ₽4,000 |
-| TM16 | AMNESIA | ₽3,000 |
-| TM12 | AURORA_BEAM | ₽2,000 |
-| TM36 | BARRAGE | ₽3,000 |
-| TM20 | BARRIER | ₽2,000 |
-| TM34 | BIDE | ₽2,000 |
-| TM14 | BLIZZARD | ₽8,000 |
-| TM08 | BODY_SLAM | ₽2,000 |
-| TM11 | BUBBLEBEAM | ₽2,000 |
-| TM28 | DIG | ₽4,000 |
-| TM10 | DOUBLE_EDGE | ₽5,000 |
-| TM23 | DRAGON_RAGE | ₽4,000 |
-| TM26 | EARTHQUAKE | ₽5,000 |
-| TM39 | FILTHY_SLAM | ₽4,000 |
-| TM31 | FIREWALL | ₽1,000 |
-| TM38 | FIRE_BLAST | ₽5,000 |
-| TM05 | FIRE_PUNCH | ₽3,000 |
-| TM37 | FLAMETHROWER | ₽8,000 |
-| TM49 | GLARE | ₽3,000 |
-| TM17 | HI_JUMP_KICK | ₽8,000 |
-| TM07 | HORN_DRILL | ₽5,000 |
-| TM15 | HYPER_BEAM | ₽8,000 |
-| TM13 | ICE_BEAM | ₽5,000 |
-| TM01 | ICE_PUNCH | ₽3,000 |
-| TM40 | KARATE_CHOP | ₽3,000 |
-| TM03 | LEECH_SEED | ₽2,000 |
-| TM44 | LIGHT_SCREEN | ₽1,000 |
-| TM42 | LOVELY_KISS | ₽3,000 |
-| TM41 | MEDITATE | ₽5,000 |
-| TM30 | MEGA_DRAIN | ₽4,000 |
-| TM04 | PIN_MISSILE | ₽3,000 |
-| TM46 | PSYBEAM | ₽2,000 |
-| TM29 | PSYCHIC | ₽5,000 |
-| TM21 | RAZOR_LEAF | ₽5,000 |
-| TM33 | REFLECT | ₽1,000 |
-| TM48 | ROCK_SLIDE | ₽5,000 |
-| TM19 | ROLLING_KICK | ₽2,000 |
-| TM02 | ROOST | ₽3,000 |
-| TM27 | SEISMIC_TOSS | ₽5,000 |
-| TM43 | SKY_ATTACK | ₽8,000 |
-| TM09 | SLASH | ₽5,000 |
-| TM47 | SLUDGE | ₽5,000 |
-| TM22 | SOLAR_BEAM | ₽8,000 |
-| TM50 | SUBSTITUTE | ₽6,000 |
-| TM32 | SWORDS_DANCE | ₽6,000 |
-| TM25 | THUNDER | ₽8,000 |
-| TM24 | THUNDERBOLT | ₽5,000 |
-| TM18 | THUNDERPUNCH | ₽3,000 |
-| TM45 | THUNDER_WAVE | ₽2,000 |
-| TM06 | TOXIC | ₽1,000 |
+| TM35 | Agility | ₽4,000 |
+| TM16 | Amnesia | ₽3,000 |
+| TM12 | Aurora Beam | ₽2,000 |
+| TM36 | Barrage | ₽3,000 |
+| TM20 | Barrier | ₽2,000 |
+| TM34 | Bide | ₽2,000 |
+| TM14 | Blizzard | ₽8,000 |
+| TM08 | Body Slam | ₽2,000 |
+| TM11 | BubbleBeam | ₽2,000 |
+| TM28 | Dig | ₽4,000 |
+| TM10 | Double-Edge | ₽5,000 |
+| TM23 | Dragon Rage | ₽4,000 |
+| TM26 | Earthquake | ₽5,000 |
+| TM39 | Filthy Slam | ₽4,000 |
+| TM31 | Firewall | ₽1,000 |
+| TM38 | Fire Blast | ₽5,000 |
+| TM05 | Fire Punch | ₽3,000 |
+| TM37 | Flamethrower | ₽8,000 |
+| TM49 | Glare | ₽3,000 |
+| TM17 | Hi Jump Kick | ₽8,000 |
+| TM07 | Horn Drill | ₽5,000 |
+| TM15 | Hyper Beam | ₽8,000 |
+| TM13 | Ice Beam | ₽5,000 |
+| TM01 | Ice Punch | ₽3,000 |
+| TM40 | Karate Chop | ₽3,000 |
+| TM03 | Leech Seed | ₽2,000 |
+| TM44 | Light Screen | ₽1,000 |
+| TM42 | Lovely Kiss | ₽3,000 |
+| TM41 | Meditate | ₽5,000 |
+| TM30 | Mega Drain | ₽4,000 |
+| TM04 | Pin Missile | ₽3,000 |
+| TM46 | Psybeam | ₽2,000 |
+| TM29 | Psychic | ₽5,000 |
+| TM21 | Razor Leaf | ₽5,000 |
+| TM33 | Reflect | ₽1,000 |
+| TM48 | Rock Slide | ₽5,000 |
+| TM19 | Rolling Kick | ₽2,000 |
+| TM02 | Roost | ₽3,000 |
+| TM27 | Seismic Toss | ₽5,000 |
+| TM43 | Sky Attack | ₽8,000 |
+| TM09 | Slash | ₽5,000 |
+| TM47 | Sludge | ₽5,000 |
+| TM22 | SolarBeam | ₽8,000 |
+| TM50 | Substitute | ₽6,000 |
+| TM32 | Swords Dance | ₽6,000 |
+| TM25 | Thunder | ₽8,000 |
+| TM24 | Thunderbolt | ₽5,000 |
+| TM18 | ThunderPunch | ₽3,000 |
+| TM45 | Thunder Wave | ₽2,000 |
+| TM06 | Toxic | ₽1,000 |
 
 
 ## Free TMs
