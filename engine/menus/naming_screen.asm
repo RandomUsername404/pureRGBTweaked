@@ -99,6 +99,10 @@ DisplayNamingScreenWrap:
 	call UpdateSprites
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
+	ld a, %11100100 ; 3210 (4 colors for party sprites)
+	ldh [rBGP], a
+	ld a, %11100100 ; 3210
+	call UpdatePal
 	call LoadHpBarAndStatusTilePatterns
 	call LoadEDTile
 	;farcall LoadMonPartySpriteGfx ; Not needed due to icon changes??
@@ -479,10 +483,6 @@ PrintNamingText:
 	ld [wMonPartySpriteSpecies], a
 	push af
 	farcall LoadNicknameMonSprite ; mechanicalpennote: CHANGED: new code for choosing which sprite displays on the nicknaming menus
-	ld a, %11100100 ; 3210 (4 colors for party sprites)
-	ldh [rBGP], a
-	ld a, %11100100 ; 3210
-	call UpdatePal
 	pop af
 	ld [wNamedObjectIndex], a
 	call GetMonName
