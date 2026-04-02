@@ -65,9 +65,9 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], a
 
-	; Armored Mewtwo gets Comet Punch, Ice Punch, Thunderbolt and Psychic.
+	; Armored Mewtwo gets Guillotine, Ice Punch, Thunderbolt and Psychic.
 	ld hl, wPartyMon3Moves
-	ld a, COMET_PUNCH
+	ld a, GUILLOTINE
 	ld [hli], a
 	ld a, ICE_PUNCH
 	ld [hli], a
@@ -75,8 +75,8 @@ IF DEF(_DEBUG)
 	ld [hli], a
 	ld [hl], PSYCHIC_M
 	ld hl, wPartyMon3PP
-	ld a, 15
-	ld [hli], a  ; COMET_PUNCH
+	ld a, 40
+	ld [hli], a  ; GUILLOTINE
 	ld a, 15
 	ld [hli], a  ; ICE_PUNCH
 	ld a, 15
@@ -196,7 +196,7 @@ IF DEF(_DEBUG)
 	SetEvent EVENT_HIDE_ALREADY_HAS_FOUR_MOVES_MSG
 	;SetEvent EVENT_UNLOCKED_AT_LEAST_ONE_CUSTOM_BALL
 	;SetEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
-	;SetEvent EVENT_BECAME_CHAMP
+	SetEvent EVENT_BECAME_CHAMP
 
 	;callfar SilphCo11FTeamRocketLeavesScript
 

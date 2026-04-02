@@ -305,9 +305,9 @@ _LoreleiIntroText::
 
 _LoreleiIntroText2::
 	text "LORELEI: You"
-	line "really thoroughly"
-	cont "thrashed me not"
-	cont "too long ago."
+	line "defeated me quite"
+	cont "soundly not too"
+	cont "long ago."
 	para "MISTY really has"
 	line "it out for you."
 	para "She gets jealous"
@@ -380,14 +380,12 @@ _AgathaIntroText::
 	prompt
 
 _AgathaIntroText2::
-	text "AGATHA: It must"
-	line "have been hard to"
-	cont "come up with that"
-	cont "intro while not"
-	cont "calling me an old"
-	cont "bag somehow!"
-	para "I'm impressed,"
-	line "child!"
+	text "AGATHA: Hmph!"
+	line "Chose your words"
+	cont "carefully, didn't"
+	cont "you, child?"
+	
+	para "Smart!"
 	prompt
 
 _AgathaIntroText3::
@@ -456,7 +454,7 @@ _GymGuideWonText::
 	prompt
 
 _RivalIntroText::
-	text "The former CHAMP,"
+	text "The acting CHAMP,"
 	line "<RIVAL>!"
 	prompt
 
@@ -680,14 +678,17 @@ _ChampArenaRivalBeforeLeaves::
 
 _IndigoPlateauArenaAssistantOnlyEliteFourAllowed::
 	text "Sorry!"
-	para "Only the CHAMP"
-	line "and ELITE FOUR"
-	cont "are allowed past"
+	
+	para "Only elite"
+	line "trainers are"
+	cont "allowed past"
 	cont "this point."
+	
 	para "If you'd like to"
 	line "challenge them,"
+	
 	para "head to the other"
-	line "stairway."
+	line "stairway first."
 	done
 
 _IndigoPlateauArenaAssistantChampAttained::
@@ -697,5 +698,5 @@ _IndigoPlateauArenaAssistantChampAttained::
 	para "We've been looking"
 	line "for you!"
 	para "Follow me into"
-	line "the CHAMP arena!"
+	line "the CHAMP ARENA!"
 	done

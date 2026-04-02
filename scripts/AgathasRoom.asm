@@ -149,6 +149,20 @@ AgathasRoomAgathaText:
 	rst TextScriptEnd
 
 AgathaBeforeBattleText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch
+	text_far _AgathaBeforeRematchText
+	text_end
+
+.normal
 	text_far _AgathaBeforeBattleText
 	text_end
 
@@ -157,6 +171,20 @@ AgathaEndBattleText:
 	text_end
 
 AgathaAfterBattleText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch
+	text_far _AgathaAfterRematchText
+	text_end
+
+.normal
 	text_far _AgathaAfterBattleText
 	text_end
 

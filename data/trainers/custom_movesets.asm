@@ -606,7 +606,7 @@ ChampArenaLanceMoveset2:
 	db SEISMIC_TOSS
 	db EARTHQUAKE
 	; kangaskhan
-	db BODY_SLAM
+	db DIZZY_PUNCH
 	db EARTHQUAKE
 	db ROCK_SLIDE
 	db SURF
@@ -1139,7 +1139,7 @@ EliteFourBrunoMoveset:
 	; electabuzz
 	db THUNDERPUNCH
 	db COUNTER ; DRAIN PUNCH
-	db TAKE_DOWN ; HEAT RUSH
+	db BARRAGE
 	db SCREECH
 	; machamp
 	db BODY_SLAM

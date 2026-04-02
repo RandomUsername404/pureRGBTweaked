@@ -109,6 +109,10 @@ LoreleisRoomLoreleiEndBattleScript:
 	jr z, ResetLoreleiScript
 	ld d, LORELEISROOM_LORELEI
 	callfar MakeSpriteFacePlayer
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .displayText
+	SetEvent EVENT_BEAT_LORELEIS_ROOM_TRAINER_0
+.displayText
 	ld a, TEXT_LORELEISROOM_LORELEI
 	ldh [hTextID], a
 	call DisplayTextID
@@ -134,6 +138,8 @@ LoreleisRoomTrainerHeaders:
 	def_trainers
 LoreleisRoomTrainerHeader0:
 	trainer EVENT_BEAT_LORELEIS_ROOM_TRAINER_0, 0, LoreleisRoomLoreleiBeforeBattleText, LoreleisRoomLoreleiEndBattleText, LoreleisRoomLoreleiAfterBattleText
+LoreleisRoomTrainerHeader1:
+	trainer EVENT_BEAT_LORELEIS_ROOM_TRAINER_1, 0, LoreleisRoomLoreleiBeforeRematchText, LoreleisRoomLoreleiEndRematchText, LoreleisRoomLoreleiAfterRematchText
 	db -1 ; end
 
 LoreleisRoomLoreleiText:
@@ -142,7 +148,11 @@ LoreleisRoomLoreleiText:
 	ld a, 9
 	ld [wGymLeaderNo], a
 ;;;;;;;;;;
+	CheckEvent EVENT_BECAME_CHAMP
 	ld hl, LoreleisRoomTrainerHeader0
+	jr z, .talkToTrainer
+	ld hl, LoreleisRoomTrainerHeader1
+.talkToTrainer
 	call TalkToTrainer
 	rst TextScriptEnd
 
@@ -156,6 +166,18 @@ LoreleisRoomLoreleiEndBattleText:
 
 LoreleisRoomLoreleiAfterBattleText:
 	text_far _LoreleisRoomLoreleiAfterBattleText
+	text_end
+
+LoreleisRoomLoreleiBeforeRematchText:
+	text_far _LoreleisRoomLoreleiBeforeRematchText
+	text_end
+
+LoreleisRoomLoreleiEndRematchText:
+	text_far _LoreleisRoomLoreleiEndRematchText
+	text_end
+
+LoreleisRoomLoreleiAfterRematchText:
+	text_far _LoreleisRoomLoreleiAfterRematchText
 	text_end
 
 LoreleisRoomLoreleiDontRunAwayText:

@@ -62,3 +62,51 @@ _LancesRoomLanceAfterBattleText::
 	line "#MON LEAGUE"
 	cont "champion!@"
 	text_end
+
+_LancesRoomLanceBeforeRematchText::
+	text "Welcome back,"
+	line "CHAMPION!"
+
+	para "I am LANCE of"
+	line "the ELITE FOUR!"
+
+	para "I command dragons,"
+	line "the strongest of"
+	cont "all!"
+
+	para "It is a shame you"
+	line "neglect your"
+	cont "duties, CHAMPION."
+
+	para "But challengers"
+	line "may use their"
+	cont "full power here."
+
+	para "How convenient."
+	line "Prepare yourself!"
+	done
+
+_LancesRoomLanceEndRematchText::
+	text "Again<...>"
+	prompt
+
+_LancesRoomLanceAfterRematchText::
+	text "Your strength is"
+	line "truly remarkable."
+
+	para "Ha!"
+
+	para "In the CHAMP ARENA"
+	line "we could fight as"
+	cont "equals!"
+
+	para "Yet you choose to"
+	line "challenge us as a"
+	cont "mere visitor."
+
+	para "A visitor who"
+	line "won't even stay."
+
+	para "Go on. Your rival"
+	line "awaits.@"
+	text_end

@@ -59,8 +59,13 @@ ChampionsRoomRivalReadyToBattleScript:
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+	CheckEvent EVENT_BECAME_CHAMP
 	ld hl, RivalDefeatedText
 	ld de, RivalVictoryText
+	jr z, .saveTextPointers
+	ld hl, RivalDefeatedRematchText
+	ld de, RivalVictoryRematchText
+.saveTextPointers
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL3
 	ld [wCurOpponent], a
@@ -238,14 +243,28 @@ ChampionsRoom_TextPointers:
 ChampionsRoomRivalText:
 	text_asm
 	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
-	ld hl, .IntroText
+	ld hl, .introText
 	jr z, .printText
 	ld hl, ChampionsRoomRivalAfterBattleText
 .printText
 	rst _PrintText
 	rst TextScriptEnd
 
-.IntroText:
+.introText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .introNormal
+	jr z, .printIntroText
+	ld hl, .introRematch
+.printIntroText
+	rst _PrintText
+	rst TextScriptEnd
+
+.introRematch:
+	text_far _ChampionsRoomRivalIntroRematchText
+	text_end
+
+.introNormal:
 	text_far _ChampionsRoomRivalIntroText
 	text_end
 
@@ -253,11 +272,33 @@ RivalDefeatedText:
 	text_far _RivalDefeatedText
 	text_end
 
+RivalDefeatedRematchText:
+	text_far _RivalDefeatedRematchText
+	text_end
+
 RivalVictoryText:
 	text_far _RivalVictoryText
 	text_end
 
+RivalVictoryRematchText:
+	text_far _RivalVictoryRematchText
+	text_end
+
 ChampionsRoomRivalAfterBattleText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch
+	text_far _ChampionsRoomRivalAfterRematchText
+	text_end
+
+.normal
 	text_far _ChampionsRoomRivalAfterBattleText
 	text_end
 
@@ -267,21 +308,63 @@ ChampionsRoomOakText:
 
 ChampionsRoomOakCongratulatesPlayerText:
 	text_asm
-	ld a, [wPlayerStarter]
-	ld [wNamedObjectIndex], a
-	call GetMonName
-	ld hl, .Text
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
 	rst _PrintText
 	rst TextScriptEnd
 
-.Text:
+.rematch:
+	text_far _ChampionsRoomOakCongratulatesPlayerAgainText
+	text_end
+
+.normal:
+	text_asm
+	ld a, [wPlayerStarter]
+	ld [wNamedObjectIndex], a
+	call GetMonName
+	ld hl, .text
+	rst _PrintText
+	rst TextScriptEnd
+
+.text:
 	text_far _ChampionsRoomOakCongratulatesPlayerText
 	text_end
 
 ChampionsRoomOakDisappointedWithRivalText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch
+	text_far _ChampionsRoomOakSupportiveOfRivalText
+	text_end
+
+.normal
 	text_far _ChampionsRoomOakDisappointedWithRivalText
 	text_end
 
 ChampionsRoomOakComeWithMeText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch
+	text_far _ChampionsRoomOakComeWithMeAgainText
+	text_end
+
+.normal
 	text_far _ChampionsRoomOakComeWithMeText
 	text_end

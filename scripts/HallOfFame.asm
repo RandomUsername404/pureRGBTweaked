@@ -129,5 +129,19 @@ HallOfFame_TextPointers:
 	dw_const HallOfFameOakText, TEXT_HALLOFFAME_OAK
 
 HallOfFameOakText:
+	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	ld hl, .normal
+	jr z, .printText
+	ld hl, .rematch
+.printText
+	rst _PrintText
+	rst TextScriptEnd
+
+.rematch:
+	text_far _HallOfFameReturnOakText
+	text_end
+
+.normal:
 	text_far _HallOfFameOakText
 	text_end

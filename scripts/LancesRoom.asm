@@ -95,6 +95,10 @@ LancesRoomLanceEndBattleScript:
 	cp $ff
 	jp z, ResetLanceScript
 	call MakeLanceFacePlayer
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .displayText
+	SetEvent EVENT_BEAT_LANCES_ROOM_TRAINER_0
+.displayText
 	ld a, TEXT_LANCESROOM_LANCE
 	ldh [hTextID], a
 	call DisplayTextID
@@ -143,6 +147,8 @@ LancesRoomTrainerHeaders:
 	def_trainers
 LancesRoomTrainerHeader0:
 	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_0, 0, LancesRoomLanceBeforeBattleText, LancesRoomLanceEndBattleText, LancesRoomLanceAfterBattleText
+LancesRoomTrainerHeader1:
+	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_1, 0, LancesRoomLanceBeforeRematchText, LancesRoomLanceEndRematchText, LancesRoomLanceAfterRematchText
 	db -1 ; end
 
 LancesRoomLanceText:
@@ -151,7 +157,11 @@ LancesRoomLanceText:
 	ld a, 12
 	ld [wGymLeaderNo], a
 ;;;;;;;;;;
+	CheckEvent EVENT_BECAME_CHAMP
 	ld hl, LancesRoomTrainerHeader0
+	jr z, .talkToTrainer
+	ld hl, LancesRoomTrainerHeader1
+.talkToTrainer
 	call TalkToTrainer
 	rst TextScriptEnd
 
@@ -164,10 +174,34 @@ LancesRoomLanceEndBattleText:
 	text_end
 
 LancesRoomLanceAfterBattleText:
-	text_far _LancesRoomLanceAfterBattleText
 	text_asm
 	SetEvent EVENT_BEAT_LANCE
+	ld hl, .text
+	rst _PrintText
 	rst TextScriptEnd
+
+.text:
+	text_far _LancesRoomLanceAfterBattleText
+	text_end
+
+LancesRoomLanceBeforeRematchText:
+	text_far _LancesRoomLanceBeforeRematchText
+	text_end
+
+LancesRoomLanceEndRematchText:
+	text_far _LancesRoomLanceEndRematchText
+	text_end
+
+LancesRoomLanceAfterRematchText:
+	text_asm
+	SetEvent EVENT_BEAT_LANCE
+	ld hl, .text
+	rst _PrintText
+	rst TextScriptEnd
+
+.text:
+	text_far _LancesRoomLanceAfterRematchText
+	text_end
 
 LancesRoomDoFacings: ; PureRGBnote: ADDED: when about to fight Lance, lance and the player will face each other properly to talk.
 	ld a, [wYCoord]

@@ -144,3 +144,142 @@ _ChampionsRoomOakComeWithMeText::
 	para "<PLAYER>!"
 	line "Come with me!"
 	done
+
+; RGB Tweaked: rematch lines start here
+_ChampionsRoomRivalIntroRematchText::
+	text "<RIVAL>: Oh."
+	
+	para "It's you."
+
+	para "I was wondering"
+	line "when you'd show"
+	cont "up again,"
+	cont "<PLAYER>."
+
+	para "While you've been"
+	line "running around,"
+
+	para "I've been stuck"
+	line "here doing your"
+	cont "job as champion."
+
+	para "Do you have any"
+	line "idea how annoying"
+	cont "these regulations"
+	cont "are?"
+
+	para "No APEX CHIPs?"
+	line "Pathetic level"
+	cont "caps?"
+
+	para "But you? You just"
+	line "waltz in here as"
+	cont "a challenger and"
+	cont "use your full"
+	cont "power."
+
+	para "How nice for you."
+
+	para "Let's see if you"
+	line "can still beat me!"
+	done
+
+_RivalDefeatedRematchText::
+	text "NO!"
+	line "Not again!"
+
+	para "I followed every"
+	line "stupid rule<...>"
+
+	para "I didn't use APEX"
+	line "CHIPs<...> I kept"
+	cont "my #MON under"
+	cont "the limit<...>"
+
+	para "This isn't fair!"
+	line "This job sucks!"
+	prompt
+
+_RivalVictoryRematchText::
+	text "Hahaha!"
+	line "See? I told you!"
+
+	para "Your last win was"
+	line "just a fluke!"
+
+	para "You're nothing but"
+	line "a poser!"
+
+	para "Try again, loser!"
+	line "Hahaha!"
+	prompt
+
+_ChampionsRoomRivalAfterRematchText::
+	text "Damn it<...>"
+	line "Not good enough."
+
+	para "No matter what I"
+	line "do, as long as"
+	cont "you exist<...>"
+
+	para "I'll always be"
+	line "nothing more"
+	cont "than the acting"
+	cont "champion."
+
+	para "Darn it! Everyone"
+	line "still sees you as"
+	cont "the real one<...>"
+
+	para "Even though you"
+	line "refuse to do the"
+	cont "job."
+	done
+
+_ChampionsRoomOakCongratulatesPlayerAgainText::
+	text "OAK: Well done!"
+	line "You won again."
+
+	para "Though I won't"
+	line "pretend the odds"
+	cont "were even today."
+
+	para "Still, a win is"
+	line "a win."
+	done
+
+_ChampionsRoomOakSupportiveOfRivalText::
+	text "OAK: <RIVAL>!"
+
+	para "I saw your battle"
+	line "from the gallery."
+
+	para "You did very well,"
+	line "especially with"
+	cont "the LEAGUE's"
+	cont "restrictions in"
+	cont "place."
+
+	para "You should be"
+	line "proud of how you"
+	cont "fought today."
+	done
+
+_ChampionsRoomOakComeWithMeAgainText::
+	text "OAK: <PLAYER>!"
+
+	para "You are incredibly"
+	line "talented, but<...>"
+
+	para "Don't you think"
+	line "battling here as"
+	cont "a challenger is"
+	cont "a bit too easy?"
+
+	para "Elite trainers"
+	line "belong in the"
+	cont "CHAMP ARENA."
+
+	para "Anyway, come with"
+	line "me!"
+	done

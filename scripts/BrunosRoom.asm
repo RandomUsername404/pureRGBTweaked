@@ -107,6 +107,10 @@ BrunosRoomBrunoEndBattleScript:
 	jr z, ResetBrunoScript
 	ld d, BRUNOSROOM_BRUNO
 	callfar MakeSpriteFacePlayer
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .displayText
+	SetEvent EVENT_BEAT_BRUNOS_ROOM_TRAINER_0
+.displayText
 	ld a, TEXT_BRUNOSROOM_BRUNO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -132,6 +136,8 @@ BrunosRoomTrainerHeaders:
 	def_trainers
 BrunosRoomTrainerHeader0:
 	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_0, 0, BrunoBeforeBattleText, BrunoEndBattleText, BrunoAfterBattleText
+BrunosRoomTrainerHeader1:
+	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_1, 0, BrunoBeforeRematchText, BrunoEndRematchText, BrunoAfterRematchText
 	db -1 ; end
 
 BrunosRoomBrunoText:
@@ -140,7 +146,11 @@ BrunosRoomBrunoText:
 	ld a, 10
 	ld [wGymLeaderNo], a
 ;;;;;;;;;;
+	CheckEvent EVENT_BECAME_CHAMP
 	ld hl, BrunosRoomTrainerHeader0
+	jr z, .talkToTrainer
+	ld hl, BrunosRoomTrainerHeader1
+.talkToTrainer
 	call TalkToTrainer
 	rst TextScriptEnd
 
@@ -154,6 +164,18 @@ BrunoEndBattleText:
 
 BrunoAfterBattleText:
 	text_far _BrunoAfterBattleText
+	text_end
+
+BrunoBeforeRematchText:
+	text_far _BrunoBeforeRematchText
+	text_end
+
+BrunoEndRematchText:
+	text_far _BrunoEndRematchText
+	text_end
+
+BrunoAfterRematchText:
+	text_far _BrunoAfterRematchText
 	text_end
 
 BrunosRoomBrunoDontRunAwayText:
