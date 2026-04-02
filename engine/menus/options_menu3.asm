@@ -61,7 +61,7 @@ OptionsMenu3Text:
 	db   "OPTIONS 3"
 	next " REDO SONG: ON OFF"
 	next " LEARNSETS: ON OFF"
-	next " TITLE:    OG Pure"
+	next " TITLE:    OG RGB"
 	next " INTRO:    ON SKIP"
 	next " FLASHING: OG LESS"
 	next " UNITS:    IMP MET@"

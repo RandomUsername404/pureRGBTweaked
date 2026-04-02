@@ -99,9 +99,7 @@ DEF rLCDC_DEFAULT EQU (1 << rLCDC_ENABLE) | (1 << rLCDC_WINDOW_TILEMAP) | (1 << 
 
 	ei
 
-;;;;;;;;;; PureRGBnote: ADDED: load options configuration from SRAM on boot of the game so we can respect the color/sprite settings.
-	callfar CopyOptionsFromSRAM
-;;;;;;;;;;
+	call InitDefaultTweakedOptions
 
 	predef LoadSGB
 
@@ -153,3 +151,28 @@ StopAllSounds::
 	ld [wLastMusicSoundID], a
 	dec a
 	jp StopAllMusic
+
+
+; PureRGB Tweaked: set default options when first starting up the game
+InitDefaultTweakedOptions:
+	ld a, PALETTES_SGB ; SGB palette is the default. Could merge this with the other wOption2 below in a single load, but it's cleaner this way.
+	ld [wOptions2], a
+	
+	ld hl, wOptions2
+	set BIT_ALT_PKMN_PALETTES, [hl] ; ALT PKMN COLORS = ON
+	set BIT_MUSIC, [hl]             ; MUSIC = OG+ (bit set = OG+, bit clear = OG)
+	
+	ld hl, wOptions3
+	set BIT_EXP_BAR, [hl]           ; EXP BAR = ON
+	set BIT_NPC_STAT_EXP, [hl]      ; NPC EVs = ON
+	set BIT_NPC_PP, [hl]            ; NPC PP = ON
+	
+	ld hl, wSpriteOptions2
+	set BIT_NEW_TITLE_SCREEN, [hl]  ; New RGB titlescreen = ON
+	set BIT_BACK_SPRITES, [hl]      ; SW97 back sprites = ON
+	
+	SetEvent FLAG_IMPERIAL_METRIC   ; metric units = ON
+	
+	;;;;;;;;;; PureRGBnote: ADDED: load options configuration from SRAM on boot of the game so we can respect the color/sprite settings.
+	callfar CopyOptionsFromSRAM
+	;;;;;;;;;;

@@ -159,14 +159,6 @@ InitOptions:
 	ld [wLetterPrintingDelayFlags], a
 	ld a, TEXT_DELAY_MEDIUM
 	ld [wOptions], a
-	; PureRGB Tweaked: set default options
-	ld hl, wOptions2
-	set BIT_ALT_PKMN_PALETTES, [hl] ; ALT PKMN COLORS = ON
-	set BIT_MUSIC, [hl]             ; MUSIC = OG+ (bit set = OG+, bit clear = OG)
-	ld hl, wOptions3
-	set BIT_EXP_BAR, [hl]        ; EXP BAR = ON
-	set BIT_NPC_STAT_EXP, [hl]   ; NPC EVs = ON
-	set BIT_NPC_PP, [hl]         ; NPC PP = ON
 	ret
 
 LinkMenu:
@@ -405,13 +397,13 @@ CableClubOptionsText:
 VersionText:
 db " "
 IF DEF(_RED)
-	db "PureRed"
+	db "Red Tweaked"
 ENDC
 IF DEF(_BLUE)
-	db "PureBlue"
+	db "Blue Tweaked"
 ENDC
 IF DEF(_GREEN)
-	db "PureGreen"
+	db "Green Tweaked"
 ENDC
 db " v"
 INCLUDE "version_number.asm"
