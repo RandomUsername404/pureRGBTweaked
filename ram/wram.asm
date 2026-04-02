@@ -2410,9 +2410,8 @@ wSilphCo10FCurScript:: db
 wSilphCo11FCurScript:: db
 	ds 1 ; unused save file byte
 wFuchsiaGymCurScript:: db
-wFuchsiaPokecenterCurScript:: db ; PureRGB Tweaked NEW
 wSaffronGymCurScript:: db
-	ds 1 ; unused save file byte
+wFuchsiaPokecenterCurScript:: db ; PureRGB Tweaked NEW
 wCinnabarGymCurScript:: db
 wGameCornerCurScript:: db
 wRoute16Gate1FCurScript:: db
