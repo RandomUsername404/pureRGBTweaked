@@ -2,21 +2,21 @@
 ; PureRGBnote: ADDED: This map is also used for the secret tunnel from saffron city to the underground path.
 DiglettsCave_Script:
 	call DiglettsCaveCheckStandingOnWarp
-	call CheckAutoHideDigletts
+	;call CheckAutoHideDigletts RGBTweaked: not needed anymore
 	jp EnableAutoTextBoxDrawing
 
 DiglettsCave_TextPointers:
 	def_text_pointers
 	dw_const DiglettsCaveDiglettText, TEXT_DIGLETTS_CAVE_DIGLETTS
 
-CheckAutoHideDigletts:
-	; can happen if you change the option setting while they're visible
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret nz
-	CheckEvent EVENT_DIGLETTS_VISIBLE
-	ret z
-	jp HideDigletts
+;CheckAutoHideDigletts:
+    ; can happen if you change the option setting while they're visible
+;    ld a, [wSpriteOptions2]
+;    bit BIT_MENU_ICON_SPRITES, a
+;    ret nz
+;    CheckEvent EVENT_DIGLETTS_VISIBLE
+;    ret z
+;    jp HideDigletts
 
 DiglettsCaveCheckStandingOnWarp:
 	ld hl, wCurrentMapScriptFlags
@@ -49,9 +49,6 @@ DiglettsCaveCheckStandingOnWarp:
 	ret
 .loadDigletts
 	call DiglettsCaveLoadDiglettSprites
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr z, HideDigletts
 	call IsPlayerNearDigletts
 	jr c, HideDigletts
 	call ShowDigletts
@@ -128,9 +125,6 @@ ProximityDigletts2::
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret nz
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret z
 	CheckEvent EVENT_DIGLETTS_VISIBLE
 	jr nz, .visible
 .hidden
@@ -155,9 +149,6 @@ ProximityDigletts2::
 	ret
 
 DiglettsCaveDiglettAnimation::
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	ret z
 	ld a, [wOverworldAnimationCounter]
 	and a
 	ret z
