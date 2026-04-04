@@ -52,9 +52,9 @@ HM moves can be deleted whenever you want.
 
 | TM | Move | Coins |
 | :--- | --- | --- |
+| TM23 | Dragon Rage | 1,500 |
 | TM15 | Hyper Beam | 3,000 |
 | TM50 | Substitute | 4,000 |
-| TM32 | Swords Dance | 1,500 |
 
 
 ### Saffron Mart

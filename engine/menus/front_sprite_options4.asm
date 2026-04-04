@@ -43,10 +43,10 @@ FrontSpriteOptions4Data:
 FrontSpriteOptions4Text:
 	db   "SPRITES→FRONT 4"
 	next " ONIX:       RB RG"
-	next " VOLTORB:    RB RG"
-	next " EXEGGCUTE:  RB Y "
+	next " VOLTORB:    RG RB"
+	next " EXEGGCUTE:  Y  RB"
 	next " EXEGGUTOR:  Y  RB"
-	next " KOFFING:    RG RB"
+	next " KOFFING:    RB RG"
 	next " STARMIE:    RB RG"
 	next " SCYTHER:    RB RG@"
 

@@ -42,12 +42,12 @@ FrontSpriteOptions5Data:
 
 FrontSpriteOptions5Text:
 	db   "SPRITES→FRONT 5"
-	next " JYNX:       RG SW"
+	next " JYNX:       SW RG"
 	next " ELECTABUZZ: RB RG"
-	next " PINSIR:     RB RG"
-	next " OMANYTE:    RB RG"
-	next " ARTICUNO:   RB Y"
-	next " ZAPDOS:     RB RG"
+	next " PINSIR:     RG RB"
+	next " OMANYTE:    RG RB"
+	next " ARTICUNO:   Y  RB"
+	next " ZAPDOS:     RG RB"
 	next " MEWTWO:     RB RG@"
 
 DrawFrontSpriteOptions5Menu:

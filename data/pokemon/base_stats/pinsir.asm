@@ -8,7 +8,7 @@
 	db 200 ; base exp
 
 	INCBIN "gfx/pokemon/front/pinsir.pic", 0, 1 ; sprite dimensions
-	dw PinsirPicFront, PinsirPicBackSW
+	dw PinsirPicFrontAlt, PinsirPicBackSW
 
 	db SCRATCH, BIND, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -47,10 +47,10 @@
 	; end
 
 
-	db BANK(PinsirPicFront)
 	db BANK(PinsirPicFrontAlt)
+	db BANK(PinsirPicFront)
 	db BANK(PinsirPicBack)
 	db BANK(PinsirPicBackSW)
 
-	dw PinsirPicFrontAlt, PinsirPicBack
+	dw PinsirPicFront, PinsirPicBack
 

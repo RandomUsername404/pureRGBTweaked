@@ -42,13 +42,13 @@ FrontSpriteOptions2Data:
 
 FrontSpriteOptions2Text:
 	db   "SPRITES→FRONT 2"
-	next " SPEAROW:    RB RG"
-	next " NIDORINO:   RB RG"
+	next " SPEAROW:    RG RB"
+	next " NIDORINO:   RG RB"
 	next " GOLBAT:     Y  RB"
-	next " GOLDUCK:    RB RG"
+	next " GOLDUCK:    RG RB"
 	next " MANKEY:     RB RG"
 	next " ARCANINE:   RB RG"
-	next " ABRA:       RB RG@"
+	next " ABRA:       RG RB@"
 
 DrawFrontSpriteOptions2Menu:
 	hlcoord 0, 0

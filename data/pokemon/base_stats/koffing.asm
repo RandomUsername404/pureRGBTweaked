@@ -8,7 +8,7 @@
 	db 114 ; base exp
 
 	INCBIN "gfx/pokemon/front/koffing.pic", 0, 1 ; sprite dimensions
-	dw KoffingPicFront, KoffingPicBackSW
+	dw KoffingPicFrontAlt, KoffingPicBackSW
 
 	db TACKLE, SMOG, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -38,10 +38,10 @@
 	; end
 
 
-	db BANK(KoffingPicFront)
 	db BANK(KoffingPicFrontAlt)
+	db BANK(KoffingPicFront)
 	db BANK(KoffingPicBack)
 	db BANK(KoffingPicBackSW)
 
-	dw KoffingPicFrontAlt, KoffingPicBack
+	dw KoffingPicFront, KoffingPicBack
 

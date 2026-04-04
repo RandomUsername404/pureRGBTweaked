@@ -8,7 +8,7 @@
 	db 216 ; base exp
 
 	INCBIN "gfx/pokemon/front/zapdos.pic", 0, 1 ; sprite dimensions
-	dw ZapdosPicFront, ZapdosPicBackSW
+	dw ZapdosPicFrontAlt, ZapdosPicBackSW
 
 	db THUNDERBOLT, DRILL_PECK, LIGHT_SCREEN, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
@@ -44,10 +44,10 @@
 	; end
 
 
-	db BANK(ZapdosPicFront)
 	db BANK(ZapdosPicFrontAlt)
+	db BANK(ZapdosPicFront)
 	db BANK(ZapdosPicBack)
 	db BANK(ZapdosPicBackSW)
 
-	dw ZapdosPicFrontAlt, ZapdosPicBack
+	dw ZapdosPicFront, ZapdosPicBack
 

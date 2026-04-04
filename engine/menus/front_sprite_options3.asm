@@ -42,13 +42,13 @@ FrontSpriteOptions3Data:
 
 FrontSpriteOptions3Text:
 	db   "SPRITES→FRONT 3"
-	next " KADABRA:    RB RG"
-	next " MACHOP:     RB RG"
+	next " KADABRA:    RG RB"
+	next " MACHOP:     RG RB"
 	next " TENTACRUEL: RB RG"
 	next " GRAVELER:   RB RG"
 	next " FARFETCHD:  RG RB"
 	next " CLOYSTER:   RB RG"
-	next " GENGAR:     RB Y@"
+	next " GENGAR:     Y  RB@"
 
 DrawFrontSpriteOptions3Menu:
 	hlcoord 0, 0

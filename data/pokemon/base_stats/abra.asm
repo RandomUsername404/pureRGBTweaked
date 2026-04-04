@@ -8,7 +8,7 @@
 	db 73 ; base exp
 
 	INCBIN "gfx/pokemon/front/abra.pic", 0, 1 ; sprite dimensions
-	dw AbraPicFront, AbraPicBackSW
+	dw AbraPicFrontAlt, AbraPicBackSW
 
 	db TELEPORT, PSYWAVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -37,9 +37,9 @@
 	; end
 
 	; PureRGBnote: ADDED: in pokemon base stat headers, these point to which bank the various sprites are stored in.
-	db BANK(AbraPicFront)
 	db BANK(AbraPicFrontAlt)
+	db BANK(AbraPicFront)
 	db BANK(AbraPicBack) 
 	db BANK(AbraPicBackSW)
 
-	dw AbraPicFrontAlt, AbraPicBack ; PureRGBnote: ADDED: the first byte is a pointer to alt front sprite if the pokemon has one, the second is a pointer to the original back sprite.
+	dw AbraPicFront, AbraPicBack ; PureRGBnote: ADDED: the first byte is a pointer to alt front sprite if the pokemon has one, the second is a pointer to the original back sprite. ; RGBTweaked: made the "normal" sprite the alt sprite and vice-versa.

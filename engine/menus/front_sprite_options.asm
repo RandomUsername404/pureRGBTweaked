@@ -83,12 +83,12 @@ FrontSpriteOptionsSetCursorPositionActions:
 
 FrontSpriteOptionsText:
 	db   "SPRITES→FRONT 1"
-	next " BULBASAUR:  RB RG"
+	next " BULBASAUR:  RG RB"
 	next " SQUIRTLE:   RB RG"
-	next " BLASTOISE:  RB RG"
+	next " BLASTOISE:  RG RB"
 	next " BUTTERFREE: RB RG"
-	next " PIDGEOTTO:  RB RG"
-	next " PIDGEOT:    RB RG"
+	next " PIDGEOTTO:  RG RB"
+	next " PIDGEOT:    RG RB"
 	next " RATICATE:   RB RG@"
 
 DrawChildMenuDigit:

@@ -197,6 +197,9 @@ IF DEF(_DEBUG)
 	;SetEvent EVENT_UNLOCKED_AT_LEAST_ONE_CUSTOM_BALL
 	;SetEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
 	SetEvent EVENT_BECAME_CHAMP
+	; next two events needed to unlock the fishing areas in the dex
+	SetEvent EVENT_GOT_FUCHSIA_FISHING_GURU_ITEM
+	SetEvent EVENT_GOT_ROUTE12_FISHING_GURU_ITEM
 
 	;callfar SilphCo11FTeamRocketLeavesScript
 

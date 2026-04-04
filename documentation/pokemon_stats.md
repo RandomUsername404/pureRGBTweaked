@@ -21,7 +21,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 009 | BLASTOISE | WATER | — | 79 | 83 | 100 | 85 | 78 | 425 | — |
 | 010 | CATERPIE | BUG | — | 45 | 30 | 35 | 20 | 45 | 175 | — |
 | 011 | METAPOD | BUG | — | 50 | 20 | 55 | 25 | 30 | 180 | — |
-| 012 | BUTTERFREE | BUG | **PSYCHIC** | **70** | **25** | **75** | **92** | **95** | **357** | BUG/FLYING |
+| 012 | BUTTERFREE | BUG | **PSYCHIC** | **70** | 45 | **70** | **90** | **80** | **355** | BUG/FLYING |
 | 013 | WEEDLE | BUG | POISON | 40 | 35 | 30 | 20 | 50 | 175 | — |
 | 014 | KAKUNA | BUG | POISON | 45 | 25 | 50 | 25 | 35 | 180 | — |
 | 015 | BEEDRILL | BUG | POISON | **70** | **92** | **75** | **50** | **95** | **382** | — |
@@ -92,7 +92,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 080 | SLOWBRO | WATER | PSYCHIC | 95 | 75 | 110 | **90** | 30 | **400** | — |
 | 081 | MAGNEMITE | ELECTRIC | — | 25 | 35 | 70 | 95 | 45 | 270 | — |
 | 082 | MAGNETON | ELECTRIC | — | **65** | 60 | 95 | 120 | 70 | **410** | — |
-| 083 | FARFETCHD | NORMAL | FLYING | **70** | **75** | **65** | **68** | **70** | **348** | — |
+| 083 | FARFETCHD | NORMAL | FLYING | **70** | **75** | **65** | **68** | **72** | **350** | — |
 | 084 | DODUO | **GROUND** | FLYING | 35 | 85 | 45 | 35 | 75 | 275 | NORMAL/FLYING |
 | 085 | DODRIO | **GROUND** | FLYING | **70** | **115** | 70 | 60 | **105** | **420** | NORMAL/FLYING |
 | 086 | SEEL | WATER | — | 65 | 45 | 55 | 70 | 45 | 280 | — |
@@ -104,20 +104,20 @@ You can find an interactive version of the table below [right here.](https://she
 | 092 | GASTLY | GHOST | POISON | 30 | 35 | 30 | 100 | 80 | 275 | — |
 | 093 | HAUNTER | GHOST | POISON | 45 | 50 | 45 | 115 | 95 | 350 | — |
 | 094 | GENGAR | GHOST | POISON | 60 | 65 | 60 | 130 | 110 | 425 | — |
-| 095 | ONIX | ROCK | GROUND | **55** | **25** | **180** | **75** | **80** | **415** | — |
+| 095 | ONIX | ROCK | GROUND | **55** | 45 | 160 | **75** | 70 | **405** | — |
 | 096 | DROWZEE | PSYCHIC | — | 60 | 48 | 45 | 90 | 42 | 285 | — |
 | 097 | HYPNO | PSYCHIC | — | **90** | 73 | 70 | 115 | **72** | **420** | — |
 | 098 | KRABBY | WATER | — | 30 | 105 | 90 | 25 | 50 | 300 | — |
 | 099 | KINGLER | WATER | **GROUND** | **75** | 130 | 115 | 50 | 75 | **445** | WATER |
 | 100 | VOLTORB | ELECTRIC | **FIRE** | 40 | 30 | 50 | 55 | 100 | 275 | ELECTRIC |
-| 101 | ELECTRODE | ELECTRIC | **FIRE** | **65** | 50 | 70 | **105** | **135** | **425** | ELECTRIC |
+| 101 | ELECTRODE | ELECTRIC | **FIRE** | **65** | 50 | 70 | **100** | **135** | **420** | ELECTRIC |
 | 102 | EXEGGCUTE | GRASS | PSYCHIC | 60 | 40 | 80 | 60 | 40 | 280 | — |
 | 103 | EXEGGUTOR | GRASS | PSYCHIC | 95 | 95 | 85 | 125 | 55 | 455 | — |
 | 104 | CUBONE | GROUND | — | 50 | 50 | 95 | 40 | 35 | 270 | — |
-| 105 | MAROWAK | GROUND | — | **80** | **90** | 110 | **80** | 45 | **405** | GROUND/**GHOST** |
+| 105 | MAROWAK | GROUND | — | **70** | **90** | 110 | **80** | 45 | **395** | GROUND/**GHOST** |
 | 106 | HITMONLEE | FIGHTING | — | **85** | **140** | 53 | **45** | 87 | **410** | — |
 | 107 | HITMONCHAN | FIGHTING | — | 50 | **115** | 79 | **90** | 76 | **410** | — |
-| 108 | LICKITUNG | NORMAL | — | **100** | **70** | **85** | **75** | **85** | **415** | — |
+| 108 | LICKITUNG | NORMAL | — | **100** | **70** | **85** | **75** | **55** | **385** | — |
 | 109 | KOFFING | POISON | — | 40 | 65 | 95 | 60 | 35 | 295 | — |
 | 110 | WEEZING | POISON | — | **85** | 90 | 120 | 85 | 60 | **440** | — |
 | 111 | RHYHORN | GROUND | ROCK | 80 | 85 | 95 | 30 | 25 | 315 | — |
@@ -141,7 +141,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 129 | MAGIKARP | WATER | — | 20 | 10 | 55 | 20 | 80 | 185 | — |
 | 130 | GYARADOS | WATER | FLYING | 95 | 125 | 79 | 100 | 81 | 480 | — |
 | 131 | LAPRAS | WATER | ICE | 130 | 85 | 80 | 95 | 60 | 450 | — |
-| 132 | DITTO | NORMAL | — | **90** | 48 | 48 | 48 | 48 | **282** | — |
+| 132 | DITTO | NORMAL | — | **88** | 48 | 48 | 48 | 48 | **280** | — |
 | 133 | EEVEE | NORMAL | — | **70** | **65** | **65** | **70** | 55 | **325** | — |
 | 134 | VAPOREON | WATER | — | 130 | 65 | 60 | 110 | 65 | 430 | — |
 | 135 | JOLTEON | ELECTRIC | — | 65 | 65 | 60 | 110 | 130 | 430 | — |
@@ -170,27 +170,27 @@ You can find an interactive version of the table below [right here.](https://she
 
 Some of the player's Pokémon can be upgraded to use the stats below. Others are only enemy encounters:
 
-| DEX NUMBER |        NAME        | TYPE 1 | TYPE 2 | HP | ATTACK | DEFENSE | SPECIAL | SPEED | TOTAL | NEW TYPING? |
-|:----------:|:------------------:|:------:|:------:|:--:|:------:|:-------:|:-------:|:-----:|:-----:|:-----------:|
-| ??? | ARMORED_MEWTWO | PSYCHIC | — | 130 | 110 | 130 | 154 | 115 | 639 | — |
-| ??? | FLOATING_MAGNETON | ELECTRIC | FLOATING | 65 | 60 | 95 | 120 | 70 | 410 | — |
-| ??? | FLOATING_WEEZING | POISON | FLOATING | 85 | 90 | 120 | 85 | 60 | 440 | — |
-| ??? | HARDENED_ONIX | CRYSTAL | GROUND | 80 | 85 | 180 | 75 | 80 | 500 | — |
-| ??? | MISSINGNO | GHOST | NORMAL | 255 | 150 | 150 | 5 | 5 | 565 | — |
-| ??? | POWERED_HAUNTER | GHOST | POISON | 60 | 65 | 60 | 130 | 110 | 425 | — |
-| ??? | SPIRIT_CHUNKY | ELECTRIC | FLOATING | 240 | 90 | 75 | 110 | 25 | 540 | — |
-| ??? | SPIRIT_IRRADIATED | FIGHTING | GHOST | 90 | 115 | 115 | 115 | 50 | 485 | — |
-| ??? | SPIRIT_PAINLESS | NORMAL | GHOST | 140 | 75 | 55 | 80 | 45 | 395 | — |
-| ??? | SPIRIT_THE_MAW | GHOST | FLYING | 75 | 250 | 75 | 75 | 250 | 725 | — |
-| ??? | SPIRIT_TORCHED | GRASS | FIRE | 95 | 95 | 85 | 125 | 55 | 455 | — |
-| ??? | VOLCANIC_MAGMAR | FIRE | MAGMA | 75 | 95 | 57 | 95 | 93 | 415 | — |
-| ??? | WINTER_DRAGONAIR | DRAGON | ICE | 91 | 84 | 75 | 130 | 80 | 460 | — |
+| NAME | TYPE 1 | TYPE 2 | HP | ATTACK | DEFENSE | SPECIAL | SPEED | TOTAL |
+| :--- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ARMORED_MEWTWO | PSYCHIC | — | 130 | 110 | 130 | 154 | 115 | 639 |
+| FLOATING_MAGNETON | ELECTRIC | FLOATING | 65 | 60 | 95 | 120 | 70 | 410 |
+| FLOATING_WEEZING | POISON | FLOATING | 85 | 90 | 120 | 85 | 60 | 440 |
+| HARDENED_ONIX | CRYSTAL | GROUND | 80 | 85 | 180 | 75 | 80 | 500 |
+| MISSINGNO | GHOST | NORMAL | 255 | 150 | 150 | 5 | 5 | 565 |
+| POWERED_HAUNTER | GHOST | POISON | 60 | 65 | 60 | 130 | 110 | 425 |
+| VOLCANIC_MAGMAR | FIRE | MAGMA | 75 | 95 | 57 | 95 | 93 | 415 |
+| WINTER_DRAGONAIR | DRAGON | ICE | 91 | 84 | 75 | 130 | 80 | 460 |
+| SPIRIT_CHUNKY | ELECTRIC | FLOATING | 240 | 90 | 75 | 110 | 25 | 540 |
+| SPIRIT_IRRADIATED | FIGHTING | GHOST | 90 | 115 | 115 | 115 | 50 | 485 |
+| SPIRIT_PAINLESS | NORMAL | GHOST | 140 | 75 | 55 | 80 | 45 | 395 |
+| SPIRIT_THE_MAW | GHOST | FLYING | 75 | 250 | 75 | 75 | 250 | 725 |
+| SPIRIT_TORCHED | GRASS | FIRE | 95 | 95 | 85 | 125 | 55 | 455 |
 
 The FLOATING type makes a Pokémon immune to GROUND moves.
 
 The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, but remains weak to FIGHTING and GROUND.
 
-The MAGMA type makes a Pokémon immune to WATER and FIRE moves.
+The MAGMA type makes a Pokémon immune to WATER and FIRE moves. MAGMA-types also get GROUND STAB.
 
 ---
 

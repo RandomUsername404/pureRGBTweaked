@@ -8,7 +8,7 @@
 	db 118 ; base exp
 
 	INCBIN "gfx/pokemon/front/nidorino.pic", 0, 1 ; sprite dimensions
-	dw NidorinoPicFront, NidorinoPicBackSW
+	dw NidorinoPicFrontAlt, NidorinoPicBackSW
 
 	db TACKLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -46,10 +46,10 @@
 	FLASH
 	; end
 
-	db BANK(NidorinoPicFront)
 	db BANK(NidorinoPicFrontAlt)
+	db BANK(NidorinoPicFront)
 	db BANK(NidorinoPicBack)
 	db BANK(NidorinoPicBackSW)
 
-	dw NidorinoPicFrontAlt, NidorinoPicBack
+	dw NidorinoPicFront, NidorinoPicBack
 

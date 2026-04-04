@@ -8,7 +8,7 @@
 	db 172 ; base exp
 
 	INCBIN "gfx/pokemon/front/pidgeot.pic", 0, 1 ; sprite dimensions
-	dw PidgeotPicFront, PidgeotPicBackSW
+	dw PidgeotPicFrontAlt, PidgeotPicBackSW
 
 	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -39,11 +39,10 @@
 	STRENGTH
 	; end
 
-
-	db BANK(PidgeotPicFront)
 	db BANK(PidgeotPicFrontAlt)
+	db BANK(PidgeotPicFront)
 	db BANK(PidgeotPicBack)
 	db BANK(PidgeotPicBackSW)
 
-	dw PidgeotPicFrontAlt, PidgeotPicBack
+	dw PidgeotPicFront, PidgeotPicBack
 

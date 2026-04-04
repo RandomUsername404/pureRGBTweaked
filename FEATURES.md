@@ -1,11 +1,9 @@
 # Full Features / Bugfixes List
 
-![covers](/box_art/PureRGB_Covers.png?raw=true)
-
-The only version differences between PureRed / PureBlue / PureGreen are visual. Play whatever color you like the most.
+The only version differences between RedTWK / GreenTWK / BlueTWK are visual. Play whatever color you like the most.
 
 ## New Options in the Options Menu
-Many options have been added to the game's options menu. To be clear, there are **4 pages of options** now. **Use the Next button on the options page** to cycle through the pages when in-game.
+Many options have been added to the game's options menu. To be clear, there are **5 pages of options** now. **Use the Next button on the options page** to cycle through the pages when in-game.
 
 You can press SELECT to get an explanation of the current option in any option menu.
 
@@ -37,10 +35,10 @@ The second page contains new big features related to general gameplay.
     ![Blue Title GBC](/screenshots/blue_title_gbc_colors_on_gbc.png?raw=true) ![Red Title GBC](/screenshots/red_title_gbc_colors_on_gbc.png?raw=true) ![Green Title GBC](/screenshots/green_title_gbc_colors_on_gbc.png?raw=true)
 
     ![Blue Title GBC2](/screenshots/blue_title_y2_colors_on_gbc.png?raw=true) ![Red Title GBC2](/screenshots/red_title_y2_colors_on_gbc.png?raw=true) ![Green Title GBC2](/screenshots/green_title_y2_colors_on_gbc.png?raw=true)
-  - The second option, `ALT PKMN COLORS` will enable or disable pokemon from being able to have special color palettes (Default: OFF). When turned on, features related to alternate color pokemon are enabled. In certain regions, you will find differently colored pokemon, like blue nidorinos and purple nidorinas. Think of them as regional color variants. This is just an amusing feature to allow for additional enjoyment in finding unique pokemon by exploring different places.
+  - The second option, `ALT PKMN COLORS` will enable or disable pokemon from being able to have special color palettes (Default: ON). When turned on, features related to alternate color pokemon are enabled. In certain regions, you will find differently colored pokemon, like blue nidorinos and purple nidorinas. Think of them as regional color variants. This is just an amusing feature to allow for additional enjoyment in finding unique pokemon by exploring different places.
 
 ![Alt Colors Off](/screenshots/alt_pokemon_colors_off.png?raw=true) ![Alt Colors On](/screenshots/alt_pokemon_colors_on.png?raw=true)
-  - The third option, `MUSIC` will enable or disable new music tracks in the game. (Default: OG) Set it to OG+ to play new music tracks when they are meant to be played. At the moment it controls only one or two minor tracks, such as Giovanni's Theme. (unused music from Pokemon Yellow's code) More music will likely be added in the future.
+  - The third option, `MUSIC` will enable or disable new music tracks in the game. (Default: OG+) OG+ will play new music tracks when they are meant to be played. At the moment it controls only one or two minor tracks, such as Giovanni's Theme. (unused music from Pokemon Yellow's code) More music will likely be added in the future.
   - The fourth option, `AUDIO PAN` will enable or disable stereo audio panning (Default: OFF). The game uses stereo audio by default, but every channel is played at equal volume throughout the right and left speaker, so it sounds like mono. With this turned on the game music sounds a bit more dynamic by panning certain channels to left or right. This was an option in Pokemon Yellow that was ported to this romhack.
   - The fifth option, `BIKE SONG` will enable or disable the music that plays while on the bicycle (Default: ON). Since the bicycle music plays 100% of the time you are using the bicycle, it gets a bit old after a while. If turned off, the only time you'll hear the music is in Cycling Road. This way you can enjoy all the music in the game, not just the bicycle song.
   - The sixth option, `GBC FADE` will enable or disable smoother fade animations on the GBC. (Default: OFF) Fade animations will be a lot smoother in framerate. Like when you enter a building or fly to another town. This feature only works on GBC.
@@ -52,29 +50,24 @@ The third page contains settings related to battles.
 ![Options Third Page](/screenshots/options_page_3.png?raw=true)
 -
   - The first four options, `GHST→PSY`, `ICE→FIRE`, `BUG→PSN`, `PSN→BUG` all control type matchups in the game. The option on the left for these is the original game's type matchup, and the right option is what it was changed to in Gen 2. These options allow you to fine-tune how you want type matchups to behave. The only non-original one is GHSTxPSY, which is set to make Ghost super effective against Psychic by default. In the original game Psychic was immune to Ghost, which the game even tells you isn't supposed to be the case in NPC dialogue.
-  - The fifth option, `EXP BAR` enables or disables an experience bar visual in battle. (Default: OFF) This feature allows easier tracking of experience while in battle.
+  - The fifth option, `EXP BAR` enables or disables an experience bar visual in battle. (Default: ON) This feature allows easier tracking of experience while in battle.
   
    ![Exp bar](screenshots/exp_bar.png?raw=true)
-  - The sixth option, `NPC EVs` enables or disables giving opponent trainer pokemon Stat EXP based on their pokemon's level. (Default: OFF) In the original game, they receive 0 stat EXP regardless of the level of their pokemon. This means if the player has a lot of stat EXP, they will totally outclass similar-level trainer pokemon. Turning this feature on will give trainer pokemon stat EXP scaled with their level to a reasonable degree. This makes the game a bit harder but can be fun for more experienced players.
-  - The seventh option `NPC PP` enables or disables tracking of PP for opponents. (Default: OFF) In the original game, opponents have infinite PP on their moves. Turning this on means they can run out of PP if they use some moves too many times. Makes the game a bit easier. But it might be good for later on in the game when recovery moves are more common.
+  - The sixth option, `NPC EVs` enables or disables giving opponent trainer pokemon Stat EXP based on their pokemon's level. (Default: ON) In the original game, they receive 0 stat EXP regardless of the level of their pokemon. This means if the player has a lot of stat EXP, they will totally outclass similar-level trainer pokemon. Turning this feature on will give trainer pokemon stat EXP scaled with their level to a reasonable degree. This makes the game a bit harder but can be fun for more experienced players.
+  - The seventh option `NPC PP` enables or disables tracking of PP for opponents. (Default: ON) In the original game, opponents have infinite PP on their moves. Turning this on means they can run out of PP if they use some moves too many times. Makes the game a bit easier. But it might be good for later on in the game when recovery moves are more common.
 
 The fourth page contains Sprite-related options. 
  
 ![Options Fourth Page](/screenshots/options_page_4.png?raw=true)
-  - The first option, `BACK` changes the back sprites in the game. (Default: OG) There are two possible settings:
+  - The first option, `BACK` changes the back sprites in the game. (Default: SW97) There are two possible settings:
     - OG: Use the original blocky back sprites. 
     
     ![Original back sprite venusaur](/gfx/pokemon/back/venusaurb.png?raw=true) ![Original back sprite blastoise](/gfx/pokemon/back/blastoiseb.png?raw=true) ![Original back sprite charizard](/gfx/pokemon/back/charizardb.png?raw=true)
     - SW97: Use the spaceworld 1997 back sprites. (some have been touched up a bit) These are higher resolution while still matching the original game's style. Very nice!
     
     ![Spaceworld back sprite venusaur](/gfx/pokemon/back_sw/venusaurb.png?raw=true) ![Spaceworld back sprite blastoise](/gfx/pokemon/back_sw/blastoiseb.png?raw=true) ![Spaceworld back sprite charizard](/gfx/pokemon/back_sw/charizardb.png?raw=true)
-  - The second option, `ICONS` changes the menu icons and overworld sprites in the game. (Default: OG) There are two possible settings:
-    - OG: Use the original icons in the overworld and on the pokemon menu.
-    - OG+: Use the original icons with some new ones. Some are based on beta sprites, some are completely newly designed sprites with the intention of being similar to the non-specific icon design of the original game, and ONE based on Gen 2's menu sprites (jellyfish sprite). This also will give unique sprites to Brock, Misty, Lt.Surge, Erika, Sabrina, and Blaine. They are all sprites that were designed from scratch to match the game's original trainer sprites, EXCEPT blaine's sprite, which is borrowed from Gen 2.
 
- ![Menu Icons 1](/gfx/icons/menusprites1.png?raw=true) ![Menu Icons 2](/gfx/icons/menusprites2.png?raw=true)
-    ![Brock](/gfx/sprites/brock.png?raw=true) ![Misty](/gfx/sprites/misty.png?raw=true) ![LtSurge](/gfx/sprites/lt_surge.png?raw=true) ![Erika](/gfx/sprites/erika.png?raw=true) ![Sabrina](/gfx/sprites/sabrina.png?raw=true) ![Blaine](/gfx/sprites/blaine.png?raw=true)
-  - If you press A on `EDIT` of the 3rd Option, it will open 5 new pages on another level. These 5 pages are for customizing the front sprites of the game. You can press A or SELECT to see which front sprite you chose for each option.
+  - If you press A on `EDIT` of the 2nd Option, it will open 5 new pages on another level. These 5 pages are for customizing the front sprites of the game. You can press A or SELECT to see which front sprite you chose for each option.
 
 ![Front Sprite Options 1](/screenshots/front_sprite_options1.png?raw=true)
 ![Front Sprite Options 2](/screenshots/front_sprite_options2.png?raw=true)
@@ -90,16 +83,16 @@ The fifth page contains some additional options.
 
 ![Options Fifth Page](/screenshots/options_page_5.png?raw=true)
 - Turn on or off the learnset feature in the game. On by default. You can unlock learnsets for pokemon in various ways (discussed in the "New Features" section if this is turned on)
-- Turn on a new title screen created for PureRGB. By default, it displays the original game's title screen for the version you are playing.
+- Turn off a new title screen created for RGB Tweaked. Toggling it off will display the original game's title screen.
   
-![Pure Red Title](/screenshots/pure_red_title0.png?raw=true)![Pure Green Title](/screenshots/pure_green_title0.png?raw=true)![Pure Blue Title](/screenshots/pure_blue_title0.png?raw=true)
+![Red Tweaked Title](/screenshots/tweaked_pokered_titlescreen.png?raw=true)![Green Tweaked Title](/screenshots/tweaked_pokegreen_titlescreen.png?raw=true)![Blue Tweaked Title](/screenshots/tweaked_pokeblue_titlescreen.png?raw=true)
 - You can skip the intro when booting up the game and go straight to the title screen.
 - You can set battles to have less intense flashing animations.
 - You can switch between Imperial and Metric units used in pokedex info.
 
 ## Quality of Life Enhancements
 - Stone evos and trade evos have full movesets
-- Trade evos evolve at level 37
+- Trade evos can evolve by levelling up.
 - The overworld runs at a smoother framerate.
 - TMs are all useful attacks
 - Level up movesets vastly improved for all pokemon
@@ -265,7 +258,7 @@ The fifth page contains some additional options.
 
 - The FISHING GURU now lives in cerulean city and you can get the OLD ROD a bit earlier. Same with the GOOD ROD, which is now in the old FISHING GURU's house in vermilion city. As for the last two gurus on Route 12 and in Fuchsia city, whoever you meet first will give you a SUPER ROD. The other will be a bit distraught at the unexpected turn of events, and then give you a FISHING GUIDE. This unlocks the ability to see fishing locations for pokemon in the pokedex.
 
-![Fishing locations good rod](/screenshots/areas_good_rod.png?raw=true) ![Fishing Locations old rod](/screenshots/areas_old_rod.png?raw=true) ![Fishing locations super rod](/screenshots/areas_super_rod.png?raw=true)
+![Fishing locations good rod](/screenshots/pkmn_locations/pkmn_locations_148.png?raw=true) ![Fishing Locations old rod](/screenshots/pkmn_locations/pkmn_locations_147.png?raw=true) ![Fishing locations super rod](/screenshots/pkmn_locations/pkmn_locations_149.png?raw=true)
 
 - You can phone home, professor oak, even your rival from the telephones in Celadon City's Department Store. You can choose how the conversations play out, and they even can have some subsequent small events based on what you choose when you go back to PALLET TOWN!
 
@@ -365,7 +358,6 @@ The fifth page contains some additional options.
 - A little animation plays when you use FLASH to light up Rock Tunnel.
 - The power plant uses a new tileset based on a beta tileset from Spaceworld 97 that was intended for the power plant.
 - When you engage static pokemon (Articuno/Moltres/Zapdos/Mewtwo/Snorlax) a special animation will play for each before battle starts.
-- If you turn on OG+ Icons mode, in diglett's cave you will see DIGLETTs popping up and down visually and hiding from you.
 - If you're playing on SGB or GBC, talking to the "Saffron City - City of Rainbow Dreams" sign will switch between a special Rainbow palette (unused code from the original game) and the original palette.
 - Using a poke doll in battle will have a little animation now.
 - In seafoam islands, you can see the water currents moving visually. When you are close to them, there are also proximity "fast water" sound effects!
@@ -580,6 +572,4 @@ The version-specific visuals of japanese pokemon green were added into PureGreen
 - I will not make a version without learnset / TM / trainer party changes
 - I will not add beta pokemon to the game (just about all of the decent beta mons for gen 1 were already repurposed as official pokemon in later games)
 - I will not add "EXP.SHARE" to the game. The game is balanced around raising each pokemon you have in battle, and it's a hallmark of gen 1! It takes discipline to raise each one up rather than ignoring them! Later on in the game you have many options to raise pokemon quickly, such as duplicating rare candies with the item duplication glitch, buying rare candies in a secret area, the BOOSTER CHIP, easy repeatable training in the SAFARI ZONE, and boosted EXP wild pokemon in Route 23. So don't worry too much about it.
-- I will not add a "Caught Pokemon" indicator in battle. Why? It changes the feel of the game. You don't really have to ever look at the pokedex if this feature is introduced. Also, I think it's a hallmark of gen 1 to not have this feature and to memorize which pokemon you have caught already.
-- I will not add a "Move Relearner". This really changes the feel of gen 1, where you have to think carefully about deleting learnset moves. Don't worry, most great moves can be relearned via TMs anyway. The excellent moves are later in learnsets, so it's unlikely you'll miss them.
 - If you want less changes but still the quality of life / bugfix stuff, I'd recommend taking a look at the romhack called shinpokered.

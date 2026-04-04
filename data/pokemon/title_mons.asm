@@ -22,16 +22,16 @@ IF DEF(_BLUE)
 	db STARTER2
 	db STARTER1
 	db STARTER3
-	db KOFFING
+	db KINGLER
 	db HITMONLEE
 	db VULPIX
 	db CHANSEY
 	db AERODACTYL
 	db JOLTEON
 	db SNORLAX
-	db TANGELA
+	db GLOOM
 	db SLOWPOKE
-	db VENONAT
+	db DODUO
 	db PORYGON
 	db GENGAR
 	db RAICHU
@@ -43,7 +43,7 @@ IF DEF(_GREEN) ; PureRGBnote: GREENBUILD: the pokemon that appear on the start s
 	db DIGLETT
 	db FEAROW
 	db GRIMER
-	db KINGLER
+	db KOFFING
 	db ZUBAT
 	db CATERPIE
 	db EEVEE

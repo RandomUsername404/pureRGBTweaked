@@ -8,7 +8,7 @@
 	db 210 ; base exp
 
 	INCBIN "gfx/pokemon/front/blastoise.pic", 0, 1 ; sprite dimensions
-	dw BlastoisePicFront, BlastoisePicBackSW
+	dw BlastoisePicFrontAlt, BlastoisePicBackSW
 
 	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -48,10 +48,10 @@
 	SEISMIC_TOSS ; YellowLegacy
 	; end
 
-	db BANK(BlastoisePicFront)
 	db BANK(BlastoisePicFrontAlt)
+	db BANK(BlastoisePicFront)
 	db BANK(BlastoisePicBack)
 	db BANK(BlastoisePicBackSW)
 
-	dw BlastoisePicFrontAlt, BlastoisePicBack
+	dw BlastoisePicFront, BlastoisePicBack
 

@@ -8,7 +8,7 @@
 	db 215 ; base exp
 
 	INCBIN "gfx/pokemon/front/articuno.pic", 0, 1 ; sprite dimensions
-	dw ArticunoPicFront, ArticunoPicBackSW
+	dw ArticunoPicFrontAlt, ArticunoPicBackSW
 
 	db WING_ATTACK, ICE_BEAM, MIST, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
@@ -45,10 +45,10 @@
 	; end
 
 
-	db BANK(ArticunoPicFront)
 	db BANK(ArticunoPicFrontAlt)
+	db BANK(ArticunoPicFront)
 	db BANK(ArticunoPicBack)
 	db BANK(ArticunoPicBackSW)
 
-	dw ArticunoPicFrontAlt, ArticunoPicBack
+	dw ArticunoPicFront, ArticunoPicBack
 

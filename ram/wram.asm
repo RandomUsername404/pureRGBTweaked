@@ -2717,9 +2717,9 @@ wCurMapScript:: db
 wSafariType:: db 
 
 ; bit 0 -> Squirtle sprite version: 0 = RB, 1 = RG
-; bit 1 -> Blastoise sprite version: 0 = RB, 1 = RG
-; bit 2 -> Pidgeot sprite version: 0 = RB, 1 = RG
-; bit 3 -> Bulbasaur sprite version: 0 = RB, 1 = RG
+; bit 1 -> Blastoise sprite version: 0 = RG, 1 = RB
+; bit 2 -> Pidgeot sprite version: 0 = RG, 1 = RB
+; bit 3 -> Bulbasaur sprite version: 0 = RG, 1 = RB
 ; bit 4 -> Golbat sprite version: 0 = Y, 1 = RB
 ; bit 5 -> Mankey sprite version: 0 = RB, 1 = RG
 ; bit 6 -> Arcanine sprite version: 0 = RB, 1 = RG
@@ -2727,9 +2727,9 @@ wSafariType:: db
 wSpriteOptions:: db
 
 ; bit 0 -> Back sprites: 0 = RB, 1 = Space World
-; bit 1 -> Nidorino sprite version: 0 = RB, 1 = RG
+; bit 1 -> Nidorino sprite version: 0 = RG, 1 = RB
 ; bit 2 -> Exeggutor sprite version: 0 = Y, 1 = RB
-; bit 3 -> Menu icon sprites: 0 = Original, 1 = Enhanced Original
+; bit 3 -> Menu icon sprites: 0 = Original, 1 = Enhanced Original ; RGBTweaked: not used anymore
 ; bit 4 -> Electabuzz sprite version: 0 = RB, 1 = RG
 ; bit 5 -> Raticate sprite version: 0 = RB, 1 = RG
 wSpriteOptions2:: db

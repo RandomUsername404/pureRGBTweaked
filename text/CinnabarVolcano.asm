@@ -583,9 +583,9 @@ _CinnabarVolcanoWestMagmarTransformText4::
 	para "The tectonic power"
 	line "of the volcano"
 	cont "flows through it!"
-	para "GROUND-type moves"
-	line "will get bonus"
-	cont "damage!"
+	para "Its GROUND-type"
+	line "moves will deal"
+	cont "bonus damage!"
 	done
 
 _Route21CinnabarVolcanoSignText::

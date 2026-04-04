@@ -9,31 +9,31 @@ NoThanksText:
 	db "NO THANKS@"
 
 PrizeMenuMon1Entries:
+	db ABRA
 	db JYNX
 	db ELECTABUZZ
-	db TANGELA
 	db "@"
 
 PrizeMenuMon1Cost:
-	bcd2 500
-	bcd2 500
-	bcd2 500
+	bcd2 400
+	bcd2 750
+	bcd2 750
 	db "@"
 
 PrizeMenuMon2Entries:
-	db DRATINI
 	db DITTO
+	db DRATINI
 	db PORYGON
 	db "@"
 
 PrizeMenuMon2Cost:
-	bcd2 2000
 	bcd2 1000
+	bcd2 3000
 	bcd2 5000
 	db "@"
 
 PrizeMenuTMsEntries:
-	db TM_SWORDS_DANCE
+	db TM_DRAGON_RAGE
 	db TM_HYPER_BEAM
 	db TM_SUBSTITUTE
 	db "@"

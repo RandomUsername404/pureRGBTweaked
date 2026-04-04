@@ -8,7 +8,7 @@
 	db 88 ; base exp
 
 	INCBIN "gfx/pokemon/front/machop.pic", 0, 1 ; sprite dimensions
-	dw MachopPicFront, MachopPicBackSW
+	dw MachopPicFrontAlt, MachopPicBackSW
 
 	db KARATE_CHOP, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -43,10 +43,10 @@
 	; end
 
 
-	db BANK(MachopPicFront)
 	db BANK(MachopPicFrontAlt)
+	db BANK(MachopPicFront)
 	db BANK(MachopPicBack)
 	db BANK(MachopPicBackSW)
 
-	dw MachopPicFrontAlt, MachopPicBack
+	dw MachopPicFront, MachopPicBack
 
