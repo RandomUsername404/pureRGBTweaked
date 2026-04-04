@@ -397,13 +397,13 @@ CableClubOptionsText:
 VersionText:
 db " "
 IF DEF(_RED)
-	db "Red Tweaked"
+	db "RedTWK"
 ENDC
 IF DEF(_BLUE)
-	db "Blue Tweaked"
+	db "BlueTWK"
 ENDC
 IF DEF(_GREEN)
-	db "Green Tweaked"
+	db "GreenTWK"
 ENDC
 db " v"
 INCLUDE "version_number.asm"

@@ -220,7 +220,7 @@ SetPal_TitleScreen:
 	ldh a, [hGBC]
 	and a
 	ld de, BlkPacket_PureTitlescreen ; gbc works with always using these packets
-	jr nz, .normalPalPacket
+	jr nz, .gbc
 	ld a, [wSpriteOptions2]
 	bit BIT_NEW_TITLE_SCREEN, a
 	ld hl, PalPacket_PureTitlescreen_SGB
@@ -231,6 +231,12 @@ SetPal_TitleScreen:
 .normalPalPacket
 	ld hl, PalPacket_Titlescreen
 .next
+	ret
+.gbc
+	ld a, [wSpriteOptions2]
+	bit BIT_NEW_TITLE_SCREEN, a
+	jr z, .normalPalPacket
+	ld hl, PalPacket_PureTitlescreen_GBC
 	ret
 
 ; used mostly for menus and the Oak intro

@@ -198,3 +198,6 @@ SlowpokeSprite::        INCBIN "gfx/sprites/extra_overworld/slowpoke.2bpp"
 SpearowSprite::         INCBIN "gfx/sprites/extra_overworld/spearow.2bpp"
 WigglytuffSprite::      INCBIN "gfx/sprites/extra_overworld/wigglytuff.2bpp"
 ZapdosSprite::          INCBIN "gfx/sprites/extra_overworld/zapdos.2bpp"
+
+SECTION "Extra fluff", ROMX
+PokemonLogoJPGraphics::     INCBIN "gfx/title/pokemon_logo_JP.2bpp"

@@ -238,6 +238,7 @@ ROMX $40
 ROMX $41
 	org $4000
 	"NPC Sprites 6"
+	"Extra fluff"
 ROMX $42
 	"Text 12"
 	"Maps 22"
