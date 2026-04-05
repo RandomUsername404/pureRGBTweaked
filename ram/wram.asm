@@ -1921,7 +1921,10 @@ wSavedSpriteScreenX:: db
 wSavedSpriteMapY:: db
 wSavedSpriteMapX:: db
 
-	ds 3 ; unused 3 bytes
+; RGB Tweaked: ADDED: The Pokedex will now remember the user's position
+wPokedexPlace1:: db  
+wPokedexPlace2:: db  
+	ds 1 ; 1 unused byte
 
 ;;; PureRGBnote: ADDED: new properties in this previously empty space
 wTownMapAreaState:: ; view which state is which in map_pokemon_areas.asm

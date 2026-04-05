@@ -14,6 +14,12 @@ ShowPokedexMenu:
 	inc a
 	ld [wPokedexNum], a
 	ldh [hJoy7], a
+; RGB Tweaked: ADDED: The Pokedex will now remember the user's position
+	ld a, [wPokedexPlace1]
+	ld [wListScrollOffset], a
+	ld a, [wPokedexPlace2]
+	ld [wCurrentMenuItem], a
+;;;
 .setUpGraphics
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
@@ -45,6 +51,12 @@ ShowPokedexMenu:
 	cp 2
 	jr z, .startPressed
 .exitPokedex
+; RGB Tweaked: ADDED: The Pokedex will now remember the user's position
+	ld a, [wListScrollOffset]
+	ld [wPokedexPlace1], a
+	ld a, [wCurrentMenuItem]
+	ld [wPokedexPlace2], a
+;;;
 	xor a
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld [wCurrentMenuItem], a
