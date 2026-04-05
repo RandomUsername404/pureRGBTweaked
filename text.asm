@@ -163,6 +163,7 @@ INCLUDE "text/SaffronAbandonedBuilding.asm"
 INCLUDE "text/ViridianSchoolHouseQuiz.asm"
 INCLUDE "text/PewterPokecenter.asm"
 INCLUDE "text/VermilionPokecenter.asm"
+INCLUDE "text/LavenderPokecenter.asm"
 
 
 SECTION "Text 7", ROMX
@@ -176,7 +177,6 @@ INCLUDE "text/BikeShop.asm"
 INCLUDE "text/CeruleanMart.asm"
 INCLUDE "text/CeruleanBadgeHouse.asm"
 INCLUDE "text/CeruleanOldRodHouse.asm"
-INCLUDE "text/LavenderPokecenter.asm"
 INCLUDE "text/PokemonTower1F.asm"
 INCLUDE "text/PokemonTower2F.asm"
 INCLUDE "text/PokemonTower3F.asm"

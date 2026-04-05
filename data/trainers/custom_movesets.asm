@@ -311,7 +311,7 @@ ChampArenaSurgeMoveset1:
 	db SEISMIC_TOSS
 	db AGILITY
 	db DOUBLE_TEAM
-	db SURF ; RGB Tweaked: illegal move, I know. Surge doesn't play by the rules.
+	db SURF
 	; magnemite
 	db SUPERSONIC
 	db DOUBLE_EDGE
@@ -326,7 +326,7 @@ ChampArenaSurgeMoveset1:
 ChampArenaSurgeMoveset2:
 	; raichu
 	db THUNDERBOLT
-	db SURF ; RGB Tweaked: illegal move, I know. Surge doesn't play by the rules.
+	db SURF
 	db BODY_SLAM
 	db THUNDER_WAVE
 	; tangela

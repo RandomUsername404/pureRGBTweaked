@@ -23,7 +23,7 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	db VOLCANIC_MAGMAR, 99
 	db ARMORED_MEWTWO, 99
 	db HARDENED_ONIX, 99
-	db WINTER_DRAGONAIR, 99
+	db PIKACHU, 99
 	db MAROWAK, 99
 	db -1 ; end
 
@@ -103,7 +103,7 @@ IF DEF(_DEBUG)
 	ld a, 10
 	ld [hl], a   ; ROCK_SLIDE
 
-	; Winter Dragonair gets ICE_BEAM, FLY, HYPNOSIS and SCREECH.
+	; Pikachu gets ICE_BEAM, FLY, HYPNOSIS and SCREECH.
 	ld hl, wPartyMon5Moves
 	ld a, ICE_BEAM
 	ld [hli], a
@@ -263,6 +263,7 @@ DebugNewGameItemsList:
 	db HM_FLY, 1
 	db TM_SUBSTITUTE, 20
 	db TOPSECRETKEY, 1
+	db THUNDER_STONE, 1
 	db -1 ; end
 
 ELSE

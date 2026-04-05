@@ -162,3 +162,26 @@ _PokemonFanClubChairLongOne::
 	para "This is a long"
 	line "story!"
 	done
+
+_PokemonFanClubPikachuSurfGreetText::
+	text "PIKACHU: Chu!"
+	line "Chu!"
+	
+	para "This PIKACHU seems"
+	line "happy to see your"
+	cont "@"
+	text_ram_namebuffer
+	text "!"
+	
+	para "It leans in and"
+	line "whispers some-"
+	cont "thing into its"
+	cont "ear<...>"
+	
+	para "It's a secret"
+	line "technique!"
+	prompt
+
+_PokemonFanClubPikachuSurfByeText::
+	text "PIKACHU: Chuuuu!"
+	done

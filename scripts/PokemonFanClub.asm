@@ -105,18 +105,54 @@ PokemonFanClubSeelFanText:
 	text_far _PokemonFanClubSeelFanYoursText
 	text_end
 
+; RGB Tweaked: the Fan Club Pikachu turns into a SURF Move Tutor if the player has beaten the E4
+; you need a PIKACHU or RAICHU in your first party slot
 PokemonFanClubPikachuText:
 	text_asm
+	CheckEvent EVENT_BECAME_CHAMP
+	jr z, .defaultText
+	ld a, [wPartySpecies]
+	cp PIKACHU
+	jr z, .surfTutor
+	cp RAICHU
+	jr z, .surfTutor
+.defaultText
 	ld hl, .Text
 	rst _PrintText
 	ld a, PIKACHU
 	call PlayCry
+	jr .done
+.surfTutor
+	ld [wNamedObjectIndex], a
+	call GetMonName
+	ld hl, .GreetText
+	rst _PrintText
+	ld a, SURF
+	ld [wMoveNum], a
+	xor a
+	ld [wWhichPokemon], a
+	ld a, [wMoveNum]
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyToStringBuffer
+	predef LearnMove
+	ld hl, .ByeText
+	rst _PrintText
+.done
 	ld c, DEX_PIKACHU - 1
 	callfar SetMonSeen
 	rst TextScriptEnd
 
-.Text
+.Text:
 	text_far _PokemonFanClubPikachuText
+	text_end
+
+.GreetText:
+	text_far _PokemonFanClubPikachuSurfGreetText
+	text_end
+
+.ByeText:
+	text_far _PokemonFanClubPikachuSurfByeText
 	text_end
 
 PokemonFanClubSeelText:
