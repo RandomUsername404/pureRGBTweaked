@@ -43,6 +43,7 @@ SaveFileUpdateCheck::
 	jr z, .updateSave
 	cp INTERNAL_VERSION_2_7_0
 	jr c, BeforeVersion2_7_0SaveFileUpdateScript
+	cp INTERNAL_VERSION_1_0_0 ; RGB Tweaked: first RGB Tweaked release, based on PureRGB v2.7.2
 	; TODO: future save file updates go here
 	jr .askPalletWarp
 .updateSave

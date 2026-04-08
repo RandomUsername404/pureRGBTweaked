@@ -489,7 +489,7 @@ RocketPasswordMenu::
 
 SaveFileUpdaterMenu::
 	dw TwoOptionMenu
-	db "Before v2.6.0"
+	db "Pure pre2.6.0"
 	next "Original Game@"
 
 ScytherPinsirMenu::

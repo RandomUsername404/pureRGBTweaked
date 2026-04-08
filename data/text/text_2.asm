@@ -1892,5 +1892,6 @@ _SaveFileUpdateWarpText::
 	cont "will reduce bugs"
 	cont "from changing"
 	cont "to a new version."
-	para "Warp to PALLET?"
+	para "Warp to PALLET"
+	line "TOWN?"
 	done
