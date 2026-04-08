@@ -111,6 +111,7 @@ FightingDojoKarateMasterPostBattleScript:
 	ld [wJoyIgnore], a
 	SetEventRange EVENT_BEAT_KARATE_MASTER, EVENT_BEAT_FIGHTING_DOJO_TRAINER_3
 	ld d, FIGHTINGDOJO_KARATE_MASTER
+	call GBFadeInFromWhite
 	callfar MakeSpriteFacePlayer
 	ld hl, wCurrentMapScriptFlags
 	res BIT_MAP_LOADED_AFTER_BATTLE, [hl]
