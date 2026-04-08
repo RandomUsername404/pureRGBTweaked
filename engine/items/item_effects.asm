@@ -3334,6 +3334,10 @@ WaterTileSetIsNextTileShoreOrWater::
 	jr z, .skipShoreTiles ; if it's the Vermilion Dock tileset
 	cp FACILITY
 	jr z, .skipShoreTiles
+	cp GYM
+	jr z, .skipShoreTiles
+	cp DOJO
+	jr z, .skipShoreTiles
 	cp VOLCANO
 	jr z, .volcanoTiles
 	ld a, [wTileInFrontOfPlayer] ; tile in front of player
