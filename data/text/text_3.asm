@@ -403,5 +403,5 @@ _LetOutAScreechText::
 
 _ScreechesGettingFainterText::
 	text "The screeches are"
-	line "getting fainter..."
+	line "getting fainter."
 	prompt

@@ -79,8 +79,9 @@ DEF SHOW EQU $15
 	const HS_OAKS_LAB_OAK_2                ; 31
 	const HS_VIRIDIAN_GYM_GIOVANNI         ; 32
 	const HS_VIRIDIAN_GYM_ITEM             ; 33 X
+	const HS_VIRIDIAN_GYM_BLUE             ; RGB Tweaked: Added secret post-game boss fight
 	const HS_OLD_AMBER                     ; 34
-	const HS_CERULEAN_BULBASAUR            ; PureRGB Tweaked: Added GIFT Bulbasaur NPC
+	const HS_CERULEAN_BULBASAUR            ; RGB Tweaked: Added GIFT Bulbasaur NPC
 	const HS_CERULEAN_CAVE_1F_ITEM_1       ; 35 X
 	const HS_CERULEAN_CAVE_1F_ITEM_2       ; 36 X
 	const HS_CERULEAN_CAVE_1F_ITEM_3       ; 37 X
@@ -258,7 +259,7 @@ DEF SHOW EQU $15
 	const HS_CERULEAN_ROCKET_HOUSE_1F_GUY  ; NEW X
 	const HS_LAPRAS_GUY_CELADON  ; NEW X
 	; current length -> 245 (F5)
-	; 9 slots remain
+	; 7 slots remain
 
 DEF NUM_HS_OBJECTS EQU const_value
 
@@ -330,7 +331,7 @@ DEF NUM_HS_OBJECTS EQU const_value
 	const HS_VOLCANO_ITEM2 ; 40 X
 	const HS_VOLCANO_SURFING_RHYDON ; 41 X
 	const HS_VOLCANO_BOSS_MAGMAR ; 42 X
-	const HS_VOLCANO_SURFING_RHYDON_ENTRANCE ; PureRGB Tweaked: Fixed post-Moltres softlock
+	const HS_VOLCANO_SURFING_RHYDON_ENTRANCE ; RGB Tweaked: Fixed post-Moltres softlock
 	const HS_POWER_PLANT_ROOF_ZAPDOS ; 43 X
 	const HS_DIGLETTS_CAVE_DIGLETT1 ; 44 X
 	const HS_DIGLETTS_CAVE_DIGLETT2 ; 45 X

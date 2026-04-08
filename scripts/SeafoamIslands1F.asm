@@ -193,15 +193,6 @@ SeafoamIslands1FCheckLoadCustomTiles::
 	cp 32
 	ret c
 SeafoamIslands1FLoadCustomTiles:
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	jr nz, .shellSprite
-	ld hl, vNPCSprites tile $78
-	ld de, FossilSprite
-	lb bc, BANK(FossilSprite), 4
-	call CopyVideoData 
-	jr .doneLoad
-.shellSprite
 	call DragonairEventLoadCloysterSprite
 .doneLoad
 	; load "sand" tile onto default water tile
@@ -396,9 +387,7 @@ DragonairEventCloysterText:
 .promptNo
 	call DisplayTextPromptButton
 .no
-	ld a, [wSpriteOptions2]
-	bit BIT_MENU_ICON_SPRITES, a
-	call nz, DragonairEventLoadCloysterSprite
+	call DragonairEventLoadCloysterSprite
 	ld a, [wYCoord]
 	cp 3
 	jr nz, .ready

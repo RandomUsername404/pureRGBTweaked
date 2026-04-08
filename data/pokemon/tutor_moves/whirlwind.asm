@@ -6,7 +6,7 @@ WhirlwindLearnset:
 	dbit TRUE  ; VENUSAUR   ; 3
 	dbit FALSE ; CHARMANDER ; 4
 	dbit FALSE ; CHARMELEON ; 5
-	dbit FALSE ; CHARIZARD  ; 6
+	dbit TRUE  ; CHARIZARD  ; 6
 	dbit FALSE ; SQUIRTLE   ; 7
 	dbit FALSE ; WARTORTLE  ; 8
 	dbit FALSE ; BLASTOISE  ; 9

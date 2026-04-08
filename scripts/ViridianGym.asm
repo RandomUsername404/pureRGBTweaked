@@ -23,13 +23,30 @@ ViridianGym_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_VIRIDIANGYM_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_VIRIDIANGYM_END_BATTLE
 	dw_const ViridianGymGiovanniPostBattle,         SCRIPT_VIRIDIANGYM_GIOVANNI_POST_BATTLE
+	dw_const ViridianGymBluePostBattle,             SCRIPT_VIRIDIANGYM_BLUE_POST_BATTLE
 
 ViridianGymDefaultScript:
 	callfar CheckStartStopSpinning
 	; we're doing this here because CheckFightingMapTrainers needs to be run while we're in this map's bank
 	ld hl, wMovementFlags
 	bit BIT_SPINNING, [hl]
-	jp z, CheckFightingMapTrainers
+	jr nz, .spinning
+	call CheckFightingMapTrainers
+	ld hl, wCurrentMapScriptFlags
+	bit BIT_CUR_MAP_LOADED_1, [hl]
+	ret z
+	res BIT_CUR_MAP_LOADED_1, [hl]
+	CheckEvent EVENT_SHOW_RIVAL_VIRIDIAN
+	ret z
+	CheckHideShowState HS_VIRIDIAN_GYM_GIOVANNI
+	ret z
+	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_BLUE
+	ret nz
+	ld a, HS_VIRIDIAN_GYM_BLUE
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ret
+.spinning
 	jpfar LoadSpinnerArrowTiles
 
 ViridianGymGiovanniPostBattle:
@@ -90,6 +107,7 @@ ViridianGym_TextPointers:
 	dw_const ViridianGymCooltrainerM3Text,          TEXT_VIRIDIANGYM_COOLTRAINER_M3
 	dw_const ViridianGymGymGuideText,               TEXT_VIRIDIANGYM_GYM_GUIDE
 	dw_const PickUpItemText,                        TEXT_VIRIDIANGYM_ITEM1
+	dw_const ViridianGymBlueText,                   TEXT_VIRIDIANGYM_BLUE ; RGB Tweaked: must be placed before the script-only entries
 	dw_const ViridianGymGiovanniEarthBadgeInfoText, TEXT_VIRIDIANGYM_GIOVANNI_EARTH_BADGE_INFO
 	dw_const ViridianGymGiovanniReceivedTM27Text,   TEXT_VIRIDIANGYM_GIOVANNI_RECEIVED_TM27
 	dw_const ViridianGymGiovanniTM27NoRoomText,     TEXT_VIRIDIANGYM_GIOVANNI_TM27_NO_ROOM
@@ -411,6 +429,15 @@ ViridianGymGymGuideText: ; PureRGBnote: ADDED: gym guide gives you apex chips af
 	ld hl, ViridianGymGuidePostBattleText
 	rst _PrintText
 	jr .done
+
+; RGB Tweaked: Added secret post-game boss fight
+ViridianGymBlueText:
+	text_asm
+	call ViridianGymPrintBlueText
+	rst TextScriptEnd
+ViridianGymBluePostBattle:
+	call ViridianGymBluePostBattleScript
+	ret
 
 ReceivedApexChipsText8:
 	text_far _ReceivedApexChipsText

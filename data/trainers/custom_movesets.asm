@@ -66,6 +66,7 @@
 	const SS_ANNE_RIVAL2_1_MOVESET
 	const SS_ANNE_RIVAL2_2_MOVESET
 	const SS_ANNE_RIVAL2_3_MOVESET
+	const X_RIVAL3_FINAL_MOVESET
 
 ; input d = which moveset
 LoadTrainerMoveSet:
@@ -162,6 +163,7 @@ MoveSetMappings:
 	dw SSAnneRival2Moveset1
 	dw SSAnneRival2Moveset2
 	dw SSAnneRival2Moveset3
+	dw XRivalFinalMoveset
 
 ChampArenaErikaMoveset1:
 	; gloom
@@ -231,7 +233,7 @@ ChampArenaBlaineMoveset1:
 	; charizard
 	db SLASH
 	db FLAMETHROWER
-	db FLY
+	db WHIRLWIND
 	db EARTHQUAKE
 	; arcanine
 	db FIRE_BLAST
@@ -263,7 +265,7 @@ ChampArenaBlaineMoveset2:
 	; moltres
 	db SOLARBEAM
 	db FLAMETHROWER
-	db SKY_ATTACK
+	db WHIRLWIND
 	db RAZOR_WIND ; ROOST
 	; volcanic magmar
 	db BODY_SLAM
@@ -289,12 +291,12 @@ ChampArenaBlaineMoveset2:
 	db DOUBLE_TEAM
 	db SLASH
 	db SOLARBEAM
-	db STUN_SPORE
+	db SPORE
 
 ChampArenaSurgeMoveset1:
 	; raichu
 	db THUNDER
-	db SURF ; RGB Tweaked: illegal move, I know. Surge doesn't play by the rules.
+	db SURF
 	db BODY_SLAM
 	db THUNDER_WAVE
 	; voltorb
@@ -328,7 +330,7 @@ ChampArenaSurgeMoveset2:
 	db THUNDERBOLT
 	db SURF
 	db BODY_SLAM
-	db THUNDER_WAVE
+	db GLARE
 	; tangela
 	db MEGA_DRAIN
 	db STUN_SPORE
@@ -367,7 +369,7 @@ ChampArenaSabrinaMoveset1:
 	db REFLECT
 	db SEISMIC_TOSS
 	; golduck
-	db BUBBLEBEAM
+	db SURF
 	db PSYBEAM
 	db THUNDER_WAVE
 	db MEGA_DRAIN
@@ -385,7 +387,7 @@ ChampArenaSabrinaMoveset1:
 	db LOVELY_KISS
 	db ICE_PUNCH
 	db PSYBEAM
-	db BUBBLEBEAM
+	db SURF
 
 ChampArenaSabrinaMoveset2:
 	; alakazam
@@ -487,7 +489,7 @@ ChampArenaMistyMoveset1:
 	; starmie
 	db THUNDER
 	db SWIFT
-	db BUBBLEBEAM
+	db SURF
 	db THUNDER_WAVE
 	; seadra
 	db SMOKESCREEN
@@ -542,7 +544,7 @@ ChampArenaMistyMoveset2:
 	db DIG
 	db SEISMIC_TOSS
 	; dewgong
-	db AURORA_BEAM
+	db ICE_BEAM
 	db WITHDRAW
 	db SURF
 	db SKULL_BASH
@@ -562,7 +564,7 @@ ChampArenaLanceMoveset1:
 	db SUPERSONIC
 	db RAZOR_WIND ; ROOST
 	db HYPER_BEAM
-	db SKY_ATTACK
+	db WHIRLWIND
 	; lapras
 	db BLIZZARD
 	db THUNDERBOLT
@@ -582,7 +584,7 @@ ChampArenaLanceMoveset1:
 ChampArenaLanceMoveset2:
 	; arcanine
 	db DRAGON_RAGE
-	db FLAMETHROWER
+	db FIRE_BLAST
 	db HYPER_BEAM
 	db BONEMERANG
 	; snorlax
@@ -615,7 +617,7 @@ ChampArenaKogaMoveset1:
 	; venomoth
 	db MEGA_DRAIN
 	db SLEEP_POWDER
-	db PSYBEAM
+	db PSYCHIC_M
 	db DOUBLE_EDGE
 	; muk
 	db SLUDGE
@@ -647,7 +649,7 @@ ChampArenaKogaMoveset2:
 	; venomoth
 	db MEGA_DRAIN
 	db SLEEP_POWDER
-	db PSYBEAM
+	db PSYCHIC_M
 	db DOUBLE_EDGE
 	; muk
 	db SLUDGE
@@ -774,16 +776,16 @@ ChampArenaBrockMoveset1:
 ChampArenaBrockMoveset2:
 	; hardened onix
 	db BIND
-	db ROCK_SLIDE
+	db SKULL_BASH
 	db EARTHQUAKE
 	db SCREECH
 	; golbat
 	db CONFUSE_RAY
-	db WING_ATTACK
+	db WHIRLWIND
 	db BIDE
 	db SKULL_BASH
 	; golem
-	db ROCK_SLIDE
+	db SKULL_BASH
 	db DIG
 	db EXPLOSION
 	db SEISMIC_TOSS
@@ -2029,3 +2031,35 @@ PreE4Rival2Moveset3:
 	db SLUDGE
 	db CONSTRICT ; SIPHON SNAG
 	db BODY_SLAM
+
+XRivalFinalMoveset:
+	; kabutops
+	db SONICBOOM
+	db GLARE
+	db VICEGRIP
+	db MEGA_DRAIN
+	; volcanic magmar
+	db CONFUSE_RAY
+	db GLARE
+	db EARTHQUAKE
+	db THUNDERBOLT
+	; aerodactyl
+	db WHIRLWIND
+	db GLARE
+	db RAZOR_WIND ; ROOST
+	db BARRAGE
+	; lapras
+	db CONFUSE_RAY
+	db GLARE
+	db SURF
+	db ICE_BEAM
+	; kangaskhan
+	db DIZZY_PUNCH
+	db GLARE
+	db BODY_SLAM
+	db EARTHQUAKE
+	; hardened onix
+	db DEFENSE_CURL
+	db WITHDRAW
+	db GLARE
+	db SKULL_BASH

@@ -536,12 +536,7 @@ ChampArenaContinueText:
 
 ReloadChallengerSprite:
 	ld a, [wChampArenaChallenger]
-	ld hl, wSpriteOptions2
 	add a ; 2 data entries per sprite (OG+ sprite and OG sprite)
-	bit BIT_MENU_ICON_SPRITES, [hl]
-	jr nz, .noIncrement
-	inc a ; use the original sprite if menu icon sprites turned off
-.noIncrement
 	add a ; multiply by 2
 	add a ; multiply by 2 again (4 bytes per sprite data entry)
 	ld hl, OpponentSpriteArray
@@ -1366,11 +1361,21 @@ GymGuideDefeatedText:
 
 BlueDefeatedText:
 	SetEventA EVENT_ARENA_BEAT_BLUE
-	ld hl, .defeated
+	CheckEvent EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
+	ld hl, .defeatedText
+	jr z, .print
+	SetEvent EVENT_SHOW_RIVAL_VIRIDIAN
+	ld hl, .defeatedAgain
+.print
 	rst _PrintText
 	rst TextScriptEnd
-.defeated
+
+.defeatedText
 	text_far _ChampArenaRivalBeforeLeaves
+	text_end
+
+.defeatedAgain
+	text_far _ChampArenaRivalBeforeLeavesAgain
 	text_end
 
 ; INPUT:

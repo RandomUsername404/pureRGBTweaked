@@ -306,6 +306,7 @@ INCLUDE "text/FightingBrosHouse.asm"
 INCLUDE "text/FuchsiaMoveReminderHouse.asm"
 INCLUDE "text/Museum1F.asm"
 INCLUDE "text/Museum2F.asm"
+INCLUDE "text/ViridianGym_2.asm"
 
 SECTION "Pokédex Text", ROMX
 

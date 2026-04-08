@@ -241,30 +241,28 @@ _LanceIntroText::
 	prompt
 
 _LanceIntroText2::
-	text "LANCE: You're too"
-	line "relaxed to hold"
-	cont "on to that CHAMP"
-	cont "title anymore."
+	text "LANCE: <PLAYER>!"
+	para "A champion who"
+	line "won't fulfill"
+	cont "his duties."
 	para "My dragons and I"
-	line "belong on top!"
-	para "Whether it's you"
-	line "or <RIVAL>,"
-	cont "you can't keep"
-	cont "the title from me"
-	cont "any longer!"
+	line "have trained for"
+	cont "this moment."
+	para "The title belongs"
+	line "with someone who"
+	cont "will honor it."
+	para "That someone"
+	line "is me."
 	prompt
 
 _LanceLostText::
-	text "You're"
-	line "more dedicated"
-	cont "than I thought!"
+	text "Remarkable."
+	line "Simply remarkable."
 	prompt
 
 _LanceWonText::
-	text "Hear"
-	line "that roar?"
-	para "It's the sound"
-	line "of your defeat!"
+	text "My dragons"
+	line "are supreme."
 	prompt
 
 _KogaIntroText::
@@ -273,9 +271,9 @@ _KogaIntroText::
 	prompt
 
 _KogaIntroText2::
-	text "KOGA: You are"
-	line "full of surprises"
-	cont "child!"
+	text "KOGA: You are full"
+	line "of surprises,"
+	cont "<PLAYER>."
 	para "You've become"
 	line "one of the most"
 	cont "powerful trainers"
@@ -467,14 +465,13 @@ _RivalIntroText2::
 	cont "now I'm here to"
 	cont "take you down"
 	cont "once and for all!"
-	para "I'll always be"
-	line "a step ahead!"
+	para "I won't fall"
+	line "behind again!"
 	prompt
 
 _RivalLostText::
-	text "Tch."
-	line "I'll be back."
-	para "Just you wait."
+	text "Not good"
+	line "enough yet<...>"
 	prompt
 
 _RivalWonText::
@@ -674,6 +671,11 @@ _ChampArenaGymGuideBeforeLeaves::
 _ChampArenaRivalBeforeLeaves::
 	text "<RIVAL>: Feh!"
 	line "Don't get cocky."
+	done
+
+_ChampArenaRivalBeforeLeavesAgain::
+	text "<RIVAL>: <...>"
+	para "I need to go."
 	done
 
 _IndigoPlateauArenaAssistantOnlyEliteFourAllowed::

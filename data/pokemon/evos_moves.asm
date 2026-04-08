@@ -1532,6 +1532,7 @@ KabutopsEvosMoves:
 	db 49, EARTHQUAKE ; PureRGB
 	db 53, HYDRO_PUMP ; YellowLegacy
 	db 60, CRABHAMMER ; RGB Tweaked
+	db 66, VICEGRIP ; RGB Tweaked
 	db 0
 
 

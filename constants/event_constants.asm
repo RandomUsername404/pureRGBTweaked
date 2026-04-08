@@ -63,9 +63,9 @@
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_5
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_6
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
-	const EVENT_GOT_SQUIRTLE_FROM_OFFICER_JENNY ; PureRGB Tweaked: Added GIFT Squirtle NPC
+	const EVENT_BEAT_VIRIDIAN_GYM_BLUE ; RGB Tweaked: Added secret post-game boss fight
 
-	; pureRGB Tweaked: ~14 bits of unused event space
+	; RGB Tweaked: ~14 bits of unused event space
 
 ; Pewter City events
 	const_next $68
@@ -258,7 +258,9 @@ DEF CUSTOM_BALL_SNAPPED_FLAGS_START EQU const_value
 	const EVENT_SNAPPED_CAMERA_PIC_ANGEL_BALL
 	const EVENT_SNAPPED_CAMERA_PIC_BOMB_BALL
 	const EVENT_SNAPPED_CAMERA_PIC_PRISM_BALL
-	; pureRGBnote: ~9 bits of unused event space
+	const EVENT_GOT_SQUIRTLE_FROM_OFFICER_JENNY ; PureRGB Tweaked: Added GIFT Squirtle NPC
+		
+	; RGB Tweaked: ~8 bits of unused event space
 
 ; Celadon City events
 	const_next $180
@@ -1233,8 +1235,9 @@ DEF CHAMP_ARENA_BATTLE_EVENTS_END EQU const_value
 	const EVENT_ARENA_PLAYER_WALKING
 	const EVENT_ARENA_BATTLE_INITIATED
 	const EVENT_ARENA_ALL_CHALLENGERS_DEFEATED
+	const EVENT_SHOW_RIVAL_VIRIDIAN
 
-	; pureRGBnote: ~13 bits of unused event space
+	; RGBTweaked: ~12 bits of unused event space
 
 ; Cerulean Cave events
 	const_next $8C0

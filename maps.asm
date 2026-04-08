@@ -1183,6 +1183,7 @@ INCLUDE "scripts/CeruleanCity_2.asm"
 
 INCLUDE "data/maps/headers/ViridianGym.asm"
 INCLUDE "scripts/ViridianGym.asm"
+INCLUDE "scripts/ViridianGym_2.asm" ; RGB Tweaked: Added secret post-game boss fight
 INCLUDE "data/maps/objects/ViridianGym.asm"
 ViridianGym_Blocks: INCBIN "maps/ViridianGym.blk"
 

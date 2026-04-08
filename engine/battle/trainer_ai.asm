@@ -30,11 +30,17 @@ AIEnemyTrainerChooseMoves:
 	add hl, bc    ; advance pointer to forbidden move
 	ld [hl], $50  ; forbid (highly discourage) disabled move
 .noMoveDisabled
-;;;;;;;;;; PureRGBnote: ADDED: champ arena always uses 1, 2, 3, 4 move choice modifier functions for all opponents.
-	ld a, [wCurMap]
-	cp CHAMP_ARENA
-	ld hl, ChampArenaGenericMoveChoices 
-	jr z, .readTrainerClassData
+;;;;;;;;;; PureRGBnote: ADDED: champ arena always uses 1, 2, 3, 4 move choice modifier functions for all opponents.  
+	ld a, [wCurMap]  
+	cp CHAMP_ARENA  
+	ld hl, ChampArenaGenericMoveChoices   
+	jr z, .readTrainerClassData  
+	; RGB Tweaked: when RIVAL has been defeated twice in the CHAMP ARENA, set him up to use a better AI (the CHAMP ARENA one) for his final fight in Viridian Gym.
+	cp VIRIDIAN_GYM  
+	jr nz, .skipViridianCheck  
+	CheckEvent EVENT_SHOW_RIVAL_VIRIDIAN  
+	jr nz, .readTrainerClassData  
+.skipViridianCheck  
 ;;;;;;;;;;
 	ld hl, TrainerClassMoveChoiceModifications
 	ld a, [wTrainerClass]
