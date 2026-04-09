@@ -146,7 +146,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 134 | VAPOREON | WATER | — | 130 | 65 | 60 | 110 | 65 | 430 | — |
 | 135 | JOLTEON | ELECTRIC | — | 65 | 65 | 60 | 110 | 130 | 430 | — |
 | 136 | FLAREON | FIRE | — | 65 | 130 | 60 | 110 | 65 | 430 | — |
-| 137 | PORYGON* | NORMAL | **GHOST** | 65 | **80** | **90** | **100** | **80** | **415** | NORMAL |
+| 137 | PORYGON | NORMAL | **GHOST** | 65 | **80** | **90** | **100** | **80** | **415** | NORMAL |
 | 138 | OMANYTE | ROCK | WATER | 35 | 40 | 100 | 90 | 35 | 300 | — |
 | 139 | OMASTAR | ROCK | WATER | **75** | 60 | 125 | 115 | 55 | **430** | — |
 | 140 | KABUTO | ROCK | WATER | 30 | 80 | 90 | 45 | 55 | 300 | ROCK/**BUG** |
@@ -162,7 +162,6 @@ You can find an interactive version of the table below [right here.](https://she
 | 150 | MEWTWO | PSYCHIC | — | 106 | 110 | 90 | 154 | 130 | 590 | — |
 | 151 | MEW | PSYCHIC | — | 100 | 100 | 100 | 100 | 100 | 500 | — |
 
-\* PORYGON's new typing is a RGB Tweaked addition.
 
 ## "Secret" Pokémon & enemies
 
@@ -194,4 +193,4 @@ The MAGMA type makes a Pokémon immune to WATER and FIRE moves. MAGMA-types also
 
 ---
 
-See also: https://github.com/RandomUsername404/pureRGBTweaked/tree/master/data/pokemon/base_stats
+See also: [/data/pokemon/base_stats](../data/pokemon/base_stats)

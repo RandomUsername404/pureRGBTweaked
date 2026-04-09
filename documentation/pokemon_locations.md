@@ -17,7 +17,7 @@
 
 ### Trade & Gift Pokémon
 
-The following link goes over Trade and Gift Pokémon: https://github.com/RandomUsername404/pureRGBTweaked/blob/master/documentation/gift_trade_pokemon.md
+The following file goes over Trade and Gift Pokémon: [/documentation/gift_trade_pokemon.md](gift_trade_pokemon.md)
 
 
 ## Wild encounters
@@ -594,9 +594,9 @@ The following link goes over Trade and Gift Pokémon: https://github.com/RandomU
 ![kangaskhan_141](../screenshots/pkmn_locations/pkmn_locations_141.png?raw=true)
 
 
-**Moltres:**
+**Horsea:**
 
-![moltres_142](../screenshots/pkmn_locations/pkmn_locations_142.png?raw=true) ![moltres_143](../screenshots/pkmn_locations/pkmn_locations_143.png?raw=true) ![moltres_144](../screenshots/pkmn_locations/pkmn_locations_144.png?raw=true)
+![horsea_142](../screenshots/pkmn_locations/pkmn_locations_142.png?raw=true) ![horsea_143](../screenshots/pkmn_locations/pkmn_locations_143.png?raw=true) ![horsea_144](../screenshots/pkmn_locations/pkmn_locations_144.png?raw=true)
 
 **Seadra:**
 
@@ -711,9 +711,13 @@ The following link goes over Trade and Gift Pokémon: https://github.com/RandomU
 ![omastar_177](../screenshots/pkmn_locations/pkmn_locations_177.png?raw=true)
 
 
+**Kabuto:**
+
+![kabuto_178](../screenshots/pkmn_locations/pkmn_locations_178.png?raw=true)
+
 **Kabutops:**
 
-![kabutops_178](../screenshots/pkmn_locations/pkmn_locations_178.png?raw=true) ![kabutops_179](../screenshots/pkmn_locations/pkmn_locations_179.png?raw=true)
+![kabutops_179](../screenshots/pkmn_locations/pkmn_locations_179.png?raw=true)
 
 
 **Aerodactyl:**
@@ -767,10 +771,8 @@ The following link goes over Trade and Gift Pokémon: https://github.com/RandomU
 
 ---
 
-If you catch 50 Pokémon and talk to the AIDE in FUCHSIA CITY's meeting room building, you will unlock a new Pokédex mode that can show the exact wild Pokémon encounter rates when selecting areas on the map:
+If you catch 50 Pokémon, you can unlock the Pokédex’s **Wild Distribution Map** by speaking to Oak’s Aide in Fuchsia City’s meeting room. This mode allows you to view wild Pokémon encounter rates by area on the Town Map, including per-floor breakdowns for multi-floor dungeons:
 
 ![town map wild data](../screenshots/town_map_wild_data.png?raw=true)
 
-You can even select specific floors in dungeons with multiple of them.
-
-If you want to check these informations beforehand, see: https://github.com/RandomUsername404/pureRGBTweaked/blob/master/data/wild
+For a preview of this data, see: [data/wild](../data/wild)
