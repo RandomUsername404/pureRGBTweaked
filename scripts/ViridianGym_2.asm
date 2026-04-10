@@ -66,8 +66,8 @@ ViridianGymBluePostBattleScript::
 	ldh [hTextID], a
 	call DisplayTextID
 	call GBFadeOutToBlack
-	ld a, HS_VIRIDIAN_GYM_BLUE
-	ld [wMissableObjectIndex], a
+	ld a, TOGGLE_VIRIDIAN_GYM_BLUE
+	ld [wToggleableObjectIndex], a
 	predef HideObject
 	call UpdateSpritesAndDelay3
 	call GBFadeInFromBlack

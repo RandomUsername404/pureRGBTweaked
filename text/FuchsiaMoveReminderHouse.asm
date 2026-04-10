@@ -33,9 +33,13 @@ _MoveDeleterForgotText::
 	line "forgotten!"
 	prompt
 
-_MoveDeleterByeText::
+_MoveDeleterBye1Text::
 	text "Come visit me"
 	line "again!"
+	done
+
+_MoveDeleterBye2Text::
+	text "No problem!"
 	
 	para "Now, should I use"
 	line "my GREEN or my"
@@ -70,7 +74,7 @@ _MoveReminderSaidYesText::
 	prompt
 
 _MoveReminderNotEnoughMoneyText::
-	text "Hmmm..."
+	text "Hmmm<...>"
 
 	para "You don't have"
 	line "enough money!"

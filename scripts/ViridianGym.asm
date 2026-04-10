@@ -38,12 +38,12 @@ ViridianGymDefaultScript:
 	res BIT_CUR_MAP_LOADED_1, [hl]
 	CheckEvent EVENT_SHOW_RIVAL_VIRIDIAN
 	ret z
-	CheckHideShowState HS_VIRIDIAN_GYM_GIOVANNI
+	CheckHideShowState TOGGLE_VIRIDIAN_GYM_GIOVANNI
 	ret z
 	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_BLUE
 	ret nz
-	ld a, HS_VIRIDIAN_GYM_BLUE
-	ld [wMissableObjectIndex], a
+	ld a, TOGGLE_VIRIDIAN_GYM_BLUE
+	ld [wToggleableObjectIndex], a
 	predef ShowObject
 	ret
 .spinning

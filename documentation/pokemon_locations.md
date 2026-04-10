@@ -12,7 +12,7 @@
 | Vermilion Dock | Mew | 65 | Revealed by using Strength to push the truck. |
 | Seafoam Islands | Articuno | 50 | Legendary encounter. |
 | Victory Road 1F | Moltres | 50 | Legendary encounter. |
-| Cinnabar Volcano | Moltres | 70 | Alternative encounter in volcano area. |
+| Cinnabar Volcano | Moltres | 50 | Alternative encounter in volcano area. |
 | Cerulean Cave B1F | Mewtwo | 70 | Legendary encounter. |
 
 ### Trade & Gift Pokémon

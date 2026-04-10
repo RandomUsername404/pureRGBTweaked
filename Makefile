@@ -196,6 +196,10 @@ gfx/trade/game_boy.2bpp: tools/gfx += --remove-duplicates
 
 
 ### Catch-all graphics rules
+gfx/camera/%.2bpp: gfx/camera/%.png
+	$(RGBGFX) $(RGBGFXFLAGS) -o $@ $<
+	$(if $(tools/gfx),\
+		tools/gfx $(tools/gfx) -o $@ $@ || $$($(RM) $@ && false))
 
 %.2bpp: %.png
 	$(RGBGFX) --colors dmg $(RGBGFXFLAGS) -o $@ $<

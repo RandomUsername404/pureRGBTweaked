@@ -2513,7 +2513,7 @@ CinnabarVolcanoSurfingRhydonEntranceText:
 	rst _PrintText
 	ld a, RHYDON
 	call PlayCry
-	ld a, HS_VOLCANO_SURFING_RHYDON_ENTRANCE
+	ld a, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
 	call VolcanoHideSpriteEntry
 	rst TextScriptEnd
 .no

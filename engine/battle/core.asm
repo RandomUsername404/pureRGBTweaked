@@ -2117,6 +2117,7 @@ DrawEnemyHUDAndHPBar::
 	lb bc, 4, 12
 	call ClearScreenArea
 	callfar PlaceEnemyHUDTiles
+	; RGB Tweaked: added caught indicator in battle HUD
 	push hl
 	ld a, [wEnemyMonSpecies2]
 	ld [wPokedexNum], a
@@ -2343,6 +2344,7 @@ DisplayBattleMenu::
 	ld a, $1
 	ld [hli], a ; wMaxMenuItem
 	ld [hl], PAD_RIGHT | PAD_A ; wMenuWatchedKeys
+; RGB Tweaked: Pushing B in wild battle moves to RUN
 	ld a, [wIsInBattle]
 	dec a
 	jr nz, .leftColumn_WaitForInput_BPressedIgnore
@@ -2353,6 +2355,7 @@ DisplayBattleMenu::
 	jr nz, .rightColumn
 	bit B_PAD_B, a
 	jr nz, .BButtonPressed
+;;;;;;;;
 	jr z, .AButtonPressed ; the A button was pressed
 .rightColumn ; put cursor in right column of menu
 	ld a, [wBattleType]
@@ -4675,6 +4678,7 @@ CalculateDamage:
 ; EXPLODE_EFFECT halves defense.
 	cp EXPLODE_EFFECT
 	jr nz, .ok
+; RGB Tweaked: SELFDESTRUCT tweak
 	ldh a, [hWhoseTurn]
 	and a
 	ld a, [wPlayerMoveNum]
@@ -4683,6 +4687,7 @@ CalculateDamage:
 .checkSelfdestruct
 	cp SELFDESTRUCT
 	jr z, .ok ; skip defense halving for SELFDESTRUCT (Power already boosted in moves.asm. This allows the player to see the "correct" power in their MoveDex.)
+;;;;;;;;;;;;
 	srl c
 	jr nz, .ok
 	inc c ; ...with a minimum value of 1 (used as a divisor later on)
@@ -7264,12 +7269,12 @@ _LoadTrainerPic:
 	jr nz, .loadSprite
 ;;;;;;;;;; PureRGB Tweaked: ADDED: now THREE banks are used for trainer sprites instead of 1
 .defaultSprite
-	ld a, [wTrainerClass]
-	cp COOL_KID
+	ld a, [wCurOpponent]
+	cp OPP_COOL_KID
 	ld a, BANK("Pics 6") ; this is where most of the trainer pics are
 	jr c, .loadSprite
-	ld a, [wTrainerClass]  ; PureRGB Tweaked: reload wTrainerClass since "a" is being overwritten somewhere
-	cp JENNY
+	ld a, [wCurOpponent]  ; PureRGB Tweaked: reload wCurOpponent since "a" is being overwritten somewhere (need to check if it's still true after the move to wCurOpponent from wTrainerClass, but I don't see why it wouldn't)
+	cp OPP_JENNY
 	ld a, BANK(KidPic) ; this is where extra trainer pics are (trainers after Cool Kid in ID)
 	jr c, .loadSprite
 	ld a, BANK(JennyPic) ; PureRGB Tweaked: new trainer pics in Pics 12

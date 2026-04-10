@@ -130,9 +130,14 @@ ENDM
 	toggle_consts_for VIRIDIAN_GYM
 	const TOGGLE_VIRIDIAN_GYM_GIOVANNI         ; 32
 	const TOGGLE_VIRIDIAN_GYM_ITEM             ; 33 X
+	const TOGGLE_VIRIDIAN_GYM_BLUE             ; RGB Tweaked: Added secret post-game boss fight
 
 	toggle_consts_for MUSEUM_1F
 	const TOGGLE_OLD_AMBER                     ; 34
+
+	; RGB Tweaked: Added GIFT Bulbasaur NPC
+	toggle_consts_for CERULEAN_TRADE_HOUSE
+	const TOGGLE_CERULEAN_BULBASAUR
 
 	toggle_consts_for CERULEAN_CAVE_1F
 	const TOGGLE_CERULEAN_CAVE_1F_ITEM_1       ; 35 X
@@ -524,6 +529,7 @@ DEF NUM_TOGGLEABLE_OBJECTS EQU const_value
 	const TOGGLE_VOLCANO_ITEM2 ; 40 X
 	const TOGGLE_VOLCANO_SURFING_RHYDON ; 41 X
 	const TOGGLE_VOLCANO_BOSS_MAGMAR ; 42 X
+	const TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE ; RGB Tweaked: Fixed post-Moltres softlock
 
 	toggle_consts_for POWER_PLANT_ROOF
 	const TOGGLE_POWER_PLANT_ROOF_ZAPDOS ; 43 X

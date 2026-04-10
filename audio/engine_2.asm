@@ -174,10 +174,10 @@ PlaySoundCommon_2:
 	ld a, [wSavedVolume]
 	and a
 	ret nz
-	ldh a, [rNR50]
+	ldh a, [rAUDVOL]
 	ld [wSavedVolume], a
 	ld a, $77
-	ldh [rNR50], a
+	ldh [rAUDVOL], a
 	ret
 
 Noise2_endchannel:

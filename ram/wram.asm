@@ -449,8 +449,16 @@ wSlotMachineSevenAndBarModeChance:: db
 	ds 2
 ; ROM back to return to when the player is done with the slot machine
 wSlotMachineSavedROMBank:: db
-	ds 166
+	;ds 166
 wLuckySlotHiddenEventIndex:: db
+
+; Move Buffer stuff for the Move Relearner/Deleter code
+wMoveBuffer::
+wRelearnableMoves::
+	ds 164
+; Try not to use this stack. 
+; A good amount of space is needed to store data for the move relearner.
+; If it's like, 2, it'll lag like crazy and show garbage from elsewhere.
 
 NEXTU
 ; values between 0-6. Shake screen horizontally, shake screen vertically, blink Pokemon...
@@ -1241,7 +1249,8 @@ NEXTU
 wMapSpriteOriginalPictureIDs:: ds 15
 ENDU
 
-ds 13 ; unused 13 bytes (used to be wGymLeaderName and 2 bytes of wGymCityName)
+wCoinGrandpaRequestedMon:: db ; RGB Tweaked: temporary and cleared on map transition. Used in Celadon Hotel only.
+ds 12 ; unused (used to be wGymLeaderName and 2 bytes of wGymCityName)
 
 UNION
 ds 16 ; PureRGBnote: CHANGED: used to be wItemList:: but now the item list for marts is expanded in size and reuses a bigger space elsewhere
@@ -1921,7 +1930,10 @@ wSavedSpriteScreenX:: db
 wSavedSpriteMapY:: db
 wSavedSpriteMapX:: db
 
-	ds 3 ; unused 3 bytes
+; RGB Tweaked: ADDED: The Pokedex will now remember the user's position
+wPokedexPlace1:: db  
+wPokedexPlace2:: db  
+	ds 1 ; 1 unused byte
 
 ;;; PureRGBnote: ADDED: new properties in this previously empty space
 wTownMapAreaState:: ; view which state is which in map_pokemon_areas.asm
@@ -1931,7 +1943,9 @@ wWhatStat:: db ; contains the stat currently being modified by a stat changing m
 ; bit 0 = set to 1 when we should mark a move as seen in the movedex flags on showing its animation, 0 otherwise
 ; bit 1 = set if we ran from battle
 ; bit 2 = set if screeches are echoing
-; bit 3-7 = unused
+; bits 3-4 = SCREECH echo turn counter (3 when activated, counts down to 0)
+; bit 5 = temporarily set when SCREECH is auto-used during the opponent's turn (suppresses echoing effect).
+; bits 6-7 = unused
 wBattleFunctionalFlags:: db
 ;;;
 
@@ -2409,7 +2423,7 @@ wSilphCo11FCurScript:: db
 	ds 1 ; unused save file byte
 wFuchsiaGymCurScript:: db
 wSaffronGymCurScript:: db
-	ds 1 ; unused save file byte
+wFuchsiaPokecenterCurScript:: db ; RGB Tweaked NEW
 wCinnabarGymCurScript:: db
 wGameCornerCurScript:: db
 wRoute16Gate1FCurScript:: db
@@ -2715,9 +2729,9 @@ wCurMapScript:: db
 wSafariType:: db 
 
 ; bit 0 -> Squirtle sprite version: 0 = RB, 1 = RG
-; bit 1 -> Blastoise sprite version: 0 = RB, 1 = RG
-; bit 2 -> Pidgeot sprite version: 0 = RB, 1 = RG
-; bit 3 -> Bulbasaur sprite version: 0 = RB, 1 = RG
+; bit 1 -> Blastoise sprite version: 0 = RG, 1 = RB
+; bit 2 -> Pidgeot sprite version: 0 = RG, 1 = RB
+; bit 3 -> Bulbasaur sprite version: 0 = RG, 1 = RB
 ; bit 4 -> Golbat sprite version: 0 = Y, 1 = RB
 ; bit 5 -> Mankey sprite version: 0 = RB, 1 = RG
 ; bit 6 -> Arcanine sprite version: 0 = RB, 1 = RG
@@ -2725,9 +2739,9 @@ wSafariType:: db
 wSpriteOptions:: db
 
 ; bit 0 -> Back sprites: 0 = RB, 1 = Space World
-; bit 1 -> Nidorino sprite version: 0 = RB, 1 = RG
+; bit 1 -> Nidorino sprite version: 0 = RG, 1 = RB
 ; bit 2 -> Exeggutor sprite version: 0 = Y, 1 = RB
-; bit 3 -> Menu icon sprites: 0 = Original, 1 = Enhanced Original
+; bit 3 -> Menu icon sprites: 0 = Original, 1 = Enhanced Original ; RGB Tweaked: not used anymore
 ; bit 4 -> Electabuzz sprite version: 0 = RB, 1 = RG
 ; bit 5 -> Raticate sprite version: 0 = RB, 1 = RG
 wSpriteOptions2:: db

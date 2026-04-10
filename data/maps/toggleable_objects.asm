@@ -159,9 +159,14 @@ ToggleableObjectStates:
 	toggleable_objects_for VIRIDIAN_GYM
 	toggle_object_state VIRIDIANGYM_GIOVANNI, ON
 	toggle_object_state VIRIDIANGYM_ITEM1,    ON
+	toggle_object_state VIRIDIANGYM_BLUE,     OFF ; RGB Tweaked: Added secret post-game boss fight
 
 	toggleable_objects_for MUSEUM_1F
 	toggle_object_state MUSEUM1F_OLD_AMBER, ON
+
+	; RGB Tweaked: Added GIFT Bulbasaur NPC
+	toggleable_objects_for CERULEAN_TRADE_HOUSE
+	toggle_object_state CERULEANTRADEHOUSE_BULBASAUR, ON
 
 	toggleable_objects_for CERULEAN_CAVE_1F
 	toggle_object_state CERULEANCAVE1F_ITEM1, ON
@@ -556,6 +561,7 @@ ExtraToggleableObjectStates:
 	toggle_object_state CINNABAR_VOLCANO_ITEM2, ON
 	toggle_object_state CINNABAR_VOLCANO_SURFING_RHYDON, ON
 	toggle_object_state CINNABAR_VOLCANO_BOSS_MAGMAR, ON
+	toggle_object_state CINNABAR_VOLCANO_SURFING_RHYDON_ENTRANCE, OFF ; PureRGB Tweaked: Fixed post-Moltres softlock
 
 	toggleable_objects_for POWER_PLANT_ROOF
 	toggle_object_state POWER_PLANT_ROOF_ZAPDOS, ON

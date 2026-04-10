@@ -106,7 +106,7 @@ IsCutTile:
 
 TryFlash:
 	ldh a, [hJoyHeld]
-	bit BIT_A_BUTTON, a
+	bit B_PAD_A, a
 	ret z
 ; A button is pressed
 	ld a, [wMapPalOffset]

@@ -17,7 +17,7 @@ MoveDeleterText:
 	and a
 	jr z, .saidYes
 .exit
-	ld hl, MoveDeleterByeText
+	ld hl, MoveDeleterBye2Text
 	call PrintText
 	rst TextScriptEnd ; PureRGB - rst TextScriptEnd
 
@@ -88,7 +88,7 @@ MoveDeleterText:
 	push de
 	ld a, b ; a = mon index
 	ld hl, wPartyMon1Moves
-	ld bc, wPartyMon2 - wPartyMon1
+	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	; hl = pointer to mon's moves
 	; Search for the move, and set it to 0.
@@ -96,7 +96,7 @@ MoveDeleterText:
 	call DeleteMove
 	ld hl, MoveDeleterForgotText
 	call PrintText
-	ld hl, MoveReminderByeText
+	ld hl, MoveDeleterBye1Text
 	call PrintText
 	rst TextScriptEnd ; PureRGB - rst TextScriptEnd
 
@@ -140,7 +140,7 @@ PrepareDeletableMoveList:
 ; Input: party mon index = [wWhichPokemon]
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMon1Moves
-	ld bc, wPartyMon2 - wPartyMon1
+	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	; hl = pointer to mon's 4 moves
 	ld b, 0 ; count of moves
@@ -183,8 +183,12 @@ MoveDeleterForgotText:
 	text_far _MoveDeleterForgotText
 	text_end
 
-MoveDeleterByeText:
-	text_far _MoveDeleterByeText
+MoveDeleterBye1Text:
+	text_far _MoveDeleterBye1Text
+	text_end
+
+MoveDeleterBye2Text:
+	text_far _MoveDeleterBye2Text
 	text_end
 
 MoveDeleterOneMoveText:

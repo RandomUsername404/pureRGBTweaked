@@ -665,21 +665,21 @@ BeforeVersion1_0_0SaveFileUpdateScript::
 	jp SaveFileUpdateCheck.updateComplete
   
 BeforeVersion1_0_0SaveFileUpdate:
-	; Insert HS_CERULEAN_BULBASAUR with its default state (SHOW)
+	; Insert TOGGLE_CERULEAN_BULBASAUR with its default state (SHOW)
 	ld hl, InsertDefaultValueToHideShowArray  
 	call SaveFileUpdaterLoadPointer  
 	ld de, Version1_0_0_AddedHideShowFlags  
-	ld c, NUM_HS_OBJECTS / 8  
-	ld hl, wMissableObjectFlags  
+	ld c, NUM_TOGGLEABLE_OBJECTS / 8  
+	ld hl, wToggleableObjectFlags  
 	call InsertValuesToFlagArray  
 	; Hide it only if the player already got Bulbasaur in Cerulean  
 	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN  
 	ret z  
-	ld a, HS_CERULEAN_BULBASAUR  
+	ld a, TOGGLE_CERULEAN_BULBASAUR  
 	jp SaveFileUpdaterHideObjectEntry  
   
 Version1_0_0_AddedHideShowFlags:  
-	db HS_CERULEAN_BULBASAUR  
+	db TOGGLE_CERULEAN_BULBASAUR  
 	db -1
 
 ; Note: if EVENT_RESCUED_MR_FUJI_2 is ever used set it correctly in save updater.
