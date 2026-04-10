@@ -57,6 +57,7 @@ ROMX $6
 ROMX $7
 	"Maps 3"
 	"Maps 4"
+	"Hidden Events 1"
 ROMX $8
 	"Sound Effect Headers 2"
 	"Music Headers 2"
@@ -91,7 +92,7 @@ ROMX $11
 	"Maps 5"
 	"Pokédex Rating"
 	"Maps 6"
-	"Hidden Objects Core"
+	"Hidden Events Core"
 ROMX $12
 	"Maps 7"
 	"Maps 8"
@@ -101,7 +102,7 @@ ROMX $14
 	"Maps 9"
 	"Maps 10"
 	"Battle Engine 8"
-	"Hidden Objects 2"
+	"Hidden Events 2"
 ROMX $15
 	"Maps 11"
 	"Battle Engine 9"
@@ -117,12 +118,12 @@ ROMX $17
 	"Maps 15"
 	"Starter Dex"
 	"Maps 16"
-	"Hidden Objects 3"
+	"Hidden Events 3"
 ROMX $18
 	"Maps 17"
 	"Cinnabar Lab Fossils"
 	"Maps 18"
-	"Hidden Objects 4"
+	"Hidden Events 4"
 ROMX $19
 	"Tilesets 1"
 ROMX $1A

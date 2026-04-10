@@ -1,20 +1,20 @@
 UpdateCinnabarGymGateTileBlocks::
 	farjp UpdateCinnabarGymGateTileBlocks_
 
-CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
+CheckForHiddenEventOrBookshelfOrCardKeyDoor::
 	ldh a, [hLoadedROMBank]
 	push af
 	ldh a, [hJoyHeld]
-	bit BIT_A_BUTTON, a
+	bit B_PAD_A, a
 	jr z, .nothingFound
 ; A button is pressed
-	ld a, BANK(CheckForHiddenObject)
+	ld a, BANK(CheckForHiddenEvent)
 	call SetCurBank
-	call CheckForHiddenObject
-	ldh a, [hDidntFindAnyHiddenObject]
+	call CheckForHiddenEvent
+	ldh a, [hDidntFindAnyHiddenEvent]
 	and a
-	jr nz, .hiddenObjectNotFound
-	ld a, [wHiddenObjectFunctionRomBank]
+	jr nz, .hiddenEventNotFound
+	ld a, [wHiddenEventFunctionRomBank]
 	call SetCurBank
 	call hl_caller
 	ld a, [wDoNotWaitForButtonPressAfterDisplayingText]
@@ -22,7 +22,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	jr z, .nothingFound  ; item already collected, allow TryFieldMove
 	xor a
 	jr .done
-.hiddenObjectNotFound
+.hiddenEventNotFound
 	farcall PrintBookshelfText
 	ldh a, [hInteractedWithBookshelf]
 	and a
