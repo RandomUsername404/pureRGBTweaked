@@ -8,7 +8,6 @@ DEF FACING_END  EQU 1 << BIT_END_OF_OAM_DATA
 DEF UNDER_GRASS EQU 1 << BIT_SPRITE_UNDER_GRASS
 
 ; OAM attribute flags
-DEF OAM_PALETTE EQU %111
 	const_def 3
 	const OAM_TILE_BANK ; 3
 	const OAM_OBP_NUM   ; 4 ; Non CGB Mode Only
