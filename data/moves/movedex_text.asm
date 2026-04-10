@@ -1119,10 +1119,13 @@ _ScreechDexEntry::
 	bage "These echoes wake"
 	next "all #MON from"
 	next "sleep."
-
-	bage "This move is auto-"
-	next "used if the <user>"
-	next "is put to sleep."
+	
+	bage "This move has a"
+	next "50% chance to be"
+	next "auto-used if the"
+	
+	bage "<user> is put to"
+	next "sleep."
 
 	bage "Never misses"
 	dex

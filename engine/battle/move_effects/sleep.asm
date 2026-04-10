@@ -38,7 +38,7 @@ _SleepEffect::
 	ld a, b
 	and a
 	jr nz, .didntAffect ; can't affect a mon that is already statused
-	; PureRGB Tweaked: check if target is invulnerable (mid-FLY or mid-DIG) and if it is, don't animate the attack and don't auto-use SCREECH
+	; RGB Tweaked: check if target is invulnerable (mid-FLY or mid-DIG) and if it is, don't animate the attack and don't auto-use SCREECH
 	ld bc, wEnemyBattleStatus1
 	ldh a, [hWhoseTurn]
 	and a
@@ -48,7 +48,7 @@ _SleepEffect::
 	ld a, [bc]
 	bit INVULNERABLE, a
 	jr nz, .didntAffect
-	; does the target have screech? If so, trigger the screech effect automatically
+	; does the target have screech? If so, try to trigger the SCREECH effect automatically
 	ld b, NUM_MOVES
 .loopCheckMoves
 	ld a, [hli]
@@ -56,7 +56,8 @@ _SleepEffect::
 	jr z, .opponentHasScreech
 	dec b
 	jr nz, .loopCheckMoves
-	; no, it doesn't have screech
+	; no, it doesn't have SCREECH
+.noScreech ; RGB Tweaked: auto-SCREECH will only trigger 50% of the time
 	ld bc, wEnemyBattleStatus2
 	ldh a, [hWhoseTurn]
 	and a
@@ -90,10 +91,16 @@ _SleepEffect::
 .didntAffect
 	jpfar PrintDidntAffectText
 .opponentHasScreech
-	callfar PlayCurrentMoveAnimation2
+	; RGB Tweaked: 50% chance to auto-use SCREECH  
+	push de
+	callfar FarBattleRandom
+	ld a, d
+	pop de
+	cp 50 percent + 1
+	jr nc, .noScreech ; >= 50%: skip auto-SCREECH, sleep-inducing move lands instead
+	callfar PlayCurrentMoveAnimation2 ; < 50%: auto-SCREECH is used, doesn't use up a turn
 	ld hl, .letOutAScreech
 	rst _PrintText
-	; make the opponent use screech automatically, and this doesn't use up their turn
 	ldh a, [hWhoseTurn]
 	ld hl, wEnemyMoveNum
 	ld de, wEnemyMoveEffect
@@ -114,7 +121,7 @@ _SleepEffect::
 	ld [de], a
 	push hl
 	push de
-	; PureRGB Tweaked: if SCREECH was auto-used, don't trigger echoing effect
+	; RGB Tweaked: if SCREECH was auto-used, don't trigger echoing effect
 	ld hl, wBattleFunctionalFlags
 	set 5, [hl]
 	callfar _ScreechEffect
@@ -130,7 +137,7 @@ _SleepEffect::
 	pop af
 	ldh [hWhoseTurn], a
 	ret
-; PureRGB Tweaked: Pokemon auto-using SCREECH will let out an audible cry
+; RGB Tweaked: Pokemon auto-using SCREECH will let out an audible cry
 .letOutAScreech
 	text_far _LetOutAScreechText
 	text_asm
