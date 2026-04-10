@@ -23,6 +23,8 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 
   ![Japanese flowers](../screenshots/japanese_flowers.png?raw=true)
 - New FLY and DIG sprites (Pidgey & a different Diglett sprite)
+
+  ![Pidgey FLY Town Map](../screenshots/pidgey_fly.png?raw=true) ![Diglett DIG](../screenshots/diglett_dig.png?raw=true)
 - Unique sprites for all overworld Pokémon
 
   ![unique pokemon overworld sprites 1](../screenshots/unique_overworld_sprites_1.png?raw=true) ![unique pokemon overworld sprites 2](../screenshots/unique_overworld_sprites_2.png?raw=true)

@@ -13,7 +13,7 @@ Or jump directly to:
 
 ---
 
-**Download link incoming.**
+📥 **Download link: ["RELEASES"](/releases)**
 
 ---
 
@@ -37,9 +37,11 @@ RGB Tweaked is an expansion of PureRGB. All 151 Pokémon are obtainable in every
 
 ![unique pokemon overworld sprites 1](./screenshots/unique_overworld_sprites_1.png?raw=true) ![unique pokemon overworld sprites 2](./screenshots/unique_overworld_sprites_2.png?raw=true) ![151 unique party sprites](./screenshots/unique_party_mon_sprites.png?raw=true)
 
-**Champ Arena.** Post-game rematches against all Gym Leaders and the Elite Four, with perfect-DV teams, custom movesets, and max AI. The teams used there were inspired by Pokémon Stadium. Beating the CHAMP ARENA may lead to a secret endgame boss fight.
+**Champ Arena.** Post-game rematches against all Gym Leaders and the Elite Four, with perfect-DV teams, custom movesets, and max AI. The teams used there were inspired by Pokémon Stadium. Beating the Champ Arena will lead to a secret endgame boss fight.
 
 **Coin Grandpa.** Lives in the Celadon Hotel and gives out free casino coins in exchange for showing him specific Pokémon.
+
+**TM Pirate.** Sells TMs in most PokéMarts, making TMs more easily accessible.
 
 **Harder AI.** By disabling Badge Boosts and the 25% miss rate for NPCs using stat down moves, the game is now a tiny bit harder.
 

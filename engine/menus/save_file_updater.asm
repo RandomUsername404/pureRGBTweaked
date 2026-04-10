@@ -44,6 +44,7 @@ SaveFileUpdateCheck::
 	cp INTERNAL_VERSION_2_7_0
 	jr c, BeforeVersion2_7_0SaveFileUpdateScript
 	cp INTERNAL_VERSION_1_0_0 ; RGB Tweaked: first RGB Tweaked release, based on PureRGB v2.7.2
+	jp c, BeforeVersion1_0_0SaveFileUpdateScript
 	; TODO: future save file updates go here
 	jr .askPalletWarp
 .updateSave
@@ -427,6 +428,7 @@ AddedHideShowFlags:
 	db HS_ROCK_TUNNEL_B1F_ITEM_2        ; NEW X
 	db HS_SEAFOAM_ISLANDS_B3F_DOME_FOSSIL ; E2
 	db HS_SEAFOAM_ISLANDS_B3F_HELIX_FOSSIL ; E3
+	db HS_CERULEAN_BULBASAUR            ; NEW RGB Tweaked
 	db -1
 
 InsertValuesToFlagArray::
@@ -605,8 +607,12 @@ UpdateNewHideShowFlagsBasedOnGameProgression:
 	ld a, HS_SEAFOAM_ISLANDS_B3F_DOME_FOSSIL
 	call nz, SaveFileUpdaterHideObjectEntry
 	CheckEvent EVENT_GOT_HELIX_FOSSIL
-	ret z
 	ld a, HS_SEAFOAM_ISLANDS_B3F_HELIX_FOSSIL
+	call nz, SaveFileUpdaterHideObjectEntry   ; was: ret z + fall-through  
+	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN
+	ld a, HS_CERULEAN_BULBASAUR
+	call nz, SaveFileUpdaterHideObjectEntry
+	ret
 SaveFileUpdaterHideObjectEntry:
 	ld [wMissableObjectIndex], a
 	predef_jump HideObject
@@ -652,6 +658,28 @@ SaveFileUpdater2_7_0_AfterCutHides:
 	db HS_VERMILIONFITNESSCLUB_JANITOR
 	db HS_CERULEAN_BALL_DESIGNER_CLIPBOARD
 	db HS_CERULEAN_BALL_DESIGNER_CLIPBOARD2
+	db -1
+
+BeforeVersion1_0_0SaveFileUpdateScript::  
+	call BeforeVersion1_0_0SaveFileUpdate
+	jp SaveFileUpdateCheck.updateComplete
+  
+BeforeVersion1_0_0SaveFileUpdate:
+	; Insert HS_CERULEAN_BULBASAUR with its default state (SHOW)
+	ld hl, InsertDefaultValueToHideShowArray  
+	call SaveFileUpdaterLoadPointer  
+	ld de, Version1_0_0_AddedHideShowFlags  
+	ld c, NUM_HS_OBJECTS / 8  
+	ld hl, wMissableObjectFlags  
+	call InsertValuesToFlagArray  
+	; Hide it only if the player already got Bulbasaur in Cerulean  
+	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN  
+	ret z  
+	ld a, HS_CERULEAN_BULBASAUR  
+	jp SaveFileUpdaterHideObjectEntry  
+  
+Version1_0_0_AddedHideShowFlags:  
+	db HS_CERULEAN_BULBASAUR  
 	db -1
 
 ; Note: if EVENT_RESCUED_MR_FUJI_2 is ever used set it correctly in save updater.
