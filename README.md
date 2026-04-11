@@ -13,7 +13,7 @@ Or jump directly to:
 
 ---
 
-📥 **Download link: ["RELEASES"](/releases)**
+📥 **Download link: [RELEASES](https://github.com/RandomUsername404/pureRGBTweaked/releases)**
 
 ---
 
@@ -43,9 +43,13 @@ RGB Tweaked is an expansion of PureRGB. All 151 Pokémon are obtainable in every
 
 **TM Pirate.** Sells TMs in most PokéMarts, making TMs more easily accessible.
 
+**Move Reminder.** Lets Pokémon relearn forgotten or skipped level-up moves.
+
 **Harder AI.** By disabling Badge Boosts and the 25% miss rate for NPCs using stat down moves, the game is now a tiny bit harder.
 
-**Quality-of-life and options.** GBC color support with switchable palettes (original, SGB, or Pokémon Yellow colors), optional Spaceworld 1997 back sprites, customizable front sprites, stereo audio panning, per-type colored move animations on GBC, and much more. Most of these can be toggled in a five-page options menu. HMs are deletable at any time, with softlock prevention built in.
+**Quality-of-life changes.** Running shoes, caught indicator on battle HUD, deletable HMs, and other features. 
+
+**Options.** GBC color support with switchable palettes (original, SGB, or Pokémon Yellow colors), optional Spaceworld 1997 back sprites, customizable front sprites, stereo audio panning, per-type colored move animations on GBC, and much more. Most of these can be toggled in a five-page options menu.
 
 ![blue gb](/screenshots/blue_title_gb_no_color.png?raw=true) ![blue gbc default](/screenshots/blue_title_default_gbc_color.png?raw=true) ![blue sgb colors](/screenshots/blue_title_sgb_colors_on_gbc.png?raw=true) ![blue sgb2 colors](/screenshots/blue_title_sgb2_colors_on_gbc.png?raw=true) ![blue gbc colors](/screenshots/blue_title_gbc_colors_on_gbc.png?raw=true)
 
@@ -81,7 +85,7 @@ Below, you'll find all the artists who unknowingly contributed to RGB Tweaked:
 
 - LJSTAR & Vortyne - type icons used in the Movedex
 - Mord & Vortyne - Lt. Surge and Erika overworld sprites
-- Vortyne - Brock and Sabrina overworld sprites
+- Vortyne - Brock and Sabrina overworld sprites. New Safari Zone song
 - Blue Emerald, Chamber_, Soloo993, and others - 151 unique menu party sprites; used as a base for several overworld sprites
 - Isona, Alakadoof and Karlos (Yellow Legacy) - several overworld sprites
 - CreamElDudJafar (Pokémon Celebrations) - many overworld sprites, including Red's surfing sprite

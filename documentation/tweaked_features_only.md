@@ -46,7 +46,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 
   ![Bulbasaur NPC](../screenshots/starter_npc_bulbasaur.png?raw=true) ![Charmander NPC](../screenshots/starter_npc_charmander.png?raw=true) ![Squirtle NPC](../screenshots/starter_npc_squirtle.png?raw=true)
 - **Coin Grandpa** — lives in the Celadon Hotel and will give you free casino coins if you show him the Pokémon he requests (inspired by the Coin Gentleman from Jojobear13's Shin Pokéred)
-- **Move Reminder & Move Deleter** — Added a Move Reminder and a Move Deleter to a house Route 19 (Fuschia's beach)
+- **Move Reminder & Move Deleter** — Added a Move Reminder and a Move Deleter to a house Route 19 (Fuchsia's beach)
 
     ![Move Reminder's house](../screenshots/move_reminder_house.png?raw=true)
 - **Secret Dragon Rage & Fly Tutor** — teach Magikarp Dragon Rage or Pikachu Fly by talking to the Magikarp salesman (adapted from Jojobear13's Shin Pokéred)

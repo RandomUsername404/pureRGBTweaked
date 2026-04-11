@@ -454,7 +454,6 @@ Everything here is set to ON by default.
 ## Bug Fixes
 - High Jump Kick / Jump Kick crash damage fixed (1/4 of the intended damage instead of always 1)
 - Focus Energy works correctly (multiplies critical hit rate by 4 instead of dividing it)
-- Badge stat boosts no longer repeatedly applied
 - Paralysis/Burn stat penalties no longer repeatedly applied; correctly reset on cure
 - Nidorino's cry plays correctly in Oak's intro (was playing Nidorina's)
 - Recover doesn't fail at exactly 255 HP
@@ -463,7 +462,6 @@ Everything here is set to ON by default.
 - Post-evolution move learning works correctly
 - Eevee always learns its type-specific move on evolution regardless of level
 - Light Screen / Reflect capped at 999 to prevent overflow
-- Lt. Surge's badge now boosts Speed (was Defense); Koga's now boosts Defense (was Speed)
 - "Poof!" sound effect on move learning fixed
 - No move swapping while Transformed (prevented a crash)
 - NPCs obey facing assignments
