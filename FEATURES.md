@@ -349,7 +349,6 @@ Everything here is set to ON by default.
 - Seadra — Water/Dragon
 - Goldeen/Seaking — Water/Normal
 - Electabuzz — Electric/Fighting
-- Pinsir — Bug/Fighting
 - Porygon — Normal/Ghost
 - Kabutops — Rock/Bug
 
@@ -358,6 +357,7 @@ Everything here is set to ON by default.
 - Victreebel — Grass/Dragon
 - Marowak — Ground/Ghost
 - Mr. Mime — Psychic/Ghost
+- Pinsir — Bug/Fighting
 - Kabuto — Rock/Bug
 
 ---

@@ -75,6 +75,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 - Victreebel — Grass/Dragon
 - Marowak — Ground/Ghost
 - Mr. Mime — Psychic/Ghost
+- Pinsir — Bug/Fighting
 - Kabuto — Rock/Bug
 
 

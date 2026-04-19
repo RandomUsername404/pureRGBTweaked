@@ -109,6 +109,10 @@ InitDefaultTypeRemapFlags:
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
+    ld c, 20 ; Pinsir
+    ld b, FLAG_SET
+    ld hl, wPkmnTypeRemapFlags
+    predef FlagActionPredef
     ld c, 22 ; Kabuto
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
