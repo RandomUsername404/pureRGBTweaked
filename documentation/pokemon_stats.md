@@ -187,7 +187,7 @@ Some of the player's Pokémon can be upgraded to use the stats below. Others are
 
 The FLOATING type makes a Pokémon immune to GROUND moves.
 
-The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, but remains weak to FIGHTING and GROUND.
+The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, but remains weak to FIGHTING and GROUND. It gets ROCK STAB.
 
 The MAGMA type makes a Pokémon immune to WATER and FIRE moves. MAGMA-types also get GROUND STAB.
 
