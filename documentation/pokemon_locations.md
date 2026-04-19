@@ -332,7 +332,7 @@ The following file goes over Trade and Gift Pokémon: [/documentation/gift_trade
 
 **Abra:**
 
-![slowbro_069](../screenshots/pkmn_locations/pkmn_locations_069.png?raw=true)
+![abra_069](../screenshots/pkmn_locations/pkmn_locations_069.png?raw=true)
 
 
 **Kadabra:**
