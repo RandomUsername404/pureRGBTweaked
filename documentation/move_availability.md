@@ -5,7 +5,7 @@
 | HM # | Move | Location | Given By | Notes | Badge Required |
 | --- | --- | --- | --- | --- | --- |
 | HM05 | Flash | Route 2 Gate | Oak's Aide | Given after the player has seen at least 10 Pokémon. | Boulder Badge (Pewter City) |
-| HM01 | Cut | S.S. Anne Captain | Captain | Given after helping him with his back. | Cascade Badge (Cerulean City) |
+| HM01 | Cut | S.S. Anne | Captain | Given after helping him with his back. | Cascade Badge (Cerulean City) |
 | HM02 | Fly | Route 16 Fly House | Brunette Girl | The house is located west of Celadon City. | Thunder Badge (Vermilion City) |
 | HM04 | Strength | Fuchsia City Warden's House | Warden | Given after returning his Gold Teeth. | Rainbow Badge (Celadon City) |
 | HM03 | Surf | Safari Zone Secret House | Prize | Awarded for finding the Secret House. | Soul Badge (Fuchsia City) |

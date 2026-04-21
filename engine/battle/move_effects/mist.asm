@@ -4,11 +4,14 @@ MistEffect_:
 	and a
 	jr z, .mistEffect
 	ld hl, wEnemyBattleStatus2
-.mistEffect
-	bit NORMAL_FIGHTING_IMMUNITY, [hl] ; is mon protected by mist?
+.mistEffect ; RGB Tweaked: restored MIST's vanilla behavior
+	bit STAT_DOWN_IMMUNITY, [hl] ; is mon protected by mist?
 	jr nz, .mistAlreadyInUse
 	set STAT_DOWN_IMMUNITY, [hl] ; mon is now protected by mist (shared with guard spec)
-	set NORMAL_FIGHTING_IMMUNITY, [hl] ; secondary effect of mist
+	;bit NORMAL_FIGHTING_IMMUNITY, [hl] ; is mon protected by mist?
+	;jr nz, .mistAlreadyInUse
+	;set STAT_DOWN_IMMUNITY, [hl] ; mon is now protected by mist (shared with guard spec)
+	;set NORMAL_FIGHTING_IMMUNITY, [hl] ; secondary effect of mist
 	callfar PlayCurrentMoveAnimation
 	ld hl, ShroudedInMistText
 	jp PrintText

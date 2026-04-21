@@ -49,7 +49,7 @@ _ScreechEffect::
 .checkPlayAnimation
 	ld a, [bc]
 	bit STAT_DOWN_IMMUNITY, a
-	jr nz, .nextCheck
+	jr nz, .no ; RGB Tweaked: SCREECH will only work if STAT_DOWN_IMMUNITY isn't set. Otherwise, the move fails.
 	ld a, [de]
 	dec a
 	jr nz, .yes

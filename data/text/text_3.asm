@@ -332,8 +332,6 @@ _ReflectGainedArmorText::
 _ShroudedInMistText::
 	text "<USER>'s"
 	line "shrouded in mist!"
-	para "<USER>"
-	line "became ethereal!"
 	prompt
 
 _SuckedHealthText::

@@ -61,7 +61,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **ACID** | POISON | **50** | 100 | 30 | **Randomly lowers either the opponent's Attack or Defense by 1 stage (50/50 chance between the two).** | — |
 | EMBER | FIRE | 40 | 100 | 25 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. | — |
 | FLAMETHROWER | FIRE | 95 | 100 | 15 | 10% chance to inflict burn on the target. Cannot burn a Fire-type Pokémon. | — |
-| MIST | ICE | 0 | 100 | 30 | Protects the user from stat-lowering moves. Also **makes the user immune to Normal and Fighting-type moves** for the rest of the battle or until they switch out. | Removed by HAZE. |
+| MIST | ICE | 0 | 100 | 30 | Protects the user from stat-lowering moves. | Removed by HAZE. |
 | WATER_GUN | WATER | 40 | 100 | 25 | No secondary effect. | — |
 | **HYDRO_PUMP** | WATER | 120 | **90** | 5 | No secondary effect. | — |
 | SURF | WATER | 95 | 100 | 15 | No secondary effect. | — |

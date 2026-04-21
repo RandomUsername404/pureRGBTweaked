@@ -560,21 +560,12 @@ _MistDexEntry::
 	next "enshrouding it in"
 	next "ethereal vapor."
 
-	bage "The <user> becomes"
-	next "ethereal; immune"
-	next "to NORMAL and"
-
-	bage "FIGHTING-type"
-	next "moves until it"
-	next "switches out."
-
 	bage "Prevents stats"
 	next "from decreasing"
 	next "from moves such"
 
 	bage "as GROWL, SCREECH"
-	next "SMOKESCREEN, etc."
-	next "as well"
+	next "SMOKESCREEN, etc"
 	dex
 
 _WaterGunDexEntry::
