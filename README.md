@@ -85,7 +85,7 @@ Below, you'll find all the artists who unknowingly contributed to RGB Tweaked:
 
 - LJSTAR & Vortyne - type icons used in the Movedex
 - Mord & Vortyne - Lt. Surge and Erika overworld sprites
-- Vortyne - Brock and Sabrina overworld sprites. New Safari Zone song
+- Vortyne - Brock and Sabrina overworld sprites. Several battle sprite edits. New Safari Zone song
 - Blue Emerald, Chamber_, Soloo993, and others - 151 unique menu party sprites; used as a base for several overworld sprites
 - Isona, Alakadoof and Karlos (Yellow Legacy) - several overworld sprites
 - CreamElDudJafar (Pokémon Celebrations) - many overworld sprites, including Red's surfing sprite

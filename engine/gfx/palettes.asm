@@ -538,6 +538,7 @@ NonMonCustomPalettes:
 SpecialMonCustomPalettes:
 	db HARDENED_ONIX, PAL_BLACKMON, PAL_BLUEMON
 	db WINTER_DRAGONAIR, PAL_BLUEMON, PAL_0F
+	db VOLCANIC_MAGMAR, PAL_REDMON, PAL_REDBAR ; RGBTweaked: different alt-palette for Volcanic Magmar
 	db -1
 ;;;;;
 
