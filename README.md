@@ -7,6 +7,7 @@ A hack of Pokémon Red/Green/Blue built on top of Vortyne's PureRGB v2.7.2, base
 For the full list of features, bugfixes, and everything else, see [**FEATURES.md**](FEATURES.md).
 Or jump directly to:
 - [Pokémon stats](/documentation/pokemon_stats.md)
+- [Type chart](/documentation/type_chart.md)
 - [Pokémon locations](/documentation/pokemon_locations.md)
 - [Full moves breakdown](/documentation/moves.md) (many were modified)
 - [TM availability](/documentation/moves.md)

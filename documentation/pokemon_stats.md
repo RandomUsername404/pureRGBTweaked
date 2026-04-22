@@ -136,7 +136,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 124 | JYNX | ICE | PSYCHIC | **70** | 50 | **75** | **105** | 95 | **395** | — |
 | 125 | ELECTABUZZ | ELECTRIC | **FIGHTING** | 65 | **93** | 57 | **95** | 105 | **415** | ELECTRIC |
 | 126 | MAGMAR | FIRE | — | **75** | 95 | 57 | **95** | 93 | **415** | — |
-| 127 | PINSIR | BUG | **FIGHTING** | 65 | 125 | 100 | 55 | 85 | 430 | BUG |
+| 127 | PINSIR | BUG | — | 65 | 125 | 100 | 55 | 85 | 430 | BUG/**FIGHTING** |
 | 128 | TAUROS | NORMAL | — | 75 | 100 | 95 | 70 | 110 | 450 | — |
 | 129 | MAGIKARP | WATER | — | 20 | 10 | 55 | 20 | 80 | 185 | — |
 | 130 | GYARADOS | WATER | FLYING | 95 | 125 | 79 | 100 | 81 | 480 | — |
@@ -193,4 +193,6 @@ The MAGMA type makes a Pokémon immune to WATER and FIRE moves. MAGMA-types also
 
 ---
 
-See also: [/data/pokemon/base_stats](../data/pokemon/base_stats)
+See also:
+- [Type chart](./type_chart.md)
+- [/data/pokemon/base_stats](../data/pokemon/base_stats)
