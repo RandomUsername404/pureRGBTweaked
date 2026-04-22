@@ -203,7 +203,6 @@ Everything here is set to ON by default.
 ## New Items
 | Item | Effect |
 |:------|--------|
-| `POCKET ABRA` | Teleport to the last Pokémon Center from anywhere, even caves and buildings. Can be nicknamed |
 | `BOOSTER CHIP` | Replaces EXP.ALL — all party members gain the traded-Pokémon EXP bonus. Obtained from Oak's aide in the Fuchsia-Route 15 Gate after catching 80 Pokémon |
 | `APEX CHIP` | Maximizes DVs when installed; the Gym Guide gives 2 after each gym badge |
 | `HYPER BALL` | Never fails to catch a Pokémon below 1/3 HP, including legendaries. For many non-legendary Pokémon it will never fail even at full HP |

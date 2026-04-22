@@ -44,52 +44,61 @@ _PewterHouse2Text3Found::
 	para "We're going on"
 	line "an ocean cruise"
 	cont "vacation soon!"
+    
+	para "I'm so relieved."
+	line "I can't thank you"
+	cont "enough!"
 
-	para "I'm a fashion"
-	line "designer and"
-	cont "#MON Breeder!"
+	para "Please accept"
+	line "this little gift."
+	cont "It might help you"
+	cont "on your travels."
 
-	para "This is my newest"
-	line "idea:"
+	;para "I'm a fashion"
+	;line "designer and"
+	;cont "#MON Breeder!"
 
-	para "#MON fit in"
-	line "your pocket when"
-	cont "in their Poké"
-	cont "Balls."
+	;para "This is my newest"
+	;line "idea:"
 
-	para "But cute #MON"
-	line "are meant to be"
-	cont "seen!"
+	;para "#MON fit in"
+	;line "your pocket when"
+	;cont "in their Poké"
+	;cont "Balls."
 
-	para "We need #MON"
-	line "to carry around"
-	cont "and show off!"
+	;para "But cute #MON"
+	;line "are meant to be"
+	;cont "seen!"
 
-	para "So I'm breeding"
-	line "tinier #MON!"
+	;para "We need #MON"
+	;line "to carry around"
+	;cont "and show off!"
 
-	para "POCKET #MON,"
-	line "if you will!"
+	;para "So I'm breeding"
+	;line "tinier #MON!"
 
-	para "My first one!"
-	line "The POCKET ABRA!"
+	;para "POCKET #MON,"
+	;line "if you will!"
 
-	para "It fits in your"
-	line "bag, and can"
-	cont "TELEPORT you back"
-	cont "home whenever you"
-	cont "like! Useful!"
+	;para "My first one!"
+	;line "The POCKET ABRA!"
 
-	para "I want you to"
-	line "have one!"
+	;para "It fits in your"
+	;line "bag, and can"
+	;cont "TELEPORT you back"
+	;cont "home whenever you"
+	;cont "like! Useful!"
+
+	;para "I want you to"
+	;line "have one!"
 	prompt
 
 
 _PewterHouse2Text3After::
-	text "How's ABRA doing?@"
+	text "Thanks again.@"
 	text_end
 
 _ReceivedPocketAbraText::
 	text "<PLAYER> received"
-	line "a POCKET ABRA!@"
+	line "×15 ESCAPE ROPEs!@"
 	text_end

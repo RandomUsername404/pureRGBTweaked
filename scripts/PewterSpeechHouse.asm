@@ -15,7 +15,7 @@ PewterSpeechHouseYoungsterText:
 	text_far _PewterSpeechHouseYoungsterText
 	text_end
 
-; PureRGBnote: ADDED: new NPC who will give you POCKET ABRA once you return their LOST WALLET
+; RGB Tweaked note: ADDED: new NPC who will give you 15 ESCAPE_ROPE once you return their LOST WALLET (vs gifting a POCKET_ABRA in PureRGB)
 PewterSpeechHouseLostWalletBeautyText: 
 	text_asm
 		CheckEvent EVENT_RETURNED_LOST_WALLET
@@ -33,23 +33,23 @@ PewterSpeechHouseLostWalletBeautyText:
 		ld a, LOST_WALLET
 		ldh [hItemToRemoveID], a
 		farcall RemoveItemByID
-		lb bc, POCKET_ABRA, 1
+		lb bc, ESCAPE_ROPE, 15 ; RGB Tweaked: was lb bc, POCKET_ABRA, 1
 		call GiveItem ; not possible to have no room for this item because you just gave the LOST WALLET away
 		ld hl, ReceivedPocketAbraText
 		rst _PrintText
 		SetEvent EVENT_RETURNED_LOST_WALLET
-		ld a, ABRA
-		ld [wCurPartySpecies], a
-		ld [wPokedexNum], a
-		call PlayCry
-		ld a, SFX_GET_ITEM_2
-		call PlaySoundWaitForCurrent
-		call WaitForSoundToFinish
-		ld a, NAME_MON_SCREEN
-		ld [wNamingScreenType], a
-		ld hl, wPocketAbraNick
-		predef AskName
-		call DisableWaitingAfterTextDisplay
+		;ld a, ABRA
+		;ld [wCurPartySpecies], a
+		;ld [wPokedexNum], a
+		;call PlayCry
+		;ld a, SFX_GET_ITEM_2
+		;call PlaySoundWaitForCurrent
+		;call WaitForSoundToFinish
+		;ld a, NAME_MON_SCREEN
+		;ld [wNamingScreenType], a
+		;ld hl, wPocketAbraNick
+		;predef AskName
+		;call DisableWaitingAfterTextDisplay
 		rst TextScriptEnd
 	.howsAbra
 		ld hl, PewterHouse2Text3HowsAbra
@@ -70,4 +70,5 @@ PewterHouse2Text3HowsAbra:
 
 ReceivedPocketAbraText:
 	text_far _ReceivedPocketAbraText
+	sound_get_item_1
 	text_end

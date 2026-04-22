@@ -104,6 +104,9 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 ## Tweaks
 - Removed badge boosts
 - Removed the 25% miss rate for NPCs using stat down moves
-- Disabled Auto Surf (a PureRGB feature)
 - Use an harder enemy AI a bit sooner (Post Cascade Badge vs Post Soul Badge in PureRGB)
 - The E4 members will acknowledge the player's Champion status
+
+## Removed Features from PureRGB
+- Auto Surf
+- Pocket Abra
