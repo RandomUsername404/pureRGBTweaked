@@ -15,8 +15,9 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 - Added "caught" icon to battle HUD
 
   ![HUD caught indicator](../screenshots/caught_indicator.png?raw=true)
-- Pressing B in a battle moves the cursor to RUN
 - EXP bar now in color
+- Pressing B in a battle moves the cursor to RUN
+- Wild battle losses no longer halve the player's money
 
 ### Overworld & World
 - Restored Japanese flowers

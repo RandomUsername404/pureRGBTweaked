@@ -27,7 +27,17 @@ EndOfBattle:
 .notLinkBattle
 	ld a, [wBattleResult]
 	and a
-	jr nz, .resetVariables
+	; RGB Tweaked: setting a flag when in a trainer battle so losing a wild battle no longer halves the player's money (see black_out.asm)
+	jr z, .playerWon
+	ld a, [wCurOpponent]
+	cp OPP_ID_OFFSET
+	ld a, 0
+	jr c, .setTrainerFlag
+	inc a ; a = 1 for trainer
+.setTrainerFlag
+	ld [wBlackedOutToTrainer], a
+	jr .resetVariables
+.playerWon
 	ld hl, wTotalPayDayMoney
 	ld a, [hli]
 	or [hl]

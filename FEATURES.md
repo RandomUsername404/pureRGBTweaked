@@ -155,6 +155,7 @@ Everything here is set to ON by default.
 - Press START (not A) to confirm move forget and Pokémon release
 - Stone/trade evolutions have full level-up learnsets
 - Pressing B in a battle moves the cursor to RUN
+- Wild battle losses no longer halve the player's money
 
 ### Overworld & World
 - 60 FPS

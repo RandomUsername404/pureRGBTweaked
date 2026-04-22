@@ -1439,7 +1439,8 @@ wTrainerBaseMoney:: dw ; BCD
 
 wToggleableObjectCounter:: db
 
-	ds 1 ; unused byte
+; RGB Tweaked: used to know if we're in a trainer battle so the player only loses money when losing a trainer battle and not a wild one
+wBlackedOutToTrainer:: db
 
 ; 13 bytes for the letters of the opposing trainer
 ; the name is terminated with $50 with possible

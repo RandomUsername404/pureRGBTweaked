@@ -18,7 +18,15 @@ ResetStatusAndHalveMoneyOnBlackout::
 	;jr c, .lostmoney ; never happens
 	;;;;;;;
 
-	; Halve the player's money.
+	; RGB Tweaked: Halve the player's money only if it was a trainer battle.
+	ld a, [wBlackedOutToTrainer]
+	ld b, a
+	xor a
+	ld [wBlackedOutToTrainer], a ; clearing the flag
+	ld a, b
+	and a
+	jr z, .skipMoneyHalve ; 0 = wild battle
+
 	ld a, [wPlayerMoney]
 	ldh [hMoney], a
 	ld a, [wPlayerMoney + 1]
@@ -37,6 +45,7 @@ ResetStatusAndHalveMoneyOnBlackout::
 	ld [wPlayerMoney + 1], a
 	ldh a, [hDivideBCDQuotient + 2]
 	ld [wPlayerMoney + 2], a
+.skipMoneyHalve ; when blacking out in a wild battle, jump here and don't lose money
 
 	;;;;;;; PureRGBnote: ADDED: clear all safari zone flags on blackout. 
 	;;;;;;; Prevents strange behaviour / glitches when blacking out in the safari zone
