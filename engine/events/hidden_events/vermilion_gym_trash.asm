@@ -152,7 +152,6 @@ VermilionGymTrashSuccessText1::
 ;	rst TextScriptEnd
 
 VermilionGymTrashSuccessText3::
-	text_far _VermilionGymTrashSuccessText2
 	text_far _VermilionGymTrashSuccessText3
 	text_asm
 	ld a, SFX_GO_INSIDE
