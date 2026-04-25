@@ -129,9 +129,11 @@ TryFlash:
 	xor a
 	ld [wMapPalOffset], a
 	ld hl, FlashLightsAreaText2
+	ldh a, [hLoadedROMBank]
+	push af
 	call PrintText
-	call CloseFieldMoveTextBox
-	ret
+	callfar ManualTextScroll
+	jp CloseTextDisplay
 
 HasPartyMove::
 ; Return z (optional: in wWhichTrade) if a PartyMon has move d.
