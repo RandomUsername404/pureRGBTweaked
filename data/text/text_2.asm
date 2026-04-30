@@ -737,14 +737,7 @@ _VermilionTheElectricLockOpened::
 	line "lock opened!"
 	done
 
-;_VermilionGymTrashSuccessText2::
-;	text "Hey! There's"
-;	line "another switch"
-;	cont "under the trash!"
-;	cont "Turn it on!"
-;	prompt
-
-_VermilionGymTrashSuccessText3::
+_VermilionGymTrashSuccessText2::
 	text "Hey! There's"
 	line "another switch"
 	cont "under the trash!@"

@@ -106,7 +106,3 @@ LoreleisRoomLoreleiEndRematchText:
 LoreleisRoomLoreleiAfterRematchText:
 	text_far _LoreleisRoomLoreleiAfterRematchText
 	text_end
-
-LoreleisRoomLoreleiDontRunAwayText:
-	text_far _LoreleisRoomLoreleiDontRunAwayText
-	text_end

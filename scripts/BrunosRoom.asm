@@ -104,7 +104,3 @@ BrunoEndRematchText:
 BrunoAfterRematchText:
 	text_far _BrunoAfterRematchText
 	text_end
-
-BrunosRoomBrunoDontRunAwayText:
-	text_far _BrunosRoomBrunoDontRunAwayText
-	text_end

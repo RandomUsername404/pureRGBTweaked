@@ -37,11 +37,8 @@ CeruleanBadgeHouseMiddleAgedManText:
 	xor a
 	ld [wCurrentMenuItem], a
 	ld [wListScrollOffset], a
-	ld hl, .WhichBadgeText
-	jr .loopEntry
 .loop
-	ld hl, .AnyMoreBadgeInfo
-.loopEntry
+	ld hl, .WhichBadgeText
 	rst _PrintText
 	ld hl, .BadgeItemList
 	call LoadItemList
@@ -119,17 +116,11 @@ CeruleanBadgeHouseMiddleAgedManText:
 	text_end
 
 .WhichBadgeText:
-	text_far _CeruleanBadgeHouseNowThenText
 	text_far _CeruleanBadgeHouseMiddleAgedManWhichBadgeText
 	text_end
 
 .VisitAnyTimeText:
 	text_far _CeruleanBadgeHouseMiddleAgedManVisitAnyTimeText
-	text_end
-
-.AnyMoreBadgeInfo:
-	text_far _CeruleanBadgeHouseNowThenText
-	text_far _CeruleanBadgeHouseAnyMoreText
 	text_end
 
 BadgeHMMapping:

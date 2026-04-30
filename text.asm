@@ -279,8 +279,6 @@ INCLUDE "text/BillsGarden.asm"
 INCLUDE "text/SecretLab.asm"
 INCLUDE "text/SilphCo5F.asm"
 INCLUDE "text/VermilionPidgeyHouse.asm"
-INCLUDE "text/CeladonMansionRoofHouse.asm"
-INCLUDE "text/SaffronPidgeyHouse.asm"
 
 SECTION "Text 12", ROMX
 INCLUDE "text/TypeGuysHouse.asm"
@@ -289,6 +287,8 @@ INCLUDE "text/DiamondMine.asm"
 INCLUDE "text/CeruleanPokecenter.asm"
 INCLUDE "text/CinnabarIsland.asm"
 INCLUDE "text/SaffronMart.asm"
+INCLUDE "text/SaffronPidgeyHouse.asm"
+INCLUDE "text/CeladonMansionRoofHouse.asm"
 
 SECTION "Text 13", ROMX
 INCLUDE "text/PokemonTowerCatacombs.asm"
