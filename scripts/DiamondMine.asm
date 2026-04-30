@@ -6,11 +6,9 @@ DiamondMine_Script:
 	call DiamondMineCheckPlayBoomboxMusic
 	call DiamondMineCheckDigAnimation
 	call DiamondMineCheckFinalStep
-	call DiamondMineJiggleBoomBox
 	jp EnableAutoTextBoxDrawing
 
 DiamondMineJiggleBoomBox::
-	; TODO: make it an overworld animation
 	CheckEvent EVENT_DIAMOND_MINE_STARTED_BOOMBOX
 	ret z
 .jiggleBoombox
@@ -72,10 +70,9 @@ DiamondMineLeaveHoleCoords:
 	db -1
 
 DiamondMineCheckHandleHole:
-	ld hl, wCurrentMapScriptFlags
-	bit BIT_CUR_MAP_LOADED_1, [hl]
-	res BIT_CUR_MAP_LOADED_1, [hl]
+	call WasMapJustLoaded
 	ret nz
+	SetFlag FLAG_MAP_HAS_OVERWORLD_ANIMATION
 	ld a, DIAMOND_MINE
 	ld [wDungeonWarpDestinationMap], a
 	ld hl, DiamondMineHoleCoords

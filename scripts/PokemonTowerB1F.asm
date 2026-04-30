@@ -21,9 +21,7 @@ PokemonTowerB1F_TextPointers:
 	dw_const PokemonTowerB1FTheMawGraveText, TEXT_POKEMONTOWERB1F_THE_MAW_GRAVE
 
 PokemonTowerB1FOnMapLoad:
-	ld hl, wCurrentMapScriptFlags
-	bit BIT_CUR_MAP_LOADED_1, [hl]
-	res BIT_CUR_MAP_LOADED_1, [hl]
+	call WasMapJustLoaded
 	ret z
 	ld a, [wYCoord]
 	cp 18
@@ -177,7 +175,7 @@ PokemonTowerB1FOnMapLoad:
 	ld [hl], -1
 	ld a, 4
 	ld [wSimulatedJoypadStatesIndex], a
-	jp StartSimulatingJoypadStates
+	jp StartSimulatingJoypadStatesNoJoypad
 .replaceTileBlockEntryClosed
 	ld a, $38
 .replaceTileBlockEntry
@@ -960,8 +958,6 @@ PokemonTowerB1FWaitForNPCWalk:
 	cp 5 + 4
 	jr nz, .secondWalk
 	ResetEvent EVENT_CATACOMBS_SPRITE_WALKING
-	xor a
-	ld [wJoyIgnore], a
 	ld a, POKEMONTOWERB1F_CUBONE
 	call SetSpriteFacingUp
 	ld a, UP
@@ -978,8 +974,6 @@ PokemonTowerB1FWaitForNPCWalk:
 	ld de, GenericMoveRight
 	jp MoveSprite
 .firstWalk
-	xor a
-	ld [wJoyIgnore], a
 	ld a, PLAYER_DIR_LEFT
 	ld [wPlayerMovingDirection], a
 	ld a, TEXT_POKEMONTOWERB1F_CUBONE
@@ -991,7 +985,7 @@ PokemonTowerB1FWaitForNPCWalk:
 	ld [hl], -1
 	ld a, 1
 	ld [wSimulatedJoypadStatesIndex], a
-	jp StartSimulatingJoypadStates
+	jp StartSimulatingJoypadStatesNoJoypad
 .checkStartPlayerWalk
 	; check if the player should start walking up to Cubone
 	CheckEvent EVENT_BEAT_THE_MAW
@@ -1012,10 +1006,8 @@ PokemonTowerB1FWaitForNPCWalk:
 	ld [hl], -1
 	ld a, 4
 	ld [wSimulatedJoypadStatesIndex], a
-	jp StartSimulatingJoypadStates
+	jp StartSimulatingJoypadStatesNoJoypad
 .lastWalk
-	xor a
-	ld [wJoyIgnore], a
 	ResetEvent EVENT_CATACOMBS_SPRITE_WALKING
 	ld a, TEXT_POKEMONTOWERB1F_GHOST_MAROWAK
 	ldh [hTextID], a
@@ -1025,6 +1017,7 @@ PokemonTowerB1FWaitForNPCWalk:
 PokemonTowerB1FCuboneText:
 	text_far _CatacombsCuboneText
 	text_asm
+	call EnableAllJoypad
 	ld a, CUBONE
 	call PlayCry
 	call DisplayTextPromptButton
@@ -1079,6 +1072,7 @@ DarkChannelerFliesAway:
 
 PokemonTowerB1FTheMawGraveText:
 	text_asm
+	call EnableAllJoypad
 	CheckEvent EVENT_BEAT_THE_MAW
 	ld hl, .after
 	jr nz, .printDone
@@ -1162,6 +1156,8 @@ PokemonTowerB1FMarowakBlockedHyperBeamText:
 	ld hl, .joinedParty
 	rst _PrintText
 	; copy marowak nickname to wTrainerName to be used in battle
+	call CheckIfGhostMarowakInParty ; sets wWhichMon according to ghost marowak's index in party
+	call GetPartyMonName2 ; wWhichMon decides what this will store
 	ld hl, wNameBuffer
 	ld de, wTrainerName
 	ld bc, NAME_LENGTH
@@ -1185,6 +1181,7 @@ PokemonTowerB1FMarowakBlockedHyperBeamText:
 	ld hl, .attacked
 	jp PrintPlayMusicScreamEnd
 .afterMaw
+	call EnableAllJoypad
 	ld hl, .oneLastTime
 	rst _PrintText
 	ld a, MAROWAK

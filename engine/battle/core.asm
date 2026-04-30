@@ -1027,7 +1027,7 @@ ReplaceFaintedEnemyMon:
 	inc a ; reset Z flag
 	ret
 
-; TODO: below music-related functions could be moved into another bank probably
+; TODO: Need more battle core space? below music-related functions could be moved into another bank probably
 
 TrainerBattleVictory:
 	call EndLowHealthAlarm
@@ -5716,7 +5716,8 @@ MoveHitTest::
 	ret z ; Swift never misses
 	call CheckTargetSubstitute
 	jr z, .checkForDigOrFlyStatus
-	; TODO: should the bug be fixed here or leave it?
+	; TODO: should the bug where draining moves should miss on substituted pokemon be fixed here or leave it?
+	; currently fixed
 	ld a, [de]
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed

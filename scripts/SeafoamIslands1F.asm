@@ -60,9 +60,7 @@ SeafoamIslands1F_TextPointers:
 	dw_const DragonairEventDragonairText2, TEXT_SEAFOAMISLANDS1F_DRAGONAIR2
 
 DragonairUnderWaterEventAreaScript:
-	ld hl, wCurrentMapScriptFlags
-	bit BIT_CUR_MAP_LOADED_1, [hl]
-	res BIT_CUR_MAP_LOADED_1, [hl]
+	call WasMapJustLoaded
 	jr z, .defaultScript
 	bit 3, [hl]
 	res 3, [hl]
@@ -111,8 +109,8 @@ DragonairUnderWaterEventAreaScript:
 	ld a, [wYCoord]
 	cp 2
 	ret nz
-	xor a
-	ld [wJoyIgnore], a
+	call EnableAllJoypad
+	; a = 0 after EnableAllJoypad
 	ld [wWhichPokemon], a ; reload this, dragonair is guaranteed to be in first slot now
 	call GetPartyMonName2
 	ld a, TEXT_SEAFOAMISLANDS1F_ERIK
@@ -175,7 +173,7 @@ DragonairUnderWaterEventAreaScript:
 .caught
 	ld a, b
 	ld [wSimulatedJoypadStatesIndex], a
-	jp StartSimulatingJoypadStates
+	jp StartSimulatingJoypadStatesNoJoypad
 .upOne
 	ld d, PAD_UP
 	jpfar ForceStepFromDoor

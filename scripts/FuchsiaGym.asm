@@ -7,13 +7,6 @@ FuchsiaGym_Script:
 	ld [wFuchsiaGymCurScript], a
 	ret
 
-FuchsiaGymResetScripts:
-	xor a ; SCRIPT_FUCHSIAGYM_DEFAULT
-	ld [wJoyIgnore], a
-	ld [wFuchsiaGymCurScript], a
-	ld [wCurMapScript], a
-	ret
-
 FuchsiaGym_ScriptPointers:
 	def_script_pointers
 	dw_const CheckFightingMapTrainers,              SCRIPT_FUCHSIAGYM_DEFAULT
@@ -21,12 +14,17 @@ FuchsiaGym_ScriptPointers:
 	dw_const EndTrainerBattle,                      SCRIPT_FUCHSIAGYM_END_BATTLE
 	dw_const FuchsiaGymKogaPostBattleScript,        SCRIPT_FUCHSIAGYM_KOGA_POST_BATTLE
 
+FuchsiaGymResetScripts:
+	call ResetMapScripts
+	; a = 0 from ResetMapScripts
+	ld [wFuchsiaGymCurScript], a ; SCRIPT_FUCHSIAGYM_DEFAULT
+	ret
+
 FuchsiaGymKogaPostBattleScript:
 	ld a, [wIsInBattle]
 	cp $ff
-	jp z, FuchsiaGymResetScripts
-	ld a, PAD_CTRL_PAD
-	ld [wJoyIgnore], a
+	jr z, FuchsiaGymResetScripts
+	call DisableDpad
 ; fallthrough
 FuchsiaGymReceiveTM06:
 	ld d, FUCHSIAGYM_KOGA
@@ -57,7 +55,7 @@ FuchsiaGymReceiveTM06:
 	ld a, FUCHSIAGYM_KOGA
 	ldh [hSpriteIndex], a
 	call SetSpriteMovementBytesToFF
-	jp FuchsiaGymResetScripts
+	jr FuchsiaGymResetScripts
 
 FuchsiaGym_TextPointers:
 	def_text_pointers
@@ -173,8 +171,35 @@ FuchsiaGymKogaTM06NoRoomText:
 FuchsiaGymJuggler1Text:
 	text_asm
 	ld hl, FuchsiaGymTrainerHeader0
+	; fall through
+FuchsiaGymTalkToTrainer:
 	call TalkToTrainer
 	rst TextScriptEnd
+
+FuchsiaGymJuggler2Text:
+	text_asm
+	ld hl, FuchsiaGymTrainerHeader1
+	jr FuchsiaGymTalkToTrainer
+
+FuchsiaGymJuggler3Text:
+	text_asm
+	ld hl, FuchsiaGymTrainerHeader2
+	jr FuchsiaGymTalkToTrainer
+
+FuchsiaGymTamer1Text:
+	text_asm
+	ld hl, FuchsiaGymTrainerHeader3
+	jr FuchsiaGymTalkToTrainer
+
+FuchsiaGymTamer2Text:
+	text_asm
+	ld hl, FuchsiaGymTrainerHeader4
+	jr FuchsiaGymTalkToTrainer
+
+FuchsiaGymJuggler4Text:
+	text_asm
+	ld hl, FuchsiaGymTrainerHeader5
+	jr FuchsiaGymTalkToTrainer
 
 FuchsiaGymJuggler1BattleText:
 	text_far _FuchsiaGymJuggler1BattleText
@@ -188,12 +213,6 @@ FuchsiaGymJuggler1AfterBattleText:
 	text_far _FuchsiaGymJuggler1AfterBattleText
 	text_end
 
-FuchsiaGymJuggler2Text:
-	text_asm
-	ld hl, FuchsiaGymTrainerHeader1
-	call TalkToTrainer
-	rst TextScriptEnd
-
 FuchsiaGymJuggler2BattleText:
 	text_far _FuchsiaGymJuggler2BattleText
 	text_end
@@ -206,12 +225,6 @@ FuchsiaGymJuggler2AfterBattleText:
 	text_far _FuchsiaGymJuggler2AfterBattleText
 	text_end
 
-FuchsiaGymJuggler3Text:
-	text_asm
-	ld hl, FuchsiaGymTrainerHeader2
-	call TalkToTrainer
-	rst TextScriptEnd
-
 FuchsiaGymJuggler3BattleText:
 	text_far _FuchsiaGymJuggler3BattleText
 	text_end
@@ -223,12 +236,6 @@ FuchsiaGymJuggler3EndBattleText:
 FuchsiaGymJuggler3AfterBattleText:
 	text_far _FuchsiaGymJuggler3AfterBattleText
 	text_end
-
-FuchsiaGymTamer1Text:
-	text_asm
-	ld hl, FuchsiaGymTrainerHeader3
-	call TalkToTrainer
-	rst TextScriptEnd
 
 FuchsiaGymTamer1BattleText:
 	text_far _FuchsiaGymTamer1BattleText
@@ -252,12 +259,6 @@ FuchsiaGymTamer1AfterBattleText:
 	text_far _FuchsiaGymTamer1AfterBattleText
 	text_end
 
-FuchsiaGymTamer2Text:
-	text_asm
-	ld hl, FuchsiaGymTrainerHeader4
-	call TalkToTrainer
-	rst TextScriptEnd
-
 FuchsiaGymTamer2BattleText:
 	text_far _FuchsiaGymTamer2BattleText
 	text_end
@@ -269,12 +270,6 @@ FuchsiaGymTamer2EndBattleText:
 FuchsiaGymTamer2AfterBattleText:
 	text_far _FuchsiaGymTamer2AfterBattleText
 	text_end
-
-FuchsiaGymJuggler4Text:
-	text_asm
-	ld hl, FuchsiaGymTrainerHeader5
-	call TalkToTrainer
-	rst TextScriptEnd
 
 FuchsiaGymJuggler4BattleText:
 	text_far _FuchsiaGymJuggler4BattleText
@@ -291,15 +286,14 @@ FuchsiaGymJuggler4AfterBattleText:
 FuchsiaGymGymGuideText: ; PureRGBnote: ADDED: gym guide gives you apex chips after beating the leader
 	text_asm
 	CheckEvent EVENT_BEAT_KOGA
-	jr nz, .afterBeat
 	ld hl, FuchsiaGymChampInMakingText
-	rst _PrintText
-	jr .done
+	jr z, .printDone
 .afterBeat
 	CheckEvent EVENT_GOT_PEWTER_APEX_CHIPS ; have to hear about apex chips to receive them after that
-	jr z, .donePrompt
-	ld hl, FuchsiaGymGuidePostBattleTextPrompt
+	ld hl, FuchsiaGymGuidePostBattleText
+	jr z, .printDone
 	rst _PrintText
+	call DisplayTextPromptButton
 	CheckEvent EVENT_GOT_FUCHSIA_APEX_CHIPS
 	jr nz, .alreadyApexChips
 .giveApexChips
@@ -307,7 +301,8 @@ FuchsiaGymGymGuideText: ; PureRGBnote: ADDED: gym guide gives you apex chips aft
 	rst _PrintText
 	lb bc, APEX_CHIP, 2
 	call GiveItem
-	jr nc, .BagFull
+	ld hl, ApexNoRoomText5
+	jr nc, .printDone
 	ld hl, ReceivedApexChipsText5
 	rst _PrintText
 	ld hl, FuchsiaGymGuideApexChipPoisonText
@@ -315,17 +310,9 @@ FuchsiaGymGymGuideText: ; PureRGBnote: ADDED: gym guide gives you apex chips aft
 	SetEvent EVENT_GOT_FUCHSIA_APEX_CHIPS
 .alreadyApexChips
 	ld hl, AlreadyReceivedApexChipsText5
+.printDone
 	rst _PrintText
-	jr .done
-.BagFull
-	ld hl, ApexNoRoomText5
-	rst _PrintText
-.done
 	rst TextScriptEnd
-.donePrompt
-	ld hl, FuchsiaGymGuidePostBattleText
-	rst _PrintText
-	jr .done
 
 ReceivedApexChipsText5:
 	text_far _ReceivedApexChipsText
@@ -351,11 +338,6 @@ FuchsiaGymChampInMakingText:
 
 FuchsiaGymGuidePostBattleText:
 	text_far _FuchsiaGymGymGuideBeatKogaText
-	text_end
-
-FuchsiaGymGuidePostBattleTextPrompt:
-	text_far _FuchsiaGymGymGuideBeatKogaText
-	text_promptbutton
 	text_end
 
 FuchsiaGymGuideApexChipPoisonText:
