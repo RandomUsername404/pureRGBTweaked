@@ -10,7 +10,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 |:---|---|---|---|---|---|---|
 | POUND | NORMAL | 40 | 100 | 35 | No secondary effect. | — |
 | **KARATE_CHOP** | **FIGHTING** | **40** | **95** | 25 | High critical hit ratio. | — |
-| **DOUBLESLAP** | NORMAL | **20** | **100** | **30** | Hits 2–5 times per use. Distribution: 3/8 for 2 hits, 3/8 for 3 hits, 1/8 for 4 hits, 1/8 for 5 hits. Deals double damage if the target is asleep, but will wake it up. | — |
+| **DOUBLESLAP** | NORMAL | **20** | **100** | **30** | Hits 2–5 times per use. Distribution: 3/8 for 2 hits, 3/8 for 3 hits, 1/8 for 4 hits, 1/8 for 5 hits. Deals double damage if the target is asleep, but it will wake up on the next turn. | — |
 | **COMET_PUNCH** | **FIGHTING** | **20** | **100** | 15 | **Priority move. Hits 2 or 3 times with a 50% probability for each outcome.** | — |
 | **MEGA_PUNCH** | **FIGHTING** | **75** | **100** | 20 | **Fighting-type user: 30% flinch chance - Non-Fighting-type user: 10% flinch chance** | — |
 | **PAY_DAY** | NORMAL | **60** | 100 | 20 | Hits the opponent and scatters coins equal to the user's level × 2. These coins are awarded to the player at the end of the battle. | — |
