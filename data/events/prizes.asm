@@ -9,13 +9,13 @@ NoThanksText:
 	db "NO THANKS@"
 
 PrizeMenuMon1Entries:
-	db ABRA
+	db TANGELA
 	db JYNX
 	db ELECTABUZZ
 	db "@"
 
 PrizeMenuMon1Cost:
-	bcd2 400
+	bcd2 500
 	bcd2 750
 	bcd2 750
 	db "@"

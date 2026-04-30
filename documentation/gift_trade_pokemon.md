@@ -23,7 +23,7 @@ The fossil you don't take in Mt. Moon will be available later in Seafoam Islands
 
 | Pokémon | Level | Coins |
 |:---|---|---|
-| **Abra** | 10 | 400 |
+| **Tangela** | 20 | 500 |
 | **Jynx** | 20 | 750 |
 | **Electabuzz** | 20 | 750 |
 | **Ditto** | 25 | 1000 |
