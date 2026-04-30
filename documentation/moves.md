@@ -27,7 +27,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **WING_ATTACK** | FLYING | **50** | 100 | 35 | **Priority move.** | — |
 | **WHIRLWIND** | **FLYING** | **110** | 85 | **10** | **30% chance to confuse the target after dealing damage.** | This effect is a PureRGB addition. |
 | **FLY** | FLYING | **75** | **100** | 15 | Two-turn move. Hits on the second turn. | — |
-| **BIND** | **ROCK** | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
+| **BIND** | **ROCK** | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot use moves during this time. | Changed from vanilla's 2–5 turns. **Target can switch out.** |
 | **FILTHY SLAM** | **POISON** | **80** | **100** | **20** | **Power goes up to 130 if the opponent is poisoned.** | **New PureRGB move. Replaces SLAM.** |
 | **VINE_WHIP** | GRASS | **40** | 100 | **25** | No secondary effect. | — |
 | STOMP | NORMAL | 65 | 100 | 20 | 30% chance to make the target flinch. | — |
@@ -42,7 +42,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | HORN_DRILL | NORMAL | 1 | 30 | 5 | One-hit KO. | — |
 | **TACKLE** | NORMAL | 35 | **100** | 35 | No secondary effect. | — |
 | BODY_SLAM | NORMAL | 85 | 100 | 15 | 30% chance to inflict paralysis on the target. Can paralize any type. | — |
-| **WRAP** | NORMAL | **22** | 85 | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
+| **WRAP** | NORMAL | **22** | 85 | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot use moves during this time. | Changed from vanilla's 2–5 turns. **Target can switch out.** |
 | **HEAT RUSH** | **FIRE** | **75** | **100** | **20** | **40% chance to raise the user's Special by +1, but only if the user is a Fire type (either type slot is checked). 30% chance to burn the target.** | **New PureRGB move & effect. Replaces TAKE DOWN.** |
 | THRASH | NORMAL | 90 | 100 | 20 | Locks the user into the move for 2 or 3 turns (chosen randomly). The user cannot select a different move during this period. When the rampage ends, the user becomes confused. | — |
 | **DOUBLE_EDGE** | NORMAL | **120** | 100 | **10** | The user takes recoil equal to 25% of the damage dealt. | — |
@@ -90,7 +90,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **PETAL_DANCE** | GRASS | **90** | 100 | 20 | Locks the user into the move for 2 or 3 turns (chosen randomly). The user cannot select a different move during this period. When the rampage ends, the user becomes confused. | — |
 | STRING_SHOT | BUG | 0 | 95 | 40 | Lowers the target's Speed modifier by 1 stage. | — |
 | **DRAGON_RAGE** | DRAGON | **80** | 100 | **20** | No secondary effect. | — |
-| **FIRE_SPIN** | FIRE | **25** | **85** | 15 | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
+| **FIRE_SPIN** | FIRE | **25** | **85** | 15 | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot use moves during this time. | Changed from vanilla's 2–5 turns. **Target can switch out.** |
 | THUNDERSHOCK | ELECTRIC | 40 | 100 | 30 | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | — |
 | THUNDERBOLT | ELECTRIC | 95 | 100 | 15 | 10% chance to inflict paralysis on the target. Cannot paralyze Ground-types. | — |
 | THUNDER_WAVE | ELECTRIC | 0 | 100 | 20 | Guarantees paralysis on the target if the move hits. Cannot paralyze Ground-types. | — |
@@ -135,7 +135,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **BONE_CLUB** | GROUND | 65 | **100** | 20 | 10% chance to make the target flinch. | — |
 | FIRE_BLAST | FIRE | 120 | 85 | 5 | 30% chance to inflict burn. Cannot burn a Fire-type Pokémon. | — |
 | **WATERFALL** | WATER | **70** | 100 | 15 | **30% chance to make the target flinch.** | — |
-| **CLAMP** | WATER | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot switch out or use moves during this time. | Changed from vanilla's 2–5 turns. |
+| **CLAMP** | WATER | **25** | **85** | **15** | Traps the target **for 2 or 3 turns** (2/3 chance of 2 turns, 1/3 chance of 3 turns). The target cannot use moves during this time. | Changed from vanilla's 2–5 turns. **Target can switch out.** |
 | **SWIFT** | **ICE** | 60 | 100 | 20 | **Priority move.** This move never misses and will hit through FLY and DIG. | — |
 | **SKULL_BASH** | **ROCK** | **90** | **85** | **10** | **If the move misses, the user takes crash damage equal to 25% of the damage it would have dealt. Accuracy boosted to 100 if the user is a ROCK-type (also applies to Hardened Onix).** | — |
 | **SPIKE_CANNON** | **ROCK** | **35** | 100 | **10** | **Hits 2 or 3 times with a 50% probability for each outcome.** | — |

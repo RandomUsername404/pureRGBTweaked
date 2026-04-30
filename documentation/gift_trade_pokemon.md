@@ -40,7 +40,6 @@ Some Trade Pokémon have alternate color palettes (marked with ★).
 |:---|---|---|---|---|---|
 | Drowzee | **Grimer** | Goopinator | Route 2 Trade House | GABE | No |
 | Pidgeotto | **Seel** | Slappy | Cerulean City | EDMUND | No |
-| Alakazam | **Magneton** | SPROCKET | Cerulean Rocket House B1F | CROCKET | ★ Yes |
 | Voltorb | **Tangela** | Discombob | Route 5 Underground Path Entrance | LILIAN | No |
 | Oddish | **Ponyta** | Seabiscuit | Route 11 Gate | BOBO | No |
 | Onix | **Gastly** | Nebula | Vermilion City | MIMI | No |
@@ -48,5 +47,6 @@ Some Trade Pokémon have alternate color palettes (marked with ★).
 | Krabby | **Zubat** | EmeraldSDB | Cinnabar Lab | MIKE | ★ Yes |
 | Ponyta | **Machop** | HulkSmash | Cinnabar Lab | DRGREEN | ★ Yes |
 | Lapras | **Snorlax** | Fatso | Cinnabar Lab | GRACIE | ★ Yes |
+| Alakazam | **Magneton** | SPROCKET | Cerulean Rocket House B1F | CROCKET | ★ Yes |
 
 You can freely rename Trade Pokémon in Lavender Town.
