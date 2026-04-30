@@ -25,8 +25,8 @@ TeleportLearnset:
 	dbit FALSE ; FEAROW     ; 22
 	dbit FALSE ; EKANS      ; 23
 	dbit FALSE ; ARBOK      ; 24
-	dbit TRUE  ; PIKACHU    ; 25
-	dbit TRUE  ; RAICHU     ; 26
+	dbit FALSE ; PIKACHU    ; 25
+	dbit FALSE ; RAICHU     ; 26
 	dbit FALSE ; SANDSHREW  ; 27
 	dbit FALSE ; SANDSLASH  ; 28
 	dbit FALSE ; NIDORAN_F  ; 29
@@ -37,32 +37,32 @@ TeleportLearnset:
 	dbit FALSE ; NIDOKING   ; 34
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
-	dbit TRUE  ; VULPIX     ; 37
-	dbit TRUE  ; NINETALES  ; 38
+	dbit FALSE ; VULPIX     ; 37
+	dbit FALSE ; NINETALES  ; 38
 	dbit TRUE  ; JIGGLYPUFF ; 39
 	dbit TRUE  ; WIGGLYTUFF ; 40
 	dbit FALSE ; ZUBAT      ; 41
 	dbit FALSE ; GOLBAT     ; 42
-	dbit TRUE  ; ODDISH     ; 43
-	dbit TRUE  ; GLOOM      ; 44
-	dbit TRUE  ; VILEPLUME  ; 45
+	dbit FALSE ; ODDISH     ; 43
+	dbit FALSE ; GLOOM      ; 44
+	dbit FALSE ; VILEPLUME  ; 45
 	dbit FALSE ; PARAS      ; 46
 	dbit FALSE ; PARASECT   ; 47
-	dbit TRUE  ; VENONAT    ; 48
+	dbit FALSE ; VENONAT    ; 48
 	dbit TRUE  ; VENOMOTH   ; 49
 	dbit FALSE ; DIGLETT    ; 50
 	dbit FALSE ; DUGTRIO    ; 51
 	dbit FALSE ; MEOWTH     ; 52
 	dbit FALSE ; PERSIAN    ; 53
-	dbit TRUE  ; PSYDUCK    ; 54
+	dbit FALSE ; PSYDUCK    ; 54
 	dbit TRUE  ; GOLDUCK    ; 55
 	dbit FALSE ; MANKEY     ; 56
 	dbit FALSE ; PRIMEAPE   ; 57
 	dbit FALSE ; GROWLITHE  ; 58
-	dbit TRUE  ; ARCANINE   ; 59
-	dbit TRUE  ; POLIWAG    ; 60
-	dbit TRUE  ; POLIWHIRL  ; 61
-	dbit TRUE  ; POLIWRATH  ; 62
+	dbit FALSE ; ARCANINE   ; 59
+	dbit FALSE ; POLIWAG    ; 60
+	dbit FALSE ; POLIWHIRL  ; 61
+	dbit FALSE ; POLIWRATH  ; 62
 	dbit TRUE  ; ABRA       ; 63
 	dbit TRUE  ; KADABRA    ; 64
 	dbit TRUE  ; ALAKAZAM   ; 65
@@ -72,13 +72,13 @@ TeleportLearnset:
 	dbit FALSE ; BELLSPROUT ; 69
 	dbit FALSE ; WEEPINBELL ; 70
 	dbit FALSE ; VICTREEBEL ; 71
-	dbit TRUE  ; TENTACOOL  ; 72
-	dbit TRUE  ; TENTACRUEL ; 73
+	dbit FALSE ; TENTACOOL  ; 72
+	dbit FALSE ; TENTACRUEL ; 73
 	dbit FALSE ; GEODUDE    ; 74
 	dbit FALSE ; GRAVELER   ; 75
 	dbit FALSE ; GOLEM      ; 76
 	dbit FALSE ; PONYTA     ; 77
-	dbit TRUE  ; RAPIDASH   ; 78
+	dbit FALSE ; RAPIDASH   ; 78
 	dbit TRUE  ; SLOWPOKE   ; 79
 	dbit TRUE  ; SLOWBRO    ; 80
 	dbit TRUE  ; MAGNEMITE  ; 81
@@ -92,9 +92,9 @@ TeleportLearnset:
 	dbit FALSE ; MUK        ; 89
 	dbit TRUE  ; SHELLDER   ; 90
 	dbit TRUE  ; CLOYSTER   ; 91
-	dbit TRUE  ; GASTLY     ; 92
-	dbit TRUE  ; HAUNTER    ; 93
-	dbit TRUE  ; GENGAR     ; 94
+	dbit FALSE ; GASTLY     ; 92
+	dbit FALSE ; HAUNTER    ; 93
+	dbit FALSE ; GENGAR     ; 94
 	dbit FALSE ; ONIX       ; 95
 	dbit TRUE  ; DROWZEE    ; 96
 	dbit TRUE  ; HYPNO      ; 97
@@ -104,11 +104,11 @@ TeleportLearnset:
 	dbit TRUE  ; ELECTRODE  ; 101
 	dbit TRUE  ; EXEGGCUTE  ; 102
 	dbit TRUE  ; EXEGGUTOR  ; 103
-	dbit TRUE  ; CUBONE     ; 104
-	dbit TRUE  ; MAROWAK    ; 105
+	dbit FALSE ; CUBONE     ; 104
+	dbit FALSE ; MAROWAK    ; 105
 	dbit FALSE ; HITMONLEE  ; 106
 	dbit FALSE ; HITMONCHAN ; 107
-	dbit TRUE  ; LICKITUNG  ; 108
+	dbit FALSE ; LICKITUNG  ; 108
 	dbit FALSE ; KOFFING    ; 109
 	dbit FALSE ; WEEZING    ; 110
 	dbit FALSE ; RHYHORN    ; 111
@@ -144,9 +144,9 @@ TeleportLearnset:
 	dbit FALSE ; KABUTOPS   ; 141
 	dbit FALSE ; AERODACTYL ; 142
 	dbit FALSE ; SNORLAX    ; 143
-	dbit TRUE  ; ARTICUNO   ; 144
-	dbit TRUE  ; ZAPDOS     ; 145
-	dbit TRUE  ; MOLTRES    ; 146
+	dbit FALSE ; ARTICUNO   ; 144
+	dbit FALSE ; ZAPDOS     ; 145
+	dbit FALSE ; MOLTRES    ; 146
 	dbit FALSE ; DRATINI    ; 147
 	dbit FALSE ; DRAGONAIR  ; 148
 	dbit FALSE ; DRAGONITE  ; 149

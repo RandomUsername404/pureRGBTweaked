@@ -310,7 +310,7 @@ ChampArenaSurgeMoveset1:
 	db SWIFT
 	db THUNDER
 	; pikachu
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db AGILITY
 	db DOUBLE_TEAM
 	db SURF
@@ -349,7 +349,7 @@ ChampArenaSurgeMoveset2:
 	; electabuzz
 	db TOXIC
 	db THUNDERPUNCH
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db PSYCHIC_M
 	; electrode
 	db SONICBOOM
@@ -367,7 +367,7 @@ ChampArenaSabrinaMoveset1:
 	db DISABLE
 	db PSYCHIC_M
 	db REFLECT
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	; golduck
 	db SURF
 	db PSYBEAM
@@ -416,7 +416,7 @@ ChampArenaSabrinaMoveset2:
 	db EXPLOSION
 	db TOXIC
 	; wigglytuff
-	db SEISMIC_TOSS
+	db DIZZY_PUNCH
 	db BODY_SLAM
 	db THUNDERBOLT
 	db ICE_BEAM
@@ -441,7 +441,7 @@ ChampArenaBrunoMoveset1:
 	db DEFENSE_CURL
 	db COMET_PUNCH
 	db HYPER_BEAM
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	; electabuzz
 	db THUNDERPUNCH
 	db COUNTER ; DRAIN PUNCH
@@ -467,13 +467,13 @@ ChampArenaBrunoMoveset2:
 	; hitmonlee
 	db AGILITY
 	db EARTHQUAKE
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db DOUBLE_TEAM
 	; machamp
 	db EARTHQUAKE
 	db DEFENSE_CURL
 	db HYPER_BEAM
-	db SEISMIC_TOSS
+	db MEGA_PUNCH
 	; poliwrath
 	db AMNESIA
 	db PSYCHIC_M
@@ -505,7 +505,7 @@ ChampArenaMistyMoveset1:
 	db HYDRO_PUMP
 	db BITE
 	db DIG
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	; staryu
 	db RECOVER
 	db MINIMIZE
@@ -542,7 +542,7 @@ ChampArenaMistyMoveset2:
 	db HYDRO_PUMP
 	db BITE
 	db DIG
-	db SEISMIC_TOSS
+	db COUNTER ; DRAIN PUNCH
 	; dewgong
 	db ICE_BEAM
 	db WITHDRAW
@@ -601,11 +601,11 @@ ChampArenaLanceMoveset2:
 	db THUNDERBOLT
 	db THUNDER_WAVE
 	db PSYCHIC_M
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	; charizard
 	db SLASH
 	db FIRE_BLAST
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db EARTHQUAKE
 	; kangaskhan
 	db DIZZY_PUNCH
@@ -665,7 +665,7 @@ ChampArenaKogaMoveset2:
 	db HYPNOSIS
 	db PSYCHIC_M
 	db COUNTER ; DRAIN_PUNCH
-	db SEISMIC_TOSS
+	db POISON_GAS
 	; tangela
 	db STUN_SPORE
 	db DOUBLE_TEAM
@@ -734,7 +734,7 @@ ChampArenaLoreleiMoveset2:
 	db HYDRO_PUMP
 	db BLIZZARD
 	db EARTHQUAKE
-	db SEISMIC_TOSS
+	db MEGA_DRAIN
 	; articuno
 	db TOXIC
 	db ICE_BEAM
@@ -751,7 +751,7 @@ ChampArenaBrockMoveset1:
 	db ROCK_SLIDE
 	db DIG
 	db SELFDESTRUCT
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	; marowak
 	db BODY_SLAM
 	db FISSURE
@@ -787,8 +787,8 @@ ChampArenaBrockMoveset2:
 	; golem
 	db SKULL_BASH
 	db DIG
-	db EXPLOSION
-	db SEISMIC_TOSS
+	db BARRAGE
+	db MEGA_PUNCH
 	; ninetales
 	db BIDE
 	db CONFUSE_RAY
@@ -845,7 +845,7 @@ ChampArenaAgathaMoveset2:
 	db PSYCHIC_M
 	; alakazam
 	db PSYCHIC_M
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db THUNDER_WAVE
 	db RECOVER
 	; arbok
@@ -872,7 +872,7 @@ ChampArenaAgathaMoveset2:
 ChampArenaGymGuideMoveset:
 	; chansey
 	db REFLECT
-	db SEISMIC_TOSS
+	db MEGA_PUNCH
 	db SOFTBOILED
 	db ICE_BEAM
 	; snorlax
@@ -911,7 +911,7 @@ ChampArena1RivalMoveset1:
 	; slowbro
 	db EARTHQUAKE
 	db PSYCHIC_M
-	db SEISMIC_TOSS
+	db SKULL_BASH
 	db SURF
 	; charizard
 	db BODY_SLAM
@@ -931,7 +931,7 @@ ChampArena1RivalMoveset1:
 	; pinsir
 	db SWORDS_DANCE
 	db TWINEEDLE
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 ChampArena1RivalMoveset2:
@@ -943,7 +943,7 @@ ChampArena1RivalMoveset2:
 	; blastoise
 	db EARTHQUAKE
 	db BARRAGE
-	db SEISMIC_TOSS
+	db SKULL_BASH
 	db SURF
 	; ninetales
 	db BODY_SLAM
@@ -963,7 +963,7 @@ ChampArena1RivalMoveset2:
 	; pinsir
 	db SWORDS_DANCE
 	db TWINEEDLE
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 ChampArena1RivalMoveset3:
@@ -975,7 +975,7 @@ ChampArena1RivalMoveset3:
 	; slowbro
 	db EARTHQUAKE
 	db PSYCHIC_M
-	db SEISMIC_TOSS
+	db SKULL_BASH
 	db SURF
 	; ninetales
 	db BODY_SLAM
@@ -995,7 +995,7 @@ ChampArena1RivalMoveset3:
 	; pinsir
 	db SWORDS_DANCE
 	db TWINEEDLE
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 ; Rival fights 10
@@ -1028,7 +1028,7 @@ ChampArena2RivalMoveset1:
 	; pinsir
 	db TWINEEDLE
 	db BIND
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 ChampArena2RivalMoveset2:
@@ -1055,12 +1055,12 @@ ChampArena2RivalMoveset2:
 	; raichu
 	db THUNDERBOLT
 	db THUNDER_WAVE
-	db SEISMIC_TOSS
+	db KARATE_CHOP
 	db BARRAGE
 	; pinsir
 	db TWINEEDLE
 	db BIND
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 ChampArena2RivalMoveset3:
@@ -1092,7 +1092,7 @@ ChampArena2RivalMoveset3:
 	; pinsir
 	db TWINEEDLE
 	db BIND
-	db SEISMIC_TOSS
+	db SUBMISSION
 	db TOXIC
 
 EliteFourAgathaMoveset:

@@ -72,7 +72,7 @@ _FitnessClubChangeSettings::
 
 _FitnessClubAllLevelLimit::
 	text "Your #MON are"
-	line "all above lvl @"
+	line "all above L@"
 	text_decimal wLevelLimit, 1, 2
 	text "!<PARA>@"
 	text_end

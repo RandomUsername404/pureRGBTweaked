@@ -67,3 +67,7 @@ From Pokémon TCG GB2:
 
 From Pokémon Gold:
 - ../koga.png
+- ../blaine.png 
+
+Edited:
+- ../little_boy.png

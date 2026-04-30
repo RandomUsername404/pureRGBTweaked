@@ -1,14 +1,14 @@
 MegaKickLearnset:
 	bit_array MegaKickLearnset
 	dbit TRUE  ; MISSINGNO  ; 0
-	dbit TRUE  ; BULBASAUR  ; 1
-	dbit TRUE  ; IVYSAUR    ; 2
+	dbit FALSE ; BULBASAUR  ; 1
+	dbit FALSE ; IVYSAUR    ; 2
 	dbit TRUE  ; VENUSAUR   ; 3
-	dbit TRUE  ; CHARMANDER ; 4
-	dbit TRUE  ; CHARMELEON ; 5
+	dbit FALSE ; CHARMANDER ; 4
+	dbit FALSE ; CHARMELEON ; 5
 	dbit TRUE  ; CHARIZARD  ; 6
-	dbit TRUE  ; SQUIRTLE   ; 7
-	dbit TRUE  ; WARTORTLE  ; 8
+	dbit FALSE ; SQUIRTLE   ; 7
+	dbit FALSE ; WARTORTLE  ; 8
 	dbit TRUE  ; BLASTOISE  ; 9
 	dbit FALSE ; CATERPIE   ; 10
 	dbit FALSE ; METAPOD    ; 11
@@ -27,18 +27,18 @@ MegaKickLearnset:
 	dbit FALSE ; ARBOK      ; 24
 	dbit TRUE  ; PIKACHU    ; 25
 	dbit TRUE  ; RAICHU     ; 26
-	dbit TRUE  ; SANDSHREW  ; 27
+	dbit FALSE ; SANDSHREW  ; 27
 	dbit TRUE  ; SANDSLASH  ; 28
-	dbit TRUE  ; NIDORAN_F  ; 29
+	dbit FALSE ; NIDORAN_F  ; 29
 	dbit TRUE  ; NIDORINA   ; 30
 	dbit TRUE  ; NIDOQUEEN  ; 31
-	dbit TRUE  ; NIDORAN_M  ; 32
+	dbit FALSE ; NIDORAN_M  ; 32
 	dbit TRUE  ; NIDORINO   ; 33
 	dbit TRUE  ; NIDOKING   ; 34
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
 	dbit FALSE ; VULPIX     ; 37
-	dbit FALSE ; NINETALES  ; 38
+	dbit TRUE  ; NINETALES  ; 38
 	dbit TRUE  ; JIGGLYPUFF ; 39
 	dbit TRUE  ; WIGGLYTUFF ; 40
 	dbit FALSE ; ZUBAT      ; 41
@@ -52,7 +52,7 @@ MegaKickLearnset:
 	dbit FALSE ; VENOMOTH   ; 49
 	dbit FALSE ; DIGLETT    ; 50
 	dbit FALSE ; DUGTRIO    ; 51
-	dbit TRUE  ; MEOWTH     ; 52
+	dbit FALSE ; MEOWTH     ; 52
 	dbit TRUE  ; PERSIAN    ; 53
 	dbit TRUE  ; PSYDUCK    ; 54
 	dbit TRUE  ; GOLDUCK    ; 55
@@ -74,7 +74,7 @@ MegaKickLearnset:
 	dbit FALSE ; VICTREEBEL ; 71
 	dbit FALSE ; TENTACOOL  ; 72
 	dbit FALSE ; TENTACRUEL ; 73
-	dbit TRUE  ; GEODUDE    ; 74
+	dbit FALSE ; GEODUDE    ; 74
 	dbit TRUE  ; GRAVELER   ; 75
 	dbit TRUE  ; GOLEM      ; 76
 	dbit TRUE  ; PONYTA     ; 77
@@ -83,7 +83,7 @@ MegaKickLearnset:
 	dbit TRUE  ; SLOWBRO    ; 80
 	dbit FALSE ; MAGNEMITE  ; 81
 	dbit FALSE ; MAGNETON   ; 82
-	dbit TRUE  ; FARFETCHD  ; 83
+	dbit FALSE ; FARFETCHD  ; 83
 	dbit TRUE  ; DODUO      ; 84
 	dbit TRUE  ; DODRIO     ; 85
 	dbit FALSE ; SEEL       ; 86
@@ -103,7 +103,7 @@ MegaKickLearnset:
 	dbit FALSE ; VOLTORB    ; 100
 	dbit FALSE ; ELECTRODE  ; 101
 	dbit FALSE ; EXEGGCUTE  ; 102
-	dbit TRUE  ; EXEGGUTOR  ; 103
+	dbit FALSE ; EXEGGUTOR  ; 103
 	dbit TRUE  ; CUBONE     ; 104
 	dbit TRUE  ; MAROWAK    ; 105
 	dbit TRUE  ; HITMONLEE  ; 106

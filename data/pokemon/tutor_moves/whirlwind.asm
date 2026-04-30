@@ -1,9 +1,9 @@
 WhirlwindLearnset:
 	bit_array WhirlwindLearnset
 	dbit TRUE  ; MISSINGNO  ; 0
-	dbit TRUE  ; BULBASAUR  ; 1
-	dbit TRUE  ; IVYSAUR    ; 2
-	dbit TRUE  ; VENUSAUR   ; 3
+	dbit FALSE ; BULBASAUR  ; 1
+	dbit FALSE ; IVYSAUR    ; 2
+	dbit FALSE ; VENUSAUR   ; 3
 	dbit FALSE ; CHARMANDER ; 4
 	dbit FALSE ; CHARMELEON ; 5
 	dbit TRUE  ; CHARIZARD  ; 6

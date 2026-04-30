@@ -159,6 +159,48 @@ HM moves can be deleted whenever you want.
 | TM06 | Toxic | ₽1,000 |
 
 
+## Move Tutors
+
+| Move(s) Taught | NPC | Location | Condition |
+|:---|---|---|---|
+| Metronome | Gambler | Route 12 | Defeat him in battle first |
+| Mimic | Copycat | Copycat's House 2F, Celadon City | Give her a Poké Doll on the first visit; free on all subsequent visits |
+| Selfdestruct, Explosion, Tri Attack, Dream Eater, Pay Day, Rest, Teleport, Softboiled | Gramps | Celadon City (above the "pool") | None. First lesson is free |
+| Mega Punch, Mega Kick, Whirlwind, Skull Bash, Swift, Egg Bomb, Rage, Screech | Left Bro | Fighting Bros House, Saffron City | Defeat Sabrina. First lesson is free |
+| Fire Punch, Ice Punch, or Thunderpunch (player chooses one, Alakazam only) | Right Bro | Fighting Bros House, Saffron City | Defeat Sabrina and present an Alakazam; one-time only, free |
+| Dragon Rage (Magikarp only), Fly (Pikachu only) | Magikarp Salesman | Mt. Moon Pokécenter | Buy his Magikarp |
+| Surf (Pikachu & Raichu only) | ????? | Pokémon Fan Club, Vermilion City | Defeat the E4 |
+
+- **Metronome**, **Mimic**, **Rage** and **Rest** can be taught to:
+    Any Pokémon except Ditto.
+- **Selfdestruct** and **Explosion** can be taught to:
+    Bellsprout, Cloyster, Electrode, Exeggcute, Exeggutor, Gastly, Gengar, Geodude, Golem, Graveler, Grimer, Haunter, Jigglypuff, Koffing, Magnemite, Magneton, Mankey, Mew, Mewtwo, MissingNo, Muk, Omanyte, Omastar, Onix, Porygon, Primeape, Shellder, Snorlax, Starmie, Staryu, Tangela, Victreebel, Voltorb, Weepinbell, Weezing, Wigglytuff
+- **Tri Attack** can be taught to:
+    Abra, Alakazam, Articuno, Chansey, Clefable, Clefairy, Cloyster, Dodrio, Doduo, Drowzee, Eevee, Hypno, Jigglypuff, Jynx, Kadabra, Magnemite, Magneton, Mew, Mewtwo, MissingNo, Moltres, Porygon, Shellder, Slowbro, Slowpoke, Starmie, Staryu, Wigglytuff, Zapdos
+- **Dream Eater** can be taught to:
+    Butterfree, Clefable, Clefairy, Drowzee, Gastly, Gengar, Gloom, Golbat, Haunter, Hypno, Jigglypuff, Jynx, Lapras, Lickitung, Mew, MissingNo, Mr Mime, Oddish, Paras, Parasect, Poliwag, Poliwhirl, Poliwrath, Tangela, Venomoth, Venonat, Vileplume, Wigglytuff, Zubat
+- **Pay Day** can be taught to:
+    Clefable, Clefairy, Dewgong, Eevee, Farfetch'd, Fearow, Flareon, Golduck, Jigglypuff, Jolteon, Lickitung, Mankey, Meowth, Mew, Mewtwo, MissingNo, Nidoking, Nidoqueen, Persian, Pikachu, Poliwag, Poliwhirl, Poliwrath, Primeape, Psyduck, Raichu, Rapidash, Raticate, Rattata, Rhydon, Sandshrew, Sandslash, Seel, Slowbro, Slowpoke, Snorlax, Vaporeon, Wigglytuff
+- **Teleport** can be taught to:
+    Abra, Alakazam, Butterfree, Chansey, Clefable, Clefairy, Cloyster, Drowzee, Electabuzz, Electrode, Exeggcute, Exeggutor, Golduck, Hypno, Jigglypuff, Jynx, Kadabra, Magmar, Magnemite, Magneton, Mew, Mewtwo, MissingNo, Mr Mime, Porygon, Shellder, Slowbro, Slowpoke, Starmie, Staryu, Venomoth, Voltorb, Wigglytuff
+- **Softboiled** can be taught to:
+    Arbok, Chansey, Clefable, Exeggcute, Exeggutor, Kangaskhan, Mew, MissingNo, Wigglytuff
+- **Mega Punch** can be taught to:
+    Abra, Alakazam, Blastoise, Chansey, Charizard, Charmander, Charmeleon, Clefable, Clefairy, Cubone, Dragonite, Drowzee, Electabuzz, Gengar, Geodude, Golduck, Golem, Graveler, Grimer, Haunter, Hitmonchan, Hitmonlee, Hypno, Jigglypuff, Jynx, Kadabra, Kangaskhan, Kingler, Lickitung, Machamp, Machoke, Machop, Magmar, Mankey, Marowak, Mew, Mewtwo, MissingNo, Mr Mime, Muk, Nidoking, Nidoqueen, Pikachu, Pinsir, Poliwhirl, Poliwrath, Primeape, Psyduck, Raichu, Raticate, Rhydon, Slowbro, Snorlax, Squirtle, Wartortle, Wigglytuff
+- **Mega Kick** can be taught to:
+    Abra, Alakazam, Arcanine, Blastoise, Charizard, Clefable, Clefairy, Cubone, Dodrio, Doduo, Dragonite, Drowzee, Electabuzz, Flareon, Gengar, Golduck, Golem, Graveler, Growlithe, Hitmonchan, Hitmonlee, Hypno, Jigglypuff, Jynx, Kabutops, Kadabra, Kangaskhan, Lickitung, Machamp, Machoke, Machop, Magmar, Mankey, Marowak, Mew, Mewtwo, MissingNo, Mr Mime, Nidoking, Nidoqueen, Nidorina, Nidorino, Ninetales, Persian, Pikachu, Pinsir, Poliwhirl, Poliwrath, Ponyta, Primeape, Psyduck, Raichu, Rapidash, Raticate, Rattata, Rhydon, Rhyhorn, Sandslash, Scyther, Slowbro, Snorlax, Tauros, Venusaur, Wigglytuff
+- **Whirlwind** can be taught to:
+    Aerodactyl, Articuno, Beedrill, Butterfree, Charizard, Dragonite, Farfetch'd, Fearow, Golbat, Gyarados, Koffing, Mew, MissingNo, Moltres, Pidgeot, Pidgeotto, Pidgey, Scyther, Spearow, Venomoth, Weezing, Zapdos, Zubat
+- **Skull Bash** can be taught to:
+    Aerodactyl, Arbok, Arcanine, Blastoise, Charizard, Charmander, Charmeleon, Clefable, Clefairy, Cloyster, Cubone, Dewgong, Diglett, Dodrio, Doduo, Dragonair, Dragonite, Dratini, Drowzee, Dugtrio, Eevee, Ekans, Electabuzz, Electrode, Farfetch'd, Fearow, Flareon, Geodude, Golbat, Goldeen, Golduck, Golem, Graveler, Growlithe, Gyarados, Hitmonchan, Hitmonlee, Hypno, Jigglypuff, Jolteon, Jynx, Kabuto, Kabutops, Kangaskhan, Kingler, Koffing, Krabby, Lapras, Lickitung, Machamp, Machoke, Machop, Magmar, Mankey, Marowak, Meowth, Mew, Mewtwo, MissingNo, Mr Mime, Nidoking, Nidoqueen, NidoranF, NidoranM, Nidorina, Nidorino, Ninetales, Omanyte, Omastar, Onix, Paras, Parasect, Persian, Pidgeot, Pidgeotto, Pikachu, Poliwag, Poliwhirl, Poliwrath, Ponyta, Porygon, Primeape, Psyduck, Raichu, Rapidash, Raticate, Rattata, Rhydon, Rhyhorn, Sandshrew, Sandslash, Scyther, Seaking, Seel, Shellder, Slowbro, Slowpoke, Snorlax, Spearow, Squirtle, Tangela, Tauros, Vaporeon, Venusaur, Voltorb, Wartortle, Weezing, Wigglytuff, Zubat
+- **Swift** can be taught to:
+    Aerodactyl, Arcanine, Articuno, Beedrill, Blastoise, Butterfree, Chansey, Charizard, Clefable, Clefairy, Cloyster, Dewgong, Dragonair, Dragonite, Dratini, Eevee, Electabuzz, Electrode, Farfetchd, Fearow, Flareon, Gloom, Golbat, Goldeen, Golduck, Gyarados, Horsea, Jigglypuff, Jolteon, Jynx, Kingler, Lapras, Magmar, Magnemite, Magneton, Mankey, Meowth, Mew, Mewtwo, MissingNo, Moltres, Mr Mime, Ninetales, Oddish, Omanyte, Omastar, Persian, Pidgeot, Pidgeotto, Pidgey, Pikachu, Ponyta, Porygon, Primeape, Psyduck, Raichu, Rapidash, Raticate, Rattata, Sandshrew, Sandslash, Seadra, Seaking, Seel, Shellder, Spearow, Starmie, Staryu, Tauros, Vaporeon, Venomoth, Venonat, Venusaur, Vileplume, Voltorb, Wigglytuff, Zapdos, Zubat
+- **Egg Bomb** can be taught to:
+    Arbok, Articuno, Beedrill, Bellsprout, Blastoise, Bulbasaur, Butterfree, Chansey, Clefable, Clefairy, Cloyster, Ekans, Exeggcute, Exeggutor, Gloom, Grimer, Gyarados, Ivysaur, Jigglypuff, Jynx, Kabutops, Kangaskhan, Kingler, Koffing, Krabby, Lapras, Lickitung, Mew, MissingNo, Moltres, Muk, Nidoking, Nidoqueen, Nidoran_F, Nidoran_M, Nidorina, Nidorino, Omanyte, Omastar, Paras, Parasect, Pinsir, Scyther, Tangela, Tentacool, Tentacruel, Venomoth, Venonat, Venusaur, Victreebel, Vileplume, Weepinbell, Weezing, Wigglytuff, Zapdos
+- **Screech** can be taught to:
+    Arbok, Cloyster, Cubone, Diglett, Dugtrio, Ekans, Electabuzz, Electrode, Fearow, Gastly, Gengar, Golbat, Golduck, Grimer, Haunter, Jigglypuff, Jynx, Kabuto, Kabutops, Koffing, Lickitung, Magmar, Magnemite, Magneton, Mankey, Marowak, Meowth, Mew, MissingNo, Muk, Omanyte, Omastar, Onix, Paras, Parasect, Persian, Pinsir, Porygon, Primeape, Psyduck, Raticate, Rattata, Shellder, Snorlax, Spearow, Tangela, Tentacool, Tentacruel, Voltorb, Weezing, Wigglytuff, Zubat
+    
+
 ## Free TMs
 
 ### From Gym Leaders
@@ -266,3 +308,12 @@ HM moves can be deleted whenever you want.
 | TM38 | Fire Blast | Victory Road 2F — above Moltres |
 | TM25 | Thunder | Victory Road 3F — northwest |
 | TM17 | Hi Jump Kick | Route 23 — maze after Victory Road |
+
+
+---
+
+See also:
+- [Moves & effects](moves.md)
+- [Level-up learnsets](../data/pokemon/evos_moves.asm)
+- [TM/HM learnset by Pokémon](../data/pokemon/base_stats/)
+- [/data/pokemon/tutor_moves](../data/pokemon/tutor_moves/)

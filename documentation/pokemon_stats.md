@@ -187,12 +187,23 @@ Some of the player's Pokémon can be upgraded to use the stats below. Others are
 
 The FLOATING type makes a Pokémon immune to GROUND moves.
 
-The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, but remains weak to FIGHTING and GROUND. It gets ROCK STAB.
-
 The MAGMA type makes a Pokémon immune to WATER and FIRE moves. MAGMA-types also get GROUND STAB.
+
+The CRYSTAL type is an upgraded ROCK type that resists WATER and ICE, takes normal damage from GRASS moves, but remains weak to FIGHTING and GROUND. It gets ROCK STAB.
+
+Here's what it means for HARDENED_ONIX:
+
+| Type | Regular ONIX | HARDENED_ONIX |
+|:---|---|---|
+| WATER | 4x | 1x |
+| GRASS | 4x | 2x |
+| ICE | 2x | 1x |
+
+Everything else is identical to regular ONIX.
 
 ---
 
 See also:
 - [Type chart](./type_chart.md)
-- [/data/pokemon/base_stats](../data/pokemon/base_stats)
+- [Level-up learnsets](../data/pokemon/evos_moves.asm)
+- [TM/HM learnset by Pokémon](../data/pokemon/base_stats)

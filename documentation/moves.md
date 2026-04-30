@@ -226,5 +226,7 @@ Certain Pokémon get bonus power or accuracy on specific moves, making those mov
 
 See also:
 - [Move availability](move_availability.md)
+- [Level-up learnsets](../data/pokemon/evos_moves.asm)
 - [/data/moves/moves.asm](../data/moves/moves.asm)
+- [TM/HM learnset by Pokémon](../data/pokemon/base_stats/)
 - [/engine/battle/remap_move_data.asm](../engine/battle/remap_move_data.asm)

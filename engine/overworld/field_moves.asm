@@ -111,8 +111,11 @@ TryFlash:
 ; A button is pressed
 	ld a, [wMapPalOffset]
    	and a
-    	ret z
-; area is dark and needs Flash
+	ret z
+; area is dark and needs Flash (excluding the Type Guy's house)
+	ld a, [wCurMap]
+	cp TYPE_GUYS_HOUSE
+	ret z
 	ld d, FLASH
 	call HasPartyMove
 	jr nz, TrySurf.no2

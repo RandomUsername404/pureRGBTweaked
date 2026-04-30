@@ -3,22 +3,22 @@ SwiftLearnset:
 	dbit TRUE  ; MISSINGNO  ; 0
 	dbit FALSE ; BULBASAUR  ; 1
 	dbit FALSE ; IVYSAUR    ; 2
-	dbit FALSE ; VENUSAUR   ; 3
+	dbit TRUE  ; VENUSAUR   ; 3
 	dbit FALSE ; CHARMANDER ; 4
 	dbit FALSE ; CHARMELEON ; 5
-	dbit FALSE ; CHARIZARD  ; 6
+	dbit TRUE  ; CHARIZARD  ; 6
 	dbit FALSE ; SQUIRTLE   ; 7
 	dbit FALSE ; WARTORTLE  ; 8
-	dbit FALSE ; BLASTOISE  ; 9
+	dbit TRUE  ; BLASTOISE  ; 9
 	dbit FALSE ; CATERPIE   ; 10
 	dbit FALSE ; METAPOD    ; 11
 	dbit TRUE  ; BUTTERFREE ; 12
 	dbit FALSE ; WEEDLE     ; 13
 	dbit FALSE ; KAKUNA     ; 14
-	dbit FALSE ; BEEDRILL   ; 15
-	dbit FALSE ; PIDGEY     ; 16
-	dbit FALSE ; PIDGEOTTO  ; 17
-	dbit FALSE ; PIDGEOT    ; 18
+	dbit TRUE  ; BEEDRILL   ; 15
+	dbit TRUE  ; PIDGEY     ; 16
+	dbit TRUE  ; PIDGEOTTO  ; 17
+	dbit TRUE  ; PIDGEOT    ; 18
 	dbit TRUE  ; RATTATA    ; 19
 	dbit TRUE  ; RATICATE   ; 20
 	dbit TRUE  ; SPEAROW    ; 21
@@ -37,12 +37,12 @@ SwiftLearnset:
 	dbit FALSE ; NIDOKING   ; 34
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
-	dbit TRUE  ; VULPIX     ; 37
+	dbit FALSE ; VULPIX     ; 37
 	dbit TRUE  ; NINETALES  ; 38
 	dbit TRUE  ; JIGGLYPUFF ; 39
 	dbit TRUE  ; WIGGLYTUFF ; 40
-	dbit FALSE ; ZUBAT      ; 41
-	dbit FALSE ; GOLBAT     ; 42
+	dbit TRUE  ; ZUBAT      ; 41
+	dbit TRUE  ; GOLBAT     ; 42
 	dbit TRUE  ; ODDISH     ; 43
 	dbit TRUE  ; GLOOM      ; 44
 	dbit TRUE  ; VILEPLUME  ; 45
@@ -56,10 +56,10 @@ SwiftLearnset:
 	dbit TRUE  ; PERSIAN    ; 53
 	dbit TRUE  ; PSYDUCK    ; 54
 	dbit TRUE  ; GOLDUCK    ; 55
-	dbit FALSE ; MANKEY     ; 56
-	dbit FALSE ; PRIMEAPE   ; 57
+	dbit TRUE  ; MANKEY     ; 56
+	dbit TRUE  ; PRIMEAPE   ; 57
 	dbit FALSE ; GROWLITHE  ; 58
-	dbit FALSE ; ARCANINE   ; 59
+	dbit TRUE  ; ARCANINE   ; 59
 	dbit FALSE ; POLIWAG    ; 60
 	dbit FALSE ; POLIWHIRL  ; 61
 	dbit FALSE ; POLIWRATH  ; 62
@@ -96,10 +96,10 @@ SwiftLearnset:
 	dbit FALSE ; HAUNTER    ; 93
 	dbit FALSE ; GENGAR     ; 94
 	dbit FALSE ; ONIX       ; 95
-	dbit TRUE  ; DROWZEE    ; 96
-	dbit TRUE  ; HYPNO      ; 97
+	dbit FALSE ; DROWZEE    ; 96
+	dbit FALSE ; HYPNO      ; 97
 	dbit FALSE ; KRABBY     ; 98
-	dbit FALSE ; KINGLER    ; 99
+	dbit TRUE  ; KINGLER    ; 99
 	dbit TRUE  ; VOLTORB    ; 100
 	dbit TRUE  ; ELECTRODE  ; 101
 	dbit FALSE ; EXEGGCUTE  ; 102
@@ -113,11 +113,11 @@ SwiftLearnset:
 	dbit FALSE ; WEEZING    ; 110
 	dbit FALSE ; RHYHORN    ; 111
 	dbit FALSE ; RHYDON     ; 112
-	dbit FALSE ; CHANSEY    ; 113
+	dbit TRUE  ; CHANSEY    ; 113
 	dbit FALSE ; TANGELA    ; 114
 	dbit FALSE ; KANGASKHAN ; 115
-	dbit FALSE ; HORSEA     ; 116
-	dbit FALSE ; SEADRA     ; 117
+	dbit TRUE  ; HORSEA     ; 116
+	dbit TRUE  ; SEADRA     ; 117
 	dbit TRUE  ; GOLDEEN    ; 118
 	dbit TRUE  ; SEAKING    ; 119
 	dbit TRUE  ; STARYU     ; 120
@@ -126,12 +126,12 @@ SwiftLearnset:
 	dbit FALSE ; SCYTHER    ; 123
 	dbit TRUE  ; JYNX       ; 124
 	dbit TRUE  ; ELECTABUZZ ; 125
-	dbit FALSE ; MAGMAR     ; 126
+	dbit TRUE  ; MAGMAR     ; 126
 	dbit FALSE ; PINSIR     ; 127
-	dbit FALSE ; TAUROS     ; 128
+	dbit TRUE  ; TAUROS     ; 128
 	dbit FALSE ; MAGIKARP   ; 129
-	dbit FALSE ; GYARADOS   ; 130
-	dbit FALSE ; LAPRAS     ; 131
+	dbit TRUE  ; GYARADOS   ; 130
+	dbit TRUE  ; LAPRAS     ; 131
 	dbit FALSE ; DITTO      ; 132
 	dbit TRUE  ; EEVEE      ; 133
 	dbit TRUE  ; VAPOREON   ; 134
@@ -142,14 +142,14 @@ SwiftLearnset:
 	dbit TRUE  ; OMASTAR    ; 139
 	dbit FALSE ; KABUTO     ; 140
 	dbit FALSE ; KABUTOPS   ; 141
-	dbit FALSE ; AERODACTYL ; 142
+	dbit TRUE  ; AERODACTYL ; 142
 	dbit FALSE ; SNORLAX    ; 143
 	dbit TRUE  ; ARTICUNO   ; 144
 	dbit TRUE  ; ZAPDOS     ; 145
 	dbit TRUE  ; MOLTRES    ; 146
-	dbit FALSE ; DRATINI    ; 147
-	dbit FALSE ; DRAGONAIR  ; 148
-	dbit FALSE ; DRAGONITE  ; 149
+	dbit TRUE  ; DRATINI    ; 147
+	dbit TRUE  ; DRAGONAIR  ; 148
+	dbit TRUE  ; DRAGONITE  ; 149
 	dbit TRUE  ; MEWTWO     ; 150
 	dbit TRUE  ; MEW        ; 151
 	end_bit_array NUM_POKEMON

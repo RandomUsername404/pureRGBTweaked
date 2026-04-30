@@ -19,7 +19,7 @@ MegaPunchLearnset:
 	dbit FALSE ; PIDGEY     ; 16
 	dbit FALSE ; PIDGEOTTO  ; 17
 	dbit FALSE ; PIDGEOT    ; 18
-	dbit TRUE  ; RATTATA    ; 19
+	dbit FALSE ; RATTATA    ; 19
 	dbit TRUE  ; RATICATE   ; 20
 	dbit FALSE ; SPEAROW    ; 21
 	dbit FALSE ; FEAROW     ; 22
@@ -83,7 +83,7 @@ MegaPunchLearnset:
 	dbit TRUE  ; SLOWBRO    ; 80
 	dbit FALSE ; MAGNEMITE  ; 81
 	dbit FALSE ; MAGNETON   ; 82
-	dbit TRUE  ; FARFETCHD  ; 83
+	dbit FALSE ; FARFETCHD  ; 83
 	dbit FALSE ; DODUO      ; 84
 	dbit FALSE ; DODRIO     ; 85
 	dbit FALSE ; SEEL       ; 86

@@ -12,7 +12,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
   ![Deposit Item From Start Menu Description](../screenshots/deposit_item_from_menu_description.png?raw=true) ![Box change Description](../screenshots/change_box_from_start_menu_description.png?raw=true)
 
 ### Battle QoL
-- Added "caught" icon to battle HUD
+- Added "already caught" icon to battle HUD
 
   ![HUD caught indicator](../screenshots/caught_indicator.png?raw=true)
 - EXP bar now in color
@@ -23,6 +23,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 - Restored Japanese flowers
 
   ![Japanese flowers](../screenshots/japanese_flowers.png?raw=true)
+- New SURF sprite (similar to Gen 3's)
 - New FLY and DIG sprites (Pidgey & a different Diglett sprite)
 
   ![Pidgey FLY Town Map](../screenshots/pidgey_fly.png?raw=true) ![Diglett DIG](../screenshots/diglett_dig.png?raw=true)

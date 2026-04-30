@@ -145,7 +145,7 @@ Everything here is set to ON by default.
 - Playtime tracked up to 10,000+ hours (was 255)
 
 ### Battle QoL
-- Added "caught" icon to battle HUD
+- Added "already caught" icon to battle HUD
 
   ![HUD caught indicator](/screenshots/caught_indicator.png?raw=true)
 - Low health alarm plays 3 times then stops
@@ -167,7 +167,9 @@ Everything here is set to ON by default.
 - Fuchsia City layout slightly improved for easier navigation
 - Daycare has a PC
 - Route 23 grass patch (just past the north exit of Victory Road) gives full EXP for late-game training
-- Buy drinks in bulk at Celadon Diner after giving one to a Saffron guard
+- Buy drinks in bulk at the Celadon Diner after giving one to a Saffron guard
+
+  ![bulk drinks seller](/screenshots/celadon_diner_drinks_bulk.png?raw=true)
 - 500 coins purchasable for ₽8,000 at the Game Corner
 - Slot machines no longer cheat; increased payouts and speed
 - Elevators show the current floor

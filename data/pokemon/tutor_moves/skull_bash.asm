@@ -1,10 +1,10 @@
 SkullBashLearnset:
 	bit_array SkullBashLearnset
 	dbit TRUE  ; MISSINGNO  ; 0
-	dbit TRUE  ; BULBASAUR  ; 1
-	dbit TRUE  ; IVYSAUR    ; 2
+	dbit FALSE ; BULBASAUR  ; 1
+	dbit FALSE ; IVYSAUR    ; 2
 	dbit TRUE  ; VENUSAUR   ; 3
-	dbit TRUE  ; CHARMANDER ; 4
+	dbit FALSE ; CHARMANDER ; 4
 	dbit TRUE  ; CHARMELEON ; 5
 	dbit TRUE  ; CHARIZARD  ; 6
 	dbit TRUE  ; SQUIRTLE   ; 7
@@ -16,7 +16,7 @@ SkullBashLearnset:
 	dbit FALSE ; WEEDLE     ; 13
 	dbit FALSE ; KAKUNA     ; 14
 	dbit FALSE ; BEEDRILL   ; 15
-	dbit TRUE  ; PIDGEY     ; 16
+	dbit FALSE ; PIDGEY     ; 16
 	dbit TRUE  ; PIDGEOTTO  ; 17
 	dbit TRUE  ; PIDGEOT    ; 18
 	dbit TRUE  ; RATTATA    ; 19
@@ -38,7 +38,7 @@ SkullBashLearnset:
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
 	dbit FALSE ; VULPIX     ; 37
-	dbit FALSE ; NINETALES  ; 38
+	dbit TRUE  ; NINETALES  ; 38
 	dbit TRUE  ; JIGGLYPUFF ; 39
 	dbit TRUE  ; WIGGLYTUFF ; 40
 	dbit TRUE  ; ZUBAT      ; 41
@@ -114,7 +114,7 @@ SkullBashLearnset:
 	dbit TRUE  ; RHYHORN    ; 111
 	dbit TRUE  ; RHYDON     ; 112
 	dbit FALSE ; CHANSEY    ; 113
-	dbit FALSE ; TANGELA    ; 114
+	dbit TRUE  ; TANGELA    ; 114
 	dbit TRUE  ; KANGASKHAN ; 115
 	dbit FALSE ; HORSEA     ; 116
 	dbit FALSE ; SEADRA     ; 117
@@ -127,7 +127,7 @@ SkullBashLearnset:
 	dbit TRUE  ; JYNX       ; 124
 	dbit TRUE  ; ELECTABUZZ ; 125
 	dbit TRUE  ; MAGMAR     ; 126
-	dbit TRUE  ; PINSIR     ; 127
+	dbit FALSE ; PINSIR     ; 127
 	dbit TRUE  ; TAUROS     ; 128
 	dbit FALSE ; MAGIKARP   ; 129
 	dbit TRUE  ; GYARADOS   ; 130

@@ -6,5 +6,6 @@ SoftboiledLearnset:
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db CHANSEY
+	db KANGASKHAN
 	db MEW
 	db -1

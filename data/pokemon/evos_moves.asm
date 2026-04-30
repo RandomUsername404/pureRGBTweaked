@@ -653,12 +653,13 @@ ScytherEvosMoves:
 	db 16, CUT ; YellowLegacy
 	db 23, PIN_MISSILE ; PureRGB
 	db 24, AGILITY ; YellowLegacy
-	db 27, FURY_ATTACK ; PureRGB
-	db 30, WING_ATTACK ; YellowLegacy
+	db 27, WING_ATTACK ; YellowLegacy
+	db 30, KARATE_CHOP ; RGBTweaked
+	db 32, FURY_ATTACK ; PureRGB
 	db 36, SLASH ; YellowLegacy
 	db 42, TWINEEDLE ; YellowLegacy
 	db 48, DOUBLE_TEAM ; YellowLegacy
-	db 49, HI_JUMP_KICK ; PureRGB
+	db 49, SWIFT ; RGBTweaked
 	db 54, SWORDS_DANCE ; YellowLegacy
 	db 0
 
@@ -711,9 +712,9 @@ PinsirEvosMoves:
 ; Learnset
 	db 5, HARDEN ; YellowLegacy
 	db 8, FOCUS_ENERGY ; YellowLegacy
+	db 12, SEISMIC_TOSS ; RGBTweaked
 	db 21, KARATE_CHOP ; PureRGB
 	db 24, VICEGRIP ; PureRGB
-	db 25, SEISMIC_TOSS ; YellowLegacy
 	db 30, TWINEEDLE ; YellowLegacy
 	db 33, SPIKE_CANNON ; PureRGB
 	db 36, SUBMISSION ; YellowLegacy
@@ -814,15 +815,15 @@ PidgeyEvosMoves:
 	db 6, GUST ; PureRGB
 	db 12, QUICK_ATTACK ; YellowLegacy
 	db 19, WING_ATTACK ; YellowLegacy
-	db 21, WHIRLWIND ; YellowLegacy
 	db 26, RAZOR_WIND ; PureRGB					ROOST
 	db 28, SHARPEN ; PureRGB
 	db 32, FURY_ATTACK ; PureRGB
 	db 34, AGILITY ; YellowLegacy
 	db 35, GLARE ; PureRGB
 	db 41, TAKE_DOWN ; PureRGB					HEAT RUSH
-	db 48, SKULL_BASH ; PureRGB
+	db 48, SWIFT ; RGBTweaked
 	db 49, MIRROR_MOVE ; YellowLegacy
+	db 54, WHIRLWIND ; PureRGB
 	db 60, HYPER_BEAM ; PureRGB
 	db 0
 
@@ -863,10 +864,10 @@ GolemEvosMoves:
 	db 45, EARTHQUAKE ; YellowLegacy
 	db 48, EXPLOSION ; YellowLegacy
 	db 52, MEGA_KICK ; PureRGB
+	db 55, SKULL_BASH ; RGBTweaked
 	db 60, FISSURE ; PureRGB
 	db 65, MIRROR_MOVE ; PureRGB
 	db 0
-
 
 ChanseyEvosMoves:
 ; Evolutions
@@ -896,16 +897,15 @@ MachampEvosMoves:
 ; Learnset
 	db 5, LEER ; YellowLegacy
 	db 7, FOCUS_ENERGY ; YellowLegacy
+	db 10, KARATE_CHOP ; RGBTweaked
 	db 15, LOW_KICK ; PureRGB
-	db 19, SEISMIC_TOSS ; YellowLegacy
+	db 19, COMET_PUNCH ; RGBTweaked
 	db 20, DEFENSE_CURL ; PureRGB
 	db 23, JUMP_KICK ; PureRGB
 	db 28, SUBMISSION ; YellowLegacy
 	db 30, BIND ; PureRGB
 	db 33, BODY_SLAM ; YellowLegacy
-	db 41, KARATE_CHOP ; YellowLegacy
-	db 42, ROCK_SLIDE ; PureRGB
-	db 44, COMET_PUNCH ; PureRGB
+	db 41, ROCK_SLIDE ; PureRGB
 	db 47, MEGA_PUNCH ; PureRGB
 	db 52, SKULL_BASH ; PureRGB
 	db 56, COUNTER ; PureRGB					DRAIN PUNCH
@@ -955,8 +955,8 @@ HitmonchanEvosMoves:
 	db 0
 ; Learnset
 	db 19, DOUBLE_TEAM ; PureRGB
-	db 22, COMET_PUNCH ; PureRGB
-	db 25, KARATE_CHOP ; YellowLegacy
+	db 22, KARATE_CHOP ; RGBTweaked
+	db 27, COMET_PUNCH ; RGBTweaked
 	db 33, FIRE_PUNCH ; YellowLegacy
 	db 35, ICE_PUNCH ; YellowLegacy
 	db 37, THUNDERPUNCH ; YellowLegacy
@@ -1223,8 +1223,8 @@ FarfetchdEvosMoves:
 ; Learnset
 	db 7, LEER ; YellowLegacy
 	db 9, SHARPEN ; YellowLegacy
-	db 13, FURY_ATTACK ; YellowLegacy
-	db 18, WING_ATTACK ; YellowLegacy
+	db 13, WING_ATTACK ; YellowLegacy
+	db 18, FURY_ATTACK ; YellowLegacy
 	db 19, KARATE_CHOP ; PureRGB
 	db 23, SLASH ; YellowLegacy
 	db 24, SWIFT ; PureRGB
@@ -1265,13 +1265,13 @@ DragoniteEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE ; YellowLegacy
+	db 15, WING_ATTACK ; RGBTweaked
 	db 20, DRAGON_RAGE ; YellowLegacy
 	db 25, AGILITY ; YellowLegacy
 	db 29, BODY_SLAM ; PureRGB
 	db 33, MIST ; PureRGB
 	db 46, WHIRLWIND ; PureRGB
 	db 47, SHARPEN ; PureRGB
-	db 55, WING_ATTACK ; YellowLegacy
 	db 60, HYPER_BEAM ; YellowLegacy
 	db 0
 
@@ -1457,7 +1457,7 @@ NinetalesEvosMoves:
 	db 0
 
 
-PikachuEvosMoves:
+PikachuEvosMoves: ; same learnset as raichu below
 ; Evolutions
 	db EVOLVE_ITEM, THUNDER_STONE, 1, RAICHU
 RaichuEvosMoves:
@@ -1525,10 +1525,10 @@ KabutopsEvosMoves:
 	db 35, MEGA_DRAIN ; YellowLegacy
 	db 36, FURY_ATTACK ; PureRGB
 	db 39, SLASH ; YellowLegacy
-	db 40, SKULL_BASH ; PureRGB
+	db 40, ROCK_SLIDE ; RGBTweaked
 	db 43, SWORDS_DANCE ; YellowLegacy
 	db 44, TWINEEDLE ; PureRGB
-	db 46, ROCK_SLIDE ; YellowLegacy
+	db 46, SKULL_BASH ; RGBTweaked
 	db 49, EARTHQUAKE ; PureRGB
 	db 53, HYDRO_PUMP ; YellowLegacy
 	db 60, CRABHAMMER ; RGB Tweaked
@@ -1725,15 +1725,14 @@ MachopEvosMoves:
 ; Learnset
 	db 5, LEER ; YellowLegacy
 	db 7, FOCUS_ENERGY ; YellowLegacy
-	db 15, LOW_KICK ; PureRGB
-	db 19, SEISMIC_TOSS ; YellowLegacy
+	db 10, KARATE_CHOP ; RGBTweaked
+	db 19, LOW_KICK ; RGBTweaked
 	db 20, DEFENSE_CURL ; PureRGB
-	db 23, JUMP_KICK ; PureRGB
-	db 28, SUBMISSION ; YellowLegacy
+	db 23, COMET_PUNCH ; RGBTweaked
+	db 28, JUMP_KICK ; RGBTweaked
 	db 30, BIND ; PureRGB
+	db 35, SUBMISSION ; PureRGB
 	db 41, ROCK_SLIDE ; PureRGB
-	db 44, COMET_PUNCH ; PureRGB
-	db 45, KARATE_CHOP ; YellowLegacy
 	db 47, MEGA_PUNCH ; PureRGB
 	db 52, SKULL_BASH ; PureRGB
 	db 56, COUNTER ; PureRGB					DRAIN PUNCH
@@ -1835,11 +1834,11 @@ PrimeapeEvosMoves:
 	db 9, LOW_KICK ; YellowLegacy
 	db 12, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 15, GLARE ; PureRGB
+	db 16, SEISMIC_TOSS ; RGBTweaked
 	db 20, DEFENSE_CURL ; PureRGB
 	db 21, KARATE_CHOP ; YellowLegacy
 	db 25, RAGE ; PureRGB
 	db 27, FOCUS_ENERGY ; YellowLegacy
-	db 33, SEISMIC_TOSS ; YellowLegacy
 	db 35, VICEGRIP ; PureRGB
 	db 39, THRASH ; YellowLegacy
 	db 40, COMET_PUNCH ; PureRGB
@@ -2017,7 +2016,6 @@ PidgeotEvosMoves:
 	db 6, GUST ; PureRGB
 	db 12, QUICK_ATTACK ; YellowLegacy
 	db 18, WING_ATTACK ; YellowLegacy
-	db 21, WHIRLWIND ; YellowLegacy
 	db 26, RAZOR_WIND ; PureRGB					ROOST
 	db 29, SHARPEN ; PureRGB
 	db 32, FURY_ATTACK ; PureRGB
@@ -2027,6 +2025,7 @@ PidgeotEvosMoves:
 	db 43, SLASH ; PureRGB
 	db 48, SKULL_BASH ; PureRGB
 	db 49, MIRROR_MOVE ; YellowLegacy
+	db 54, WHIRLWIND ; PureRGB
 	db 60, HYPER_BEAM ; PureRGB
 	db 0
 
@@ -2138,7 +2137,7 @@ RaticateEvosMoves:
 	db 26, RAGE ; PureRGB
 	db 28, SUPER_FANG ; YellowLegacy
 	db 31, SKULL_BASH ; PureRGB
-	db 44, MEGA_PUNCH ; PureRGB
+	db 44, MEGA_KICK  ; RGBTweaked
 	db 0
 
 
@@ -2202,7 +2201,7 @@ GeodudeEvosMoves:
 	db 40, ROCK_SLIDE ; YellowLegacy
 	db 45, EARTHQUAKE ; YellowLegacy
 	db 48, EXPLOSION ; YellowLegacy
-	db 52, MEGA_KICK ; PureRGB
+	db 52, SKULL_BASH ; RGBTweaked
 	db 60, FISSURE ; PureRGB
 	db 65, MIRROR_MOVE ; PureRGB
 	db 0
@@ -2238,8 +2237,8 @@ AerodactylEvosMoves:
 	db 27, ROCK_THROW ; YellowLegacy
 	db 32, WING_ATTACK ; YellowLegacy
 	db 33, SWORDS_DANCE ; PureRGB
-	db 38, SKULL_BASH ; PureRGB
-	db 40, ROCK_SLIDE ; YellowLegacy
+	db 38, ROCK_SLIDE ; RGBTweaked
+	db 40, SKULL_BASH ; RGBTweaked
 	db 44, EARTHQUAKE ; PureRGB
 	db 49, WHIRLWIND ; PureRGB
 	db 50, HYPER_BEAM ; YellowLegacy

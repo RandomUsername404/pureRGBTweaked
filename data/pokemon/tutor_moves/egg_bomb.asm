@@ -83,7 +83,7 @@ EggBombLearnset:
 	dbit FALSE ; SLOWBRO    ; 80
 	dbit FALSE ; MAGNEMITE  ; 81
 	dbit FALSE ; MAGNETON   ; 82
-	dbit TRUE  ; FARFETCHD  ; 83
+	dbit FALSE ; FARFETCHD  ; 83
 	dbit FALSE ; DODUO      ; 84
 	dbit FALSE ; DODRIO     ; 85
 	dbit FALSE ; SEEL       ; 86

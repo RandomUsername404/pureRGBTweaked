@@ -37,8 +37,8 @@ TriAttackLearnset:
 	dbit FALSE ; NIDOKING   ; 34
 	dbit TRUE  ; CLEFAIRY   ; 35
 	dbit TRUE  ; CLEFABLE   ; 36
-	dbit TRUE  ; VULPIX     ; 37
-	dbit TRUE  ; NINETALES  ; 38
+	dbit FALSE ; VULPIX     ; 37
+	dbit FALSE ; NINETALES  ; 38
 	dbit TRUE  ; JIGGLYPUFF ; 39
 	dbit TRUE  ; WIGGLYTUFF ; 40
 	dbit FALSE ; ZUBAT      ; 41
@@ -51,7 +51,7 @@ TriAttackLearnset:
 	dbit FALSE ; VENONAT    ; 48
 	dbit FALSE ; VENOMOTH   ; 49
 	dbit FALSE ; DIGLETT    ; 50
-	dbit TRUE  ; DUGTRIO    ; 51
+	dbit FALSE ; DUGTRIO    ; 51
 	dbit FALSE ; MEOWTH     ; 52
 	dbit FALSE ; PERSIAN    ; 53
 	dbit FALSE ; PSYDUCK    ; 54
@@ -63,9 +63,9 @@ TriAttackLearnset:
 	dbit FALSE ; POLIWAG    ; 60
 	dbit FALSE ; POLIWHIRL  ; 61
 	dbit FALSE ; POLIWRATH  ; 62
-	dbit FALSE ; ABRA       ; 63
-	dbit FALSE ; KADABRA    ; 64
-	dbit FALSE ; ALAKAZAM   ; 65
+	dbit TRUE  ; ABRA       ; 63
+	dbit TRUE  ; KADABRA    ; 64
+	dbit TRUE  ; ALAKAZAM   ; 65
 	dbit FALSE ; MACHOP     ; 66
 	dbit FALSE ; MACHOKE    ; 67
 	dbit FALSE ; MACHAMP    ; 68
@@ -90,8 +90,8 @@ TriAttackLearnset:
 	dbit FALSE ; DEWGONG    ; 87
 	dbit FALSE ; GRIMER     ; 88
 	dbit FALSE ; MUK        ; 89
-	dbit FALSE ; SHELLDER   ; 90
-	dbit FALSE ; CLOYSTER   ; 91
+	dbit TRUE  ; SHELLDER   ; 90
+	dbit TRUE  ; CLOYSTER   ; 91
 	dbit FALSE ; GASTLY     ; 92
 	dbit FALSE ; HAUNTER    ; 93
 	dbit FALSE ; GENGAR     ; 94
@@ -113,16 +113,16 @@ TriAttackLearnset:
 	dbit FALSE ; WEEZING    ; 110
 	dbit FALSE ; RHYHORN    ; 111
 	dbit FALSE ; RHYDON     ; 112
-	dbit FALSE ; CHANSEY    ; 113
+	dbit TRUE  ; CHANSEY    ; 113
 	dbit FALSE ; TANGELA    ; 114
 	dbit FALSE ; KANGASKHAN ; 115
 	dbit FALSE ; HORSEA     ; 116
 	dbit FALSE ; SEADRA     ; 117
 	dbit FALSE ; GOLDEEN    ; 118
 	dbit FALSE ; SEAKING    ; 119
-	dbit FALSE ; STARYU     ; 120
-	dbit FALSE ; STARMIE    ; 121
-	dbit TRUE  ; MR_MIME    ; 122
+	dbit TRUE  ; STARYU     ; 120
+	dbit TRUE  ; STARMIE    ; 121
+	dbit FALSE ; MR_MIME    ; 122
 	dbit FALSE ; SCYTHER    ; 123
 	dbit TRUE  ; JYNX       ; 124
 	dbit FALSE ; ELECTABUZZ ; 125
