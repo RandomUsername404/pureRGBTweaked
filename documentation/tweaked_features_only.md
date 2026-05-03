@@ -33,6 +33,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 - Use all HM moves from the overworld
 
   ![use HM overworld](../screenshots/use_cut_overworld.png?raw=true)
+- Different Fuchsia City layout near the GYM (still more navigable than vanilla)
 
 ### Menus & Misc
 - 151 unique party menu sprites
