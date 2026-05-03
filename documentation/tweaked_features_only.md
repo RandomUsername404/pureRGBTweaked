@@ -67,7 +67,6 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 ## Pokémon Changes
 - Completely revamped Pokémon **base stats**, mixing PureRGB, Yellow Legacy and tweaks of my own (see [this link](../documentation/pokemon_stats.md))
 - Completely revamped [**level-up learnsets**](../data/pokemon/evos_moves.asm) and [**TM/HM learnsets**](../data/pokemon/base_stats), mixing PureRGB, Yellow Legacy and tweaks of my own
-- **Signature Moves** were tweaked a bit ([check them out](../documentation/moves.md#signature-moves))
 - [Brand new Pokémon locations/wild encounters](../documentation/pokemon_locations.md) and lower encounter rates (based on Yellow Legacy).
 
 **NEW Type change ON by default** (togglable via the Type Guy on Route 23):
@@ -85,6 +84,7 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 ---
 
 ## Trainer changes
+- Some trainers had their team levels changed. Some were raised, others were lowered.
 - The Gym teams used by Erika, Koga and Sabrina will scale depending on how many badges you own (inspired by Yellow Legacy)
 - All the Gym Leaders get custom movesets and slightly revamped teams
 - The rival gets brand new teams (less diverse and unpredictable than PureRGB's but with a clearer progression); gets custom movesets for all his teams post-Cerulean
@@ -93,7 +93,9 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 
 ---
 
-## Move Change
+## Move Changes
+- Many moves were edited: some effects were altered, Base Power was raised/lowered (mostly lowered), and some types were changed/restored. For example, SCREECH no longer blocks sleep-inducing moves indefinitely, and it is now only auto-used 50% of the time (down from 100%). See [this link](../documentation/moves.md) for the full list of moves, with changes from vanilla highlighted in bold.
+- **Signature Moves** were tweaked a bit ([check them out](../documentation/moves.md#signature-moves))
 - Crabhammer is no longer a TM, replaced by Seismic Toss
 
 ---

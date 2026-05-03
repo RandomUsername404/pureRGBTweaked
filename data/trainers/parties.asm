@@ -469,15 +469,15 @@ JugglerData:
 ; Victory Road 2F
 	db 55, SCYTHER, HYPNO, ELECTABUZZ, SEADRA, 0
 ; Fuchsia Gym
-	db 42, HYPNO, BEEDRILL, KADABRA, GOLBAT, 0
-	db 43, STARMIE, MR_MIME, 0
+	db 40, HAUNTER, BEEDRILL, KADABRA, GOLBAT, 0
+	db 41, TENTACRUEL, GRIMER, 0
 ; Victory Road 2F
 	db 62, GYARADOS, 0
 ; Safari Zone Center
 	db $FE, 40, TAUROS,  40 + 128, TAUROS, 40, TAUROS,  40 + 128, TAUROS, 40, TAUROS,  40 + 128, TAUROS, 0 ; NEWx
 ; Fuchsia Gym
-	db 46, HYPNO, 0
-	db 43, DRAGONAIR, CLEFABLE, 0
+	db 44, HYPNO, 0
+	db 41, WEEZING, DROWZEE, 0
 ; Safari Zone North
 	db $FE, 45, VOLTORB, 45, ELECTRODE, 45 + 128, VOLTORB,  45 + 128, ELECTRODE, 0 ; NEWx
 ; Safari Zone West
@@ -485,8 +485,8 @@ JugglerData:
 
 TamerData:
 ; Fuchsia Gym
-	db 43, SANDSLASH, ARBOK, 0
-	db 42, VENUSAUR, NIDOQUEEN, ARBOK, 0
+	db 41, SANDSLASH, ARBOK, 0
+	db 40, ARBOK, NIDOQUEEN, VENUSAUR, 0
 ; Viridian Gym
 	db 58, RHYDON, 0
 	db 55, ARBOK, TAUROS, 0
