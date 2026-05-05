@@ -339,7 +339,7 @@ DisplayChooseQuantityMenuMinQuantity::
 	ldh [hDivideBCDDivisor + 1], a
 	ld a, $02
 	ldh [hDivideBCDDivisor + 2], a
-	predef DivideBCDPredef3 ; halves the price
+	callfar DivideBCD
 ; store the halved price
 	ldh a, [hDivideBCDQuotient]
 	ldh [hMoney], a
@@ -524,7 +524,8 @@ PrintListMenuEntries::
 	pop hl
 	ld bc, SCREEN_WIDTH + 8 ; 1 row down and 8 columns right
 	add hl, bc
-	call PrintLevel
+	ld a, $CE ; level tile (when in pc menus)
+	call PrintLevelArbitraryTile
 	pop af
 	ld [wNamedObjectIndex], a
 ;;;;

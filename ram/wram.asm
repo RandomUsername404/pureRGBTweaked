@@ -353,7 +353,7 @@ wDirectionChangeModeCounter:: db
 ; PureRGBnote: when running the generic palette setting function, we can force it to use a different palette by loading one here
 wGenericPaletteOverride:: db
 
-wToggleableObjectIndex:: db
+	ds 1 ; used to be wToggleableObjectIndex but that wasn't needed after moving the hide/show object routines into home bank
 
 wPredefID:: db
 wPredefHL:: dw
@@ -1149,7 +1149,7 @@ wNPCMovementScriptFunctionNum:: db
 ;        to the current map's bank
 wTextPredefFlag:: db
 
-wPredefParentBank:: db
+ds 1 ; used to be wPredefParentBank but this wasn't needed
 
 wSpriteIndex:: db
 
@@ -1180,13 +1180,7 @@ wOnSGB:: db
 
 wDefaultPaletteCommand:: db
 
-UNION
 wPlayerHPBarColor:: db
-
-NEXTU
-; species of the mon whose palette is used for the whole screen
-wWholeScreenPaletteMonSpecies:: db
-ENDU
 
 wEnemyHPBarColor:: db
 
@@ -1423,6 +1417,10 @@ wTrainerPicPointer:: dw
 	ds 1 ; unused lone byte
 
 UNION
+
+wSwitchOrHoleCoordList:: ds 5
+
+NEXTU
 wTempMoveNameBuffer:: ds MOVE_NAME_LENGTH
 
 NEXTU
@@ -1573,13 +1571,7 @@ wBattleStatusDataEnd::
 ; non-zero when an item or move that allows escape from battle was used
 wEscapedFromBattle:: db
 
-UNION
 wAmountMoneyWon:: ds 3 ; BCD
-
-NEXTU
-wObjectToHide:: db
-wObjectToShow:: db
-ENDU
 
 ; the map you will start at when the debug bit is set
 wDefaultMap::
@@ -1829,12 +1821,7 @@ wLearnsetList::
 ; concatenated move name list where intermediate '@' are replaced with '<NEXT>'
 wMovesString:: ds NUM_MOVES * MOVE_NAME_LENGTH ; 56
 
-wUnusedCurMapTilesetCopy:: db
-
-; wWalkBikeSurfState is sometimes copied here, but it doesn't seem to be used for anything
-wWalkBikeSurfStateCopy:: db
-
-ds 1 ; unused byte (used to be wInitListType but that was a pointless waste of a variable)
+ds 3 ; unused 3 bytes (used to be wUnusedCurMapTilesetCopy and wWalkBikeSurfStateCopy and wInitListType but that was a pointless waste)
 
 ; 0 if no mon was captured
 wCapturedMonSpecies:: db
@@ -1915,11 +1902,6 @@ wOutOfBattleBlackout:: db
 ; $02 = the user pressed B or pressed A with the second menu item selected
 wMenuExitMethod:: db
 
-; the size is always 6, so they didn't need a variable in RAM for this
-wDungeonWarpDataEntrySize::
-; 0 = museum guy
-; 1 = gym guy
-wWhichPewterGuy::
 ; there are 3 windows, from 0 to 2
 wWhichPrizeWindow::
 ; a horizontal or vertical gate block
@@ -2160,7 +2142,7 @@ wSpriteSet:: ds SPRITE_SET_LENGTH
 ; sprite set ID for the current map
 wSpriteSetID:: db
 
-wObjectDataPointerTemp:: dw
+	ds 2 ; wObjectDataPointerTemp:: dw ; unused save file 2 bytes (needs save file update to use)
 
 	ds 2 ; unused save file 2 bytes
 

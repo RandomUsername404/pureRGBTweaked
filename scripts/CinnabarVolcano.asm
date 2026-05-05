@@ -29,18 +29,19 @@ CinnabarVolcanoOnMapLoad:
 	;SetEventReuseHL EVENT_GAVE_RHYDON_LIMESTONE
 	;SetEventReuseHL EVENT_FINISHED_VOLCANO
 	;
+	call Remove7FTilesFromBGMap
 	CheckEvent EVENT_BEAT_MOLTRES
 	jr z, .notBeaten
 	; RGB Tweaked: Moltres is beaten, so we hide it and show Entrance Rhydon
-	ld a, TOGGLE_VOLCANO_MOLTRES
-	call VolcanoHideSpriteEntry
-	ld a, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
-	call VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_MOLTRES
+	call HideExtraObject
+	ld c, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call ShowExtraObject
 	jr .afterRhydon
 .notBeaten
 	; Moltres wasn't beaten, hide Entrance Rhydon
-	ld a, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
-	call VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call HideExtraObject
 .afterRhydon
 	CheckAndResetEvent EVENT_IN_LAVA_FLOOD_ROOM
 	ld a, 1
@@ -142,7 +143,7 @@ VolcanoDoRoomSpecificMapLoadCode::
 	res BIT_AUTOSURF, [hl] ; reset autosurf bit to make sure entering main room that surfing from downstairs isn't still present
 	CheckEvent EVENT_VOLCANO_DUG_TO_FLOOR2
 	jr z, .skipLadderReplaceFloor1
-	lb bc, 12, 6
+	lb de, 12, 6
 	ld a, $28
 	; we will redraw the map in the routine after this anyway so don't redraw to reduce lag
 	call ReplaceTileBlockEntryNoRedraw
@@ -153,7 +154,7 @@ VolcanoDoRoomSpecificMapLoadCode::
 .floor2
 	CheckEvent EVENT_VOLCANO_DUG_TO_FLOOR3
 	jr z, .skipLadderReplaceFloor2
-	lb bc, 17, 21
+	lb de, 17, 21
 	ld a, $28
 	call ReplaceTileBlockEntryNoRedraw
 .skipLadderReplaceFloor2
@@ -165,7 +166,7 @@ VolcanoDoRoomSpecificMapLoadCode::
 	SetEvent EVENT_IN_LAVA_FLOOD_ROOM
 	CheckEvent EVENT_VOLCANO_DUG_TO_FLOOR4
 	jr z, .skipLadderReplaceFloor3
-	lb bc, 15, 1
+	lb de, 15, 1
 	ld a, $3C
 	call ReplaceTileBlockEntryNoRedraw
 .skipLadderReplaceFloor3
@@ -204,10 +205,10 @@ VolcanoDoRoomSpecificMapLoadCode::
 
 ReplaceTileBlockEntry:
 	ld [wNewTileBlockID], a
-	predef_jump ReplaceTileBlock
+	jp ReplaceTileBlock
 ReplaceTileBlockEntryNoRedraw:
 	ld [wNewTileBlockID], a
-	predef_jump ReplaceTileBlockNoRedraw
+	jpfar ReplaceTileBlockNoRedraw
 
 RepositionRubies:
 	CheckEvent EVENT_VOLCANO_BOMBED_FLOOR4
@@ -357,8 +358,8 @@ CheckShowSurfableRhydon:
 	ret nz
 ShowSurfableRhydon:
 	ResetEvent EVENT_SURFING_ON_RHYDON
-	ld a, TOGGLE_VOLCANO_SURFING_RHYDON
-	jp VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_SURFING_RHYDON
+	jp ShowExtraObject
 
 CheckForceSurfDirection::
 	ld a, [wWalkBikeSurfState]
@@ -453,7 +454,7 @@ ReplaceLadderAndWalkUp:
 	pop af
 	pop bc
 	ld [wNewTileBlockID], a
-	predef ReplaceTileBlock
+	call ReplaceTileBlock
 	SetEvent EVENT_HOLE_DRILL_FINISHED
 	ld a, 1
 	ld [wOverworldAnimationCooldown], a
@@ -625,13 +626,13 @@ VolcanoBombedFloor2ReplaceBlocksDefault:
 	ld de, VolcanoFloor2TileBlockReplacements
 	call VolcanoReplaceBlockLineWithLava
 	ld a, $4D
-	lb bc, 19, 24
+	lb de, 19, 24
 	jp ReplaceTileBlockEntryNoRedraw
 
 VolcanoBombedFloor2ReplaceBlocks:
 	call VolcanoBombedFloor2ReplaceBlocksDefault
 	ld a, $60
-	lb bc, 17, 24
+	lb de, 17, 24
 	jp ReplaceTileBlockEntryNoRedraw
 
 VolcanoReplaceBlockLineWithLava:
@@ -687,13 +688,13 @@ ReloadOldAmberSprite:
 	jp CopyVideoData
 
 ShowRubies:
-	ld a, TOGGLE_VOLCANO_RUBY_1
-	call VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_RUBY_1
+	call ShowExtraObject
 ShowOnlyTwoRubies:
-	ld a, TOGGLE_VOLCANO_RUBY_2
-	call VolcanoShowSpriteEntry
-	ld a, TOGGLE_VOLCANO_RUBY_3
-	jp VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_RUBY_2
+	call ShowExtraObject
+	ld c, TOGGLE_VOLCANO_RUBY_3
+	jp ShowExtraObject
 
 VolcanoBombableRockCommon:
 	call PauseVolcanoShaking
@@ -894,8 +895,8 @@ ShatterAnim:
 
 
 ShowAnimationSprite:
-	ld a, TOGGLE_VOLCANO_ANIMATION_PROXY ; we will use an extra sprite as a proxy for showing an animation
-	call VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_ANIMATION_PROXY ; we will use an extra sprite as a proxy for showing an animation
+	call ShowExtraObject
 	ld hl, wSprite08StateData2MapY
 	ld a, [wYCoord]
 	add 5 ; add map offset + 1 coordinate below player
@@ -906,15 +907,8 @@ ShowAnimationSprite:
 	ret
 
 HideAnimationSprite:
-	ld a, TOGGLE_VOLCANO_ANIMATION_PROXY
-VolcanoHideSpriteEntry:
-	ld [wToggleableObjectIndex], a
-	predef_jump HideExtraObject
-
-VolcanoShowSpriteEntry:
-	ld [wToggleableObjectIndex], a
-	predef_jump ShowExtraObject
-
+	ld c, TOGGLE_VOLCANO_ANIMATION_PROXY
+	jp HideExtraObject
 
 ; input a = which block to replace it with
 ReplaceBlockBelowPlayer:
@@ -926,7 +920,7 @@ ReplaceBlockBelowPlayer:
 	inc a
 	srl a
 	ld b, a
-	predef_jump ReplaceTileBlock
+	jp ReplaceTileBlock
 
 PlayCryOfSelectedPartyPokemon::
 	ld a, [wWhichPokemon]
@@ -980,21 +974,21 @@ CinnabarVolcano_TextPointers:
 
 CinnabarVolcanoRuby1Text:
 	text_asm
-	ld a, TOGGLE_VOLCANO_RUBY_1
+	ld c, TOGGLE_VOLCANO_RUBY_1
 	jr CinnabarVolcanoRubyTextCommon
 
 CinnabarVolcanoRuby2Text:
 	text_asm
-	ld a, TOGGLE_VOLCANO_RUBY_2
+	ld c, TOGGLE_VOLCANO_RUBY_2
 	jr CinnabarVolcanoRubyTextCommon
 
 CinnabarVolcanoRuby3Text:
 	text_asm
-	ld a, TOGGLE_VOLCANO_RUBY_3
+	ld c, TOGGLE_VOLCANO_RUBY_3
 	; fall through
 
 CinnabarVolcanoRubyTextCommon:
-	call VolcanoHideSpriteEntry
+	call HideExtraObject
 	call VolcanoStopChannel8
 	CheckEvent EVENT_VOLCANO_DUG_TO_FLOOR4
 	jr z, .normal
@@ -1226,8 +1220,8 @@ CinnabarVolcanoSurfingRhydonText:
 	rst _PrintText
 	ld a, RHYDON
 	call PlayCry
-	ld a, TOGGLE_VOLCANO_SURFING_RHYDON
-	call VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_SURFING_RHYDON
+	call HideExtraObject
 	SetEvent EVENT_SURFING_ON_RHYDON
 	rst TextScriptEnd
 .no
@@ -1355,8 +1349,8 @@ VolcanoBlowWallOpen::
 	rst _DelayFrames
 	ld a, TEXT_CINNABAR_VOLCANO_CLEARED_ALL_BLOCKAGES
 	call CinnabarVolcanoDisplayTextIDEntry
-	ld a, TOGGLE_VOLCANO_BLAINE
-	call VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_BLAINE
+	call ShowExtraObject
 	jp ResumeMusic
 
 VolcanoFloor4TileBlockReplacements:
@@ -1618,8 +1612,8 @@ CheckWaitForVolcanoSpriteWalk:
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
 	call .doneWalkReset
-	ld a, TOGGLE_VOLCANO_BLAINE
-	jp VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_BLAINE
+	jp HideExtraObject
 .entranceMovement
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
@@ -1755,11 +1749,10 @@ CheckIfVolcanoBattleOccurred:
 	ret z
 .moltresWin
 	SetEvent EVENT_BEAT_MOLTRES
-	ld a, TOGGLE_VOLCANO_MOLTRES
-	call VolcanoHideSpriteEntry
-	ld a, TOGGLE_MOLTRES
-	ld [wToggleableObjectIndex], a
-	predef_jump HideObject
+	ld c, TOGGLE_VOLCANO_MOLTRES
+	call HideExtraObject
+	ld c, TOGGLE_MOLTRES
+	jp HideObject
 .magmarWin
 	ld a, [wBattleFunctionalFlags]
 	bit 1, a
@@ -1774,8 +1767,8 @@ CheckIfVolcanoBattleOccurred:
 	ld a, TEXT_CINNABAR_VOLCANO_BOSS_MAGMAR_AFTER
 	jp CinnabarVolcanoDisplayTextIDEntry
 .caughtMagmar
-	ld a, TOGGLE_VOLCANO_BOSS_MAGMAR
-	jp VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_BOSS_MAGMAR
+	jp HideExtraObject
 
 
 CallReplaceBlocksThenRedrawMap:
@@ -1819,8 +1812,8 @@ MoltresBattleAnimation:
 	ld de, BurningAnimation
 	lb bc, BANK(BurningAnimation), 4
 	call CopyVideoData
-	ld a, TOGGLE_VOLCANO_ANIMATION_PROXY ; we will use an extra sprite as a proxy for showing an animation
-	call VolcanoShowSpriteEntry
+	ld c, TOGGLE_VOLCANO_ANIMATION_PROXY ; we will use an extra sprite as a proxy for showing an animation
+	call ShowExtraObject
 	ld de, SFX_Melt_Rocks
 	call PlayNewSoundChannel8
 	ld a, 14 + 4
@@ -1883,7 +1876,7 @@ MoltresBattleAnimation:
 	ld a, $43
 	ld [wNewTileBlockID], a
 	lb bc, 7, 2
-	predef ReplaceTileBlock
+	call ReplaceTileBlock
 	call GBFadeInFromWhite
 	ld a, MOLTRES
 	ld [wEngagedTrainerClass], a
@@ -2122,8 +2115,8 @@ CinnabarVolcanoProspectorText:
 	callfar FarLoadSmokeTileFourTimes
 	ld c, 4
 	rst _DelayFrames
-	ld a, TOGGLE_VOLCANO_ARCANINE
-	call VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_ARCANINE
+	call HideExtraObject
 	ld hl, .goodluck
 	rst _PrintText
 	SetEvent EVENT_VOLCANO_SPRITE_MOVING
@@ -2359,6 +2352,7 @@ BlaineWalksOut:
 	db NPC_MOVEMENT_LEFT
 	db NPC_MOVEMENT_LEFT
 	db NPC_MOVEMENT_LEFT
+	db NPC_MOVEMENT_LEFT
 	db -1
 
 BlaineLeavesVolcano:
@@ -2479,7 +2473,6 @@ VolcanoHiddenItemInit::
 	call VolcanoStopChannel8
 	jpfar HiddenItems
 
-
 ; RGB Tweaked: Entrance Rhydon will appear after Moltres has been defeated, preventing a softlock
 CinnabarVolcanoSurfingRhydonEntranceText:
 	text_asm
@@ -2503,8 +2496,8 @@ CinnabarVolcanoSurfingRhydonEntranceText:
 	rst _PrintText
 	ld a, RHYDON
 	call PlayCry
-	ld a, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
-	call VolcanoHideSpriteEntry
+	ld c, TOGGLE_VOLCANO_SURFING_RHYDON_ENTRANCE
+	call HideExtraObject
 	rst TextScriptEnd
 .no
 	ld a, CINNABAR_VOLCANO_SURFING_RHYDON_ENTRANCE
@@ -2521,3 +2514,30 @@ CinnabarVolcanoSurfingRhydonEntranceText:
 .gotOn
 	text_far _RhydonGotOnBack
 	text_end
+
+; since we will shake the screen while walking around,
+; we need to make sure when the player loads the map that there aren't any blank tiles in the bgmap.
+; on loading the save file, the bgmap gets filled with tile 7F, so we will replace them all with $10 (border tile) on map load.
+Remove7FTilesFromBGMap:
+	ld de, vBGMap0
+	ld bc, TILEMAP_AREA
+.copy
+	di
+.waitVRAM
+	ldh a, [rSTAT]		; 2 cycles
+	and %10				; 4 cycles
+	jr nz, .waitVRAM	; 2 cycles when not taken, 3 when taken
+; Copy bc bytes from hl to de.
+	ld a, [de]			; 2 cycles
+	cp $7F              ; 2 cycles
+	jr nz, .skip        ; 2 cycles when not taken, 3 when taken
+	ld a, $10           ; 2 cycles
+	ld [de], a			; 2 cycles
+.skip
+	inc de              
+	dec bc
+	ei	;re-enable vblank functions
+	ld a, c
+	or b
+	jr nz, .copy
+	ret

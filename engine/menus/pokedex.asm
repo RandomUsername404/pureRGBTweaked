@@ -21,7 +21,7 @@ ShowPokedexMenu:
 	ld [wCurrentMenuItem], a
 ;;;
 .setUpGraphics
-	ld b, SET_PAL_GENERIC
+	ld d, SET_PAL_GENERIC
 	call RunPaletteCommand
 	callfar LoadPokedexTilePatterns
 ;;;;;;;;;;; PureRGBnote: ADDED: load these new button prompt graphics into VRAM
@@ -215,7 +215,7 @@ HandlePokedexSideMenu:
 	jr .handleMenuInput
 
 .choseArea
-	predef LoadTownMap_Nest ; display pokemon areas
+	callfar LoadTownMap_Nest ; display pokemon areas
 	ld b, 0
 	jr .exitSideMenu
 
@@ -563,10 +563,7 @@ IsPokemonBitSet:
 	dec a
 	ld c, a
 	ld b, FLAG_TEST
-	predef FlagActionPredef
-	ld a, c
-	and a
-	ret
+	jp FlagAction
 
 ShowPokedexDataInternal:
 	ld hl, wPokedexDataFlags
@@ -588,7 +585,7 @@ ShowPokedexDataInternal:
 	jr ShowPokedexDataCommon
 
 ; function to display pokedex data from outside the pokedex
-ShowPokedexData:
+ShowPokedexData::
 	ld hl, wPokedexDataFlags
 	set BIT_POKEDEX_DATA_DISPLAY_TYPE, [hl]
 	CheckEvent EVENT_GOT_POKEDEX
@@ -663,7 +660,7 @@ ShowNextPokemonData:
 	ld [wCurPartySpecies], a
 	ld [wBattleMonSpecies2], a
 	push af
-	ld b, SET_PAL_POKEDEX
+	ld d, SET_PAL_POKEDEX
 	call RunPaletteCommand
 	pop af
 	ld [wPokedexNum], a
@@ -969,8 +966,8 @@ ShowNextPokemonData:
 	hlcoord 1, 11
 	ld de, DexType1Text
 	call PlaceString
-	hlcoord 2, 12
-	predef PrintMonType
+	decoord 2, 12
+	callfar PrintMonType
 	hlcoord 2, 14
 	ld a, [hl]
 	cp ' '
@@ -1036,8 +1033,8 @@ ShowNextPokemonData:
 	callfar LoadMonBackPicInPokedex ; draw back sprite
 	xor a
 	ldh [hStartTileID], a
-	hlcoord 1, 1
-	predef CopyUncompressedPicToTilemap
+	decoord 1, 1
+	callfar FarCopyUncompressedPicToTilemap
 	jr .reloadwPokedexNum
 .nextMon
 	ld a, [wPokedexNum]
@@ -1115,7 +1112,7 @@ PokedexDataDividerLine:
 INCLUDE "data/pokemon/dex_entries.asm"
 INCLUDE "data/pokemon/dex_pokemon_categories.asm"
 
-PokedexToIndex:
+PokedexToIndex::
 	; converts the Pokédex number at [wPokedexNum] to an index
 	push bc
 	push hl
@@ -1136,7 +1133,7 @@ PokedexToIndex:
 	pop bc
 	ret
 
-IndexToPokedex:
+_IndexToPokedex::
 	; converts the index number at [wPokedexNum] to a Pokédex number
 	push bc
 	push hl

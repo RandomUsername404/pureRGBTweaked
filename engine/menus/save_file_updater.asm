@@ -251,11 +251,11 @@ EarlierVersionSaveFileUpdate:
 	call EarlierVersionEventConstantsUpdate
 	; step 6: update hide show variables based on events (if possible)
 	CheckEvent EVENT_MET_DAD
-	ld a, TOGGLE_REDS_HOUSE_1F_DAD
-	call z, HideExtraObjectEntry
+	ld c, TOGGLE_REDS_HOUSE_1F_DAD
+	call z, HideExtraObject
 	CheckEvent EVENT_DIAMOND_MINE_COMPLETED
-	ld a, TOGGLE_PROSPECTORS_HOUSE_PROSPECTOR
-	call z, HideExtraObjectEntry
+	ld c, TOGGLE_PROSPECTORS_HOUSE_PROSPECTOR
+	call z, HideExtraObject
 	callfar SetDetentionHideShows
 	ld hl, SaveFileUpdater2_6_0_Hides
 	call HideMultipleExtraObjects
@@ -268,12 +268,10 @@ HideMultipleExtraObjects:
 	cp -1
 	ret z
 	push hl
-	call HideExtraObjectEntry
+	ld c, a
+	call HideExtraObject
 	pop hl
 	jr HideMultipleExtraObjects
-HideExtraObjectEntry:
-	ld [wToggleableObjectIndex], a
-	predef_jump HideExtraObject
 
 SaveFileUpdater2_6_0_Hides:
 	; despite the champ arena having been introduced already before 2.6.0, we can reset the values to deal with even earlier versions
@@ -553,10 +551,8 @@ TransferMovedHideShowFlags:
 	ld c, a
 	ld b, FLAG_TEST
 	push de
-	predef FlagActionPredef
+	call FlagAction
 	pop de
-	ld a, c
-	and a
 	ld b, FLAG_SET
 	jr nz, .transferValue
 	ld b, FLAG_RESET
@@ -566,7 +562,7 @@ TransferMovedHideShowFlags:
 	ld c, a
 	ld hl, wExtraToggleableObjectFlags
 	push de
-	predef FlagActionPredef
+	call FlagAction
 	pop de
 	inc de
 	jr .loop
@@ -589,37 +585,34 @@ UpdateNewHideShowFlagsBasedOnGameProgression:
 	cp -1
 	jr z, .next
 	push hl
-	ld [wToggleableObjectIndex], a
-	predef ShowObject
+	ld c, a
+	call ShowObject
 	pop hl
 	jr .loop
 .next
-	ld a, TOGGLE_MEW_VERMILION_DOCK
-	call SaveFileUpdaterHideObjectEntry
+	ld c, TOGGLE_MEW_VERMILION_DOCK
+	call HideObject
 	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr z, .dontHideRocketHouseGuy
-	ld a, TOGGLE_CERULEAN_ROCKET_HOUSE_1F_GUY
-	call SaveFileUpdaterHideObjectEntry
+	ld c, TOGGLE_CERULEAN_ROCKET_HOUSE_1F_GUY
+	call HideObject
 .dontHideRocketHouseGuy
 	ld a, [wStatusFlags4]
 	bit BIT_GOT_SILPH_CO_LAPRAS_OR_ITEM, a
 	jr z, .dontHideCeladonLaprasGuy
-	ld a, TOGGLE_LAPRAS_GUY_CELADON
-	call SaveFileUpdaterHideObjectEntry
+	ld c, TOGGLE_LAPRAS_GUY_CELADON
+	call HideObject
 .dontHideCeladonLaprasGuy
+	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN ; RGBTweaked: added check so Bulbasaur can appear on imported saves
+	ld c, TOGGLE_CERULEAN_BULBASAUR
+	call nz, HideObject
 	CheckEvent EVENT_GOT_DOME_FOSSIL
-	ld a, TOGGLE_SEAFOAM_ISLANDS_B3F_DOME_FOSSIL
-	call nz, SaveFileUpdaterHideObjectEntry
+	ld c, TOGGLE_SEAFOAM_ISLANDS_B3F_DOME_FOSSIL
+	call nz, HideObject
 	CheckEvent EVENT_GOT_HELIX_FOSSIL
-	ld a, TOGGLE_SEAFOAM_ISLANDS_B3F_HELIX_FOSSIL
-	call nz, SaveFileUpdaterHideObjectEntry   ; was: ret z + fall-through  
-	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN
-	ld a, TOGGLE_CERULEAN_BULBASAUR
-	call nz, SaveFileUpdaterHideObjectEntry
-	ret
-SaveFileUpdaterHideObjectEntry:
-	ld [wToggleableObjectIndex], a
-	predef_jump HideObject
+	ret z
+	ld c, TOGGLE_SEAFOAM_ISLANDS_B3F_HELIX_FOSSIL
+	jp HideObject
 
 
 	db -1
