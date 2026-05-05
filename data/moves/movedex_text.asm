@@ -1676,8 +1676,8 @@ _CrabhammerDexEntry::
 	next "on the <opponent>"
 
 	bage "with a pincer,"
-	next "fist, or blunt"
-	next "edge.@"
+	next "scythe, sickle,"
+	next "or crushing claw.@"
 
 	text_jump _GenericOftenLandsCriticalHitsText
 

@@ -69,7 +69,8 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 - Completely revamped [**level-up learnsets**](../data/pokemon/evos_moves.asm) and [**TM/HM learnsets**](../data/pokemon/base_stats), mixing PureRGB, Yellow Legacy and tweaks of my own
 - [Brand new Pokémon locations/wild encounters](../documentation/pokemon_locations.md) and lower encounter rates (based on Yellow Legacy).
 
-**NEW Type change ON by default** (togglable via the Type Guy on Route 23):
+**NEW Type changes ON by default** (togglable via the Type Guy on Route 23):
+- Krabby — Water/Ground
 - Porygon — Normal/Ghost
 
 **PureRGB type changes now OFF by default** (togglable via the Type Guy on Route 23):

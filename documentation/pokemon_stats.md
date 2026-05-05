@@ -107,7 +107,7 @@ You can find an interactive version of the table below [right here.](https://she
 | 095 | ONIX | ROCK | GROUND | **55** | 45 | 160 | **75** | 70 | **405** | — |
 | 096 | DROWZEE | PSYCHIC | — | 60 | 48 | 45 | 90 | 42 | 285 | — |
 | 097 | HYPNO | PSYCHIC | — | **90** | 73 | 70 | 115 | **72** | **420** | — |
-| 098 | KRABBY | WATER | — | 30 | 105 | 90 | 25 | 50 | 300 | — |
+| 098 | KRABBY | WATER | **GROUND** | 30 | 105 | 90 | 25 | 50 | 300 | WATER |
 | 099 | KINGLER | WATER | **GROUND** | **75** | 130 | 115 | 50 | 75 | **445** | WATER |
 | 100 | VOLTORB | ELECTRIC | **FIRE** | 40 | 30 | 50 | 55 | 100 | 275 | ELECTRIC |
 | 101 | ELECTRODE | ELECTRIC | **FIRE** | **65** | 50 | 70 | **100** | **135** | **420** | ELECTRIC |

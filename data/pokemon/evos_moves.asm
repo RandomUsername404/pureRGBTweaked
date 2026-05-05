@@ -661,6 +661,7 @@ ScytherEvosMoves:
 	db 48, DOUBLE_TEAM ; YellowLegacy
 	db 49, SWIFT ; RGBTweaked
 	db 54, SWORDS_DANCE ; YellowLegacy
+	db 60, CRABHAMMER ; RGBTweaked
 	db 0
 
 
@@ -723,6 +724,7 @@ PinsirEvosMoves:
 	db 45, GUILLOTINE ; YellowLegacy
 	db 48, BIND ; YellowLegacy
 	db 54, SWORDS_DANCE ; YellowLegacy
+	db 60, CRABHAMMER ; RGBTweaked
 	db 0
 
 
@@ -1419,12 +1421,12 @@ KinglerEvosMoves:
 ; Learnset
 	db 14, FURY_SWIPES ; PureRGB				DUST CLAW
 	db 17, KARATE_CHOP ; PureRGB
-	db 20, VICEGRIP ; YellowLegacy
+	db 20, CUT ; RGBTweaked
 	db 25, BUBBLEBEAM ; YellowLegacy
 	db 26, AGILITY ; PureRGB
-	db 29, CUT ; YellowLegacy
+	db 29, VICEGRIP	 ; RGBTweaked
 	db 30, STOMP ; YellowLegacy
-	db 31, SLASH ; PureRGB
+	db 32, SLASH ; PureRGB
 	db 35, CRABHAMMER ; YellowLegacy
 	db 36, SLAM ; PureRGB						FILTHY SLAM
 	db 39, FURY_ATTACK ; PureRGB

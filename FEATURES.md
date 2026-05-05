@@ -346,6 +346,7 @@ Everything here is set to ON by default.
 - Golduck — Water/Psychic
 - Ponyta/Rapidash — Fire/Normal
 - Doduo/Dodrio — Ground/Flying
+- Krabby — Water/Ground
 - Kingler — Water/Ground
 - Voltorb/Electrode — Electric/Fire
 - Seadra — Water/Dragon

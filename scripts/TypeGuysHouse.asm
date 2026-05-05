@@ -264,7 +264,7 @@ TypeGuysHouseTypeGuyText:
 	text_end
 
 PokemonTypeGuyList::
-	db 24
+	db 25
 	db BUTTERFREE
 	db FEAROW
 	db SANDSHREW
@@ -276,6 +276,7 @@ PokemonTypeGuyList::
 	db RAPIDASH
 	db DODUO
 	db DODRIO
+	db KRABBY
 	db KINGLER
 	db VOLTORB
 	db ELECTRODE

@@ -12,6 +12,7 @@ db PONYTA, FIRE, FIRE
 db RAPIDASH, FIRE, FIRE
 db DODUO, NORMAL, FLYING
 db DODRIO, NORMAL, FLYING
+db KRABBY, WATER, WATER
 db KINGLER, WATER, WATER
 db VOLTORB, ELECTRIC, ELECTRIC
 db ELECTRODE, ELECTRIC, ELECTRIC
@@ -101,19 +102,19 @@ InitDefaultTypeRemapFlags:
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
-    ld c, 14 ; Marowak
+    ld c, 15 ; Marowak
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
-    ld c, 18 ; Mr. Mime
+    ld c, 19 ; Mr. Mime
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
-    ld c, 20 ; Pinsir
+    ld c, 21 ; Pinsir
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
-    ld c, 22 ; Kabuto
+    ld c, 23 ; Kabuto
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
     predef FlagActionPredef
