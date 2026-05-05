@@ -1509,7 +1509,7 @@ wPlayerBattleStatus1:: db
 ; bit 3 - immune to psychic moves (triggered by haze)
 ; bit 4 - has a substitute
 ; bit 5 - need to recharge
-; bit 6 - immune to normal/fighting moves (triggered by mist)
+; bit 6 - immune to normal/fighting moves (triggered by mist)				RGBTweaked: used to be set with set NORMAL_FIGHTING_IMMUNITY, but not used anymore. Check constants/battle_constants.asm line 99
 ; bit 7 - leech seeded
 wPlayerBattleStatus2:: db
 

@@ -158,7 +158,7 @@ You can find an interactive version of the table below (without the "COMMENT" co
 | **FLASH** | **ELECTRIC** | **60** | **100** | **15** | **Priority move. 10% chance to make the target flinch.** | — |
 | **PSYWAVE** | PSYCHIC_TYPE | **30** | **100** | **20** | **~33% chance to lower the target's Special by 1 stage after dealing damage.** | — |
 | SPLASH | NORMAL | 0 | 100 | 40 | Doesn't do anything. | — |
-| **ACID_ARMOR** | POISON | 0 | 100 | **10** | **Applies both REFLECT and LIGHT SCREEN simultaneously (halving both physical and special damage).** | This effect is a PureRGB addition. |
+| ACID_ARMOR | POISON | 0 | 100 | 40 | Raises the user's Defense modifier by 2 stages. | — |
 | **CRABHAMMER** | WATER | 90 | **95** | 10 | High critical hit ratio. | — |
 | **EXPLOSION** | **ROCK** | **140** | 100 | 5 | **50% of damage dealt as recoil if the move hits. If the move misses, the user still takes 1/4 of their max HP as recoil damage. When the user has less than 1/3 of its HP left, the attack power of EXPLOSION is upped to 320, but using it will cause the user to faint.** | — |
 | **DUST CLAW** | **GROUND** | **40** | **100** | **15** | **No secondary effect.** | **New PureRGB move. Replaces FURY SWIPES.** |

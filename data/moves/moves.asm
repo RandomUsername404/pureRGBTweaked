@@ -64,7 +64,7 @@ Moves:
 	move ACID,         ACID_SIDE_EFFECT,            50, POISON,       100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
 	move FLAMETHROWER, BURN_SIDE_EFFECT1,           95, FIRE,         100, 15
-	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30
+	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30 ; RGBTweaked: Restored MIST's vanilla effect
 	move WATER_GUN,    NO_ADDITIONAL_EFFECT,        40, WATER,        100, 25
 	move HYDRO_PUMP,   NO_ADDITIONAL_EFFECT,       120, WATER,         90,  5
 	move SURF,         NO_ADDITIONAL_EFFECT,        95, WATER,        100, 15
@@ -161,7 +161,7 @@ Moves:
 	move FLASH,        FLINCH_SIDE_EFFECT1,         60, ELECTRIC,     100, 15 ; priority move
 	move PSYWAVE,      SPECIAL_DOWN_SIDE_EFFECT,    30, PSYCHIC_TYPE, 100, 20
 	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,       100, 40
-	move ACID_ARMOR,   ACID_ARMOR_EFFECT,            0, POISON,       100, 10 ; combined reflect and light screen effects in one move
+	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       100, 40 ; RGBTweaked: restored vanilla effect. Used to be ACID_ARMOR_EFFECT (combined reflect and light screen effects in one move)
 	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,        90, WATER,         95, 10 ; high critical hit ratio
 	move EXPLOSION,    EXPLODE_RECOIL_EFFECT,      140, ROCK,         100,  5
 	move FURY_SWIPES,  NO_ADDITIONAL_EFFECT,        40, GROUND,       100, 15 ; -> DUST CLAW

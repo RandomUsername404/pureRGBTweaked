@@ -1665,9 +1665,9 @@ _AcidArmorDexEntry::
 	next "additional"
 	next "protection."
 
-	bage "Cuts all damage"
-	next "(Physical/Special)"
-	next "in half"
+	bage "Greatly raises"
+	next "<user>'s DEFENSE."
+	next "(+2 DEFENSE)"
 	dex
 	
 _CrabhammerDexEntry::
