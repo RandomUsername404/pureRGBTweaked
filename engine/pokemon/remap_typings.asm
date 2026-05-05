@@ -95,25 +95,25 @@ InitDefaultTypeRemapFlags:
     ld c, 1  ; Fearow | bit index 1 = Fearow's position in OriginalTypings
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ld c, 6  ; Victreebel
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ld c, 15 ; Marowak
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ld c, 19 ; Mr. Mime
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ld c, 21 ; Pinsir
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ld c, 23 ; Kabuto
     ld b, FLAG_SET
     ld hl, wPkmnTypeRemapFlags
-    predef FlagActionPredef
+    call FlagAction
     ret

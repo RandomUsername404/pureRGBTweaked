@@ -111,9 +111,12 @@ Everything here is set to ON by default.
 
 ### Inventory & PC
 - Bag size: 20 → 30 slots; PC items: 50 → 60 slots
-- Deposit items to PC directly from the bag (press START on an item)
+- Automatically sort your bag and your PC items (press SELECT on the option menu)
 
-  ![Deposit Item From Start Menu Description](/screenshots/deposit_item_from_menu_description.png?raw=true) ![Deposit Item From Start Menu](/screenshots/deposit_item_from_menu.png?raw=true)
+  ![Automatically sort bag](/screenshots/auto_sort_bag.png?raw=true)
+- Deposit items to your PC directly from the bag (press START on an item)
+
+  ![Deposit Item From Start Menu](/screenshots/deposit_item_from_menu.png?raw=true)
 - Change PC boxes from the Start Menu (scroll to SAVE, press SELECT); also shows the Pokémon count per box
 
   ![Box change Description](/screenshots/change_box_from_start_menu_description.png?raw=true) ![Box change](/screenshots/change_box_from_start_menu.png?raw=true)

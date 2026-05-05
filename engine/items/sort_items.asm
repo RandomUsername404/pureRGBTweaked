@@ -234,15 +234,15 @@ ItemSortedList:
 	db NUGGET
 	db OLD_COIN
 	; TMs / HMs
-	db TM_ICE_PUNCH   	; $C9
+	db TM_ICE_PUNCH    ; $C9
 	db TM_RAZOR_WIND   ; $CA ROOST
-	db TM_LEECH_SEED 	; $CB
+	db TM_LEECH_SEED   ; $CB
 	db TM_PIN_MISSILE  ; $CC
 	db TM_FIRE_PUNCH   ; $CD
 	db TM_TOXIC        ; $CE
 	db TM_HORN_DRILL   ; $CF
 	db TM_BODY_SLAM    ; $D0
-	db TM_SLASH    	; $D1
+	db TM_SLASH        ; $D1
 	db TM_DOUBLE_EDGE  ; $D2
 	db TM_BUBBLEBEAM   ; $D3
 	db TM_AURORA_BEAM  ; $D4
@@ -260,7 +260,7 @@ ItemSortedList:
 	db TM_THUNDERBOLT  ; $E0
 	db TM_THUNDER      ; $E1
 	db TM_EARTHQUAKE   ; $E2
-	db TM_CRABHAMMER	; $E3
+	db TM_SEISMIC_TOSS ; $E3 ; RGBTweaked: replaced CRABHAMMER
 	db TM_DIG          ; $E4
 	db TM_PSYCHIC_M    ; $E5
 	db TM_MEGA_DRAIN   ; $E6
@@ -268,21 +268,21 @@ ItemSortedList:
 	db TM_SWORDS_DANCE ; $E8
 	db TM_REFLECT      ; $E9
 	db TM_BIDE         ; $EA 
-	db TM_AGILITY    	; $EB
-	db TM_BARRAGE 		; $EC
+	db TM_AGILITY      ; $EB
+	db TM_BARRAGE      ; $EC
 	db TM_FLAMETHROWER ; $ED
 	db TM_FIRE_BLAST   ; $EE
-	db TM_SLAM        	; $EF FILTHY SLAM
+	db TM_SLAM         ; $EF FILTHY SLAM
 	db TM_KARATE_CHOP  ; $F0
-	db TM_MEDITATE   	; $F1 
+	db TM_MEDITATE     ; $F1 
 	db TM_LOVELY_KISS  ; $F2
 	db TM_SKY_ATTACK   ; $F3
 	db TM_LIGHT_SCREEN ; $F4
 	db TM_THUNDER_WAVE ; $F5
 	db TM_PSYBEAM      ; $F6
-	db TM_SLUDGE    	; $F7
+	db TM_SLUDGE       ; $F7
 	db TM_ROCK_SLIDE   ; $F8
-	db TM_GLARE   		; $F9
+	db TM_GLARE        ; $F9
 	db TM_SUBSTITUTE   ; $FA
 	db HM_CUT          ; $C4
 	db HM_FLY          ; $C5

@@ -204,18 +204,14 @@ IF DEF(_DEBUG)
 	;callfar SilphCo11FTeamRocketLeavesScript
 
 	
-	ld a, TOGGLE_LYING_OLD_MAN
-	ld [wToggleableObjectIndex], a
-	predef HideObject
-	ld a, TOGGLE_OLD_MAN
-	ld [wToggleableObjectIndex], a
-	predef ShowObject
-	ld a, TOGGLE_ERIK_HOUSE
-	ld [wToggleableObjectIndex], a
-	predef ShowExtraObject
-	ld a, TOGGLE_SARA_HOUSE
-	ld [wToggleableObjectIndex], a
-	predef ShowExtraObject
+	ld c, TOGGLE_LYING_OLD_MAN
+	call HideObject
+	ld c, TOGGLE_OLD_MAN
+	call ShowObject
+	ld c, TOGGLE_ERIK_HOUSE
+	call ShowExtraObject
+	ld c, TOGGLE_SARA_HOUSE  
+	call ShowExtraObject
 	ld hl, wPocketAbraNick
 	ld de, PocketAbraTestName
 	call CopyString

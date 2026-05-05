@@ -2128,7 +2128,7 @@ DrawEnemyHUDAndHPBar::
 	ld c, a
 	ld b, FLAG_TEST
 	ld hl, wPokedexOwned
-	predef FlagActionPredef
+	call FlagAction
 	ld a, c
 	and a
 	jr z, .notOwned

@@ -479,7 +479,6 @@ INCLUDE "engine/battle/move_effects/siphon_snag.asm"
 INCLUDE "engine/menus/map_wild_data.asm"
 INCLUDE "engine/battle/move_effects/screech.asm"
 INCLUDE "engine/menus/preview_front_sprite.asm"
-INCLUDE "engine/menus/change_box_menu.asm"
 
 SECTION "newCode3", ROMX
 

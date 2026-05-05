@@ -672,8 +672,8 @@ BeforeVersion1_0_0SaveFileUpdate:
 	; Hide it only if the player already got Bulbasaur in Cerulean  
 	CheckEvent EVENT_GOT_BULBASAUR_IN_CERULEAN  
 	ret z  
-	ld a, TOGGLE_CERULEAN_BULBASAUR  
-	jp SaveFileUpdaterHideObjectEntry  
+	ld c, TOGGLE_CERULEAN_BULBASAUR  
+	jp HideObject
   
 Version1_0_0_AddedHideShowFlags:  
 	db TOGGLE_CERULEAN_BULBASAUR  

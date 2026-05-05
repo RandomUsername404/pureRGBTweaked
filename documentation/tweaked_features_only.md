@@ -6,11 +6,6 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 
 ## Quality-of-Life Improvements
 
-### Inventory & PC
-- Menu descriptions so the player always knows how to store items and change BOX wirelessly.
-
-  ![Deposit Item From Start Menu Description](../screenshots/deposit_item_from_menu_description.png?raw=true) ![Box change Description](../screenshots/change_box_from_start_menu_description.png?raw=true)
-
 ### Battle QoL
 - Added "already caught" icon to battle HUD
 

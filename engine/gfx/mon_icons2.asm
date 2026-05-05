@@ -76,7 +76,7 @@ PreparePartyMonSpriteCopy:
 	jr z, .missingno
 	; get pokedex number
 	ld [wPokedexNum], a
-	predef IndexToPokedex
+	call IndexToPokedex
 	ld a, [wPokedexNum]
 	; multiply (pokedex number - 1) by $80 (8 tiles per frame, 2 frames = 16 tiles = $80 bytes)
 	dec a

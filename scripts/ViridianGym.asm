@@ -35,9 +35,8 @@ ViridianGymDefaultScript:
 	ret z
 	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_BLUE
 	ret nz
-	ld a, TOGGLE_VIRIDIAN_GYM_BLUE
-	ld [wToggleableObjectIndex], a
-	predef ShowObject
+	ld c, TOGGLE_VIRIDIAN_GYM_BLUE
+	call ShowObject
 	ret
 .spinning
 	jpfar LoadSpinnerArrowTiles

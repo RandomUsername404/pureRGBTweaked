@@ -43,9 +43,8 @@ CeruleanTradeHouseMelanieText:
 	call z, WaitForTextScrollButtonPress
 	ld hl, CeruleanHouse1MelanieByeText
 	rst _PrintText
-	ld a, TOGGLE_CERULEAN_BULBASAUR
-	ld [wToggleableObjectIndex], a
-	predef HideObject
+	ld c, TOGGLE_CERULEAN_BULBASAUR
+	call HideObject
 	SetEvent EVENT_GOT_BULBASAUR_IN_CERULEAN
 .noAccess
 	rst TextScriptEnd
