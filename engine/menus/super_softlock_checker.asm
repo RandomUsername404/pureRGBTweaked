@@ -150,7 +150,7 @@ IsMoveLearnableByParty:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	push de
-	predef CanLearnTM ; RGBTweaked: restored CanLearnTM as a predef because otherwise all Pokemon were able to learn every move (the BankSwitch was clobbering c)
+	callfar CanLearnTM
 	pop de
 	ld a, c
 	and a ; can the pokemon learn the move?

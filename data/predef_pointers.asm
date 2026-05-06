@@ -30,7 +30,6 @@ PredefPointers::
 	add_predef HPBarLength ; used once
 	add_predef CopyTileIDsFromList
 	add_predef WriteMonMoves
-	add_predef CanLearnTM ; RGBTweaked: restored CanLearnTM as a predef because otherwise all Pokemon were able to learn every move (the BankSwitch was clobbering c)
 	add_predef MakePokemonDisappearInOverworld
 	add_predef SaveScreenTileAreaToBuffer3
 	add_predef LoadScreenTileAreaFromBuffer3

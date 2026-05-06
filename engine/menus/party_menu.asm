@@ -86,7 +86,7 @@ RedrawPartyMenu_::
 	jr .printLevel
 .teachMoveMenu
 	push hl
-	predef CanLearnTM ; check if the pokemon can learn the move							 RGBTweaked: restored CanLearnTM as a predef because otherwise all Pokemon were able to learn every move (the BankSwitch was clobbering c)
+	callfar CanLearnTM ; check if the pokemon can learn the move
 	pop hl
 	ld de, .ableToLearnMoveOrEvolveText
 	ld a, c

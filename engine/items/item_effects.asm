@@ -2654,7 +2654,7 @@ ItemUseTMHM:
 	call RunDefaultPaletteCommand
 	jp LoadScreenTilesFromBuffer1 ; restore saved screen
 .checkIfAbleToLearnMove
-	predef CanLearnTM ; check if the pokemon can learn the move							 RGBTweaked: restored CanLearnTM as a predef because otherwise all Pokemon were able to learn every move (the BankSwitch was clobbering c)
+	callfar CanLearnTM ; check if the pokemon can learn the move
 	push bc
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
