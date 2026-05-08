@@ -1,4 +1,5 @@
  From Red/Green JP:
+ Dratini (edited. Based on an edit by Vortyne)
  Electrode
  Kakuna
  Kangaskhan
@@ -29,7 +30,7 @@
  Persian
  Pikachu (edited)
  Primeape (edited)
- Raichu (edited)
+ Raichu (edited but unused)
  Sandslash
  Seaking (edited)
  Tangela
@@ -46,7 +47,6 @@
  Charizard
  Charmander
  Dragonite
- Horsea
  Ivysaur
  Machop
  Machoke
@@ -56,3 +56,7 @@
  Vaporeon
  Vulpix
  Weezing
+
+ 
+ From Gold:
+ Raichu (DMG'd)

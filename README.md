@@ -2,7 +2,7 @@
 
 ![Red Tweaked Title](./screenshots/tweaked_pokered_titlescreen.png?raw=true) ![Green Tweaked Title](./screenshots/tweaked_pokegreen_titlescreen.png?raw=true) ![Blue Tweaked Title](./screenshots/tweaked_pokeblue_titlescreen.png?raw=true)
 
-A hack of Pokémon Red/Green/Blue built on top of Vortyne's PureRGB v2.7.2, based on the pokered disassembly.
+A hack of Pokémon Red/Green/Blue built on top of Vortyne's PureRGB v2.7.3, based on the pokered disassembly.
 
 For the full list of features, bugfixes, and everything else, see [**FEATURES.md**](FEATURES.md).
 Or jump directly to:
@@ -68,7 +68,7 @@ Pictured: GB Monochrome, Original GBC color, SGB Colors, Alternate SGB Colors, G
 
 This project would not have been possible without the work of:
 
-- Vortyne - PureRGB v2.7.2, the base this hack is built on
+- Vortyne - PureRGB v2.7.3, the base this hack is built on
 - The Pret team for their original disassembly work on Red / Blue
 - Jojobear13 - Shin PokéRed
 - cRz-Shadows & members of his team - Yellow Legacy
@@ -88,8 +88,9 @@ Below, you'll find all the artists who unknowingly contributed to RGB Tweaked:
 - Mord & Vortyne - Lt. Surge and Erika overworld sprites
 - Vortyne - Brock and Sabrina overworld sprites. Several battle sprite edits. New Safari Zone song
 - Blue Emerald, Chamber_, Soloo993, and others - 151 unique menu party sprites; used as a base for several overworld sprites
+- ZuperZACH, Isona, Karlos, Reader Dragon and Alakadoof (Yellow Legacy) - most "OG" back sprites
 - Isona, Alakadoof and Karlos (Yellow Legacy) - several overworld sprites
-- CreamElDudJafar (Pokémon Celebrations) - many overworld sprites, including Red's surfing sprite
+- CreamElDudJafar (Pokémon Celebrations) - several overworld sprites, including Red's surfing sprite
 - ZuperZACH - Nurse Joy battle sprite
 - Karlos - Officer Jenny battle sprite
 

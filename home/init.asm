@@ -158,7 +158,6 @@ InitDefaultTweakedOptions:
 	
 	ld hl, wSpriteOptions2
 	set BIT_NEW_TITLE_SCREEN, [hl]  ; New RGB titlescreen = ON
-	set BIT_BACK_SPRITES, [hl]      ; SW97 back sprites = ON
 	
 	SetEvent FLAG_IMPERIAL_METRIC   ; metric units = ON
 	

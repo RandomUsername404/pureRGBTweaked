@@ -61,8 +61,8 @@ Press SELECT on any option to get an explanation of it.
 **Page 4 — Sprite Options**
 
 ![Options Fourth Page](/screenshots/options_page_4.png?raw=true)
-- `BACK` — toggle between back sprite sets (Default: SW97)
-  - `OG`: Original blocky back sprites.
+- `BACK` — toggle between back sprite sets (Default: OG)
+  - `OG`: "Original" blocky back sprites; mostly sourced from Yellow Legacy.
 
     ![Original back sprite venusaur](/gfx/pokemon/back/venusaurb.png?raw=true) ![Original back sprite blastoise](/gfx/pokemon/back/blastoiseb.png?raw=true) ![Original back sprite charizard](/gfx/pokemon/back/charizardb.png?raw=true)
   - `SW97`: Spaceworld 1997 back sprites — higher resolution while still matching the original game's style.
@@ -136,6 +136,7 @@ Everything here is set to ON by default.
 
   ![preview BOX content](/screenshots/preview_box_content.png?raw=true)
 - Give PC BOXes custom names (press SELECT on CHANGE BOX)
+
   ![rename_pc_box](/screenshots/rename_pc_box.png?raw=true)
 
 ### Navigation & Controls

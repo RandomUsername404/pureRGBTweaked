@@ -36,7 +36,6 @@ check_section "Pics 1" \
   pokemon/back_sw/kangaskhanb.pic \
   pokemon/front/spearow.pic \
   pokemon/back_sw/spearowb.pic \
-  pokemon/front/voltorb.pic \
   pokemon/back_sw/voltorbb.pic \
   pokemon/front_alt/voltorb.pic \
   pokemon/front/nidoking.pic \
@@ -53,13 +52,14 @@ check_section "Pics 1" \
   pokemon/front/grimer.pic \
   pokemon/back_sw/grimerb.pic \
   pokemon/front/gengar.pic \
+  pokemon/back_sw/gengarb.pic \
   pokemon/front_alt/gengar.pic \
   pokemon/front/nidoranf.pic \
   pokemon/back_sw/nidoranfb.pic \
   pokemon/front/nidoqueen.pic \
   pokemon/back_sw/nidoqueenb.pic \
   pokemon/front/cubone.pic \
-  pokemon/back_sw/primeapeb.pic \
+  pokemon/back_sw/cuboneb.pic \
   pokemon/front/rhyhorn.pic \
   pokemon/back_sw/rhyhornb.pic \
   pokemon/front/lapras.pic \
@@ -75,7 +75,8 @@ check_section "Pics 1" \
   pokemon/front/clefairy.pic \
   pokemon/back_sw/clefairyb.pic \
   pokemon/front/kakuna.pic \
-  pokemon/back_sw/kakunab.pic
+  pokemon/back_sw/kakunab.pic \
+  pokemon/back/machopb.pic
 
 check_section "Pics 2" \
   pokemon/front/growlithe.pic \
@@ -120,9 +121,10 @@ check_section "Pics 2" \
   pokemon/front/magneton.pic \
   pokemon/back_sw/magnetonb.pic \
   pokemon/front/primeape.pic \
-  pokemon/back_sw/cuboneb.pic \
+  pokemon/back_sw/primeapeb.pic \
   pokemon/front/nidoranm.pic \
-  pokemon/back_sw/nidoranmb.pic
+  pokemon/back_sw/nidoranmb.pic \
+  pokemon/front/voltorb.pic
 
 check_section "Pics 3" \
   pokemon/front/articuno.pic \
@@ -219,7 +221,6 @@ check_section "Pics 4" \
   pokemon/back_sw/pinsirb.pic \
   pokemon/front/charmeleon.pic \
   pokemon/back_sw/charmeleonb.pic \
-  pokemon/back_sw/gengarb.pic \
   player/redb.pic \
   battle/oldmanb.pic \
   player/redb_big.pic \
@@ -275,7 +276,8 @@ check_section "Pics 5" \
   pokemon/front_alt/starmie.pic \
   pokemon/front/rattata.pic \
   pokemon/front/horsea.pic \
-  pokemon/back_sw/horseab.pic
+  pokemon/back_sw/horseab.pic \
+  pokemon/back/eeveeb.pic
 
 check_section "Pics 6" \
   trainers/youngster.pic \
@@ -374,6 +376,7 @@ check_section "Pics 7" \
   pokemon/back_sw/vaporeonb.pic \
   pokemon/front/muk.pic \
   pokemon/back_sw/mukb.pic \
+  pokemon/back/jolteonb.pic \
   pokemon/back_sw/dragonairb.pic
 
 check_section "Pics 8" \
@@ -554,16 +557,13 @@ check_section "Pics 9" \
   pokemon/back/jynxb.pic \
   pokemon/back/moltresb.pic \
   pokemon/back/pinsirb.pic \
-  pokemon/back/tangelab.pic \
-  pokemon/back/eeveeb.pic \
-  pokemon/back/flareonb.pic \
-  pokemon/back/jolteonb.pic \
-  pokemon/back/vaporeonb.pic \
-  pokemon/back/machopb.pic \
-  pokemon/back/zubatb.pic \
-  pokemon/back/ekansb.pic
+  pokemon/back/tangelab.pic
 
 check_section "Pics 10" \
+  pokemon/back/flareonb.pic \
+  pokemon/back/vaporeonb.pic \
+  pokemon/back/zubatb.pic \
+  pokemon/back/ekansb.pic \
   pokemon/back/parasb.pic \
   pokemon/back/poliwhirlb.pic \
   pokemon/back/poliwrathb.pic \

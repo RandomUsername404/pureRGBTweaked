@@ -60,6 +60,8 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 ---
 
 ## Pokémon Changes
+- Several front sprites were changed
+- Different OG back sprites, mostly sourced from Yellow Legacy
 - Completely revamped Pokémon **base stats**, mixing PureRGB, Yellow Legacy and tweaks of my own (see [this link](../documentation/pokemon_stats.md))
 - Completely revamped [**level-up learnsets**](../data/pokemon/evos_moves.asm) and [**TM/HM learnsets**](../data/pokemon/base_stats), mixing PureRGB, Yellow Legacy and tweaks of my own
 - [Brand new Pokémon locations/wild encounters](../documentation/pokemon_locations.md) and lower encounter rates (based on Yellow Legacy).
@@ -97,7 +99,6 @@ If you're coming from PureRGB and wondering what's new in Tweaked, read this pag
 ---
 
 ## Bug Fix
-
 - Can't Surf on Gym statues anymore 
 
 ---
