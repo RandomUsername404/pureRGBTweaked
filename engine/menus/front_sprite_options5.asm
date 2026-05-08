@@ -47,7 +47,7 @@ FrontSpriteOptions5Text:
 	next " PINSIR:     RG RB"
 	next " OMANYTE:    RG RB"
 	next " ARTICUNO:   Y  RB"
-	next " ZAPDOS:     RG RB"
+	next " ZAPDOS:     Y  RG"
 	next " MEWTWO:     RB RG@"
 
 DrawFrontSpriteOptions5Menu:

@@ -113,7 +113,7 @@ Everything here is set to ON by default.
 - Bag size: 20 → 30 slots; PC items: 50 → 60 slots
 - Automatically sort your bag and your PC items (press SELECT on the option menu)
 
-  ![Automatically sort bag](/screenshots/auto_sort_bag.png?raw=true)
+  ![Automatically sort bag](/screenshots/auto_sort_bag.png?raw=true) ![Automatically sort PC](/screenshots/auto_sort_pc.png?raw=true)
 - Deposit items to your PC directly from the bag (press START on an item)
 
   ![Deposit Item From Start Menu](/screenshots/deposit_item_from_menu.png?raw=true)
@@ -133,6 +133,10 @@ Everything here is set to ON by default.
 - Town Map removed from bag (press SELECT in the Pokédex — requires obtaining the Map in Pallet Town first)
 - Reduced item swap delay
 - View the contents of a BOX even with a full party (press SELECT on WITHDRAW)
+
+  ![preview BOX content](/screenshots/preview_box_content.png?raw=true)
+- Give PC BOXes custom names (press SELECT on CHANGE BOX)
+  ![rename_pc_box](/screenshots/rename_pc_box.png?raw=true)
 
 ### Navigation & Controls
 - Running shoes (hold B); faster bicycle (hold B); animations scale to match
@@ -236,7 +240,7 @@ Everything here is set to ON by default.
 | **CHAMP ARENA** | Post-Champion rematches against all Gym Leaders and Elite Four with perfect-DV teams, custom movesets, and max AI. Choose from many audio tracks. Opponents get even stronger on subsequent runs. Teams inspired by Pokémon Stadium. |
 | **Bill's Garden** | Post-Champion; content changes on repeat visits; A certain alternate-palette Pokémon can be caught there |
 | **Pokémon Tower B1F** | Dark Channeler can curse a Gengar to look like a Haunter again (keeping Gengar's stats); Ghost Marowak burial event |
-| **Power Plant (enhanced)** | SW97 beta tileset; button-puzzle electrical gates; roof area; Magneton upgrade (immune to Ground damage) |
+| **Power Plant (enhanced)** | SW97 beta tileset; new electrical gates puzzle; roof area; Magneton upgrade (immune to Ground damage) |
 | **Diamond Mine** (Route 8) | Prospector quest; Onix upgrade (better stats, reduced Water/Ice/Grass damage) |
 | **Saffron Abandoned Building** | Team Rocket's secret infiltration route into the city; Weezing upgrade (immune to Ground damage) |
 | **Erik and Sara's House** (Route 19) | Dragonair upgrade quest; based on a beta Route 21 house |

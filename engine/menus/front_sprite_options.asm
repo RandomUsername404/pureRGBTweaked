@@ -83,8 +83,8 @@ FrontSpriteOptionsSetCursorPositionActions:
 
 FrontSpriteOptionsText:
 	db   "SPRITES→FRONT 1"
-	next " BULBASAUR:  RG RB"
-	next " SQUIRTLE:   RB RG"
+	next " BULBASAUR:  SW RG"
+	next " SQUIRTLE:   SW RB"
 	next " BLASTOISE:  RG RB"
 	next " BUTTERFREE: RB RG"
 	next " PIDGEOTTO:  RG RB"

@@ -43,7 +43,7 @@ FrontSpriteOptions3Data:
 FrontSpriteOptions3Text:
 	db   "SPRITES→FRONT 3"
 	next " KADABRA:    RG RB"
-	next " MACHOP:     RG RB"
+	next " MACHOP:     SW RG"
 	next " TENTACRUEL: RB RG"
 	next " GRAVELER:   RB RG"
 	next " FARFETCHD:  RG RB"

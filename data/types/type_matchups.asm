@@ -107,5 +107,6 @@ TypeEffects:
 	db BONEMERANG_TYPE,   POISON,       SUPER_EFFECTIVE
 	db WATER,        MAGMA,         NO_EFFECT
 	db FIRE,         MAGMA,         NO_EFFECT
+	db TRI,          MAGMA,         NOT_VERY_EFFECTIVE ; RGBTweaked: extra resistance for Volcanic Magmar. TRI_ATTACK goes from x0,5 to x0,25
 	db -1 ; end
 

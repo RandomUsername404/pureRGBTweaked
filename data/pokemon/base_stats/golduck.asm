@@ -8,7 +8,7 @@
 	db 174 ; base exp
 
 	INCBIN "gfx/pokemon/front/golduck.pic", 0, 1 ; sprite dimensions
-	dw GolduckPicFrontAlt, GolduckPicBackSW
+	dw GolduckPicFront, GolduckPicBackSW
 
 	db SCRATCH, BUBBLE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -56,10 +56,10 @@
 	SEISMIC_TOSS ; YellowLegacy
 	; end
 
-	db BANK(GolduckPicFrontAlt)
 	db BANK(GolduckPicFront)
+	db BANK(GolduckPicFrontAlt)
 	db BANK(GolduckPicBack)
 	db BANK(GolduckPicBackSW)
 
-	dw GolduckPicFront, GolduckPicBack
+	dw GolduckPicFrontAlt, GolduckPicBack
 

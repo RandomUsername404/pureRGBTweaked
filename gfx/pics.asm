@@ -34,14 +34,13 @@ ExeggcutePicFrontAlt:: INCBIN "gfx/pokemon/front_alt/exeggcute.pic"
 GrimerPicFront::       INCBIN "gfx/pokemon/front/grimer.pic"
 GrimerPicBackSW::      INCBIN "gfx/pokemon/back_sw/grimerb.pic"
 GengarPicFront::       INCBIN "gfx/pokemon/front/gengar.pic"
-GengarPicBackSW::      INCBIN "gfx/pokemon/back_sw/gengarb.pic"
 GengarPicFrontAlt::    INCBIN "gfx/pokemon/front_alt/gengar.pic"
 NidoranFPicFront::     INCBIN "gfx/pokemon/front/nidoranf.pic"
 NidoranFPicBackSW::    INCBIN "gfx/pokemon/back_sw/nidoranfb.pic"
 NidoqueenPicFront::    INCBIN "gfx/pokemon/front/nidoqueen.pic"
 NidoqueenPicBackSW::   INCBIN "gfx/pokemon/back_sw/nidoqueenb.pic"
 CubonePicFront::       INCBIN "gfx/pokemon/front/cubone.pic"
-CubonePicBackSW::      INCBIN "gfx/pokemon/back_sw/cuboneb.pic"
+PrimeapePicBackSW::    INCBIN "gfx/pokemon/back_sw/primeapeb.pic" ; RGBTweaked: moved from Pics 2
 RhyhornPicFront::      INCBIN "gfx/pokemon/front/rhyhorn.pic"
 RhyhornPicBackSW::     INCBIN "gfx/pokemon/back_sw/rhyhornb.pic"
 LaprasPicFront::       INCBIN "gfx/pokemon/front/lapras.pic"
@@ -92,7 +91,6 @@ ArbokPicBackSW::      INCBIN "gfx/pokemon/back_sw/arbokb.pic"
 ParasectPicFront::    INCBIN "gfx/pokemon/front/parasect.pic"
 ParasectPicBackSW::   INCBIN "gfx/pokemon/back_sw/parasectb.pic"
 PsyduckPicFront::     INCBIN "gfx/pokemon/front/psyduck.pic"
-PsyduckPicBackSW::    INCBIN "gfx/pokemon/back_sw/psyduckb.pic"
 DrowzeePicFront::     INCBIN "gfx/pokemon/front/drowzee.pic"
 DrowzeePicBackSW::    INCBIN "gfx/pokemon/back_sw/drowzeeb.pic"
 GolemPicFront::       INCBIN "gfx/pokemon/front/golem.pic"
@@ -105,7 +103,7 @@ ElectabuzzPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/electabuzz.pic"
 MagnetonPicFront::    INCBIN "gfx/pokemon/front/magneton.pic"
 MagnetonPicBackSW::   INCBIN "gfx/pokemon/back_sw/magnetonb.pic"
 PrimeapePicFront::     INCBIN "gfx/pokemon/front/primeape.pic"
-PrimeapePicBackSW::    INCBIN "gfx/pokemon/back_sw/primeapeb.pic"
+CubonePicBackSW::      INCBIN "gfx/pokemon/back_sw/cuboneb.pic" ; RGBTweaked: moved from Pics 1
 NidoranMPicFront::     INCBIN "gfx/pokemon/front/nidoranm.pic"
 NidoranMPicBackSW::    INCBIN "gfx/pokemon/back_sw/nidoranmb.pic"
 
@@ -155,11 +153,12 @@ BeedrillPicFront::    INCBIN "gfx/pokemon/front/beedrill.pic"
 BeedrillPicBackSW::   INCBIN "gfx/pokemon/back_sw/beedrillb.pic"
 ExeggutorPicFront::    INCBIN "gfx/pokemon/front/exeggutor.pic"
 ExeggutorPicBackSW::   INCBIN "gfx/pokemon/back_sw/exeggutorb.pic"
-ExeggutorPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/exeggutor.pic"
 DewgongPicFront::      INCBIN "gfx/pokemon/front/dewgong.pic"
 DewgongPicBackSW::     INCBIN "gfx/pokemon/back_sw/dewgongb.pic"
 ZubatPicFront::       INCBIN "gfx/pokemon/front/zubat.pic"
 ZubatPicBackSW::      INCBIN "gfx/pokemon/back_sw/zubatb.pic"
+PsyduckPicBackSW::    INCBIN "gfx/pokemon/back_sw/psyduckb.pic" ; RGBTweaked: moved from Pics 2
+RattataPicBackSW::     INCBIN "gfx/pokemon/back_sw/rattatab.pic" ; RGBTweaked: moved from Pics 5
 
 
 SECTION "Pics 4", ROMX, BANK[PICS_4]
@@ -207,6 +206,7 @@ HitmonchanPicFront::  INCBIN "gfx/pokemon/front/hitmonchan.pic"
 PinsirPicBackSW::     INCBIN "gfx/pokemon/back_sw/pinsirb.pic"
 CharmeleonPicFront::   INCBIN "gfx/pokemon/front/charmeleon.pic"
 CharmeleonPicBackSW::  INCBIN "gfx/pokemon/back_sw/charmeleonb.pic"
+GengarPicBackSW::      INCBIN "gfx/pokemon/back_sw/gengarb.pic" ; RGBTweaked: moved from Pics 1
 
 RedPicBack::           INCBIN "gfx/player/redb.pic"
 OldManPicBack::        INCBIN "gfx/battle/oldmanb.pic"
@@ -265,7 +265,6 @@ StarmiePicFront::      INCBIN "gfx/pokemon/front/starmie.pic"
 StarmiePicBackSW::     INCBIN "gfx/pokemon/back_sw/starmieb.pic"
 StarmiePicFrontAlt::   INCBIN "gfx/pokemon/front_alt/starmie.pic"
 RattataPicFront::      INCBIN "gfx/pokemon/front/rattata.pic"
-RattataPicBackSW::     INCBIN "gfx/pokemon/back_sw/rattatab.pic"
 HorseaPicFront::      INCBIN "gfx/pokemon/front/horsea.pic"
 HorseaPicBackSW::     INCBIN "gfx/pokemon/back_sw/horseab.pic"
 
@@ -318,7 +317,6 @@ AgathaPic::        INCBIN "gfx/trainers/agatha.pic"
 LancePic::         INCBIN "gfx/trainers/lance.pic"
 
 MewPicFront::          INCBIN "gfx/pokemon/front/mew.pic" ; moved from bank 1
-MewPicBack::           INCBIN "gfx/pokemon/back/mewb.pic" ; moved from bank 1
 MewPicBackSW::         INCBIN "gfx/pokemon/back_sw/mewb.pic" ; moved from bank 1
 
 PidgeottoPicBack::     INCBIN "gfx/pokemon/back/pidgeottob.pic"
@@ -349,7 +347,6 @@ TaurosPicBackSW::     INCBIN "gfx/pokemon/back_sw/taurosb.pic"
 FarfetchdPicFront::   INCBIN "gfx/pokemon/front/farfetchd.pic"
 FarfetchdPicBackSW::  INCBIN "gfx/pokemon/back_sw/farfetchdb.pic"
 VenonatPicFront::     INCBIN "gfx/pokemon/front/venonat.pic"
-VenonatPicBackSW::    INCBIN "gfx/pokemon/back_sw/venonatb.pic"
 DragonitePicFront::   INCBIN "gfx/pokemon/front/dragonite.pic"
 DragonitePicBackSW::  INCBIN "gfx/pokemon/back_sw/dragoniteb.pic"
 DoduoPicFront::       INCBIN "gfx/pokemon/front/doduo.pic"
@@ -583,6 +580,8 @@ GloomPicBack::         INCBIN "gfx/pokemon/back/gloomb.pic"
 VileplumePicBack::     INCBIN "gfx/pokemon/back/vileplumeb.pic"
 ArmoredMewtwoPicBack::    INCBIN "gfx/pokemon/back/armored_mewtwob.pic"
 
+ArticunoPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/articuno.pic" ; RGBTweaked: moved from Pics 11
+VenonatPicBackSW::    INCBIN "gfx/pokemon/back_sw/venonatb.pic" ; RGBTweaked: moved from Pics 7
 KoffingPicFront::     INCBIN "gfx/pokemon/front/koffing.pic"
 KoffingPicBackSW::    INCBIN "gfx/pokemon/back_sw/koffingb.pic"
 KoffingPicFrontAlt::  INCBIN "gfx/pokemon/front_alt/koffing.pic"
@@ -610,7 +609,6 @@ FistFighterPic::   INCBIN "gfx/unused_prototype_sprites/fist_fighter.pic"
 
 SECTION "Pics 11", ROMX
 
-ArticunoPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/articuno.pic"
 JynxPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/jynx.pic"
 FarfetchdPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/farfetchd.pic"
 OmanytePicFrontAlt:: INCBIN "gfx/pokemon/front_alt/omanyte.pic"
@@ -620,6 +618,8 @@ GolduckPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/golduck.pic"
 WinterDragonairPicFront:: INCBIN "gfx/pokemon/front_alt/dragonair.pic"
 VolcanicMagmarPicFront:: INCBIN "gfx/pokemon/front_alt/volcanic_magmar.pic"
 VolcanicMagmarPicBackSW:: INCBIN "gfx/pokemon/back_sw/volcanic_magmarb.pic"
+ExeggutorPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/exeggutor.pic" ; RGBTweaked: moved from Pics 3
+MewPicBack::           INCBIN "gfx/pokemon/back/mewb.pic" ; RGBTweaked: moved from bank 1 then from Pics 6
 
 ; spirits
 TorchedPicFront:: INCBIN "gfx/battle/spirit_torched.pic"

@@ -8,7 +8,7 @@
 	db 64 ; base exp
 
 	INCBIN "gfx/pokemon/front/bulbasaur.pic", 0, 1 ; sprite dimensions
-	dw BulbasaurPicFrontAlt, BulbasaurPicBackSW
+	dw BulbasaurPicFront, BulbasaurPicBackSW
 
 	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -43,11 +43,11 @@
 	FLASH
 	; end
 
-	db BANK(BulbasaurPicFrontAlt)
 	db BANK(BulbasaurPicFront)
+	db BANK(BulbasaurPicFrontAlt)
 	db BANK(BulbasaurPicBack)
 	db BANK(BulbasaurPicBackSW)
 
-	dw BulbasaurPicFront, BulbasaurPicBack
+	dw BulbasaurPicFrontAlt, BulbasaurPicBack
 
 
